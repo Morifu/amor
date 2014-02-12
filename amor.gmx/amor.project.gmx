@@ -5,9 +5,27 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_arrow</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\all_objects</object>
+    <object>objects\obj_static</object>
+    <object>objects\obj_dynamic</object>
+    <object>objects\obj_player</object>
+    <object>objects\obj_wall</object>
+    <object>objects\obj_arrow</object>
+    <object>objects\obj_force_controller</object>
+    <object>objects\obj_set_variables</object>
+    <object>objects\obj_force_bar</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\test_level</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
