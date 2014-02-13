@@ -12,10 +12,6 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <scripts name="scripts">
-    <script>scripts\drag_and_zoom.gml</script>
-    <script>scripts\init_drag_zoom.gml</script>
-  </scripts>
   <objects name="objects">
     <object>objects\all_objects</object>
     <object>objects\obj_static</object>
@@ -26,7 +22,6 @@
     <object>objects\obj_force_controller</object>
     <object>objects\obj_set_variables</object>
     <object>objects\obj_force_bar</object>
-    <object>objects\obj_camera_control</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\test_level</room>
