@@ -6,9 +6,17 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_player</sprite>
+    <sprites name="player">
+      <sprite>sprites\spr_player_nogi</sprite>
+      <sprite>sprites\spr_player_dol_lewo</sprite>
+      <sprite>sprites\spr_player_gora_lewo</sprite>
+      <sprite>sprites\spr_player_gora_prawo</sprite>
+      <sprite>sprites\spr_player_dol_prawo</sprite>
+    </sprites>
     <sprite>sprites\spr_wall</sprite>
-    <sprite>sprites\spr_arrow</sprite>
+    <sprite>sprites\spr_arrow_right</sprite>
+    <sprite>sprites\spr_arrow_left</sprite>
+    <sprite>sprites\spr_cloud</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -17,16 +25,25 @@
     <script>scripts\init_drag_zoom.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\all_objects</object>
-    <object>objects\obj_static</object>
-    <object>objects\obj_dynamic</object>
-    <object>objects\obj_player</object>
+    <objects name="controllers">
+      <object>objects\obj_set_variables</object>
+      <object>objects\obj_camera_control</object>
+      <object>objects\obj_shoot_control</object>
+    </objects>
+    <objects name="containers">
+      <object>objects\all_objects</object>
+      <object>objects\obj_static</object>
+      <object>objects\obj_dynamic</object>
+    </objects>
+    <objects name="Player">
+      <object>objects\obj_player_controller</object>
+      <object>objects\obj_player_gora</object>
+      <object>objects\obj_player_nogi</object>
+      <object>objects\obj_arrow_right</object>
+      <object>objects\obj_arrow_left</object>
+    </objects>
     <object>objects\obj_wall</object>
-    <object>objects\obj_arrow</object>
-    <object>objects\obj_force_controller</object>
-    <object>objects\obj_set_variables</object>
-    <object>objects\obj_force_bar</object>
-    <object>objects\obj_camera_control</object>
+    <object>objects\obj_cloud</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\test_level</room>
