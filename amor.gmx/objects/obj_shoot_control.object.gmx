@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>if(global.clicked_on_cloud == false)
 {
- if(!keyboard_check(vk_space))
+ if(global.clicked_on_amor = true)
  {
  
   if (mouse_x &lt; obj_player_gora.x)
@@ -43,18 +43,20 @@
   
   view_object[0] = arrow;
  }
+ 
 }else
 {
  global.clicked_on_cloud = false
-}
 
+}
+global.clicked_on_amor = false;
 
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="6" enumb="53">
+    <event eventtype="6" enumb="50">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -71,8 +73,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!keyboard_check(vk_space))
+            <string>if(global.clicked_on_amor == true)
 {
+  global.DRAG=false;
   if(mouse_x &gt; obj_player_gora.x &amp;&amp; mouse_y &lt;  obj_player_gora.y )
   {
     global.var_force_x = (obj_player_gora.x - mouse_x) / 100;
@@ -96,6 +99,26 @@
     global.var_force_x = (obj_player_gora.x + mouse_x) / 100;
     global.var_force_y = (obj_player_gora.y - mouse_y) / 100;
   }
+  
+  if (mouse_x &lt; obj_player_nogi.x)
+{
+  
+  with(obj_player_nogi)
+  {
+    sprite_index = spr_player_nogi_prawo;
+  }
+}
+
+if (mouse_x &gt; obj_player_nogi.x)
+{
+  with(obj_player_nogi)
+  {
+    sprite_index = spr_player_nogi_lewo;
+  }
+}
+  
+  
+  if (obj_player_gora.image_index == 6) { obj_player_gora.image_speed = 0 }
 }
 </string>
           </argument>

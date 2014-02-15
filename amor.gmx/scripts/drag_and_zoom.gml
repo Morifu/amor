@@ -1,15 +1,12 @@
 X=view_xview;
 Y=view_yview;
-if keyboard_check(vk_space) and mouse_check_button(mb_left){
+if (mouse_check_button(mb_left) && global.clicked_on_amor == false){
     global.DRAG=true;
     window_set_cursor(cr_drag);
     view_xview-=vmx;
     view_yview-=vmy;
-}else{
-    if !keyboard_check(vk_space){
-        global.DRAG=false
-    }
-    window_set_cursor(cr_default);
+}else{  global.DRAG=false;
+        window_set_cursor(cr_default);
 }
 
 vmx=(mouse_x-X)-omx;
