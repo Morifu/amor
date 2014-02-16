@@ -1,18 +1,21 @@
 X=view_xview;
 Y=view_yview;
-if (mouse_check_button(mb_left) && global.clicked_on_amor == false){
-    global.DRAG=true;
+if  mouse_check_button(mb_left) and global.clicked_on_amor == false{
     window_set_cursor(cr_drag);
-    view_xview-=vmx;
-    view_yview-=vmy;
-}else{  global.DRAG=false;
-        window_set_cursor(cr_default);
+     view_xview[0]-=vmx;
+     view_yview[0]-=vmy;
+    
+
+
+}else{
+    window_set_cursor(cr_default);
 }
 
-vmx=(mouse_x-X)-omx;
-omx=(mouse_x-X);
-vmy=(mouse_y-Y)-omy;
-omy=(mouse_y-Y);
+  vmx=(mouse_x-X)-omx;
+  omx=(mouse_x-X);
+  vmy=(mouse_y-Y)-omy;
+  omy=(mouse_y-Y);
+  
 
 if mouse_wheel_up(){
     center_of_space_x=view_xview+view_wview/2;

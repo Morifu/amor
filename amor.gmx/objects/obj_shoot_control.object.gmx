@@ -92,7 +92,6 @@ global.var_force_y = 0;
             <kind>1</kind>
             <string>if(global.clicked_on_amor == true)
 {
-  global.DRAG=false;
  
     global.var_force_x = round((obj_player_gora.x - mouse_x) / divider);
     global.var_force_y = round((obj_player_gora.y - mouse_y) / divider);
@@ -107,6 +106,10 @@ global.var_force_y = 0;
   {
     sprite_index = spr_player_nogi_prawo;
   }
+  with(obj_player_szata)
+  {
+    sprite_index = spr_szata_prawo;
+  }
 }
 
 if (mouse_x &gt; obj_player_nogi.x)
@@ -115,6 +118,11 @@ if (mouse_x &gt; obj_player_nogi.x)
   {
     sprite_index = spr_player_nogi_lewo;
   }
+  with(obj_player_szata)
+  {
+    sprite_index = spr_szata_lewo;
+  }
+  
 }
   
    
