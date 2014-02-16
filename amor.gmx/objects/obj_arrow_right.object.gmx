@@ -27,18 +27,7 @@
             <kind>1</kind>
             <string>
 ar = physics_fixture_create();
-if(mouse_x &lt; obj_player_gora.x &amp;&amp; mouse_y &gt; obj_player_gora.y)
-{
- 
-  phy_rotation = 180 - point_direction(x,y,mouse_x,mouse_y);
-}
-
-if(mouse_x &lt; obj_player_gora.x &amp;&amp; mouse_y &lt; obj_player_gora.y)
-{
- 
-  phy_rotation = 180 - point_direction(x,y,mouse_x,mouse_y);
-}
-
+phy_rotation = 180 - point_direction(x,y,mouse_x,mouse_y);
 
 physics_apply_force(x,y,global.var_force_x,global.var_force_y);
 

@@ -54,16 +54,8 @@ max_force = 100;
  if(global.clicked_on_amor = true)
  {
  
-  if (mouse_x &lt; obj_player_gora.x)
-  {   
-    arrow = instance_create(obj_player_gora.x,obj_player_gora.y,obj_arrow_right);
-    
-  }
+  arrow = instance_create(obj_player_gora.x,obj_player_gora.y,obj_arrow);
   
-  if (mouse_x &gt; obj_player_gora.x)
-  {   
-    arrow = instance_create(obj_player_gora.x,obj_player_gora.y,obj_arrow_left);
-  }
   
   view_object[0] = arrow;
  }
@@ -101,40 +93,10 @@ global.var_force_y = 0;
             <string>if(global.clicked_on_amor == true)
 {
   global.DRAG=false;
-  if(mouse_x &gt; obj_player_gora.x &amp;&amp; mouse_y &lt;  obj_player_gora.y )
-  {
-    global.var_force_x = round((obj_player_gora.x - mouse_x) / divider);
-    global.var_force_y = round((obj_player_gora.y + mouse_y) / divider);
-   
-    
-    
-  }
-  
-   if(mouse_x &gt; obj_player_gora.x &amp;&amp; mouse_y &gt;  obj_player_gora.y )
-  {
+ 
     global.var_force_x = round((obj_player_gora.x - mouse_x) / divider);
     global.var_force_y = round((obj_player_gora.y - mouse_y) / divider);
-    
    
-  }
-  
-   if(mouse_x &lt; obj_player_gora.x &amp;&amp; mouse_y &lt;  obj_player_gora.y )
-  {
-    global.var_force_x = round((obj_player_gora.x - mouse_x) / divider);
-    global.var_force_y = round((obj_player_gora.y + mouse_y) / divider);
-    
-    
-  }
-  
-   if(mouse_x &lt; obj_player_gora.x &amp;&amp; mouse_y &gt;  obj_player_gora.y )
-  {
-    global.var_force_x = round((obj_player_gora.x - mouse_x) / divider);
-    global.var_force_y = round((obj_player_gora.y - mouse_y) / divider);
-    
-     
-  }
-  
-
 
 
   
