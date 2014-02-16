@@ -54,7 +54,7 @@ max_force = 100;
  if(global.clicked_on_amor = true)
  {
  
-  arrow = instance_create(obj_player_gora.x,obj_player_gora.y,obj_arrow);
+  arrow = instance_create(obj_player_gora.x,obj_player_gora.y-70,obj_arrow);
   
   
   view_object[0] = arrow;
@@ -120,7 +120,7 @@ if (mouse_x &gt; obj_player_nogi.x)
    
     
     
-  if (obj_player_gora.image_index &gt;= 6) { obj_player_gora.image_speed = 0 }
+  if (obj_player_gora.image_index &gt;= 120) { obj_player_gora.image_speed = 0 }
 }
 </string>
           </argument>

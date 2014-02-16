@@ -35,6 +35,7 @@ physics_apply_force(x,y,global.var_force_x,global.var_force_y);
 
 global.var_force_x = 0;
 global.var_force_y = 0;
+arrow_hit = false;
 </string>
           </argument>
         </arguments>
@@ -63,6 +64,40 @@ obj_player_gora.image_angle = 0;
 obj_player_gora.image_index = 1;
 view_object[0] = obj_player_gora;
 instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_ropePoint">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(arrow_hit == false)
+{
+where_to_cut = instance_nearest(x,y,obj_ropePoint);
+
+with(where_to_cut)
+{
+
+ instance_destroy();
+
+}
+arrow_hit = true;
+}
 </string>
           </argument>
         </arguments>
