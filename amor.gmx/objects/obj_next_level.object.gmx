@@ -4,11 +4,11 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="9" enumb="76">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,13 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.var_force_x = 0;
-global.var_force_y = 0;
-global.max_force_x = 100;
-global.max_force_y = 100;
-global.clicked_on_cloud = false;
-global.clicked_on_amor = false;
+            <string>if(room != room_game_over)
+{
+ room_goto_next();
+  
+}
+else
+{
 
+ game_restart();
+ 
+}
 </string>
           </argument>
         </arguments>
