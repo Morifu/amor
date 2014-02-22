@@ -32,6 +32,40 @@ max_force = 100;
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(global.mouse_locked == true)
+{
+
+ dir = point_direction(obj_player_gora.x,obj_player_gora.y,mouse_x,mouse_y);
+  
+
+  
+  
+
+  
+  
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="6" enumb="56">
       <action>
         <libid>1</libid>
@@ -54,7 +88,7 @@ max_force = 100;
  if(global.clicked_on_amor = true)
  {
  
-  arrow = instance_create(obj_player_gora.x,obj_player_gora.y-70,obj_arrow);
+  arrow = instance_create(obj_player_gora.x,obj_player_gora.y-100,obj_arrow);
   
   
   view_object[0] = arrow;
@@ -68,6 +102,7 @@ max_force = 100;
 global.clicked_on_amor = false;
 global.var_force_x = 0;
 global.var_force_y = 0;
+global.mouse_locked = false;
 </string>
           </argument>
         </arguments>
@@ -124,8 +159,16 @@ if (mouse_x &gt; obj_player_nogi.x)
   }
   
 }
+dis = point_distance(mouse_x,mouse_y, obj_player_gora.x, obj_player_gora.y);
+if ( dis &gt;= 100)
+{
+  global.mouse_locked = true;
   
-   
+  
+}
+  
+  
+
     
     
   if (obj_player_gora.image_index &gt;= 120) { obj_player_gora.image_speed = 0 }

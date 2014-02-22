@@ -13,6 +13,8 @@
       <sprite>sprites\spr_player_prawo</sprite>
       <sprite>sprites\spr_szata_prawo</sprite>
       <sprite>sprites\spr_szata_lewo</sprite>
+      <sprite>sprites\spr_dlon_prawo</sprite>
+      <sprite>sprites\spr_dlon_lewo</sprite>
     </sprites>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_arrow_right</sprite>
@@ -22,6 +24,8 @@
       <sprite>sprites\spr_rope_start</sprite>
       <sprite>sprites\spr_rope_component</sprite>
     </sprites>
+    <sprite>sprites\spr_test_main_target1</sprite>
+    <sprite>sprites\spr_test_main_target1_hit</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -52,6 +56,7 @@
     <object>objects\obj_cloud</object>
     <object>objects\obj_rope_creator</object>
     <object>objects\obj_ropePoint</object>
+    <object>objects\obj_main_target_1</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\test_level</room>
