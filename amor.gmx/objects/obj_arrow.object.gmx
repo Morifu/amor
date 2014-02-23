@@ -27,7 +27,19 @@
             <kind>1</kind>
             <string>
 ar = physics_fixture_create();
-phy_rotation = 270 - point_direction(obj_player_gora.x,obj_player_gora.y-100,mouse_x,mouse_y);
+
+if (mouse_x &gt; obj_player_gora.x)
+{
+  
+ // image_yscale = -1;
+ // image_xscale = 1;
+  phy_rotation =  180 - point_direction(obj_player_gora.x,obj_player_gora.y,mouse_x,mouse_y);
+}
+if (mouse_x &lt; obj_player_gora.x)
+{
+ // image_xscale = 1;
+  phy_rotation = 180 - point_direction(obj_player_gora.x,obj_player_gora.y,mouse_x,mouse_y,);
+}
 
 physics_apply_force(x,y,global.var_force_x,global.var_force_y);
 

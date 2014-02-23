@@ -16,16 +16,40 @@
     </sprites>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_arrow_right</sprite>
-    <sprite>sprites\spr_arrow_left</sprite>
     <sprite>sprites\spr_cloud</sprite>
     <sprites name="rope">
       <sprite>sprites\spr_rope_start</sprite>
       <sprite>sprites\spr_rope_component</sprite>
     </sprites>
-    <sprite>sprites\spr_test_main_target1</sprite>
-    <sprite>sprites\spr_test_main_target2</sprite>
-    <sprite>sprites\spr_test_main_target2_hit</sprite>
-    <sprite>sprites\spr_test_main_target1_hit</sprite>
+    <sprites name="Main Target1">
+      <sprite>sprites\spr_test_main_target1</sprite>
+      <sprite>sprites\spr_test_main_target1_hit</sprite>
+    </sprites>
+    <sprites name="Main Target2">
+      <sprite>sprites\spr_test_main_target2_hit</sprite>
+      <sprite>sprites\spr_test_main_target2</sprite>
+    </sprites>
+    <sprites name="planks">
+      <sprite>sprites\spr_mid_plank</sprite>
+      <sprite>sprites\spr_short_plank2</sprite>
+      <sprite>sprites\spr_short_plank1</sprite>
+      <sprite>sprites\spr_long_plank2</sprite>
+      <sprite>sprites\spr_long_plank1</sprite>
+    </sprites>
+    <sprites name="veggies">
+      <sprite>sprites\spr_cabbage</sprite>
+      <sprite>sprites\spr_potato</sprite>
+      <sprite>sprites\spr_carrot</sprite>
+    </sprites>
+    <sprite>sprites\spr_chain_side</sprite>
+    <sprites name="lock">
+      <sprite>sprites\spr_lock_opened</sprite>
+      <sprite>sprites\spr_lock_closed</sprite>
+    </sprites>
+    <sprites name="doors">
+      <sprite>sprites\spr_door_opening</sprite>
+      <sprite>sprites\spr_door_closed</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -33,6 +57,7 @@
     <script>scripts\drag_and_zoom.gml</script>
     <script>scripts\init_drag_zoom.gml</script>
     <script>scripts\scr_createRope.gml</script>
+    <script>scripts\scr_createChain.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="controllers">
@@ -54,11 +79,33 @@
       <object>objects\obj_player_szata</object>
     </objects>
     <object>objects\obj_wall</object>
-    <object>objects\obj_cloud</object>
-    <object>objects\obj_rope_creator</object>
-    <object>objects\obj_ropePoint</object>
     <object>objects\obj_main_target_1</object>
     <object>objects\obj_main_target_2</object>
+    <objects name="environment">
+      <objects name="rope">
+        <object>objects\obj_rope_creator</object>
+        <object>objects\obj_ropePoint</object>
+      </objects>
+      <objects name="planks">
+        <object>objects\obj_long_plank1</object>
+        <object>objects\obj_long_plank2</object>
+        <object>objects\obj_short_plank1</object>
+        <object>objects\obj_short_plank2</object>
+        <object>objects\obj_mid_plank</object>
+      </objects>
+      <objects name="veggies">
+        <object>objects\obj_cabbage</object>
+        <object>objects\obj_potato</object>
+        <object>objects\obj_carrot</object>
+      </objects>
+      <object>objects\obj_cloud</object>
+      <objects name="chain">
+        <object>objects\obj_chain_creator</object>
+        <object>objects\obj_chainPoint</object>
+      </objects>
+      <object>objects\obj_door</object>
+      <object>objects\obj_lock</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\test_level</room>
