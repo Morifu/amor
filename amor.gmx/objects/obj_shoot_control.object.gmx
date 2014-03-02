@@ -105,11 +105,11 @@ global.mouse_locked = false;
   
   with(obj_player_nogi)
   {
-    sprite_index = spr_player_nogi_prawo;
+    image_xscale = -1
   }
   with(obj_player_szata)
   {
-    sprite_index = spr_szata_prawo;
+    image_xscale = -1
   }
 }
 
@@ -117,11 +117,11 @@ if (mouse_x &gt; obj_player_nogi.x)
 {
   with(obj_player_nogi)
   {
-    sprite_index = spr_player_nogi_lewo;
+    image_xscale = 1
   }
   with(obj_player_szata)
   {
-    sprite_index = spr_szata_lewo;
+    image_xscale = 1
   }
   
 }

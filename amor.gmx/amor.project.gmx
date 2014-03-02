@@ -7,11 +7,8 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="player">
-      <sprite>sprites\spr_player_nogi_prawo</sprite>
       <sprite>sprites\spr_player_nogi_lewo</sprite>
       <sprite>sprites\spr_player_lewo</sprite>
-      <sprite>sprites\spr_player_prawo</sprite>
-      <sprite>sprites\spr_szata_prawo</sprite>
       <sprite>sprites\spr_szata_lewo</sprite>
     </sprites>
     <sprite>sprites\spr_wall</sprite>
@@ -60,6 +57,7 @@
       <sprite>sprites\spr_cloud</sprite>
       <sprite>sprites\spr_cloud2</sprite>
     </sprites>
+    <sprite>sprites\spr_lover1_inLove</sprite>
     <sprite>sprites\spr_lover1</sprite>
   </sprites>
   <backgrounds name="background"/>
@@ -117,12 +115,12 @@
         <object>objects\obj_veggie_crate</object>
       </objects>
       <object>objects\obj_cloud</object>
+      <object>objects\obj_door</object>
+      <object>objects\obj_lock</object>
       <objects name="chain">
         <object>objects\obj_chain_creator</object>
         <object>objects\obj_chainPoint</object>
       </objects>
-      <object>objects\obj_door</object>
-      <object>objects\obj_lock</object>
     </objects>
   </objects>
   <rooms name="rooms">
