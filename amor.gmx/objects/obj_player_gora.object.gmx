@@ -59,7 +59,7 @@ i = 0;
 if(mouse_x &gt; x) // myszka znajduje sie po prawej stronie
 {
   
-  image_xscale = 1;
+  image_xscale = -1;
   angle = point_direction(x,y,mouse_x,mouse_y); //sprawdzamy kat pozycji myszki w stosunku do gracza
   
   
@@ -70,7 +70,7 @@ if(mouse_x &gt; x) // myszka znajduje sie po prawej stronie
 if(mouse_x &lt; x) // myszka znajduje sie po lewej stronie
 {
   
-  image_xscale = -1
+  image_xscale = 1
   angle = 180 + point_direction(x,y,mouse_x,mouse_y); //sprawdzamy kat pozycji myszki w stosunku do gracza
  
 }

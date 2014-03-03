@@ -65,6 +65,7 @@ max_force = 100;
  global.clicked_on_cloud = false
 
 }
+image_index = 1;
 global.clicked_on_amor = false;
 global.var_force_x = 0;
 global.var_force_y = 0;
@@ -127,11 +128,8 @@ if (mouse_x &gt; obj_player_nogi.x)
 }
 
   
-  
-
     
-    
-  if (obj_player_gora.image_index &gt;= 119) { obj_player_gora.image_speed = 0 }
+  if (obj_player_gora.image_index &gt;= 26) { obj_player_gora.image_speed = 0 }
 }
 </string>
           </argument>
