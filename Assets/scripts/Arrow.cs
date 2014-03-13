@@ -8,6 +8,11 @@ public class Arrow : MonoBehaviour {
 		// Destroy the arrow after 2 seconds if it doesn't get destroyed before then.
 		Destroy(gameObject, 2);
 	}
+
+	void Update()
+	{
+
+	}
 	
 	void FixedUpdate()
 	{
