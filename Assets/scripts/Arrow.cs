@@ -9,14 +9,10 @@ public class Arrow : MonoBehaviour {
 		Destroy(gameObject, 2);
 	}
 
-	void Update()
-	{
-
-	}
 	
 	void FixedUpdate()
 	{
-		//transform.Rotate (0, 0, -1);
+		transform.Rotate (0, 0, -1);
 	}
 
 }

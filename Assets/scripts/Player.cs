@@ -9,7 +9,11 @@ public class Player : MonoBehaviour {
 	void Start () {
 		weapon = transform.FindChild ("Bow").GetComponent<Bow> ();
 	}
-
+	
+	void OnMouseDrag() 
+	{
+		Debug.Log ("Dragging mouse!");
+	}
 
 	void OnMouseUp () 
 	{
