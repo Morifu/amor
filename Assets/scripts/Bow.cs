@@ -9,10 +9,11 @@ public class Bow : MonoBehaviour {
 	
 	private Animator anim;					// Reference to the Animator component.
 
-	public void shootArrow()
+	public void shootArrow( Vector2 direction )
 	{
-		// ... instantiate the rocket facing right and set it's velocity to the right. 
+		// ... instantiate the arrow facing right and set it's velocity to the right. 
 		Rigidbody2D bulletInstance = Instantiate(arrow, transform.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
-		bulletInstance.velocity = new Vector2(speed, 0);
+		bulletInstance.velocity = direction*5;
+
 	}
 }

@@ -12,7 +12,12 @@ public class Arrow : MonoBehaviour {
 	
 	void FixedUpdate()
 	{
-		transform.Rotate (0, 0, -1);
+		Quaternion rot = Quaternion.LookRotation (rigidbody2D.velocity);
+		// we don't need rotation on x and y within 2D space
+		rot.x = 0;
+		rot.y = 0;
+		transform.rotation = rot;
+
 	}
 
 }
