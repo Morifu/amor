@@ -46,7 +46,7 @@ PlayerSettings:
   forceSingleInstance: 0
   resizableWindow: 0
   useMacAppStoreValidation: 0
-  gpuSkinning: 1
+  gpuSkinning: 0
   xboxPIXTextureCapture: 0
   xboxEnableAvatar: 0
   xboxEnableKinect: 0
@@ -76,7 +76,7 @@ PlayerSettings:
   iPhoneBundleIdentifier: com.unity3d.tester
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
-  productGUID: 07a996f3a1fa743948c9913c0cac8a72
+  productGUID: 8003f28a43c58a44eb62d8e4954f260b
   iPhoneBundleVersion: 1.0
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
@@ -156,12 +156,13 @@ PlayerSettings:
   flashStrippingLevel: 2
   spritePackerPolicy: 
   scriptingDefineSymbols:
+    0: "G\x01"
     1: CROSS_PLATFORM_INPUT
     2: CROSS_PLATFORM_INPUT
-    4: CROSS_PLATFORM_INPUT
-    7: CROSS_PLATFORM_INPUT
-    15: CROSS_PLATFORM_INPUT
-    16: CROSS_PLATFORM_INPUT
+    4: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    7: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    15: CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    16: CROSS_PLATFORM_INPUT;MOBILE_INPUT
   metroPackageName: Sample-Assets Project
   metroPackageLogo: 
   metroPackageVersion: 
