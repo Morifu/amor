@@ -8,6 +8,8 @@ public class Player : MonoBehaviour {
 	Vector2 startingPos;
 	Vector2 endingPos;
 
+	bool flippedCharacter = false; // if we should flip the player
+
 	// Use this for initialization
 	void Start () {
 		weapon = transform.FindChild ("Bow").GetComponent<Bow> ();
@@ -29,7 +31,23 @@ public class Player : MonoBehaviour {
 		Vector3 v3 = Input.mousePosition;
 		v3.z = 10;
 		Vector3 pos = Camera.main.ScreenToWorldPoint (v3);
-		Debug.DrawLine (startingPos, pos);
+		Debug.DrawLine (startingPos, new Vector2(pos.x,pos.y));
+
+		Vector2 sign = startingPos - new Vector2(pos.x,pos.y);
+		if (sign.x < 0 && !flippedCharacter) 
+		{
+			Vector3 scale = transform.localScale;
+			scale.x *= -1;
+			transform.localScale = scale;
+			flippedCharacter = true;
+		}
+		else if (sign.x > 0 && flippedCharacter)
+		{
+			Vector3 scale = transform.localScale;
+			scale.x *= -1;
+			transform.localScale = scale;
+			flippedCharacter = false;
+		}
 	}
 
 	void OnMouseUp () 
