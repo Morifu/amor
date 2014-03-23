@@ -4,17 +4,20 @@ using System.Collections;
 public class SnipingPoint : MonoBehaviour {
 
 	public bool startingPoint;
-	public Transform player;
+	GameObject player;
 
 	// Use this for initialization
 	void Start () {
-	}
+		player = GameObject.FindGameObjectWithTag ("Amor");
 
+		if (startingPoint && player != null)
+			player.transform.position = transform.position;
+	}
 
 	void OnMouseUp() 
 	{
 		Debug.Log ("OnMouseup mouse!");
 		if(player != null)
-		player.position = transform.position;
+			player.transform.position = transform.position;
 	}
 }
