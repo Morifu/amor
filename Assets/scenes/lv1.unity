@@ -105,7 +105,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingPoint: 0
-  player: {fileID: 470669140}
 --- !u!61 &68548598
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -286,6 +285,7 @@ GameObject:
   - 92: {fileID: 251359851}
   - 124: {fileID: 251359850}
   - 81: {fileID: 251359849}
+  - 114: {fileID: 251359854}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -334,7 +334,7 @@ Camera:
   far clip plane: 1000
   field of view: 40
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 2.54999995
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -354,6 +354,24 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &251359854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 251359848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d8238cc53530b64fbb7828c3d3bb591, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnOnDrag: 1
+  minZoom: 1
+  maxZoom: 10
+  sensitivity: 1
+  whatToHit:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &372031308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,7 +1214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrow: {fileID: 5000000, guid: bcfe0965cda241d4ba02d232a5ae30ca, type: 2}
-  speed: 10
+  speed: 5
 --- !u!1001 &1345079503
 Prefab:
   m_ObjectHideFlags: 0
@@ -1948,7 +1966,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingPoint: 0
-  player: {fileID: 470669140}
 --- !u!61 &1866731881
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2289,7 +2306,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingPoint: 0
-  player: {fileID: 470669140}
 --- !u!61 &2127744833
 BoxCollider2D:
   m_ObjectHideFlags: 0

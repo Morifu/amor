@@ -7,10 +7,14 @@ public class Camera2DController : MonoBehaviour {
 	public bool turnOnDrag = false;
 	public float minZoom = 1f;
 	public float maxZoom = 10f;
-	public float sensitivity = 50f;
+	public float sensitivity = 1f;
 
 	Vector2 startingPos;
 	Vector3 dragOrigin;
+
+	public RaycastHit2D hit;
+
+	public LayerMask whatToHit;
 
 	// Use this for initialization
 	void Start () 
@@ -23,14 +27,22 @@ public class Camera2DController : MonoBehaviour {
 	{
 		if(turnOnDrag)
 		{
+			bool canDrag = false;
 			if ( Input.GetMouseButtonDown(0))
 			{
 				Debug.Log("Mouse position: "+Input.mousePosition);
 				dragOrigin = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 10);
 				dragOrigin = Camera.main.ScreenToWorldPoint(dragOrigin);
+
+				hit = Physics2D.Raycast(dragOrigin, Vector2.zero,10,whatToHit);
+
+
+
 			}
-			
-			if ( Input.GetMouseButton(0))
+			if(hit.collider == null)
+				canDrag = true;
+
+			if ( canDrag && Input.GetMouseButton(0))
 			{
 				
 				Vector3 currentPos = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 10);
