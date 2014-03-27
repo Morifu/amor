@@ -34,7 +34,7 @@ public class AnimationWoman1 : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 
-	void OnCollisionEnter(Collision other) {
+	void OnCollisionEnter2D(Collision2D other) {
 		if (other.gameObject.tag == "Arrow") {
 			move = -1;
 		}
