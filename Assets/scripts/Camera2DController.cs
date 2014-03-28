@@ -25,7 +25,7 @@ public class Camera2DController : MonoBehaviour {
 		{
 			if ( Input.GetMouseButtonDown(0))
 			{
-				Debug.Log("Mouse position: "+Input.mousePosition);
+				//Debug.Log("Mouse position: "+Input.mousePosition);
 				dragOrigin = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 10);
 				dragOrigin = Camera.main.ScreenToWorldPoint(dragOrigin);
 			}
@@ -36,7 +36,7 @@ public class Camera2DController : MonoBehaviour {
 				Vector3 currentPos = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 10);
 				currentPos = Camera.main.ScreenToWorldPoint(currentPos);
 				Vector3 movePos = dragOrigin - currentPos;
-				Debug.Log ("Move Pos: "+movePos);
+				//Debug.Log ("Move Pos: "+movePos);
 				transform.position += movePos;
 			}
 		}
