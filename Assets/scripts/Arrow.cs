@@ -9,9 +9,6 @@ public class Arrow : MonoBehaviour {
 	void Start() 
 	{
 		arrowBody = rigidbody2D;
-		// Destroy the arrow after 2 seconds if it doesn't get destroyed before then.
-		Destroy(gameObject, 2);
-
 	}
 	
 	void FixedUpdate()
@@ -34,7 +31,7 @@ public class Arrow : MonoBehaviour {
 	{
 		arrowBody.fixedAngle = true;
 		arrowBody.isKinematic = true;
-		
+		Destroy(gameObject, 2);
 	} 
 
 }
