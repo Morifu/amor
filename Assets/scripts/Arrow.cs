@@ -4,11 +4,13 @@ using System.Collections;
 public class Arrow : MonoBehaviour {
 
 	Rigidbody2D arrowBody;
+	CircleCollider2D arrowCollider;
 
 	// Use this for initialization
 	void Start() 
 	{
 		arrowBody = rigidbody2D;
+		arrowCollider = GetComponent<CircleCollider2D> ();
 	}
 	
 	void FixedUpdate()
@@ -31,7 +33,9 @@ public class Arrow : MonoBehaviour {
 	{
 		arrowBody.fixedAngle = true;
 		arrowBody.isKinematic = true;
+		arrowCollider.enabled = false;
 		Destroy(gameObject, 2);
+		transform.parent = coll.transform;
 	} 
 
 
