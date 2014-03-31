@@ -34,4 +34,5 @@ public class Arrow : MonoBehaviour {
 		Destroy(gameObject, 2);
 	} 
 
+
 }

@@ -10,6 +10,7 @@ public class Player : MonoBehaviour {
 
 	bool flippedCharacter = false; // if we should flip the player
 
+	public float maxAngle = 70;
 	// Use this for initialization
 	void Start () {
 		weapon = transform.FindChild ("Bow").GetComponent<Bow> ();
@@ -48,6 +49,20 @@ public class Player : MonoBehaviour {
 			transform.localScale = scale;
 			flippedCharacter = false;
 		}
+		Vector2 v2 = startingPos - new Vector2 (pos.x, pos.y);
+		Quaternion rot = Quaternion.LookRotation (v2);
+		v2.Normalize ();
+		// we don't need rotation on x and y within 2D space
+		rot.x = 0;
+		rot.y = 0;
+		float cosz = Mathf.Cos (rot.eulerAngles.z*Mathf.Deg2Rad); 
+		Debug.Log ("Cosinus z : " + cosz+" Cosinus 70 : "+maxAngle + "rotz: "+rot.eulerAngles.z);
+		if(cosz > Mathf.Cos (maxAngle*Mathf.Deg2Rad))
+			transform.rotation = rot;
+	}
+
+	void OnMouseOver() {
+
 	}
 
 	void OnMouseUp () 
