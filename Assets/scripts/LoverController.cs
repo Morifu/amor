@@ -5,7 +5,6 @@ public class LoverController : MonoBehaviour {
 	public float maxSpeed = 1f;
 	bool facingRight = true;
 	public float move;
-	i
 
 	Animator anim;
 
