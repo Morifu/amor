@@ -37,11 +37,27 @@ public class LoverController : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D other) {
 		if (other.gameObject.tag == "Arrow") {
-			move = -1;
+
+			Vector3 position = transform.InverseTransformPoint(other.transform.position);
+			if(position.x < 0)
+				GoLeft();
+			else if (position.x > 0)
+				GoRight();
+			other.transform.parent = transform;
 		}
 		else {
 			move = 0;
 		}
+	}
+
+	void GoLeft()
+	{
+		move = 1;
+	}
+
+	void GoRight()
+	{
+		move = -1;
 	}
 }
 

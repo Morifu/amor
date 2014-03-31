@@ -2,7 +2,9 @@ using UnityEngine;
 using System.Collections;
 
 public class Camera2DController : MonoBehaviour {
-	
+
+
+	public bool turnOnDrag = false;
 	public float minZoom = 1f;
 	public float maxZoom = 10f;
 	public float sensitivity = 1f;
@@ -23,31 +25,33 @@ public class Camera2DController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		bool canDrag = false;
-		if ( Input.GetMouseButtonDown(0))
+		if(turnOnDrag)
 		{
-			Debug.Log("Mouse position: "+Input.mousePosition);
-			dragOrigin = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 10);
-			dragOrigin = Camera.main.ScreenToWorldPoint(dragOrigin);
+			bool canDrag = false;
+			if ( Input.GetMouseButtonDown(0))
+			{
+				//Debug.Log("Mouse position: "+Input.mousePosition);
+				dragOrigin = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 10);
+				dragOrigin = Camera.main.ScreenToWorldPoint(dragOrigin);
 
-			hit = Physics2D.Raycast(dragOrigin, Vector2.zero,10,whatToHit);
+				hit = Physics2D.Raycast(dragOrigin, Vector2.zero,10,whatToHit);
 
 
 
+			}
+			if(hit.collider == null)
+				canDrag = true;
+
+			if ( canDrag && Input.GetMouseButton(0))
+			{
+				
+				Vector3 currentPos = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 10);
+				currentPos = Camera.main.ScreenToWorldPoint(currentPos);
+				Vector3 movePos = dragOrigin - currentPos;
+				//Debug.Log ("Move Pos: "+movePos);
+				transform.position += movePos;
+			}
 		}
-		if(hit.collider == null)
-			canDrag = true;
-
-		if ( canDrag && Input.GetMouseButton(0))
-		{
-			
-			Vector3 currentPos = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 10);
-			currentPos = Camera.main.ScreenToWorldPoint(currentPos);
-			Vector3 movePos = dragOrigin - currentPos;
-			Debug.Log ("Move Pos: "+movePos);
-			transform.position += movePos;
-		}
-
 		float size = Camera.main.orthographicSize;
 		size += Input.GetAxis ("Mouse ScrollWheel") * sensitivity;
 		size = Mathf.Clamp (size, (int)minZoom, (int)maxZoom);
