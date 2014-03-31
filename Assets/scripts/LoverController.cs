@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AnimationWoman1 : MonoBehaviour {
+public class LoverController : MonoBehaviour {
 	public float maxSpeed = 1f;
 	bool facingRight = true;
 	public float move;
+	i
 
 	Animator anim;
 
