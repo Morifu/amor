@@ -5,32 +5,51 @@ public class LoverController : MonoBehaviour {
 	public float maxSpeed = 1f;
 	bool facingRight = true;
 	public float move;
+	public int steps = 5;
+	int stepsCount = 0;
+
+	bool arrived = false;
 
 	Animator anim;
 
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
+		if(transform.localScale.x > 0)
+			facingRight = false;
+		else
+			facingRight = true;
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 		//float move = Input.GetAxis("Horizontal");
 
-		anim.SetFloat("Speed", Mathf.Abs (move));
+		anim.SetFloat("Speed", Mathf.Abs (rigidbody2D.velocity.x));
+		if(arrived) return;
 
-		rigidbody2D.velocity = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
+		if(stepsCount > 0)
+		{
+			rigidbody2D.velocity = new Vector2(move * maxSpeed, rigidbody2D.velocity.y);
+			stepsCount--;
+		}
+		else
+		{
+			move = 0;
+		}
 
-		if (move> 0 && facingRight) 
+		if (move < 0 && facingRight) 
 			Flip ();
-		else if (move< 0 && !facingRight) 
+		else if (move > 0 && !facingRight) 
 			Flip ();
 	}
 
 	void Flip() {
 		facingRight = !facingRight;
 		Vector3 theScale = transform.localScale;
-		theScale.x *=-1;
+		if((facingRight && theScale.x > 0) || (!facingRight && theScale.x < 0) )
+			theScale.x *=-1;
+
 		transform.localScale = theScale;
 	}
 
@@ -39,24 +58,39 @@ public class LoverController : MonoBehaviour {
 
 			Vector3 position = transform.InverseTransformPoint(other.transform.position);
 			if(position.x < 0)
-				GoLeft();
-			else if (position.x > 0)
 				GoRight();
+			else if (position.x > 0)
+				GoLeft();
+				
 			other.transform.parent = transform;
+			other.gameObject.GetComponent<CircleCollider2D>().enabled = false;
 		}
 		else {
 			move = 0;
+		}
+
+
+	}
+
+	void OnTriggerEnter2D(Collider2D other) 
+	{
+		if (other.gameObject.tag == "MeetingPoint") {
+			arrived = true;
+			move = 0;
+			rigidbody2D.isKinematic = true;
 		}
 	}
 
 	void GoLeft()
 	{
 		move = 1;
+		stepsCount = steps;
 	}
 
 	void GoRight()
 	{
 		move = -1;
+		stepsCount = steps;
 	}
 }
 
