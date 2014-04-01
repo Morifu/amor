@@ -7,12 +7,19 @@ public class Bow : MonoBehaviour {
 	/// The arrow prefab to link.
 	/// </summary>
 	public Rigidbody2D arrow;	// Prefab of the arrow.
-	Rigidbody2D arrowInstance;
+
 	/// <summary>
 	/// Speed of the arrow shot
 	/// </summary>
 	public float speed = 5;		
 
+	/// <summary>
+	/// The arrow spawn delay in seconds.
+	/// </summary>
+	public int arrowSpawnDelay = 1;
+
+	// private fields
+	Rigidbody2D arrowInstance;
 	bool arrowShot = false;
 
 	void Start()
@@ -30,17 +37,21 @@ public class Bow : MonoBehaviour {
 
 	public void shootArrow( Vector2 direction )
 	{
-		arrowInstance.isKinematic = false;
-		arrowInstance.velocity = direction*speed;
-		arrowInstance.transform.parent = null;
-		arrowShot = true;
-		StartCoroutine (spawnArrow());
+		if(arrowInstance != null)
+		{
+			arrowInstance.isKinematic = false;
+			arrowInstance.velocity = direction*speed;
+			arrowInstance.transform.parent = null;
+			arrowShot = true;
+			arrowInstance = null;
+			StartCoroutine (spawnArrow());
+		}
 	}
 
 	
 	IEnumerator spawnArrow()
 	{
-		yield return new WaitForSeconds(2);
+		yield return new WaitForSeconds(arrowSpawnDelay);
 		if(arrowShot)
 		{
 			arrowInstance = Instantiate(arrow, transform.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;

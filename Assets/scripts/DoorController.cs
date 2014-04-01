@@ -1,12 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Doors : MonoBehaviour {
+public class DoorController : MonoBehaviour {
 	public bool Shooted = false; 
 	public bool Opened = false;
-
-	public Object door;
-	public Object openDoor;
 
 	// Use this for initialization
 	void Start () {
@@ -28,7 +25,7 @@ public class Doors : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D other) {
-		if (Shooted == false) {
+		if (!Shooted) {
 			if (other.gameObject.tag == "Arrow") {
 				Opened = true;
 				Shooted=true;

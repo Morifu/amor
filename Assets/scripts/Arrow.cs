@@ -35,7 +35,8 @@ public class Arrow : MonoBehaviour {
 		arrowBody.isKinematic = true;
 		arrowCollider.enabled = false;
 		Destroy(gameObject, 2);
-		transform.parent = coll.transform;
+		if(coll.gameObject.CompareTag("Lover"))
+			transform.parent = coll.transform;
 	} 
 
 
