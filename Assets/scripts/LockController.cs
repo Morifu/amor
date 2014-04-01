@@ -5,7 +5,7 @@ public class LockController : MonoBehaviour {
 
 	// Private fields
 	SpriteRenderer sprite;
-	BoxCollider2D collider;
+	BoxCollider2D coll;
 
 	SpriteRenderer odrzwiaSprite;
 	BoxCollider2D ramaCollider;
@@ -13,7 +13,7 @@ public class LockController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		sprite = GetComponent<SpriteRenderer> ();
-		collider = GetComponent<BoxCollider2D> ();
+		coll = GetComponent<BoxCollider2D> ();
 		odrzwiaSprite = transform.parent.FindChild("odrzwia").GetComponent<SpriteRenderer> ();
 		ramaCollider = transform.parent.FindChild("rama").GetComponent<BoxCollider2D> ();
 	}
@@ -35,7 +35,7 @@ public class LockController : MonoBehaviour {
 			ramaCollider.enabled = false;
 			// hide lock sprite and turn off collider
 			sprite.enabled = false;
-			collider.enabled = false;
+			coll.enabled = false;
 		}
 	}
 }

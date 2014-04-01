@@ -9,11 +9,6 @@ public class LineBreaker : MonoBehaviour {
 	void Start () {
 		ring = GetComponent<HingeJoint2D> ();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	void OnTriggerEnter2D(Collider2D other) 
 	{
