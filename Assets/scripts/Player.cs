@@ -23,7 +23,8 @@ public class Player : MonoBehaviour {
 //		Vector3 v3 = Input.mousePosition;
 //		v3.z = 10;
 //		Vector3 pos = Camera.main.ScreenToWorldPoint (v3);
-//		startingPos = new Vector2 (pos.x, pos.y);
+		//startingPos = new Vector2 (pos.x, pos.y);
+		startingPos = new Vector2(transform.position.x,transform.position.y);
 //		Debug.Log ("Starting Position x: " + pos.x + " y: " + pos.y);
 	}
 
