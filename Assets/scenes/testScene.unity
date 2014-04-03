@@ -164,6 +164,10 @@ Prefab:
       propertyPath: currentState
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8fbcfdc8326eb534e9889e7b61fb2dd6, type: 2}
+      propertyPath: m_Name
+      value: Lever_3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8fbcfdc8326eb534e9889e7b61fb2dd6, type: 2}
   m_RootGameObject: {fileID: 859880866}
@@ -214,9 +218,9 @@ MonoBehaviour:
   opened: 0
   leverProperStates: 010000000000000000000000
   levers:
-  - {fileID: 859880871}
-  - {fileID: 1559974172}
   - {fileID: 805145226}
+  - {fileID: 1559974172}
+  - {fileID: 859880871}
 --- !u!61 &653492640
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -319,7 +323,7 @@ Transform:
   m_PrefabInternal: {fileID: 1632689960}
   m_GameObject: {fileID: 675427732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .989709735, y: .204420432, z: 0}
+  m_LocalPosition: {x: -13.6319275, y: 4.9013586, z: 0}
   m_LocalScale: {x: -.57572329, y: .575722516, z: 1}
   m_Children:
   - {fileID: 1664661297}
@@ -392,6 +396,7 @@ MonoBehaviour:
   maxSpeed: 1
   move: 0
   steps: 20
+  deathVelocity: 5
 --- !u!95 &675427738
 Animator:
   serializedVersion: 2
@@ -649,7 +654,7 @@ GameObject:
   - 95: {fileID: 805145227}
   - 114: {fileID: 805145226}
   m_Layer: 0
-  m_Name: Lever
+  m_Name: Lever_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -843,7 +848,7 @@ GameObject:
   - 95: {fileID: 859880869}
   - 114: {fileID: 859880871}
   m_Layer: 0
-  m_Name: Lever
+  m_Name: Lever_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -962,6 +967,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 8fbcfdc8326eb534e9889e7b61fb2dd6, type: 2}
       propertyPath: currentState
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8fbcfdc8326eb534e9889e7b61fb2dd6, type: 2}
+      propertyPath: m_Name
+      value: Lever_1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8fbcfdc8326eb534e9889e7b61fb2dd6, type: 2}
@@ -1166,9 +1175,10 @@ GameObject:
   - 114: {fileID: 1201060682}
   - 114: {fileID: 1201060685}
   - 61: {fileID: 1201060684}
+  - 114: {fileID: 1201060686}
   m_Layer: 0
   m_Name: Controller
-  m_TagString: Untagged
+  m_TagString: Controller
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1224,6 +1234,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TS: 0
   pause: 0
+--- !u!114 &1201060686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1181331894}
+  m_GameObject: {fileID: 1201060681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0cbde79d229b36439dc9af6739daa8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: 100000, guid: 71b6bbfcd4a447941827b71d163a2de2, type: 2}
 --- !u!1 &1303132669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,6 +1430,14 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8fbcfdc8326eb534e9889e7b61fb2dd6, type: 2}
+      propertyPath: m_Name
+      value: Lever_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8fbcfdc8326eb534e9889e7b61fb2dd6, type: 2}
+      propertyPath: currentState
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8fbcfdc8326eb534e9889e7b61fb2dd6, type: 2}
   m_RootGameObject: {fileID: 1559974171}
@@ -1517,7 +1548,7 @@ Prefab:
     - target: {fileID: 11400000, guid: ca40e6e3e2225d5469012cba42a5f4c9, type: 2}
       propertyPath: levers.Array.data[0]
       value: 
-      objectReference: {fileID: 859880871}
+      objectReference: {fileID: 805145226}
     - target: {fileID: 11400000, guid: ca40e6e3e2225d5469012cba42a5f4c9, type: 2}
       propertyPath: leverProperStates.Array.data[0]
       value: 1
@@ -1529,7 +1560,7 @@ Prefab:
     - target: {fileID: 11400000, guid: ca40e6e3e2225d5469012cba42a5f4c9, type: 2}
       propertyPath: levers.Array.data[2]
       value: 
-      objectReference: {fileID: 805145226}
+      objectReference: {fileID: 859880871}
     - target: {fileID: 11400000, guid: ca40e6e3e2225d5469012cba42a5f4c9, type: 2}
       propertyPath: leverProperStates.Array.data[1]
       value: 0
@@ -1557,7 +1588,7 @@ GameObject:
   - 95: {fileID: 1559974173}
   - 114: {fileID: 1559974172}
   m_Layer: 0
-  m_Name: Lever
+  m_Name: Lever_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1575,7 +1606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685714b87fbe3ae439e5958a23b01cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: 0
+  currentState: 1
 --- !u!95 &1559974173
 Animator:
   serializedVersion: 2
@@ -1711,11 +1742,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: d6388c07a5a341e469dacb2e5c240504, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .989709735
+      value: -13.6319275
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d6388c07a5a341e469dacb2e5c240504, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .204420432
+      value: 4.9013586
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d6388c07a5a341e469dacb2e5c240504, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1736,6 +1767,18 @@ Prefab:
     - target: {fileID: 400002, guid: d6388c07a5a341e469dacb2e5c240504, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000000, guid: d6388c07a5a341e469dacb2e5c240504, type: 2}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000000, guid: d6388c07a5a341e469dacb2e5c240504, type: 2}
+      propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d6388c07a5a341e469dacb2e5c240504, type: 2}
+      propertyPath: deathVelocity
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6388c07a5a341e469dacb2e5c240504, type: 2}

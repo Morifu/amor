@@ -7,7 +7,8 @@ public class LoverController : MonoBehaviour {
 	public float move;
 	public int steps = 5;
 	int stepsCount = 0;
-
+	public float deathVelocity = 5.0f;
+	bool died = false;
 	bool arrived = false;
 
 	Animator anim;
@@ -25,7 +26,15 @@ public class LoverController : MonoBehaviour {
 	void FixedUpdate () {
 		//float move = Input.GetAxis("Horizontal");
 
-		anim.SetFloat("Speed", Mathf.Abs (rigidbody2D.velocity.x));
+		float velocityY = rigidbody2D.velocity.y;
+		//Debug.Log ("Falling speed: " + velocityY);
+		anim.SetFloat("FallSpeed", Mathf.Abs (velocityY));
+		if(died) return;
+		if( velocityY < (-1)*deathVelocity)
+		{
+			died = true;
+			anim.SetBool("Died",died);
+		}
 		if(arrived) return;
 
 		if(stepsCount > 0)
