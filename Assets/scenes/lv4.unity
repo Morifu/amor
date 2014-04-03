@@ -2753,8 +2753,8 @@ PolygonCollider2D:
       - {x: -4.43052435, y: 2.67211437}
       - {x: -4.29280043, y: 2.67001152}
       - {x: -4.3010788, y: 1.59128487}
-    - - {x: -1.14324844, y: 3.60121202}
-      - {x: -1.03224003, y: 3.60404778}
+    - - {x: -1.15064359, y: 3.7565074}
+      - {x: -1.03963518, y: 3.76673841}
       - {x: -1.0304774, y: 4.17802048}
       - {x: -1.15296519, y: 4.21802855}
     - - {x: -4.30651426, y: 4.14295101}
@@ -2782,10 +2782,10 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 8c3bcdc480f1a7c4b80f3f13438755ac, type: 3}
+  m_SortingLayerID: 1093696345
+  m_Sprite: {fileID: 21300000, guid: 04e0e010c71be124aab64798053990ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &880360988
 Transform:
@@ -3129,9 +3129,9 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 224205991
   m_Sprite: {fileID: 21300000, guid: c701c2a5ae5c6f349bf0f60352a5d897, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &952242761
@@ -6694,6 +6694,14 @@ Prefab:
       propertyPath: levers.Array.data[0]
       value: 
       objectReference: {fileID: 2000752578}
+    - target: {fileID: 21200000, guid: ca40e6e3e2225d5469012cba42a5f4c9, type: 2}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: ca40e6e3e2225d5469012cba42a5f4c9, type: 2}
+      propertyPath: m_SortingLayerID
+      value: 224205991
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca40e6e3e2225d5469012cba42a5f4c9, type: 2}
   m_RootGameObject: {fileID: 2107626496}
