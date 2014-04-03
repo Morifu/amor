@@ -1172,9 +1172,9 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 3
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_SortingLayerID: 3940858523
+  m_SortingLayerID: 1093696345
   m_Sprite: {fileID: 21300000, guid: 017b5717883126e40a0fef60faf2a018, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &379784814
@@ -2119,7 +2119,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_SortingLayerID: 1093696345
-  m_Sprite: {fileID: 21300000, guid: d68c56eb344584443a0f78f6739215f4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 633d1eb8843678b4cbd2e34385b3375f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &638733861
 Transform:
@@ -2141,8 +2141,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .138178825, y: .484020233}
-  m_Center: {x: 2.28277493, y: -.821863174}
+  m_Size: {x: .10830307, y: .507922173}
+  m_Center: {x: 2.30966568, y: -.833814144}
 --- !u!61 &638733863
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2152,8 +2152,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .117567703, y: .622429967}
-  m_Center: {x: -.164864302, y: -.811964929}
+  m_Size: {x: .117567718, y: .479017615}
+  m_Center: {x: -.164864302, y: -.943425953}
 --- !u!61 &638733864
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2163,8 +2163,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .12967211, y: .600684762}
-  m_Center: {x: -.152760029, y: 1.30795181}
+  m_Size: {x: .105770066, y: .648487806}
+  m_Center: {x: -.140809059, y: 1.28404891}
 --- !u!61 &638733865
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2174,8 +2174,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .138178825, y: .65560019}
-  m_Center: {x: 2.28277493, y: -.164850831}
+  m_Size: {x: .156104565, y: .619747162}
+  m_Center: {x: 2.29771423, y: -.182777286}
 --- !u!61 &638733866
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2185,8 +2185,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 2.5679729, y: .196218848}
-  m_Center: {x: 1.06918776, y: -.57099539}
+  m_Size: {x: 2.53809547, y: .226096272}
+  m_Center: {x: 1.08412647, y: -.62178725}
 --- !u!60 &638733867
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2198,20 +2198,19 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_Poly:
     m_Paths:
-    - - {x: .0351583362, y: 1.82769454}
-      - {x: 2.13460445, y: 1.82184565}
-      - {x: 2.27832603, y: 1.36500013}
-      - {x: 2.37380695, y: 1.37341726}
-      - {x: 2.38999987, y: 2.00499988}
-      - {x: .560000002, y: 3.05499983}
-      - {x: .50999999, y: 3.07500005}
-      - {x: -.049999997, y: 3.07500005}
-      - {x: -1.75999999, y: 2.07500005}
-      - {x: -1.91035557, y: 1.98809612}
-      - {x: -1.90345192, y: 1.79119241}
-      - {x: -.336507887, y: 1.79348648}
-      - {x: -.212103754, y: 1.52718508}
-      - {x: -.0815976858, y: 1.52846515}
+    - - {x: .06503582, y: 1.77989042}
+      - {x: 2.14655542, y: 1.78001702}
+      - {x: 2.290277, y: 1.34707344}
+      - {x: 2.39770889, y: 1.34951532}
+      - {x: 2.41987705, y: 1.94524491}
+      - {x: .545853019, y: 3.00329447}
+      - {x: -.0380490422, y: 2.99731874}
+      - {x: -1.73609793, y: 2.00329399}
+      - {x: -1.88047802, y: 1.91639006}
+      - {x: -1.87954986, y: 1.76131499}
+      - {x: -.342483401, y: 1.77555978}
+      - {x: -.188201785, y: 1.44352806}
+      - {x: -.0815976858, y: 1.43285692}
 --- !u!1 &644866800
 GameObject:
   m_ObjectHideFlags: 0
@@ -4394,9 +4393,10 @@ GameObject:
   - 114: {fileID: 1446905085}
   - 114: {fileID: 1446905088}
   - 61: {fileID: 1446905087}
+  - 114: {fileID: 1446905089}
   m_Layer: 0
   m_Name: Controller
-  m_TagString: Untagged
+  m_TagString: Controller
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4451,7 +4451,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TS: 0
-  pouse: 0
+  pause: 0
+--- !u!114 &1446905089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400004, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1218359896}
+  m_GameObject: {fileID: 1446905084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0cbde79d229b36439dc9af6739daa8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: 100000, guid: 71b6bbfcd4a447941827b71d163a2de2, type: 2}
 --- !u!1001 &1447395962
 Prefab:
   m_ObjectHideFlags: 0
