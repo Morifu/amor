@@ -1,28 +1,28 @@
 using UnityEngine;
 using System.Collections;
 
-public class PouseGame : MonoBehaviour {
+public class PauseGame : MonoBehaviour {
+
 	public float TS;
-	public bool pouse;
-	
+	public bool pause;
 
 	// Use this for initialization
 	void Start () {
-	TS = Time.timeScale;
+		TS = Time.timeScale;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown("p")) { 
-			if (!pouse) {
-				pouse = true;
+			if (!pause) {
+				pause = true;
 			}
 			else {
-				pouse = false;
+				pause = false;
 			}
 		}
 		
-		if (pouse) {
+		if (pause) {
 			if (Time.timeScale > 0.0f) {
 				Time.timeScale = 0.0f;
 			//zatrzymanie dzwieku audio.pouse();
@@ -36,11 +36,11 @@ public class PouseGame : MonoBehaviour {
 		}
 	}
 	void OnMouseDown() {
-			if (!pouse) {
-				pouse = true;
+		if (!pause) {
+			pause = true;
 			}
 			else {
-				pouse = false;
+			pause = false;
 			}
 		}
 		
