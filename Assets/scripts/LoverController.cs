@@ -16,6 +16,8 @@ public class LoverController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
+		if (anim == null)
+			anim = GetComponentInChildren<Animator> ();
 		if(transform.localScale.x > 0)
 			facingRight = false;
 		else
@@ -28,6 +30,7 @@ public class LoverController : MonoBehaviour {
 
 		float velocityY = rigidbody2D.velocity.y;
 		//Debug.Log ("Falling speed: " + velocityY);
+		if (anim !=null)
 		anim.SetFloat("FallSpeed", Mathf.Abs (velocityY));
 		if(died) return;
 		if( velocityY < (-1)*deathVelocity)
