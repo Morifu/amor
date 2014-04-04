@@ -26,6 +26,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: vSpeed
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -50,8 +56,8 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: FallSpeed
-    m_EventTreshold: .00999999978
+    m_ConditionEvent: vSpeed
+    m_EventTreshold: .100000001
     m_ExitTime: .799999952
   m_Atomic: 1
   m_Solo: 0
@@ -122,8 +128,8 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: FallSpeed
-    m_EventTreshold: .00999999978
+    m_ConditionEvent: vSpeed
+    m_EventTreshold: .100000001
     m_ExitTime: 1
   m_Atomic: 1
   m_Solo: 0
@@ -191,7 +197,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: a0261b49eb364af4baf2019c152e130f, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: -192, y: 48, z: 0}
+  m_Position: {x: -180, y: -60, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -221,7 +227,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: 72acd4731b3272a48973db357d94913c, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 60, y: 12, z: 0}
+  m_Position: {x: 48, y: -48, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -242,6 +248,9 @@ StateMachine:
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
+    data:
+      first: {fileID: 110286025}
+      second: []
     data:
       first: {fileID: 110250584}
       second:
@@ -264,5 +273,5 @@ StateMachine:
       second:
       - {fileID: 110100000}
   m_MotionSetCount: 1
-  m_AnyStatePosition: {x: -168, y: -60, z: 0}
+  m_AnyStatePosition: {x: -216, y: -132, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
