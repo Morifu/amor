@@ -29,9 +29,13 @@ public class LoverController : MonoBehaviour {
 		//float move = Input.GetAxis("Horizontal");
 
 		float velocityY = rigidbody2D.velocity.y;
+		float velocityX = rigidbody2D.velocity.x;
 		//Debug.Log ("Falling speed: " + velocityY);
 		if (anim !=null)
-		anim.SetFloat("FallSpeed", Mathf.Abs (velocityY));
+		{
+			anim.SetFloat("FallSpeed", Mathf.Abs (velocityY));
+			anim.SetFloat("vSpeed",Mathf.Abs(velocityX));
+		}
 		if(died) return;
 		if( velocityY < (-1)*deathVelocity)
 		{
