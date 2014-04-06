@@ -33,10 +33,11 @@ public class Arrow : MonoBehaviour {
 	{
 		arrowBody.fixedAngle = true;
 		arrowBody.isKinematic = true;
+		arrowBody.velocity = Vector2.zero;
 		arrowCollider.enabled = false;
-		Destroy(gameObject, 2);
-		if(coll.gameObject.CompareTag("Lover"))
-			transform.parent = coll.transform;
+		Destroy(gameObject); // we destroy as soon it hits anything as it creates problems
+//		if(coll.gameObject.CompareTag("Lover"))
+//			transform.parent = coll.transform;
 	} 
 
 

@@ -16,6 +16,8 @@ public class DoorController : MonoBehaviour {
 	void Start () {
 		odrzwiaSprite = transform.FindChild("odrzwia").GetComponent<SpriteRenderer> ();
 		ramaCollider = GetComponent<BoxCollider2D> ();
+		if(ramaCollider == null)
+			ramaCollider = GetComponentInChildren<BoxCollider2D>();
 	}
 
 	void Update()
