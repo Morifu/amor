@@ -36,7 +36,7 @@ public class GUIManager: MonoBehaviour {
 		GUIStyle style = new GUIStyle ();
 		style.active.background = pauseButtonActive;
 		style.normal.background = pauseButtonNormal;
-		if (GUI.Button(new Rect(510, 10, 50, 50), "",style))
+		if (GUI.Button(new Rect(580, 10, 50, 50), "",style))
 		{
 			GameManager.Instance().GamePaused = !GameManager.Instance().GamePaused;
 		}
