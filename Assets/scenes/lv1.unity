@@ -2084,6 +2084,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f95275a88e69ce499dc7b10ea55151d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseButtonActive: {fileID: 2800000, guid: c153e15280107b14c8ce3ff1efe43251, type: 3}
+  pauseButtonNormal: {fileID: 2800000, guid: c1f2a28d691aa9f48bccd3350197d743, type: 3}
 --- !u!1 &1115109010
 GameObject:
   m_ObjectHideFlags: 0
@@ -2457,6 +2459,18 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 2800000, guid: c153e15280107b14c8ce3ff1efe43251, type: 3}
+    - target: {fileID: 11400000, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: pauseButtonNormal
+      value: 
+      objectReference: {fileID: 2800000, guid: c1f2a28d691aa9f48bccd3350197d743, type: 3}
+    - target: {fileID: 11400000, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: pauseButtonActive
+      value: 
+      objectReference: {fileID: 2800000, guid: c153e15280107b14c8ce3ff1efe43251, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
   m_RootGameObject: {fileID: 1097193436}

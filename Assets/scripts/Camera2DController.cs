@@ -29,6 +29,7 @@ public class Camera2DController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		if(GameManager.Instance().GamePaused) return;
 
 		bool canDrag = false;
 		if ( Input.GetMouseButtonDown(0))
@@ -74,7 +75,7 @@ public class Camera2DController : MonoBehaviour {
 		pos.y = Mathf.Clamp (pos.y, minY, maxY);
 
 		transform.position = pos;
-		Debug.Log ("position: " + pos);
+		//Debug.Log ("position: " + pos);
 		sizeY = Mathf.Clamp (sizeY, minZoom, maxZoom);
 		Camera.main.orthographicSize = sizeY;
 

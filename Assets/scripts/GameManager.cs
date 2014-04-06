@@ -7,6 +7,18 @@ public class GameManager : MonoBehaviour {
 	
 	static GameManager instance;
 
+	bool gamePaused = false;
+
+	public bool GamePaused {
+		get {
+			return gamePaused;
+		}
+		set {
+			gamePaused = value;
+		}
+	}
+
+
 	// Use this for initialization
 	void Awake () {
 		if(instance == null)

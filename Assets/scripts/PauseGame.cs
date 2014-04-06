@@ -12,37 +12,21 @@ public class PauseGame : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if (Input.GetKeyDown("p")) { 
-			if (!pause) {
-				pause = true;
-			}
-			else {
-				pause = false;
-			}
+	void Update () 
+	{
+		if (Input.GetKeyDown("p")) 
+		{ 
+			GameManager.Instance().GamePaused = !GameManager.Instance().GamePaused;
 		}
 		
-		if (pause) {
-			if (Time.timeScale > 0.0f) {
-				Time.timeScale = 0.0f;
-			//zatrzymanie dzwieku audio.pouse();
-			}
+		if (GameManager.Instance().GamePaused) 
+		{
+			Time.timeScale = 0.0f;
 		}
-			else {
-				if (Time.timeScale < TS) {
-				Time.timeScale = TS;
-				//zatrzymanie dzwieku audio.play();
-			}			
-		}
+		else 
+		{
+			Time.timeScale = TS;
+		}			
 	}
-	void OnMouseDown() {
-		if (!pause) {
-			pause = true;
-			}
-			else {
-			pause = false;
-			}
-		}
-		
 
 }

@@ -31,11 +31,12 @@ public class Arrow : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll) 
 	{
+		Destroy(gameObject);
 		arrowBody.fixedAngle = true;
 		arrowBody.isKinematic = true;
 		arrowBody.velocity = Vector2.zero;
 		arrowCollider.enabled = false;
-		Destroy(gameObject); // we destroy as soon it hits anything as it creates problems
+		 // we destroy as soon it hits anything as it creates problems
 //		if(coll.gameObject.CompareTag("Lover"))
 //			transform.parent = coll.transform;
 	} 

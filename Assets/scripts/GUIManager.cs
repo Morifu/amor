@@ -4,6 +4,8 @@ using System.Collections;
 public class GUIManager: MonoBehaviour {
 
 	static GUIManager instance;
+	public Texture2D pauseButtonActive;
+	public Texture2D pauseButtonNormal;
 
 	GUIText arrowCountTXT;
 	
@@ -28,6 +30,17 @@ public class GUIManager: MonoBehaviour {
 	{
 		if(arrowCountTXT != null)
 			arrowCountTXT.text = string.Format("x{0}", GameManager.Instance ().arrowCount);
+	}
+
+	void OnGUI() {
+		GUIStyle style = new GUIStyle ();
+		style.active.background = pauseButtonActive;
+		style.normal.background = pauseButtonNormal;
+		if (GUI.Button(new Rect(510, 10, 50, 50), "",style))
+		{
+			GameManager.Instance().GamePaused = !GameManager.Instance().GamePaused;
+		}
+		
 	}
 	
 	static public GUIManager Instance()

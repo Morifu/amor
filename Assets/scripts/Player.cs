@@ -22,6 +22,7 @@ public class Player : MonoBehaviour {
 
 	void OnMouseDown() 
 	{
+		if(GameManager.Instance().GamePaused) return;
 //		Debug.Log ("Mouse Position: " + Input.mousePosition);
 //		Vector3 v3 = Input.mousePosition;
 //		v3.z = 10;
@@ -34,6 +35,8 @@ public class Player : MonoBehaviour {
 	void OnMouseDrag() 
 	{
 		//Debug.Log ("Dragging mouse!");
+		if(GameManager.Instance().GamePaused) return;
+
 		Vector3 v3 = Input.mousePosition;
 		v3.z = 10;
 		Vector3 pos = Camera.main.ScreenToWorldPoint (v3);
@@ -76,6 +79,7 @@ public class Player : MonoBehaviour {
 
 	void OnMouseUp () 
 	{
+		if(GameManager.Instance().GamePaused) return;
 		Debug.Log ("Clicked!");
 		Debug.Log ("Mouse Position: " + Input.mousePosition);
 		Vector3 v3 = Input.mousePosition;
