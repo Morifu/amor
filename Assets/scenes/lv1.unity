@@ -2068,7 +2068,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: 35a00d9212d545c40ae4cf85236873f3, type: 2}
       propertyPath: m_Center.y
-      value: .810000002
+      value: 2.5999999
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: 35a00d9212d545c40ae4cf85236873f3, type: 2}
       propertyPath: m_Size.x
@@ -2080,7 +2080,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 6100000, guid: 35a00d9212d545c40ae4cf85236873f3, type: 2}
       propertyPath: m_Size.y
-      value: 7
+      value: 10.5799999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 35a00d9212d545c40ae4cf85236873f3, type: 2}
@@ -2619,7 +2619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 2
   move: 0
-  steps: 50
+  steps: 100
   deathVelocity: 6
 --- !u!95 &1161866499
 Animator:
@@ -2977,7 +2977,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_SortingLayerID: 3940858523
   m_Sprite: {fileID: 21300000, guid: 2fa655c2e22d2ff4598c08aa5b476d87, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3979,7 +3979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 1
   move: 0
-  steps: 50
+  steps: 100
   deathVelocity: 6
 --- !u!95 &1536165795
 Animator:
@@ -4505,8 +4505,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 15, y: 7}
-  m_Center: {x: 0, y: .810000002}
+  m_Size: {x: 15, y: 10.5799999}
+  m_Center: {x: 0, y: 2.5999999}
 --- !u!4 &1789949628
 Transform:
   m_ObjectHideFlags: 0
