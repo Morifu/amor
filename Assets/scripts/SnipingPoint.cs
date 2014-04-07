@@ -4,7 +4,8 @@ using System.Collections;
 public class SnipingPoint : MonoBehaviour {
 
 	public bool startingPoint;
-	GameObject player;
+	GameObject player; 
+	Transform spawnPoint;
 
 	// Use this for initialization
 	void Start () {

@@ -8,16 +8,21 @@ public class Player : MonoBehaviour {
 	Vector2 startingPos;
 	Vector2 endingPos;
 
-	Animator anim;
+	Transform upperBody;
+
+	Animator legAnim, bodyAnim;
 
 	bool flippedCharacter = false; // if we should flip the player
 
 	public float maxAngle = 70;
 	// Use this for initialization
 	void Start () {
-		weapon = transform.FindChild ("Bow").GetComponent<Bow> ();
-		startingPos = new Vector2(transform.position.x,transform.position.y+0.66f);
-		anim = GetComponentInChildren<Animator> ();
+
+		upperBody = transform.FindChild("UpperBody");
+		weapon = upperBody.FindChild ("Bow").GetComponent<Bow> ();
+		startingPos = new Vector2(transform.position.x,transform.position.y+0.5f);
+		bodyAnim = upperBody.GetComponentInChildren<Animator> ();
+
 	}
 
 	void OnMouseDown() 
@@ -28,7 +33,7 @@ public class Player : MonoBehaviour {
 //		v3.z = 10;
 //		Vector3 pos = Camera.main.ScreenToWorldPoint (v3);
 		//startingPos = new Vector2 (pos.x, pos.y);
-		startingPos = new Vector2(transform.position.x,transform.position.y+0.66f);
+		startingPos = new Vector2(transform.position.x,transform.position.y+0.5f);
 //		Debug.Log ("Starting Position x: " + pos.x + " y: " + pos.y);
 	}
 
@@ -60,17 +65,17 @@ public class Player : MonoBehaviour {
 		Vector2 v2 = startingPos - new Vector2 (pos.x, pos.y);
 		Quaternion rot = Quaternion.LookRotation (v2);
 		Debug.Log ("magnitude : " + v2.magnitude);
-		anim.SetFloat ("Magnitude", v2.magnitude);
+		bodyAnim.SetFloat ("Magnitude", v2.magnitude);
 		v2.Normalize ();
 
 		// we don't need rotation on x and y within 2D space
 		rot.x = 0;
 		rot.y = 0;
 		float cosz = Mathf.Cos (rot.eulerAngles.z*Mathf.Deg2Rad); 
-
+		rot.z *= transform.localScale.x;
 		//Debug.Log ("Cosinus z : " + cosz+" Cosinus 70 : "+maxAngle + "rotz: "+rot.eulerAngles.z);
 		if(cosz > Mathf.Cos (maxAngle*Mathf.Deg2Rad))
-			transform.rotation = rot;
+			upperBody.rotation = rot;
 	}
 
 	void OnMouseOver() {
@@ -88,7 +93,7 @@ public class Player : MonoBehaviour {
 		endingPos = new Vector2 (pos.x, pos.y);
 		Debug.Log ("Ending Position x: " + pos.x + " y: " + pos.y);
 		weapon.shootArrow (startingPos-endingPos);
-		anim.SetTrigger ("Shoot");
-		anim.SetFloat ("Magnitude", 0);
+		bodyAnim.SetTrigger ("Shoot");
+		bodyAnim.SetFloat ("Magnitude", 0);
 	}
 }

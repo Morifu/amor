@@ -6,6 +6,13 @@ public class GUIManager: MonoBehaviour {
 	static GUIManager instance;
 	public Texture2D pauseButtonActive;
 	public Texture2D pauseButtonNormal;
+	public GUIStyle windowStyle;
+
+
+	public float posX = 510;
+	public float posY = 10;
+	public float width = 50;
+	public float height = 50;
 
 	GUIText arrowCountTXT;
 	
@@ -36,9 +43,11 @@ public class GUIManager: MonoBehaviour {
 		GUIStyle style = new GUIStyle ();
 		style.active.background = pauseButtonActive;
 		style.normal.background = pauseButtonNormal;
-		if (GUI.Button(new Rect(580, 10, 50, 50), "",style))
+		if (GUI.Button(new Rect(posX, posY, width, height), "",style))
 		{
 			GameManager.Instance().GamePaused = !GameManager.Instance().GamePaused;
+
+
 		}
 		
 	}
