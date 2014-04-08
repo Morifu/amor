@@ -5,7 +5,9 @@ public class GameManager : MonoBehaviour {
 
 	public int arrowCount = 0;
 	
-	static GameManager instance;
+	public static GameManager instance;
+
+	LevelData lvlData = null;
 
 	bool gamePaused = false;
 
@@ -18,6 +20,15 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	public void Save()
+	{
+		PlayerPrefs.SetInt ("lvl1data", 5);
+	}
+
+	public void Load()
+	{
+
+	}
 
 	// Use this for initialization
 	void Awake () {
@@ -30,16 +41,8 @@ public class GameManager : MonoBehaviour {
 		{
 			Destroy(gameObject);
 		}
-	}
-
-	static public GameManager Instance()
-	{
-		if(instance == null)
-		{
-			instance = new GameManager();
-		} 
-
-		return instance;
+		if(lvlData == null)
+			lvlData = new LevelData ();
 	}
 
 }

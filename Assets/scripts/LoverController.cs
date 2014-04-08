@@ -73,6 +73,7 @@ public class LoverController : MonoBehaviour {
 		if (other.gameObject.tag == "Arrow") {
 
 			Vector3 position = transform.InverseTransformPoint(other.transform.position);
+			position.x *= (transform.localScale.x>0)?1:-1;
 			if(position.x < 0)
 				GoRight();
 			else if (position.x > 0)
@@ -99,13 +100,13 @@ public class LoverController : MonoBehaviour {
 
 	void GoLeft()
 	{
-		move = 1;
+		move = -1;
 		stepsCount = steps;
 	}
 
 	void GoRight()
 	{
-		move = -1;
+		move = 1;
 		stepsCount = steps;
 	}
 }

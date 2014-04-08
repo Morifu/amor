@@ -29,7 +29,7 @@ public class Camera2DController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if(GameManager.Instance().GamePaused) return;
+		if(GameManager.instance.GamePaused) return;
 
 		bool canDrag = false;
 		if ( Input.GetMouseButtonDown(0))

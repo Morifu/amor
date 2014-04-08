@@ -36,7 +36,7 @@ public class GUIManager: MonoBehaviour {
 	void Update()
 	{
 		if(arrowCountTXT != null)
-			arrowCountTXT.text = string.Format("x{0}", GameManager.Instance ().arrowCount);
+			arrowCountTXT.text = string.Format("x{0}", GameManager.instance.arrowCount);
 	}
 
 	void OnGUI() {
@@ -45,7 +45,7 @@ public class GUIManager: MonoBehaviour {
 		style.normal.background = pauseButtonNormal;
 		if (GUI.Button(new Rect(posX, posY, width, height), "",style))
 		{
-			GameManager.Instance().GamePaused = !GameManager.Instance().GamePaused;
+			GameManager.instance.GamePaused = !GameManager.instance.GamePaused;
 
 
 		}

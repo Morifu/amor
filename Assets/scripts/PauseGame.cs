@@ -16,10 +16,10 @@ public class PauseGame : MonoBehaviour {
 	{
 		if (Input.GetKeyDown("p")) 
 		{ 
-			GameManager.Instance().GamePaused = !GameManager.Instance().GamePaused;
+			GameManager.instance.GamePaused = !GameManager.instance.GamePaused;
 		}
 		
-		if (GameManager.Instance().GamePaused) 
+		if (GameManager.instance.GamePaused) 
 		{
 			Time.timeScale = 0.0f;
 		}
