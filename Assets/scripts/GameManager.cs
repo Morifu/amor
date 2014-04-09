@@ -27,6 +27,11 @@ public class GameManager : MonoBehaviour {
 
 	public void Load()
 	{
+		for( int i = 0; i < lvlData.levels.Count; i++)
+		{
+			LevelData.LevelInfo lvlinfo = lvlData.getLevelInfo(i);
+			//lvlinfo.
+		}
 
 	}
 
