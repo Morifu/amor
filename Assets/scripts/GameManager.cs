@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour {
 	
 	public static GameManager instance;
 
-	LevelData lvlData = null;
+	public GameController controller = null;
 
 	bool gamePaused = false;
 
@@ -22,15 +22,28 @@ public class GameManager : MonoBehaviour {
 
 	public void Save()
 	{
-		PlayerPrefs.SetInt ("lvl1data", 5);
+		LevelData lvlData = controller.lvdata;
+		for( int i = 1; i < lvlData.levels.Count+1; i++)
+		{
+			LevelData.LevelInfo lvlinfo = lvlData.getLevelInfo(i);
+			PlayerPrefs.SetInt ("lvl"+i+"_arrowscnt", lvlinfo.arrowsUsed);
+			PlayerPrefs.SetInt ("lvl"+i+"_besttime", lvlinfo.bestTime);
+			PlayerPrefs.SetInt ("lvl"+i+"_collectible", lvlinfo.collectible?1:0);
+			PlayerPrefs.SetInt ("lvl"+i+"_maxscore", lvlinfo.maxScore);
+		}
+		PlayerPrefs.Save ();
 	}
 
 	public void Load()
 	{
-		for( int i = 0; i < lvlData.levels.Count; i++)
+		LevelData lvlData = controller.lvdata;
+		for( int i = 1; i < lvlData.levels.Count+1; i++)
 		{
 			LevelData.LevelInfo lvlinfo = lvlData.getLevelInfo(i);
-			//lvlinfo.
+			lvlinfo.arrowsUsed = PlayerPrefs.GetInt("lvl"+i+"_arrowscnt");
+			lvlinfo.bestTime = PlayerPrefs.GetInt("lvl"+i+"_besttime");
+			lvlinfo.collectible = (PlayerPrefs.GetInt("lvl"+i+"_collectible") > 0)?true:false;
+			lvlinfo.maxScore = PlayerPrefs.GetInt("lvl"+i+"_maxscore");
 		}
 
 	}
@@ -42,12 +55,18 @@ public class GameManager : MonoBehaviour {
 			DontDestroyOnLoad (gameObject);
 			instance = this;
 		}
-		else if (instance != this)
+		else if (instance != this) 
 		{
 			Destroy(gameObject);
 		}
-		if(lvlData == null)
-			lvlData = new LevelData ();
+	
+		// create level controller
+		if(controller == null)
+		{
+			controller = new GameController();
+			Load ();
+		}
+
 	}
 
 }

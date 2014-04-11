@@ -1,18 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameController : MonoBehaviour {
+public class GameController {
 
-	public int loverCount = 0;
-	public string nextLevel;
+	int currentLvl = 1;
+	public LevelData lvdata;
 
-	void OnTriggerEnter2D(Collider2D other) 
+	public GameController()
 	{
-		if (other.gameObject.tag == "Lover")
-			loverCount++;
+		lvdata = new LevelData ();
+	}
 
-		Debug.Log ("LoverCount: " + loverCount);
-		if (loverCount == 2)
-			Application.LoadLevel (nextLevel);
+	public void UpdateData()
+	{
+		LevelData.LevelInfo info = lvdata.getLevelInfo(currentLvl);
+		info.maxScore = 1000;
+		info.collectible = false;
+		info.bestTime = 320;
+		info.arrowsUsed = 6;
+		lvdata.setLevelInfo(1,info);
+		GameManager.instance.Save();
 	}
 }

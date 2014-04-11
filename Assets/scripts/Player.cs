@@ -64,7 +64,7 @@ public class Player : MonoBehaviour {
 		}
 		Vector2 v2 = startingPos - new Vector2 (pos.x, pos.y);
 		Quaternion rot = Quaternion.LookRotation (v2);
-		Debug.Log ("magnitude : " + v2.magnitude);
+		//Debug.Log ("magnitude : " + v2.magnitude);
 		bodyAnim.SetFloat ("Magnitude", v2.magnitude);
 		v2.Normalize ();
 

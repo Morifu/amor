@@ -3,13 +3,22 @@ using System.Collections;
 
 public class LevelData {
 
+	public enum LevelState
+	{
+		LOCKED = 0,
+		UNLOCKED,
+		STAR1COMPLETE,
+		STAR2COMPLETE,
+		STAR3COMPLETE
+	}
+
 	public struct LevelInfo
 	{
-		public int star3Count;
-		public int star2Count;
-		public int star1Count;
+		int star3Count;
+		int star2Count;
+		int star1Count;
 
-		public bool cleared;
+		public LevelState lvlState;
 		public bool collectible;
 		public int bestTime;
 		public int arrowsUsed;
@@ -21,13 +30,12 @@ public class LevelData {
 			star2Count = star2;
 			star1Count = star1;
 
-			cleared = false;
+			lvlState = LevelState.LOCKED;
 			collectible = false;
 			bestTime = 0;
 			arrowsUsed = 0;
 			maxScore = 0;
 		}
-
 
 	};
 
@@ -58,6 +66,11 @@ public class LevelData {
 		return (LevelInfo)levels [lv-1];
 	}
 
-
+	public void setLevelInfo(int lv, LevelInfo lvinfo)
+	{
+		if(lv-1 < 0)
+			lv = 1;
+		levels[lv-1] = lvinfo;
+	}
 
 }
