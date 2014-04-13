@@ -24,7 +24,6 @@ public class Bow : MonoBehaviour {
 
 	void Start()
 	{
-		GameManager.instance.arrowCount = 0;
 		//arrowInstance = Instantiate(arrow, transform.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
 //		arrowInstance.transform.parent = transform;
 //		arrowInstance.transform.rotation = transform.rotation;
@@ -48,7 +47,7 @@ public class Bow : MonoBehaviour {
 			arrowShot = true;
 			//arrowInstance = null;
 			//StartCoroutine (spawnArrow());
-			GameManager.instance.arrowCount++;
+			GameManager.instance.controller.arrowCount++;
 		}
 	}
 

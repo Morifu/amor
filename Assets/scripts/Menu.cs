@@ -4,7 +4,7 @@ using System.Collections;
 public class Menu : MonoBehaviour {
 	public string where;
 	bool travelNow = false;
-
+	public int levelNumber;
 
 	// Use this for initialization
 	void Start () {
@@ -15,9 +15,9 @@ public class Menu : MonoBehaviour {
 	void Update () {
 		if (travelNow == true) {
 			travelNow = false;
+			GameManager.instance.controller.setNextLevel(levelNumber);
 			Application.LoadLevel(where);
 		}
-
 	
 	}
 

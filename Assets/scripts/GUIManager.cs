@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class GUIManager: MonoBehaviour {
@@ -14,7 +14,8 @@ public class GUIManager: MonoBehaviour {
 	public float width = 50;
 	public float height = 50;
 
-	GUIText arrowCountTXT;
+	public GUIText arrowCountTXT;
+	public GUIText timeLeftTXT;
 	
 	// Use this for initialization
 	void Awake () {
@@ -30,13 +31,20 @@ public class GUIManager: MonoBehaviour {
 	}
 
 	void Start() {
-		arrowCountTXT = GameObject.Find("ArrowCountTXT").GetComponent<GUIText> ();
+		//arrowCountTXT = GameObject.Find("ArrowCountTXT").GetComponent<GUIText> ();
 	}
 
 	void Update()
 	{
 		if(arrowCountTXT != null)
-			arrowCountTXT.text = string.Format("x{0}", GameManager.instance.arrowCount);
+			arrowCountTXT.text = string.Format("x{0:d}", GameManager.instance.controller.arrowCount);
+		if (timeLeftTXT != null)
+		{
+			int seconds = (int)(Time.time - GameManager.instance.controller.time);
+			int minutes = (int)(seconds/60);
+
+			timeLeftTXT.text = string.Format("Time: {0:d2}:{1:d2}", minutes, seconds);
+		}
 	}
 
 	void OnGUI() {
@@ -46,8 +54,6 @@ public class GUIManager: MonoBehaviour {
 		if (GUI.Button(new Rect(posX, posY, width, height), "",style))
 		{
 			GameManager.instance.GamePaused = !GameManager.instance.GamePaused;
-
-
 		}
 		
 	}

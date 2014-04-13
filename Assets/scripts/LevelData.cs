@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LevelData {
+public class LevelData : ScriptableObject {
 
 	public enum LevelState
 	{
@@ -14,49 +14,53 @@ public class LevelData {
 
 	public struct LevelInfo
 	{
-		int star3Count;
-		int star2Count;
-		int star1Count;
+		public int star3Count;
+		public int star2Count;
+		public int star1Count;
 
 		public LevelState lvlState;
 		public bool collectible;
-		public int bestTime;
+		public float bestTime;
 		public int arrowsUsed;
 		public int maxScore;
+		public float timeLimit;
 
-		public LevelInfo(int star3, int star2, int star1)
+		public LevelInfo(int star1, int star2, int star3, float minTime)
 		{
 			star3Count = star3;
 			star2Count = star2;
 			star1Count = star1;
+			timeLimit = minTime;
 
 			lvlState = LevelState.LOCKED;
 			collectible = false;
-			bestTime = 0;
+			bestTime = 3600;
 			arrowsUsed = 0;
 			maxScore = 0;
 		}
 
 	};
 
-	public ArrayList levels;
+	public ArrayList levels = null;
 
-	public LevelData()
+	void OnEnable()
 	{
-		levels = new ArrayList ();
+		if (levels == null)
+		{
+			levels = new ArrayList ();
+			// constructor is LevelInfo(for 1 star, for 2 stars, for 3 stars, minimum time);
+			LevelInfo lvl1 = new LevelInfo (12, 5, 3, 15);
+			LevelInfo lvl2 = new LevelInfo (12, 5, 3, 15);
+			LevelInfo lvl3 = new LevelInfo (12, 5, 3, 15);
+			LevelInfo lvl4 = new LevelInfo (12, 5, 3, 15);
+			LevelInfo lvl5 = new LevelInfo (12, 5, 3, 15);
 
-		LevelInfo lvl1 = new LevelInfo(5,3,1);
-		LevelInfo lvl2 = new LevelInfo(5,3,1);
-		LevelInfo lvl3 = new LevelInfo(5,3,1);
-		LevelInfo lvl4 = new LevelInfo(5,3,1);
-		LevelInfo lvl5 = new LevelInfo(5,3,1);
-
-		levels.Add (lvl1);
-		levels.Add (lvl2);
-		levels.Add (lvl3);
-		levels.Add (lvl4);
-		levels.Add (lvl5);
-
+			levels.Add (lvl1);
+			levels.Add (lvl2);
+			levels.Add (lvl3);
+			levels.Add (lvl4);
+			levels.Add (lvl5);
+		}
 	}
 
 	public LevelInfo getLevelInfo(int lv)
@@ -66,7 +70,7 @@ public class LevelData {
 		return (LevelInfo)levels [lv-1];
 	}
 
-	public void setLevelInfo(int lv, LevelInfo lvinfo)
+	public void updateLevelInfo(int lv, LevelInfo lvinfo)
 	{
 		if(lv-1 < 0)
 			lv = 1;

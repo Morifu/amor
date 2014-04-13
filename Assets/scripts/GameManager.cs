@@ -2,11 +2,10 @@
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
-
-	public int arrowCount = 0;
 	
 	public static GameManager instance;
 
+	[HideInInspector]
 	public GameController controller = null;
 
 	bool gamePaused = false;
@@ -27,7 +26,7 @@ public class GameManager : MonoBehaviour {
 		{
 			LevelData.LevelInfo lvlinfo = lvlData.getLevelInfo(i);
 			PlayerPrefs.SetInt ("lvl"+i+"_arrowscnt", lvlinfo.arrowsUsed);
-			PlayerPrefs.SetInt ("lvl"+i+"_besttime", lvlinfo.bestTime);
+			PlayerPrefs.SetFloat ("lvl"+i+"_besttime", lvlinfo.bestTime);
 			PlayerPrefs.SetInt ("lvl"+i+"_collectible", lvlinfo.collectible?1:0);
 			PlayerPrefs.SetInt ("lvl"+i+"_maxscore", lvlinfo.maxScore);
 		}
@@ -41,7 +40,7 @@ public class GameManager : MonoBehaviour {
 		{
 			LevelData.LevelInfo lvlinfo = lvlData.getLevelInfo(i);
 			lvlinfo.arrowsUsed = PlayerPrefs.GetInt("lvl"+i+"_arrowscnt");
-			lvlinfo.bestTime = PlayerPrefs.GetInt("lvl"+i+"_besttime");
+			lvlinfo.bestTime = PlayerPrefs.GetFloat("lvl"+i+"_besttime");
 			lvlinfo.collectible = (PlayerPrefs.GetInt("lvl"+i+"_collectible") > 0)?true:false;
 			lvlinfo.maxScore = PlayerPrefs.GetInt("lvl"+i+"_maxscore");
 		}
@@ -54,17 +53,17 @@ public class GameManager : MonoBehaviour {
 		{
 			DontDestroyOnLoad (gameObject);
 			instance = this;
+
+			// create level controller
+			if(controller == null)
+			{
+				controller = ScriptableObject.CreateInstance<GameController>();
+				Load ();
+			}
 		}
 		else if (instance != this) 
 		{
 			Destroy(gameObject);
-		}
-	
-		// create level controller
-		if(controller == null)
-		{
-			controller = new GameController();
-			Load ();
 		}
 
 	}
