@@ -4,15 +4,12 @@ using System.Collections;
 public class GUIManager: MonoBehaviour {
 
 	static GUIManager instance;
-	public Texture2D pauseButtonActive;
-	public Texture2D pauseButtonNormal;
-	public GUIStyle windowStyle;
+	public GUIStyle pauseButtonStyle;
+	public Texture2D pauseBG;
 
-
-	public float posX = 510;
-	public float posY = 10;
-	public float width = 50;
-	public float height = 50;
+	public float width = 80;
+	public float height = 80;
+	public float offset = 10;
 
 	public GUIText arrowCountTXT;
 	public GUIText timeLeftTXT;
@@ -37,27 +34,64 @@ public class GUIManager: MonoBehaviour {
 	void Update()
 	{
 		if(arrowCountTXT != null)
+		{
 			arrowCountTXT.text = string.Format("x{0:d}", GameManager.instance.controller.arrowCount);
+
+		}
 		if (timeLeftTXT != null)
 		{
 			int seconds = (int)(Time.time - GameManager.instance.controller.time);
 			int minutes = (int)(seconds/60);
 
-			timeLeftTXT.text = string.Format("Time: {0:d2}:{1:d2}", minutes, seconds);
+			timeLeftTXT.text = string.Format("Time: {0:d2}:{1:d2}", minutes, seconds%60);
 		}
 	}
 
 	void OnGUI() {
-		GUIStyle style = new GUIStyle ();
-		style.active.background = pauseButtonActive;
-		style.normal.background = pauseButtonNormal;
-		if (GUI.Button(new Rect(posX, posY, width, height), "",style))
+
+		// lets draw outline on all texts
+		Rect screenRect = arrowCountTXT.GetScreenRect ();
+		screenRect.y = Screen.height - (screenRect.y+screenRect.height);
+		DrawOutline(screenRect,arrowCountTXT.text, arrowCountTXT,Color.black,Color.white);
+
+		// time left text outlie draw
+		screenRect = timeLeftTXT.GetScreenRect ();
+		screenRect.y = Screen.height - (screenRect.y+screenRect.height);
+		DrawOutline(screenRect,timeLeftTXT.text, timeLeftTXT,Color.black,Color.white);
+
+		// pause button
+		if (GUI.Button(new Rect(Screen.width-width-offset, offset, width, height), "",pauseButtonStyle))
 		{
 			GameManager.instance.GamePaused = !GameManager.instance.GamePaused;
 		}
-		
+		if(GameManager.instance.GamePaused)
+		{
+			Rect rectu = new Rect (0, 0, Screen.width, Screen.height);
+			GUI.DrawTexture (rectu, pauseBG);
+		}
 	}
-	
+
+	public static void DrawOutline(Rect position, string text, GUIText style, Color outColor, Color inColor){
+		GUIStyle backupStyle = new GUIStyle();
+		backupStyle.font = style.font;
+		backupStyle.fontSize = style.fontSize;
+		backupStyle.normal.textColor = Color.black;
+		//backupStyle.alignment = style.anchor;
+		position.x--;
+		GUI.Label(position, text, backupStyle);
+		position.x +=2;
+		GUI.Label(position, text, backupStyle);
+		position.x--;
+		position.y--;
+		GUI.Label(position, text, backupStyle);
+		position.y +=2;
+		GUI.Label(position, text, backupStyle);
+		position.y--;
+		backupStyle.normal.textColor = Color.white;
+		GUI.Label(position, text, backupStyle);
+		//style = backupStyle;
+	}
+
 	static public GUIManager Instance()
 	{
 		if(instance == null)
