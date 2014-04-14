@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 400002}
   - 23: {fileID: 2300002}
   - 102: {fileID: 10200002}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Tut3
   m_TagString: Untagged
@@ -56,7 +57,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
-  m_Text: Door is closed. Try to open it.
+  m_Text: Remember that a fall from a high point can kill a character.
   m_OffsetZ: 0
   m_CharacterSize: .5
   m_LineSpacing: 1
@@ -70,6 +71,18 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4060086272
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf3e1babdd6f74458d47cdf2e78b507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToHide: 60
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
