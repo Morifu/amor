@@ -82,9 +82,9 @@ public class LoverController : MonoBehaviour {
 			other.transform.parent = transform;
 			other.gameObject.GetComponent<CircleCollider2D>().enabled = false;
 		}
-		else {
-			move = 0;
-		}
+//		else {
+//			move = 0;
+//		}
 
 
 	}

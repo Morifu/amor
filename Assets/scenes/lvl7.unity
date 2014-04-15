@@ -3681,7 +3681,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd03baecae96efb4d89b72d7bfc8480c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowCount: 0
+  controller: {fileID: 0}
+  isInGame: 0
+  GamePaused: 0
 --- !u!114 &371577531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3694,6 +3696,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lvdata: {fileID: 1548524690}
+  time: 0
+  arrowCount: 0
+  bonusCollected: 0
+  starsCount: 0
+  secondsLeft: 0
 --- !u!1 &372923294
 GameObject:
   m_ObjectHideFlags: 0
@@ -6380,6 +6388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loverCount: 0
   nextLevel: lvl8
+  levelNumber: 8
 --- !u!1 &670543009
 GameObject:
   m_ObjectHideFlags: 0
@@ -13755,6 +13764,17 @@ SpriteRenderer:
   m_SortingLayerID: 1859086223
   m_Sprite: {fileID: 21300000, guid: 373bd34a3c1058f48bc6187eb89cabb8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1548524690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1573119251
 GameObject:
   m_ObjectHideFlags: 0
@@ -16212,6 +16232,10 @@ Prefab:
     - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
       propertyPath: nextLevel
       value: lvl8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
+      propertyPath: levelNumber
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}

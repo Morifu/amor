@@ -8,16 +8,12 @@ public class GameManager : MonoBehaviour {
 	[HideInInspector]
 	public GameController controller = null;
 
-	bool gamePaused = false;
+	[HideInInspector]
+	public bool isInGame = false;
+	
+	[HideInInspector]
+	public bool GamePaused = false;
 
-	public bool GamePaused {
-		get {
-			return gamePaused;
-		}
-		set {
-			gamePaused = value;
-		}
-	}
 
 	public void Save()
 	{

@@ -1449,17 +1449,18 @@ Transform:
 --- !u!114 &263996901
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 13da22e69ace9d1478b92de2bb9ff9e3,
+  m_PrefabParentObject: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3,
     type: 2}
   m_PrefabInternal: {fileID: 1886563278}
   m_GameObject: {fileID: 263996897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
+  m_Script: {fileID: 11500000, guid: 206c4d1114ead694e92bb67703273222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   loverCount: 0
-  nextLevel: lvl10
+  nextLevel: lv10
+  levelNumber: 10
 --- !u!1 &270183885
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,6 +2103,17 @@ Prefab:
   m_RootGameObject: {fileID: 1638190977}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!114 &463494325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &481692613
 GameObject:
   m_ObjectHideFlags: 0
@@ -6386,6 +6398,7 @@ GameObject:
   - 61: {fileID: 1257735038}
   - 114: {fileID: 1257735041}
   - 114: {fileID: 1257735040}
+  - 114: {fileID: 1257735042}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Controller
@@ -6455,7 +6468,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd03baecae96efb4d89b72d7bfc8480c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowCount: 0
+  controller: {fileID: 0}
+  isInGame: 0
+  GamePaused: 0
 --- !u!114 &1257735041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6469,6 +6484,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   music: {fileID: 100000, guid: 71b6bbfcd4a447941827b71d163a2de2, type: 2}
+--- !u!114 &1257735042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400008, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e,
+    type: 2}
+  m_PrefabInternal: {fileID: 773236628}
+  m_GameObject: {fileID: 1257735035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvdata: {fileID: 463494325}
+  time: 0
+  arrowCount: 0
+  bonusCollected: 0
+  starsCount: 0
+  secondsLeft: 0
 --- !u!1 &1263366020
 GameObject:
   m_ObjectHideFlags: 0
@@ -7421,6 +7454,14 @@ Prefab:
     - target: {fileID: 11400000, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
       propertyPath: nextLevel
       value: lvl10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
+      propertyPath: nextLevel
+      value: lv10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
+      propertyPath: levelNumber
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
@@ -9445,6 +9486,14 @@ Prefab:
       propertyPath: nextLevel
       value: lvl10
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
+      propertyPath: levelNumber
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
+      propertyPath: nextLevel
+      value: lv10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
   m_RootGameObject: {fileID: 263996897}
@@ -10421,17 +10470,18 @@ GameObject:
 --- !u!114 &2136558303
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 13da22e69ace9d1478b92de2bb9ff9e3,
+  m_PrefabParentObject: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3,
     type: 2}
   m_PrefabInternal: {fileID: 1540835929}
   m_GameObject: {fileID: 2136558302}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
+  m_Script: {fileID: 11500000, guid: 206c4d1114ead694e92bb67703273222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   loverCount: 0
-  nextLevel: lvl10
+  nextLevel: lv10
+  levelNumber: 10
 --- !u!61 &2136558304
 BoxCollider2D:
   m_ObjectHideFlags: 0
