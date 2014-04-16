@@ -1132,7 +1132,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &187791894
 Transform:
   m_ObjectHideFlags: 0
@@ -2321,11 +2321,15 @@ Prefab:
     - target: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: levers.Array.data[0]
       value: 
-      objectReference: {fileID: 1771775293}
+      objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: destination
       value: 
       objectReference: {fileID: 1439870600}
+    - target: {fileID: 100002, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
   m_RootGameObject: {fileID: 1060449260}
@@ -2818,17 +2822,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1548438064}
---- !u!114 &577597104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &579539691
 GameObject:
   m_ObjectHideFlags: 0
@@ -5683,7 +5676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1046484144
 Transform:
   m_ObjectHideFlags: 0
@@ -5778,7 +5771,7 @@ MonoBehaviour:
   opened: 0
   leverProperStates: 01000000
   levers:
-  - {fileID: 1771775293}
+  - {fileID: 0}
   destination: {fileID: 1439870600}
 --- !u!68 &1060449263
 EdgeCollider2D:
@@ -6009,7 +6002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvdata: {fileID: 577597104}
+  lvdata: {fileID: 1624986995}
   time: 0
   arrowCount: 0
   bonusCollected: 0
@@ -8034,7 +8027,7 @@ MonoBehaviour:
   opened: 0
   leverProperStates: 01000000
   levers:
-  - {fileID: 1771775293}
+  - {fileID: 0}
   destination: {fileID: 1060449260}
 --- !u!68 &1439870603
 EdgeCollider2D:
@@ -8872,7 +8865,15 @@ Prefab:
     - target: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: levers.Array.data[0]
       value: 
-      objectReference: {fileID: 1771775293}
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
   m_RootGameObject: {fileID: 1439870600}
@@ -9227,6 +9228,17 @@ SpriteRenderer:
   m_SortingLayerID: 1859086223
   m_Sprite: {fileID: 21300000, guid: 373bd34a3c1058f48bc6187eb89cabb8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1624986995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1648124656
 GameObject:
   m_ObjectHideFlags: 0
@@ -10548,11 +10560,15 @@ Prefab:
     - target: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: levers.Array.data[0]
       value: 
-      objectReference: {fileID: 1077144741}
+      objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: destination
       value: 
       objectReference: {fileID: 1548438063}
+    - target: {fileID: 100002, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
   m_RootGameObject: {fileID: 1930844537}
@@ -10979,7 +10995,7 @@ MonoBehaviour:
   opened: 0
   leverProperStates: 01000000
   levers:
-  - {fileID: 1077144741}
+  - {fileID: 0}
   destination: {fileID: 1548438063}
 --- !u!68 &1930844540
 EdgeCollider2D:
@@ -11373,7 +11389,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2012303760
 Transform:
   m_ObjectHideFlags: 0

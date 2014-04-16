@@ -446,11 +446,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7.81333923
+      value: 8.39849854
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.48692513
+      value: .470344663
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: m_LocalPosition.z
@@ -485,9 +485,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 51544983}
-  m_Layer: 0
+  - 114: {fileID: 51544985}
+  - 68: {fileID: 51544984}
+  m_Layer: 8
   m_Name: ClosedGate
-  m_TagString: Untagged
+  m_TagString: Gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -499,13 +501,43 @@ Transform:
   m_PrefabInternal: {fileID: 632090163}
   m_GameObject: {fileID: 51544982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.91131592, y: -6.11581993, z: 0}
+  m_LocalPosition: {x: 7.4964757, y: -7.21540928, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 1196633253}
   - {fileID: 165813943}
   - {fileID: 1952695081}
   m_Father: {fileID: 0}
+--- !u!68 &51544984
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6800002, guid: 121217ec193d59648ab6da343ec82abf,
+    type: 2}
+  m_PrefabInternal: {fileID: 632090163}
+  m_GameObject: {fileID: 51544982}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: -.302247047, y: -.233798265}
+  - {x: -.295841694, y: 1.18562412}
+--- !u!114 &51544985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf,
+    type: 2}
+  m_PrefabInternal: {fileID: 632090163}
+  m_GameObject: {fileID: 51544982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52adbd72431a7554da47dc09999c7ef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  leverProperStates: 01000000
+  levers:
+  - {fileID: 0}
+  destination: {fileID: 518978846}
 --- !u!1 &59072429
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,7 +941,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 99125247}
   - 212: {fileID: 99125246}
-  m_Layer: 0
+  - 68: {fileID: 99125248}
+  m_Layer: 8
   m_Name: kraty_brama
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -947,10 +980,23 @@ Transform:
   m_PrefabInternal: {fileID: 556891735}
   m_GameObject: {fileID: 99125245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.300000012, z: .0230096988}
+  m_LocalPosition: {x: .579999983, y: .689999998, z: .0230096988}
   m_LocalScale: {x: -.694910824, y: .694910884, z: 1}
   m_Children: []
   m_Father: {fileID: 2093889450}
+--- !u!68 &99125248
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6800000, guid: 121217ec193d59648ab6da343ec82abf,
+    type: 2}
+  m_PrefabInternal: {fileID: 556891735}
+  m_GameObject: {fileID: 99125245}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: -.266300023, y: .936467409}
+  - {x: -.249710828, y: -1.26136327}
 --- !u!1 &99733523
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,7 +1453,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 165813943}
   - 212: {fileID: 165813942}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: brama1-infront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1445,7 +1491,7 @@ Transform:
   m_PrefabInternal: {fileID: 632090163}
   m_GameObject: {fileID: 165813941}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00852489471, y: -.291087151, z: 0}
+  m_LocalPosition: {x: .579999983, y: .689999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 51544983}
@@ -1880,7 +1926,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 257451391}
   - 212: {fileID: 257451390}
-  m_Layer: 0
+  - 68: {fileID: 257451392}
+  m_Layer: 8
   m_Name: kraty_brama
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1918,10 +1965,23 @@ Transform:
   m_PrefabInternal: {fileID: 1027318682}
   m_GameObject: {fileID: 257451389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.300000012, z: .0230096988}
+  m_LocalPosition: {x: .579999983, y: .689999998, z: .0230096988}
   m_LocalScale: {x: -.694910824, y: .694910884, z: 1}
   m_Children: []
   m_Father: {fileID: 518978847}
+--- !u!68 &257451392
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6800000, guid: 121217ec193d59648ab6da343ec82abf,
+    type: 2}
+  m_PrefabInternal: {fileID: 1027318682}
+  m_GameObject: {fileID: 257451389}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: -.266300023, y: .936467409}
+  - {x: -.249710828, y: -1.26136327}
 --- !u!1 &260953696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1994,9 +2054,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 261027991}
-  m_Layer: 0
+  - 114: {fileID: 261027993}
+  - 68: {fileID: 261027992}
+  m_Layer: 8
   m_Name: ClosedGate
-  m_TagString: Untagged
+  m_TagString: Gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2008,13 +2070,43 @@ Transform:
   m_PrefabInternal: {fileID: 39904515}
   m_GameObject: {fileID: 261027990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.81333923, y: 1.48692513, z: 0}
+  m_LocalPosition: {x: 8.39849854, y: .470344663, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 972591279}
   - {fileID: 968157649}
   - {fileID: 494267513}
   m_Father: {fileID: 0}
+--- !u!68 &261027992
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6800002, guid: 121217ec193d59648ab6da343ec82abf,
+    type: 2}
+  m_PrefabInternal: {fileID: 39904515}
+  m_GameObject: {fileID: 261027990}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: -.302247047, y: -.233798265}
+  - {x: -.295841694, y: 1.18562412}
+--- !u!114 &261027993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf,
+    type: 2}
+  m_PrefabInternal: {fileID: 39904515}
+  m_GameObject: {fileID: 261027990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52adbd72431a7554da47dc09999c7ef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  leverProperStates: 01000000
+  levers:
+  - {fileID: 0}
+  destination: {fileID: 0}
 --- !u!1 &273072040
 GameObject:
   m_ObjectHideFlags: 0
@@ -2254,7 +2346,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 297221765}
   - 212: {fileID: 297221766}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: brama1-infront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2268,7 +2360,7 @@ Transform:
   m_PrefabInternal: {fileID: 556891735}
   m_GameObject: {fileID: 297221764}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00852489471, y: -.291087151, z: 0}
+  m_LocalPosition: {x: .579999983, y: .689999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2093889450}
@@ -3659,7 +3751,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 494267513}
   - 212: {fileID: 494267512}
-  m_Layer: 0
+  - 68: {fileID: 494267514}
+  m_Layer: 8
   m_Name: kraty_brama
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3697,10 +3790,23 @@ Transform:
   m_PrefabInternal: {fileID: 39904515}
   m_GameObject: {fileID: 494267511}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.300000012, z: .0230096988}
+  m_LocalPosition: {x: .579999983, y: .689999998, z: .0230096988}
   m_LocalScale: {x: -.694910824, y: .694910884, z: 1}
   m_Children: []
   m_Father: {fileID: 261027991}
+--- !u!68 &494267514
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6800000, guid: 121217ec193d59648ab6da343ec82abf,
+    type: 2}
+  m_PrefabInternal: {fileID: 39904515}
+  m_GameObject: {fileID: 494267511}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: -.266300023, y: .936467409}
+  - {x: -.249710828, y: -1.26136327}
 --- !u!1001 &496667648
 Prefab:
   m_ObjectHideFlags: 0
@@ -3896,7 +4002,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 513716662}
   - 212: {fileID: 513716663}
-  m_Layer: 0
+  - 68: {fileID: 513716664}
+  m_Layer: 8
   m_Name: kraty_brama
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3910,7 +4017,7 @@ Transform:
   m_PrefabInternal: {fileID: 1527916053}
   m_GameObject: {fileID: 513716661}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.300000012, z: .0230096988}
+  m_LocalPosition: {x: .579999983, y: .689999998, z: .0230096988}
   m_LocalScale: {x: -.694910824, y: .694910884, z: 1}
   m_Children: []
   m_Father: {fileID: 2058311834}
@@ -3938,6 +4045,19 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: 138f2fa1061a759418c7934e8a64e33d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!68 &513716664
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6800000, guid: 121217ec193d59648ab6da343ec82abf,
+    type: 2}
+  m_PrefabInternal: {fileID: 1527916053}
+  m_GameObject: {fileID: 513716661}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: -.266300023, y: .936467409}
+  - {x: -.249710828, y: -1.26136327}
 --- !u!1 &518978846
 GameObject:
   m_ObjectHideFlags: 0
@@ -3946,9 +4066,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 518978847}
-  m_Layer: 0
+  - 114: {fileID: 518978849}
+  - 68: {fileID: 518978848}
+  m_Layer: 8
   m_Name: ClosedGate
-  m_TagString: Untagged
+  m_TagString: Gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3960,13 +4082,43 @@ Transform:
   m_PrefabInternal: {fileID: 1027318682}
   m_GameObject: {fileID: 518978846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.926651, y: -2.94585228, z: 0}
+  m_LocalPosition: {x: 8.98822975, y: -3.92922974, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 554971758}
   - {fileID: 1557344921}
   - {fileID: 257451391}
   m_Father: {fileID: 0}
+--- !u!68 &518978848
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6800002, guid: 121217ec193d59648ab6da343ec82abf,
+    type: 2}
+  m_PrefabInternal: {fileID: 1027318682}
+  m_GameObject: {fileID: 518978846}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: -.302247047, y: -.233798265}
+  - {x: -.295841694, y: 1.18562412}
+--- !u!114 &518978849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf,
+    type: 2}
+  m_PrefabInternal: {fileID: 1027318682}
+  m_GameObject: {fileID: 518978846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52adbd72431a7554da47dc09999c7ef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  leverProperStates: 01000000
+  levers:
+  - {fileID: 0}
+  destination: {fileID: 51544982}
 --- !u!1 &526199863
 GameObject:
   m_ObjectHideFlags: 0
@@ -4172,7 +4324,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 554971758}
   - 212: {fileID: 554971759}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: brama
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4186,7 +4338,7 @@ Transform:
   m_PrefabInternal: {fileID: 1027318682}
   m_GameObject: {fileID: 554971757}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00281954557, y: -.293698668, z: .0230096988}
+  m_LocalPosition: {x: .579999983, y: .689999998, z: .0230096988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 518978847}
@@ -4223,11 +4375,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.45385742
+      value: -10.3922787
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -6.1415844
+      value: -7.25777626
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4253,6 +4405,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
+      propertyPath: destination
+      value: 
+      objectReference: {fileID: 2058311833}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
   m_RootGameObject: {fileID: 2093889449}
@@ -4667,11 +4823,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6.91131592
+      value: 7.4964757
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -6.11581993
+      value: -7.21540928
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4693,6 +4849,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
+      propertyPath: destination
+      value: 
+      objectReference: {fileID: 518978846}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
   m_RootGameObject: {fileID: 51544982}
@@ -4926,7 +5086,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 704876728}
   - 212: {fileID: 704876729}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: brama
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4940,7 +5100,7 @@ Transform:
   m_PrefabInternal: {fileID: 1527916053}
   m_GameObject: {fileID: 704876727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00281954557, y: -.293698668, z: .0230096988}
+  m_LocalPosition: {x: .579999983, y: .689999998, z: .0230096988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2058311834}
@@ -5664,7 +5824,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 778431978}
   - 212: {fileID: 778431979}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: brama
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5678,7 +5838,7 @@ Transform:
   m_PrefabInternal: {fileID: 556891735}
   m_GameObject: {fileID: 778431977}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00281954557, y: -.293698668, z: .0230096988}
+  m_LocalPosition: {x: .579999983, y: .689999998, z: .0230096988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2093889450}
@@ -6311,7 +6471,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 968157649}
   - 212: {fileID: 968157650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: brama1-infront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6325,7 +6485,7 @@ Transform:
   m_PrefabInternal: {fileID: 39904515}
   m_GameObject: {fileID: 968157648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00852489471, y: -.291087151, z: 0}
+  m_LocalPosition: {x: .579999983, y: .689999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 261027991}
@@ -6413,7 +6573,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 972591279}
   - 212: {fileID: 972591280}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: brama
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6427,7 +6587,7 @@ Transform:
   m_PrefabInternal: {fileID: 39904515}
   m_GameObject: {fileID: 972591278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00281954557, y: -.293698668, z: .0230096988}
+  m_LocalPosition: {x: .579999983, y: .689999998, z: .0230096988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 261027991}
@@ -6645,11 +6805,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 9.926651
+      value: 8.98822975
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.94585228
+      value: -3.92922974
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6675,6 +6835,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
+      propertyPath: destination
+      value: 
+      objectReference: {fileID: 51544982}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
   m_RootGameObject: {fileID: 518978846}
@@ -7364,7 +7528,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1196633253}
   - 212: {fileID: 1196633254}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: brama
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7378,7 +7542,7 @@ Transform:
   m_PrefabInternal: {fileID: 632090163}
   m_GameObject: {fileID: 1196633252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00281954557, y: -.293698668, z: .0230096988}
+  m_LocalPosition: {x: .579999983, y: .689999998, z: .0230096988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 51544983}
@@ -7597,6 +7761,17 @@ Prefab:
   m_RootGameObject: {fileID: 225119954}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!114 &1293960172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1303857945
 Prefab:
   m_ObjectHideFlags: 0
@@ -7862,17 +8037,18 @@ GameObject:
 --- !u!114 &1338071498
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 13da22e69ace9d1478b92de2bb9ff9e3,
+  m_PrefabParentObject: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3,
     type: 2}
   m_PrefabInternal: {fileID: 1390725519}
   m_GameObject: {fileID: 1338071497}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
+  m_Script: {fileID: 11500000, guid: 206c4d1114ead694e92bb67703273222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   loverCount: 0
-  nextLevel: lv2
+  nextLevel: 
+  levelNumber: 0
 --- !u!61 &1338071499
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8889,11 +9065,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -10.433197
+      value: -11.3716183
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.43538094
+      value: .485207677
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8919,6 +9095,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
+      propertyPath: destination
+      value: 
+      objectReference: {fileID: 2093889449}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
   m_RootGameObject: {fileID: 2058311833}
@@ -9064,7 +9244,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1557344921}
   - 212: {fileID: 1557344922}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: brama1-infront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9078,7 +9258,7 @@ Transform:
   m_PrefabInternal: {fileID: 1027318682}
   m_GameObject: {fileID: 1557344920}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00852489471, y: -.291087151, z: 0}
+  m_LocalPosition: {x: .579999983, y: .689999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 518978847}
@@ -9183,6 +9363,7 @@ GameObject:
   - 61: {fileID: 1583845026}
   - 114: {fileID: 1583845029}
   - 114: {fileID: 1583845028}
+  - 114: {fileID: 1583845030}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Controller
@@ -9252,7 +9433,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd03baecae96efb4d89b72d7bfc8480c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowCount: 0
+  controller: {fileID: 0}
+  isInGame: 0
+  GamePaused: 0
 --- !u!114 &1583845029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9266,6 +9449,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   music: {fileID: 100000, guid: 71b6bbfcd4a447941827b71d163a2de2, type: 2}
+--- !u!114 &1583845030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400008, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e,
+    type: 2}
+  m_PrefabInternal: {fileID: 340565407}
+  m_GameObject: {fileID: 1583845023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvdata: {fileID: 1293960172}
+  time: 0
+  arrowCount: 0
+  bonusCollected: 0
+  starsCount: 0
+  secondsLeft: 0
 --- !u!1 &1597412186
 GameObject:
   m_ObjectHideFlags: 0
@@ -10015,17 +10216,18 @@ GameObject:
 --- !u!114 &1768836777
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 13da22e69ace9d1478b92de2bb9ff9e3,
+  m_PrefabParentObject: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3,
     type: 2}
   m_PrefabInternal: {fileID: 428262722}
   m_GameObject: {fileID: 1768836776}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
+  m_Script: {fileID: 11500000, guid: 206c4d1114ead694e92bb67703273222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   loverCount: 0
-  nextLevel: lv2
+  nextLevel: 
+  levelNumber: 0
 --- !u!61 &1768836778
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10383,7 +10585,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1826924643}
   - 212: {fileID: 1826924644}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: brama1-infront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10397,7 +10599,7 @@ Transform:
   m_PrefabInternal: {fileID: 1527916053}
   m_GameObject: {fileID: 1826924642}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00852489471, y: -.291087151, z: 0}
+  m_LocalPosition: {x: .579999983, y: .689999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2058311834}
@@ -11021,7 +11223,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1952695081}
   - 212: {fileID: 1952695082}
-  m_Layer: 0
+  - 68: {fileID: 1952695083}
+  m_Layer: 8
   m_Name: kraty_brama
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11035,7 +11238,7 @@ Transform:
   m_PrefabInternal: {fileID: 632090163}
   m_GameObject: {fileID: 1952695080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.300000012, z: .0230096988}
+  m_LocalPosition: {x: .579999983, y: .689999998, z: .0230096988}
   m_LocalScale: {x: -.694910824, y: .694910884, z: 1}
   m_Children: []
   m_Father: {fileID: 51544983}
@@ -11063,6 +11266,19 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: 138f2fa1061a759418c7934e8a64e33d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!68 &1952695083
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6800000, guid: 121217ec193d59648ab6da343ec82abf,
+    type: 2}
+  m_PrefabInternal: {fileID: 632090163}
+  m_GameObject: {fileID: 1952695080}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: -.266300023, y: .936467409}
+  - {x: -.249710828, y: -1.26136327}
 --- !u!1 &1957934365
 GameObject:
   m_ObjectHideFlags: 0
@@ -11648,9 +11864,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2058311834}
-  m_Layer: 0
+  - 114: {fileID: 2058311836}
+  - 68: {fileID: 2058311835}
+  m_Layer: 8
   m_Name: ClosedGate
-  m_TagString: Untagged
+  m_TagString: Gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11662,13 +11880,43 @@ Transform:
   m_PrefabInternal: {fileID: 1527916053}
   m_GameObject: {fileID: 2058311833}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.433197, y: 1.43538094, z: 0}
+  m_LocalPosition: {x: -11.3716183, y: .485207677, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 704876728}
   - {fileID: 1826924643}
   - {fileID: 513716662}
   m_Father: {fileID: 0}
+--- !u!68 &2058311835
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6800002, guid: 121217ec193d59648ab6da343ec82abf,
+    type: 2}
+  m_PrefabInternal: {fileID: 1527916053}
+  m_GameObject: {fileID: 2058311833}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: -.302247047, y: -.233798265}
+  - {x: -.295841694, y: 1.18562412}
+--- !u!114 &2058311836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf,
+    type: 2}
+  m_PrefabInternal: {fileID: 1527916053}
+  m_GameObject: {fileID: 2058311833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52adbd72431a7554da47dc09999c7ef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  leverProperStates: 01000000
+  levers:
+  - {fileID: 0}
+  destination: {fileID: 2093889449}
 --- !u!1 &2067454606
 GameObject:
   m_ObjectHideFlags: 0
@@ -11779,9 +12027,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2093889450}
-  m_Layer: 0
+  - 114: {fileID: 2093889452}
+  - 68: {fileID: 2093889451}
+  m_Layer: 8
   m_Name: ClosedGate
-  m_TagString: Untagged
+  m_TagString: Gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11793,13 +12043,43 @@ Transform:
   m_PrefabInternal: {fileID: 556891735}
   m_GameObject: {fileID: 2093889449}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.45385742, y: -6.1415844, z: 0}
+  m_LocalPosition: {x: -10.3922787, y: -7.25777626, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 778431978}
   - {fileID: 297221765}
   - {fileID: 99125247}
   m_Father: {fileID: 0}
+--- !u!68 &2093889451
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6800002, guid: 121217ec193d59648ab6da343ec82abf,
+    type: 2}
+  m_PrefabInternal: {fileID: 556891735}
+  m_GameObject: {fileID: 2093889449}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Points:
+  - {x: -.302247047, y: -.233798265}
+  - {x: -.295841694, y: 1.18562412}
+--- !u!114 &2093889452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf,
+    type: 2}
+  m_PrefabInternal: {fileID: 556891735}
+  m_GameObject: {fileID: 2093889449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52adbd72431a7554da47dc09999c7ef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  leverProperStates: 01000000
+  levers:
+  - {fileID: 0}
+  destination: {fileID: 2058311833}
 --- !u!1001 &2103945796
 Prefab:
   m_ObjectHideFlags: 0
