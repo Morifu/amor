@@ -2,20 +2,32 @@
 using System.Collections;
 
 public class HideTutText : MonoBehaviour {
-	public int timeToHide;
-	int timeLeft;
+	public int clickToHide=3;
+	bool travelNow = false;
+	int clickLeft;
 	int fpsToHide;
 	// Use this for initialization
 	void Start () {
-		timeLeft=0;
-		fpsToHide=timeToHide*60;
+		clickLeft=0;
+		//fpsToHide=timeToHide*60;
 
 	}
 	
-	// Update is called once per frame
+
 	void Update () {
-		timeLeft++;
-	if (fpsToHide < timeLeft)
-			Destroy (gameObject);
+		if (travelNow == true) {
+			clickLeft++;
+			travelNow = false;
+			if (clickToHide <= clickLeft)
+				Destroy (gameObject);
+
+
+		}
+		
+	}
+	
+	void OnMouseDown() {
+		travelNow=true;
+		
 	}
 }
