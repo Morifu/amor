@@ -1105,6 +1105,17 @@ Transform:
   - {fileID: 1998750560}
   - {fileID: 2045360103}
   m_Father: {fileID: 1779999809}
+--- !u!114 &367441285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &371770035
 GameObject:
   m_ObjectHideFlags: 0
@@ -2093,7 +2104,7 @@ Animator:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100002, guid: 0ea517c19cc9b7245ac62e9631591b19, type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 612930040}
@@ -2110,10 +2121,10 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400002, guid: 0ea517c19cc9b7245ac62e9631591b19, type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 612930039}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -21.3542728, z: 0}
+  m_LocalPosition: {x: 0, y: -16.3809948, z: 0}
   m_LocalScale: {x: 1.64242613, y: 1.64242613, z: 1.64242613}
   m_Children: []
   m_Father: {fileID: 733820858}
@@ -2123,7 +2134,7 @@ TextMesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 10200002, guid: 0ea517c19cc9b7245ac62e9631591b19,
     type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 612930039}
   m_Text: "Good luck!\r\n"
   m_OffsetZ: 0
@@ -2144,7 +2155,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300002, guid: 0ea517c19cc9b7245ac62e9631591b19,
     type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 612930039}
   m_Enabled: 1
   m_CastShadows: 1
@@ -3229,7 +3240,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100012, guid: 0ea517c19cc9b7245ac62e9631591b19, type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 733820858}
@@ -3249,7 +3260,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400012, guid: 0ea517c19cc9b7245ac62e9631591b19, type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 733820857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.5091639, y: 9.44988918, z: -.0383300781}
@@ -3258,53 +3269,52 @@ Transform:
   - {fileID: 612930040}
   - {fileID: 1800925651}
   - {fileID: 1663894065}
-  - {fileID: 1625334675}
   m_Father: {fileID: 0}
 --- !u!61 &733820859
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6100000, guid: 0ea517c19cc9b7245ac62e9631591b19,
     type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 733820857}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 26.5156746, y: 9.67141056}
-  m_Center: {x: 13.2578449, y: -24.1081352}
+  m_Size: {x: 26.5156746, y: 9.19999981}
+  m_Center: {x: 13.1999998, y: -20.8899994}
 --- !u!61 &733820860
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6100002, guid: 0ea517c19cc9b7245ac62e9631591b19,
     type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 733820857}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 146.696899, y: 16.3984127}
-  m_Center: {x: 73.3484497, y: -13.5314732}
+  m_Size: {x: 67.7600021, y: 16.3984127}
+  m_Center: {x: 98.8000031, y: -13.5314732}
 --- !u!61 &733820861
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6100004, guid: 0ea517c19cc9b7245ac62e9631591b19,
     type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 733820857}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 60.1500092, y: 17.4325466}
-  m_Center: {x: 30.0750046, y: -7.28385067}
+  m_Size: {x: 65.5999985, y: 18.2800007}
+  m_Center: {x: 32.9000015, y: -7.28385067}
 --- !u!102 &733820862
 TextMesh:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 10200012, guid: 0ea517c19cc9b7245ac62e9631591b19,
     type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 733820857}
-  m_Text: "The tutorial is over. There are no more tips.\r\n"
+  m_Text: Some objects were added only to deceive you.
   m_OffsetZ: 0
   m_CharacterSize: .5
   m_LineSpacing: 1
@@ -3323,7 +3333,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300012, guid: 0ea517c19cc9b7245ac62e9631591b19,
     type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 733820857}
   m_Enabled: 1
   m_CastShadows: 1
@@ -3716,17 +3726,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1746453825}
---- !u!114 &819060107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &840239292
 GameObject:
   m_ObjectHideFlags: 0
@@ -4243,46 +4242,6 @@ Transform:
   m_Children:
   - {fileID: 1423550898}
   m_Father: {fileID: 0}
---- !u!1001 &1006627438
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400012, guid: 0ea517c19cc9b7245ac62e9631591b19, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -12.5091639
-      objectReference: {fileID: 0}
-    - target: {fileID: 400012, guid: 0ea517c19cc9b7245ac62e9631591b19, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 9.44988918
-      objectReference: {fileID: 0}
-    - target: {fileID: 400012, guid: 0ea517c19cc9b7245ac62e9631591b19, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -.0383300781
-      objectReference: {fileID: 0}
-    - target: {fileID: 400012, guid: 0ea517c19cc9b7245ac62e9631591b19, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400012, guid: 0ea517c19cc9b7245ac62e9631591b19, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400012, guid: 0ea517c19cc9b7245ac62e9631591b19, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400012, guid: 0ea517c19cc9b7245ac62e9631591b19, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 0ea517c19cc9b7245ac62e9631591b19, type: 2}
-  m_RootGameObject: {fileID: 733820857}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &1016188365
 GameObject:
   m_ObjectHideFlags: 0
@@ -4448,7 +4407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvdata: {fileID: 819060107}
+  lvdata: {fileID: 367441285}
   time: 0
   arrowCount: 0
   bonusCollected: 0
@@ -6715,79 +6674,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
---- !u!1 &1625334674
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100004, guid: 0ea517c19cc9b7245ac62e9631591b19, type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1625334675}
-  - 23: {fileID: 1625334677}
-  - 102: {fileID: 1625334676}
-  m_Layer: 0
-  m_Name: Tut4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1625334675
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400004, guid: 0ea517c19cc9b7245ac62e9631591b19, type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
-  m_GameObject: {fileID: 1625334674}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -16.5573616, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 733820858}
---- !u!102 &1625334676
-TextMesh:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 10200004, guid: 0ea517c19cc9b7245ac62e9631591b19,
-    type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
-  m_GameObject: {fileID: 1625334674}
-  m_Text: Furthermore, there are some places without any exits. So don't be afraid
-    to restart the level and try again.
-  m_OffsetZ: 0
-  m_CharacterSize: .5
-  m_LineSpacing: 1
-  m_Anchor: 0
-  m_Alignment: 1
-  m_TabSize: 4
-  m_FontSize: 70
-  m_FontStyle: 0
-  m_RichText: 1
-  m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
-  m_Color:
-    serializedVersion: 2
-    rgba: 4069487133
---- !u!23 &1625334677
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300004, guid: 0ea517c19cc9b7245ac62e9631591b19,
-    type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
-  m_GameObject: {fileID: 1625334674}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 2100000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
 --- !u!1 &1632165540
 GameObject:
   m_ObjectHideFlags: 0
@@ -6834,7 +6720,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1632165540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.40047479, y: 6.66122913, z: 0}
+  m_LocalPosition: {x: 2.40047479, y: 6.69030952, z: 0}
   m_LocalScale: {x: 44.9039001, y: 16.4341774, z: 16.4341774}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6944,7 +6830,7 @@ SpriteRenderer:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100010, guid: 0ea517c19cc9b7245ac62e9631591b19, type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1663894065}
@@ -6963,10 +6849,9 @@ TextMesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 10200010, guid: 0ea517c19cc9b7245ac62e9631591b19,
     type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1663894062}
-  m_Text: "From now one you must try to figure out how to finish the level on your
-    own.\r\n"
+  m_Text: 'There are places you might get stuck. '
   m_OffsetZ: 0
   m_CharacterSize: .5
   m_LineSpacing: 1
@@ -6985,7 +6870,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300010, guid: 0ea517c19cc9b7245ac62e9631591b19,
     type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1663894062}
   m_Enabled: 1
   m_CastShadows: 1
@@ -7006,7 +6891,7 @@ Renderer:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400010, guid: 0ea517c19cc9b7245ac62e9631591b19, type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1663894062}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -5.47358131, z: 0}
@@ -7926,7 +7811,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100008, guid: 0ea517c19cc9b7245ac62e9631591b19, type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
+  m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1800925651}
@@ -7943,7 +7828,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400008, guid: 0ea517c19cc9b7245ac62e9631591b19, type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1800925650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -10.9471731, z: 0}
@@ -7956,10 +7841,9 @@ TextMesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 10200008, guid: 0ea517c19cc9b7245ac62e9631591b19,
     type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1800925650}
-  m_Text: 'You must be alert. This is a really difficult game. Some objects were added
-    only to deceive you.     '
+  m_Text: Don't be afraid to restart level and try again.
   m_OffsetZ: 0
   m_CharacterSize: .5
   m_LineSpacing: 1
@@ -7978,7 +7862,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300008, guid: 0ea517c19cc9b7245ac62e9631591b19,
     type: 2}
-  m_PrefabInternal: {fileID: 1006627438}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1800925650}
   m_Enabled: 1
   m_CastShadows: 1

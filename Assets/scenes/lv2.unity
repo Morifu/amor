@@ -412,6 +412,7 @@ GameObject:
   - 4: {fileID: 223929936}
   - 23: {fileID: 223929935}
   - 102: {fileID: 223929934}
+  - 61: {fileID: 223929939}
   - 114: {fileID: 223929937}
   - 61: {fileID: 223929938}
   m_Layer: 0
@@ -429,7 +430,7 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 1256451001}
   m_GameObject: {fileID: 223929933}
-  m_Text: Note that some objects are interactive. Use them.
+  m_Text: Note that some objects are INTERACTIVE. Use them.
   m_OffsetZ: 0
   m_CharacterSize: .5
   m_LineSpacing: 1
@@ -439,10 +440,10 @@ TextMesh:
   m_FontSize: 70
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: 864d8204d1e1389479f9c38eb5a5566e, type: 3}
+  m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4060086272
+    rgba: 4068828940
 --- !u!23 &223929935
 Renderer:
   m_ObjectHideFlags: 0
@@ -456,7 +457,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 864d8204d1e1389479f9c38eb5a5566e, type: 3}
+  - {fileID: 2100000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -499,6 +500,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 75.5, y: 4.09850025}
   m_Center: {x: 37.75, y: -2.04925013}
+--- !u!61 &223929939
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100000, guid: 7b9196cfa80b95143ba4bb1f7b9fd29f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1256451001}
+  m_GameObject: {fileID: 223929933}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!1 &233610013
 GameObject:
   m_ObjectHideFlags: 0
@@ -2519,7 +2532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvdata: {fileID: 2086236657}
+  lvdata: {fileID: 2019352162}
   time: 0
   arrowCount: 0
   bonusCollected: 0
@@ -2835,6 +2848,10 @@ Prefab:
     - target: {fileID: 400002, guid: 7b9196cfa80b95143ba4bb1f7b9fd29f, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10200002, guid: 7b9196cfa80b95143ba4bb1f7b9fd29f, type: 2}
+      propertyPath: m_Text
+      value: Note that some objects are INTERACTIVE. Use them.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b9196cfa80b95143ba4bb1f7b9fd29f, type: 2}
@@ -4161,7 +4178,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1739329424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .354392529, y: 2.33244991, z: 0}
+  m_LocalPosition: {x: .377206981, y: 2.33244991, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4994,6 +5011,17 @@ SpriteRenderer:
   m_SortingLayerID: 3940858523
   m_Sprite: {fileID: 21300000, guid: e32de7d88443e784f9d3ffce48ab292d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &2019352162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2064840361
 Prefab:
   m_ObjectHideFlags: 0
@@ -5406,17 +5434,6 @@ MonoBehaviour:
   pauseBG: {fileID: 2800000, guid: 1bcfc92da58814d43978f30dc27dbf6a, type: 3}
   arrowCountTXT: {fileID: 127627297}
   timeLeftTXT: {fileID: 1627278855}
---- !u!114 &2086236657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2127744831
 GameObject:
   m_ObjectHideFlags: 0
