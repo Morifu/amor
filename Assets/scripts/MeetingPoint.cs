@@ -6,6 +6,8 @@ public class MeetingPoint : MonoBehaviour {
 	public int loverCount = 0;
 	public string nextLevel;
 	public int levelNumber;
+	public bool completesLevel = true;
+	public GameObject[] lovers;
 
 	void Start()
 	{
@@ -14,11 +16,19 @@ public class MeetingPoint : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other) 
 	{
-		if (other.gameObject.tag == "Lover")
+//		if (other.gameObject.tag == "Lover")
+//			loverCount++;
+//		
+		if(lovers.Length > 0)
+		if (other.gameObject.Equals (lovers [0]) 
+		    || other.gameObject.Equals (lovers [1]))
+		{
+			Debug.Log("IT WORKS");
+			other.gameObject.GetComponent<LoverController>().LockLover();
 			loverCount++;
-		
-		Debug.Log ("LoverCount: " + loverCount);
-		if (loverCount == 2)
+		}
+
+		if (loverCount == 2 && completesLevel)
 		{
 			GameManager.instance.controller.LevelCompleted();
 			GameManager.instance.controller.setNextLevel(levelNumber);

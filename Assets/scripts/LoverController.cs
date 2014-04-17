@@ -2,16 +2,21 @@
 using System.Collections;
 
 public class LoverController : MonoBehaviour {
+
+	// public variables
 	public float maxSpeed = 1f;
-	bool facingRight = true;
 	public float move;
 	public int steps = 5;
-	int stepsCount = 0;
 	public float deathVelocity = 5.0f;
+
+	// private variables
+	int stepsCount = 0;
 	bool died = false;
 	bool arrived = false;
+	bool facingRight = true;
 
 	Animator anim;
+	BoxCollider2D loverCollider;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +27,8 @@ public class LoverController : MonoBehaviour {
 			facingRight = false;
 		else
 			facingRight = true;
+
+		loverCollider = GetComponent<BoxCollider2D> ();
 	}
 	
 	// Update is called once per frame
@@ -89,14 +96,24 @@ public class LoverController : MonoBehaviour {
 
 	}
 
-	void OnTriggerEnter2D(Collider2D other) 
+	public void LockLover()
 	{
-		if (other.gameObject.tag == "MeetingPoint") {
-			arrived = true;
-			move = 0;
-			rigidbody2D.isKinematic = true;
-		}
+		arrived = true;
+		move = 0;
+		rigidbody2D.isKinematic = true;
+		loverCollider.enabled = false;
+
 	}
+
+//	void OnTriggerEnter2D(Collider2D other) 
+//	{
+//		if (other.gameObject.tag == "MeetingPoint") {
+//			arrived = true;
+//			move = 0;
+//			rigidbody2D.isKinematic = true;
+//
+//		}
+//	}
 
 	void GoLeft()
 	{

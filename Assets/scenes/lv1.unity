@@ -2299,6 +2299,10 @@ MonoBehaviour:
   loverCount: 0
   nextLevel: lv2
   levelNumber: 2
+  completesLevel: 1
+  lovers:
+  - {fileID: 1536165789}
+  - {fileID: 1161866493}
 --- !u!61 &1016829152
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3233,6 +3237,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 4160feaa6c7f73c478bf6d74c8a4b928, type: 2}
       propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100000, guid: 4160feaa6c7f73c478bf6d74c8a4b928, type: 2}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4987,6 +4995,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
+      propertyPath: lovers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
       propertyPath: m_LocalPosition.x
       value: .0120580196
@@ -5022,6 +5034,18 @@ Prefab:
     - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
       propertyPath: levelNumber
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
+      propertyPath: lovers.Array.data[0]
+      value: 
+      objectReference: {fileID: 1536165789}
+    - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
+      propertyPath: lovers.Array.data[1]
+      value: 
+      objectReference: {fileID: 1161866493}
+    - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
+      propertyPath: mainPoint
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
