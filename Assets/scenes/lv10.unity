@@ -1461,6 +1461,8 @@ MonoBehaviour:
   loverCount: 0
   nextLevel: lv10
   levelNumber: 10
+  completesLevel: 1
+  lovers: []
 --- !u!1 &270183885
 GameObject:
   m_ObjectHideFlags: 0
@@ -2063,17 +2065,6 @@ Transform:
   - {fileID: 505051916}
   - {fileID: 1205850450}
   m_Father: {fileID: 0}
---- !u!114 &433713804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &444760556
 Prefab:
   m_ObjectHideFlags: 0
@@ -2307,7 +2298,7 @@ GameObject:
   - 233: {fileID: 504112491}
   m_Layer: 0
   m_Name: WoodenBoxBig
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5187,6 +5178,17 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: ff8bc0cd6d700c34088102d8361301c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &994571087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1002769011
 Prefab:
   m_ObjectHideFlags: 0
@@ -6496,7 +6498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvdata: {fileID: 433713804}
+  lvdata: {fileID: 994571087}
   time: 0
   arrowCount: 0
   bonusCollected: 0
@@ -7351,7 +7353,7 @@ GameObject:
   - 233: {fileID: 1533314754}
   m_Layer: 0
   m_Name: WoodenBoxBig
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7626,7 +7628,7 @@ GameObject:
   - 233: {fileID: 1602227888}
   m_Layer: 0
   m_Name: WoodenBoxBig
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10482,6 +10484,8 @@ MonoBehaviour:
   loverCount: 0
   nextLevel: lv11
   levelNumber: 11
+  completesLevel: 1
+  lovers: []
 --- !u!61 &2136558304
 BoxCollider2D:
   m_ObjectHideFlags: 0

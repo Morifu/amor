@@ -4,7 +4,7 @@ using System.Collections;
 public class HideTutText : MonoBehaviour {
 	public int clickToHide=3;
 	bool travelNow = false;
-	int clickLeft;
+	public int clickLeft;
 	int fpsToHide;
 	// Use this for initialization
 	void Start () {

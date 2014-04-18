@@ -2295,6 +2295,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
+      propertyPath: lovers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
       propertyPath: m_LocalPosition.x
       value: -1.9872241
@@ -2335,6 +2339,14 @@ Prefab:
       propertyPath: levelNumber
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
+      propertyPath: lovers.Array.data[0]
+      value: 
+      objectReference: {fileID: 1016856213}
+    - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
+      propertyPath: lovers.Array.data[1]
+      value: 
+      objectReference: {fileID: 262698725}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
   m_RootGameObject: {fileID: 1416698764}
@@ -6163,6 +6175,17 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1114332214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1135906046
 GameObject:
   m_ObjectHideFlags: 0
@@ -7064,7 +7087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvdata: {fileID: 1850230568}
+  lvdata: {fileID: 1114332214}
   time: 0
   arrowCount: 0
   bonusCollected: 0
@@ -7397,6 +7420,10 @@ MonoBehaviour:
   loverCount: 0
   nextLevel: lv10
   levelNumber: 10
+  completesLevel: 1
+  lovers:
+  - {fileID: 1016856213}
+  - {fileID: 262698725}
 --- !u!1 &1418691676
 GameObject:
   m_ObjectHideFlags: 0
@@ -8821,7 +8848,7 @@ GameObject:
   - 233: {fileID: 1778260313}
   m_Layer: 0
   m_Name: WoodenBoxBig
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9107,17 +9134,6 @@ Prefab:
   m_RootGameObject: {fileID: 1197594830}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &1850230568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1870226136
 GameObject:
   m_ObjectHideFlags: 0
