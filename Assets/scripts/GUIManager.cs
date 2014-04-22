@@ -41,6 +41,11 @@ public class GUIManager: MonoBehaviour {
 	public GUIText arrowCountTXT;
 	public GUIText timeLeftTXT;
 	GUIText LevelNumberTXT;
+
+	bool hideLevelNumber = false;
+
+	public float targetsHideTime = 5.0f;
+
 	// Use this for initialization
 	void Awake () {
 //		if(instance == null)
@@ -78,6 +83,13 @@ public class GUIManager: MonoBehaviour {
 
 			timeLeftTXT.text = string.Format("Time: {0:d2}:{1:d2}", minutes, seconds%60);
 		}
+
+		if(!hideLevelNumber && (int)(Time.time - GameManager.instance.controller.time) > targetsHideTime)
+		{
+			hideLevelNumber = true;
+			GameObject.Find("Targets").SetActive(false);
+			LevelNumberTXT.enabled = false;
+		}
 	}
 
 	void OnGUI() {
@@ -88,11 +100,13 @@ public class GUIManager: MonoBehaviour {
 		screenRect.y = Screen.height - (screenRect.y+screenRect.height);
 		DrawOutline(screenRect,arrowCountTXT.text, arrowCountTXT,Color.black,arrowCountTXT.color);
 
-		// outline for LevelNumberTXT text
-		screenRect = LevelNumberTXT.GetScreenRect ();
-		screenRect.y = Screen.height - (screenRect.y+screenRect.height);
-		DrawOutline(screenRect,LevelNumberTXT.text, LevelNumberTXT,Color.black,LevelNumberTXT.color);
-
+		if(!hideLevelNumber)
+		{
+			// outline for LevelNumberTXT text
+			screenRect = LevelNumberTXT.GetScreenRect ();
+			screenRect.y = Screen.height - (screenRect.y+screenRect.height);
+			DrawOutline(screenRect,LevelNumberTXT.text, LevelNumberTXT,Color.black,LevelNumberTXT.color);
+		}
 		// time left text outlie draw
 		screenRect = timeLeftTXT.GetScreenRect ();
 		screenRect.y = Screen.height - (screenRect.y+screenRect.height);

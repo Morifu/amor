@@ -97,7 +97,7 @@ GameObject:
   m_IsActive: 0
 --- !u!1 &100012
 GameObject:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -113,14 +113,46 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &100014
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400014}
+  - 131: {fileID: 13100004}
   m_Layer: 0
-  m_Name: LevelInfo
+  m_Name: Woman
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400016}
+  m_Layer: 0
+  m_Name: Targets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100018
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400018}
+  - 131: {fileID: 13100006}
+  m_Layer: 0
+  m_Name: Man
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,7 +193,8 @@ Transform:
   - {fileID: 400002}
   - {fileID: 400000}
   - {fileID: 400006}
-  - {fileID: 400014}
+  - {fileID: 400016}
+  - {fileID: 400012}
   - {fileID: 400010}
   - {fileID: 400008}
   m_Father: {fileID: 0}
@@ -205,10 +238,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.89729905, y: -3.90324736, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: .5, y: .600000024, z: -1}
+  m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children: []
-  m_Father: {fileID: 400014}
+  m_Father: {fileID: 400004}
 --- !u!4 &400014
 Transform:
   m_ObjectHideFlags: 1
@@ -218,9 +251,32 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400016}
+--- !u!4 &400016
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100016}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .5, y: .5, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children:
-  - {fileID: 400012}
+  - {fileID: 400018}
+  - {fileID: 400014}
   m_Father: {fileID: 400004}
+--- !u!4 &400018
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100018}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400016}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -559,6 +615,7 @@ MonoBehaviour:
   pauseBG: {fileID: 2800000, guid: 1bcfc92da58814d43978f30dc27dbf6a, type: 3}
   arrowCountTXT: {fileID: 13200000}
   timeLeftTXT: {fileID: 13200002}
+  targetsHideTime: 3
 --- !u!131 &13100000
 GUITexture:
   m_ObjectHideFlags: 1
@@ -593,6 +650,44 @@ GUITexture:
     y: 0
     width: 0
     height: 0
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
+--- !u!131 &13100004
+GUITexture:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100014}
+  m_Enabled: 1
+  m_Texture: {fileID: 2800000, guid: b1f6654d78a2601459375d4c383ac193, type: 3}
+  m_Color: {r: .5, g: .5, b: .5, a: .5}
+  m_PixelInset:
+    serializedVersion: 2
+    x: 25
+    y: -50
+    width: 50
+    height: 50
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
+--- !u!131 &13100006
+GUITexture:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100018}
+  m_Enabled: 1
+  m_Texture: {fileID: 2800000, guid: 3e9c1b2f8a0694547b9f0898816c22ed, type: 3}
+  m_Color: {r: .5, g: .5, b: .5, a: .5}
+  m_PixelInset:
+    serializedVersion: 2
+    x: -75
+    y: -50
+    width: 50
+    height: 50
   m_LeftBorder: 0
   m_RightBorder: 0
   m_TopBorder: 0
@@ -651,7 +746,7 @@ GUIText:
   m_GameObject: {fileID: 100012}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: LEVEL X
+  m_Text: 
   m_Anchor: 4
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
