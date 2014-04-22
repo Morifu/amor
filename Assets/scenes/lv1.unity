@@ -2087,6 +2087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf3e1babdd6f74458d47cdf2e78b507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToleft: 10
   clickToHide: 3
   clickLeft: 0
 --- !u!102 &941279752
@@ -2296,7 +2297,14 @@ Prefab:
       propertyPath: m_Center.x
       value: 61.4725342
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11400006, guid: 4a57f9ad305ac31429e0321220358e04, type: 2}
+      propertyPath: timeToleft
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11400000, guid: 4a57f9ad305ac31429e0321220358e04, type: 2}
+    - {fileID: 11400002, guid: 4a57f9ad305ac31429e0321220358e04, type: 2}
+    - {fileID: 11400004, guid: 4a57f9ad305ac31429e0321220358e04, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 4a57f9ad305ac31429e0321220358e04, type: 2}
   m_RootGameObject: {fileID: 941279750}
   m_IsPrefabParent: 0
@@ -3571,7 +3579,6 @@ GameObject:
   - 4: {fileID: 1303942963}
   - 23: {fileID: 1303942962}
   - 102: {fileID: 1303942961}
-  - 114: {fileID: 1303942960}
   m_Layer: 0
   m_Name: Tut1
   m_TagString: Untagged
@@ -3579,20 +3586,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1303942960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 4a57f9ad305ac31429e0321220358e04,
-    type: 2}
-  m_PrefabInternal: {fileID: 946795995}
-  m_GameObject: {fileID: 1303942959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf3e1babdd6f74458d47cdf2e78b507, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickToHide: 3
-  clickLeft: 0
 --- !u!102 &1303942961
 TextMesh:
   serializedVersion: 3
@@ -4689,7 +4682,6 @@ GameObject:
   - 4: {fileID: 1643852532}
   - 23: {fileID: 1643852535}
   - 102: {fileID: 1643852534}
-  - 114: {fileID: 1643852533}
   m_Layer: 0
   m_Name: Tut1
   m_TagString: Untagged
@@ -4708,20 +4700,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 941279754}
---- !u!114 &1643852533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400002, guid: 4a57f9ad305ac31429e0321220358e04,
-    type: 2}
-  m_PrefabInternal: {fileID: 946795995}
-  m_GameObject: {fileID: 1643852531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf3e1babdd6f74458d47cdf2e78b507, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickToHide: 3
-  clickLeft: 0
 --- !u!102 &1643852534
 TextMesh:
   serializedVersion: 3
@@ -5566,7 +5544,6 @@ GameObject:
   - 4: {fileID: 1985205067}
   - 23: {fileID: 1985205070}
   - 102: {fileID: 1985205069}
-  - 114: {fileID: 1985205068}
   m_Layer: 0
   m_Name: Tut1
   m_TagString: Untagged
@@ -5585,20 +5562,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 941279754}
---- !u!114 &1985205068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400004, guid: 4a57f9ad305ac31429e0321220358e04,
-    type: 2}
-  m_PrefabInternal: {fileID: 946795995}
-  m_GameObject: {fileID: 1985205066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf3e1babdd6f74458d47cdf2e78b507, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickToHide: 3
-  clickLeft: 0
 --- !u!102 &1985205069
 TextMesh:
   serializedVersion: 3
