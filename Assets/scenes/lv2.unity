@@ -631,17 +631,6 @@ Transform:
   - {fileID: 351100969}
   - {fileID: 178217862}
   m_Father: {fileID: 0}
---- !u!114 &263545349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &280301753
 GameObject:
   m_ObjectHideFlags: 0
@@ -2536,8 +2525,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLvl: 1
-  lvdata: {fileID: 263545349}
+  currentLvl: 2
+  lvdata: {fileID: 1719555090}
   time: 0
   arrowCount: 0
   bonusCollected: 0
@@ -3784,6 +3773,10 @@ Prefab:
       propertyPath: level
       value: lv4
       objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e, type: 2}
+      propertyPath: currentLvl
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e, type: 2}
   m_RootGameObject: {fileID: 1104695172}
@@ -3975,6 +3968,17 @@ SpriteRenderer:
   m_SortingLayerID: 1859086223
   m_Sprite: {fileID: 21300000, guid: 373bd34a3c1058f48bc6187eb89cabb8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1719555090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1730943984
 Prefab:
   m_ObjectHideFlags: 0
