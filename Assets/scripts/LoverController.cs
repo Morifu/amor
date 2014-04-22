@@ -62,12 +62,12 @@ public class LoverController : MonoBehaviour {
 		}
 
 		if (move < 0 && facingRight) 
-			Flip ();
+			FlipView ();
 		else if (move > 0 && !facingRight) 
-			Flip ();
+			FlipView ();
 	}
 
-	void Flip() {
+	void FlipView() {
 		facingRight = !facingRight;
 		Vector3 theScale = transform.localScale;
 		if((facingRight && theScale.x > 0) || (!facingRight && theScale.x < 0) )
@@ -76,14 +76,18 @@ public class LoverController : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 
+	public void FlipMovement()
+	{
+		move *= -1;
+	}
+
 	void OnCollisionEnter2D(Collision2D other) {
 		if (other.gameObject.tag == "Arrow") {
 
-			Vector3 position = transform.InverseTransformPoint(other.transform.position);
-			position.x *= (transform.localScale.x>0)?1:-1;
-			if(position.x < 0)
+			Vector2 position = other.rigidbody.velocity;
+			if(position.x > 0)
 				GoRight();
-			else if (position.x > 0)
+			else if (position.x < 0)
 				GoLeft();
 				
 			other.transform.parent = transform;

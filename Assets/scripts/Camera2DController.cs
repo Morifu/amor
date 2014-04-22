@@ -6,6 +6,7 @@ public class Camera2DController : MonoBehaviour {
 	public float minZoom = 1f;
 	float maxZoom = 10f;
 	public float sensitivity = 1f;
+	public float WSADSensitivity = 0.01f;
 
 	Vector2 startingPos;
 	Vector3 dragOrigin;
@@ -54,9 +55,27 @@ public class Camera2DController : MonoBehaviour {
 		{
 			float size = Camera.main.orthographicSize;
 			size += Input.GetAxis ("Mouse ScrollWheel") * sensitivity;
+			size += Input.GetAxis ("Zoom")*sensitivity;
 			size = Mathf.Clamp (size, minZoom, maxZoom);
 			Camera.main.orthographicSize = size;
+
 		}
+		CheckBounds();
+	}
+
+	void FixedUpdate()
+	{
+		//Debug.Log (Input.GetAxis ("Horizontal"));
+		Vector3 pos = transform.position;
+		if(Input.GetAxis("Horizontal") != 0)
+		{
+			pos.x += Input.GetAxis("Horizontal")*WSADSensitivity;
+		}
+		if (Input.GetAxis("Vertical") != 0)
+		{
+			pos.y += Input.GetAxis("Vertical")*WSADSensitivity;
+		}
+		transform.position = pos;
 		CheckBounds();
 	}
 

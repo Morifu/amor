@@ -2,8 +2,6 @@
 using System.Collections;
 
 public class Gate : MonoBehaviour {
-
-	public bool opened = false;
 	
 	public Lever.State[] leverProperStates;
 	public Lever[] levers;
@@ -18,7 +16,6 @@ public class Gate : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(opened) return;
 		
 		bool shouldOpen = true;
 		for ( int i = 0; i < levers.Length && shouldOpen ; i++)
@@ -30,10 +27,21 @@ public class Gate : MonoBehaviour {
 		{
 			kraty.SetActive(false);
 		}
+		else 
+		{
+			kraty.SetActive(true);
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{
-		coll.transform.position = destination.transform.position;
+		if(coll.gameObject.tag == "Lover")
+		{
+			coll.transform.position = destination.transform.position;
+			if(transform.localScale.x * destination.transform.localScale.x > 0)
+			{
+				coll.transform.GetComponent<LoverController>().FlipMovement();
+			}
+		}
 	}
 }

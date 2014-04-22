@@ -295,6 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minZoom: 1
   sensitivity: 1
+  WSADSensitivity: .200000003
   whatToHit:
     serializedVersion: 2
     m_Bits: 4294967291
@@ -539,7 +540,7 @@ GameObject:
   - 114: {fileID: 51544985}
   - 68: {fileID: 51544984}
   m_Layer: 8
-  m_Name: ClosedGate
+  m_Name: ClosedGate_lowestRight
   m_TagString: Gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -584,7 +585,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52adbd72431a7554da47dc09999c7ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opened: 0
   leverProperStates: 01000000
   levers:
   - {fileID: 0}
@@ -2313,7 +2313,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52adbd72431a7554da47dc09999c7ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opened: 0
   leverProperStates: 01000000
   levers:
   - {fileID: 0}
@@ -4103,60 +4102,6 @@ Transform:
   - {fileID: 440440308}
   - {fileID: 1053036663}
   m_Father: {fileID: 336484346}
---- !u!1 &504005793
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100004, guid: da28e859b79d92241806abb050b8cc6a, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 504005794}
-  - 61: {fileID: 504005796}
-  - 114: {fileID: 504005795}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Amor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &504005794
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400004, guid: da28e859b79d92241806abb050b8cc6a, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 504005793}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.6878662, y: -2.51874352, z: 0}
-  m_LocalScale: {x: .649999976, y: .649999976, z: 1}
-  m_Children:
-  - {fileID: 540943311}
-  m_Father: {fileID: 0}
---- !u!114 &504005795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400002, guid: da28e859b79d92241806abb050b8cc6a,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 504005793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b65036516dff5bb44973be840687aef7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxAngle: 45
---- !u!61 &504005796
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6100000, guid: da28e859b79d92241806abb050b8cc6a,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 504005793}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 2.5, y: 1.26999998}
-  m_Center: {x: 0, y: .660000026}
 --- !u!1 &505290236
 GameObject:
   m_ObjectHideFlags: 0
@@ -4297,7 +4242,7 @@ GameObject:
   - 114: {fileID: 518978849}
   - 68: {fileID: 518978848}
   m_Layer: 8
-  m_Name: ClosedGate
+  m_Name: ClosedGate_middleRight
   m_TagString: Gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4342,7 +4287,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52adbd72431a7554da47dc09999c7ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opened: 0
   leverProperStates: 01000000
   levers:
   - {fileID: 1510632208}
@@ -4491,47 +4435,6 @@ SpriteRenderer:
   m_SortingLayerID: 1859086223
   m_Sprite: {fileID: 21300000, guid: e5cc863d92378aa4a8bec2c375efbfd8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &540943309
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: da28e859b79d92241806abb050b8cc6a, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 540943311}
-  - 114: {fileID: 540943310}
-  m_Layer: 0
-  m_Name: Bow
-  m_TagString: Bow
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &540943310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: da28e859b79d92241806abb050b8cc6a,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 540943309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 228e0d6b66fb9d04b9711d059d6c38c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arrow: {fileID: 5000000, guid: bcfe0965cda241d4ba02d232a5ae30ca, type: 2}
-  speed: 5
---- !u!4 &540943311
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: da28e859b79d92241806abb050b8cc6a, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 540943309}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 504005794}
 --- !u!1 &547555740
 GameObject:
   m_ObjectHideFlags: 0
@@ -4681,6 +4584,10 @@ Prefab:
       propertyPath: levers.Array.data[0]
       value: 
       objectReference: {fileID: 1493692458}
+    - target: {fileID: 100000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
+      propertyPath: m_Name
+      value: ClosedGate_lowestLeft
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
   m_RootGameObject: {fileID: 2093889449}
@@ -5128,6 +5035,10 @@ Prefab:
     - target: {fileID: 100002, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
+      propertyPath: m_Name
+      value: ClosedGate_lowestRight
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
@@ -6372,6 +6283,17 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 2, y: .910000026}
   m_Center: {x: 0, y: 0}
+--- !u!114 &880635580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &886727201
 GameObject:
   m_ObjectHideFlags: 0
@@ -7399,6 +7321,10 @@ Prefab:
       propertyPath: levers.Array.data[0]
       value: 
       objectReference: {fileID: 1510632208}
+    - target: {fileID: 100000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
+      propertyPath: m_Name
+      value: ClosedGate_middleRight
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
   m_RootGameObject: {fileID: 518978846}
@@ -9443,17 +9369,6 @@ Transform:
   m_Children:
   - {fileID: 1332998555}
   m_Father: {fileID: 0}
---- !u!114 &1437681229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1487418154
 GameObject:
   m_ObjectHideFlags: 0
@@ -9841,6 +9756,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
+      propertyPath: levers.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
+      propertyPath: leverProperStates.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: m_LocalPosition.x
       value: -11.3716183
@@ -9880,6 +9803,10 @@ Prefab:
     - target: {fileID: 100002, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
+      propertyPath: m_Name
+      value: ClosedGate_upperLeft
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
@@ -10359,7 +10286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvdata: {fileID: 1437681229}
+  lvdata: {fileID: 880635580}
   time: 0
   arrowCount: 0
   bonusCollected: 0
@@ -13046,7 +12973,7 @@ GameObject:
   - 114: {fileID: 2058311836}
   - 68: {fileID: 2058311835}
   m_Layer: 8
-  m_Name: ClosedGate
+  m_Name: ClosedGate_upperLeft
   m_TagString: Gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13091,10 +13018,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52adbd72431a7554da47dc09999c7ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opened: 0
-  leverProperStates: 01000000
-  levers:
-  - {fileID: 0}
+  leverProperStates: 
+  levers: []
   destination: {fileID: 2093889449}
 --- !u!1 &2067454606
 GameObject:
@@ -13209,7 +13134,7 @@ GameObject:
   - 114: {fileID: 2093889452}
   - 68: {fileID: 2093889451}
   m_Layer: 8
-  m_Name: ClosedGate
+  m_Name: ClosedGate_lowestLeft
   m_TagString: Gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13254,7 +13179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52adbd72431a7554da47dc09999c7ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opened: 0
   leverProperStates: 01000000
   levers:
   - {fileID: 1493692458}
