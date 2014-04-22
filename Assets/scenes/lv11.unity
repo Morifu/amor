@@ -3551,17 +3551,6 @@ Transform:
   - {fileID: 476503154}
   - {fileID: 523534311}
   m_Father: {fileID: 137618683}
---- !u!114 &543651195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &560955969
 GameObject:
   m_ObjectHideFlags: 0
@@ -5101,6 +5090,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
+      propertyPath: lovers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1.82459176
@@ -8198,6 +8191,17 @@ Animator:
   m_ApplyRootMotion: 0
   m_AnimatePhysics: 1
   m_HasTransformHierarchy: 1
+--- !u!114 &1532289651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1553083158
 GameObject:
   m_ObjectHideFlags: 0
@@ -8655,7 +8659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvdata: {fileID: 543651195}
+  lvdata: {fileID: 1532289651}
   time: 0
   arrowCount: 0
   bonusCollected: 0
@@ -9165,6 +9169,10 @@ MonoBehaviour:
   loverCount: 0
   nextLevel: lv12
   levelNumber: 12
+  completesLevel: 1
+  lovers:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!61 &1679481354
 BoxCollider2D:
   m_ObjectHideFlags: 0

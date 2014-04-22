@@ -1023,9 +1023,9 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 224205991
   m_Sprite: {fileID: 21300000, guid: c701c2a5ae5c6f349bf0f60352a5d897, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &164228497
@@ -1577,7 +1577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 2
   move: 0
-  steps: 100
+  steps: 150
   deathVelocity: 7
 --- !u!95 &262698730
 Animator:
@@ -1674,6 +1674,17 @@ SpriteRenderer:
   m_SortingLayerID: 3940858523
   m_Sprite: {fileID: 21300000, guid: 2fa655c2e22d2ff4598c08aa5b476d87, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &270976029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &272136715
 Prefab:
   m_ObjectHideFlags: 0
@@ -1683,11 +1694,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: a7534dae79ee8b3449432552d1d81bc3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.49370384
+      value: -4.16605282
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: a7534dae79ee8b3449432552d1d81bc3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.1977911
+      value: -3.22119474
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: a7534dae79ee8b3449432552d1d81bc3, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2301,7 +2312,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.9872241
+      value: -2.2680676
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4964,6 +4975,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 908044367}
   - 61: {fileID: 908044366}
+  - 114: {fileID: 908044368}
   m_Layer: 0
   m_Name: Floor1
   m_TagString: Untagged
@@ -4995,6 +5007,26 @@ Transform:
   m_Children:
   - {fileID: 153591659}
   m_Father: {fileID: 0}
+--- !u!114 &908044368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 908044365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8929788283572fd49bb8f1d2f351fc75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activated: 0
+  leverProperStates: 0100000001000000
+  levers:
+  - {fileID: 1168281174}
+  - {fileID: 1400407497}
+  turnOffColliders: 1
+  turnOffObject: 1
+  changeTransform: 0
+  transformToApply: {fileID: 0}
 --- !u!1 &910350493
 GameObject:
   m_ObjectHideFlags: 0
@@ -5219,6 +5251,14 @@ Prefab:
       propertyPath: levers.Array.data[2]
       value: 
       objectReference: {fileID: 1595970205}
+    - target: {fileID: 21200000, guid: ca40e6e3e2225d5469012cba42a5f4c9, type: 2}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: ca40e6e3e2225d5469012cba42a5f4c9, type: 2}
+      propertyPath: m_SortingLayerID
+      value: 224205991
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca40e6e3e2225d5469012cba42a5f4c9, type: 2}
   m_RootGameObject: {fileID: 743727828}
@@ -5678,7 +5718,7 @@ Transform:
   m_PrefabInternal: {fileID: 272136715}
   m_GameObject: {fileID: 1016856213}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.49370384, y: -3.1977911, z: 0}
+  m_LocalPosition: {x: -4.16605282, y: -3.22119474, z: 0}
   m_LocalScale: {x: -.392730534, y: .3927297, z: 1}
   m_Children:
   - {fileID: 2002397224}
@@ -6175,17 +6215,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
---- !u!114 &1114332214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1135906046
 GameObject:
   m_ObjectHideFlags: 0
@@ -6486,7 +6515,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 9e863e3b42dd2b648bcbdc4e150d064e, type: 2}
       propertyPath: startingPoint
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e863e3b42dd2b648bcbdc4e150d064e, type: 2}
@@ -7087,7 +7116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvdata: {fileID: 1114332214}
+  lvdata: {fileID: 270976029}
   time: 0
   arrowCount: 0
   bonusCollected: 0
@@ -7401,7 +7430,7 @@ Transform:
   m_PrefabInternal: {fileID: 390908157}
   m_GameObject: {fileID: 1416698764}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9872241, y: -2.93035698, z: 0}
+  m_LocalPosition: {x: -2.2680676, y: -2.93035698, z: 0}
   m_LocalScale: {x: .460000008, y: .460000008, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9223,6 +9252,10 @@ Prefab:
       propertyPath: deathVelocity
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e59e354c4aa18d84aa7c83c22da3a986, type: 2}
+      propertyPath: steps
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e59e354c4aa18d84aa7c83c22da3a986, type: 2}
   m_RootGameObject: {fileID: 262698725}
@@ -9585,7 +9618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 012489bd4d2c2f24b9d3c7c0a53b43d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingPoint: 0
+  startingPoint: 1
 --- !u!61 &2003668330
 BoxCollider2D:
   m_ObjectHideFlags: 0
