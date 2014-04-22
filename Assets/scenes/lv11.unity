@@ -543,6 +543,18 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a0a3eafcddb5d124d8439d8171459186, type: 2}
+      propertyPath: maxSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a0a3eafcddb5d124d8439d8171459186, type: 2}
+      propertyPath: deathVelocity
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a0a3eafcddb5d124d8439d8171459186, type: 2}
+      propertyPath: steps
+      value: 200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a0a3eafcddb5d124d8439d8171459186, type: 2}
   m_RootGameObject: {fileID: 1520847870}
@@ -2488,7 +2500,7 @@ Transform:
   m_PrefabInternal: {fileID: 764960093}
   m_GameObject: {fileID: 344251500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5808506, y: 1.74482059, z: 0}
+  m_LocalPosition: {x: 3.56388378, y: 1.22258377, z: 0}
   m_LocalScale: {x: .600000024, y: .600000024, z: 1}
   m_Children:
   - {fileID: 1760952792}
@@ -2822,9 +2834,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52adbd72431a7554da47dc09999c7ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leverProperStates: 01000000
-  levers:
-  - {fileID: 0}
+  leverProperStates: 
+  levers: []
   destination: {fileID: 333009902}
 --- !u!1 &444683907
 GameObject:
@@ -3621,17 +3632,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 504005794}
---- !u!114 &541571163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &542474962
 GameObject:
   m_ObjectHideFlags: 0
@@ -4293,7 +4293,7 @@ Rigidbody2D:
     type: 2}
   m_PrefabInternal: {fileID: 1578671731}
   m_GameObject: {fileID: 709822582}
-  m_Mass: 1
+  m_Mass: 20
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
@@ -4314,10 +4314,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40237a83f8b69394baa902da1bb1a25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 1
+  maxSpeed: 2
   move: 0
-  steps: 100
-  deathVelocity: 7
+  steps: 50
+  deathVelocity: 8
 --- !u!95 &709822588
 Animator:
   serializedVersion: 2
@@ -4845,11 +4845,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 9e863e3b42dd2b648bcbdc4e150d064e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.5808506
+      value: 3.56388378
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9e863e3b42dd2b648bcbdc4e150d064e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.74482059
+      value: 1.22258377
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9e863e3b42dd2b648bcbdc4e150d064e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5281,11 +5281,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.82459176
+      value: 4.49247026
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.58350635
+      value: -3.62872434
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5315,6 +5315,14 @@ Prefab:
       propertyPath: levelNumber
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
+      propertyPath: lovers.Array.data[0]
+      value: 
+      objectReference: {fileID: 1458556823}
+    - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
+      propertyPath: lovers.Array.data[1]
+      value: 
+      objectReference: {fileID: 1520847870}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
   m_RootGameObject: {fileID: 1679481352}
@@ -5327,6 +5335,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
+      propertyPath: levers.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
+      propertyPath: leverProperStates.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: m_LocalPosition.x
       value: 7.74031973
@@ -5913,6 +5929,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
+      propertyPath: levers.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
+      propertyPath: leverProperStates.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: m_LocalPosition.x
       value: -4.84093904
@@ -7142,9 +7166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52adbd72431a7554da47dc09999c7ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leverProperStates: 01000000
-  levers:
-  - {fileID: 0}
+  leverProperStates: 
+  levers: []
   destination: {fileID: 1374469927}
 --- !u!1 &1245311556
 GameObject:
@@ -8726,10 +8749,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40237a83f8b69394baa902da1bb1a25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 1
+  maxSpeed: 2
   move: 0
-  steps: 100
-  deathVelocity: 6
+  steps: 200
+  deathVelocity: 8
 --- !u!95 &1520847876
 Animator:
   serializedVersion: 2
@@ -9033,7 +9056,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 2fa2f493bb3fbdc4b81b7716b59f520c, type: 2}
       propertyPath: deathVelocity
-      value: 7
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 2fa2f493bb3fbdc4b81b7716b59f520c, type: 2}
+      propertyPath: maxSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 2fa2f493bb3fbdc4b81b7716b59f520c, type: 2}
+      propertyPath: steps
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000000, guid: 2fa2f493bb3fbdc4b81b7716b59f520c, type: 2}
+      propertyPath: m_Mass
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2fa2f493bb3fbdc4b81b7716b59f520c, type: 2}
@@ -9202,7 +9237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvdata: {fileID: 541571163}
+  lvdata: {fileID: 1746586360}
   time: 0
   arrowCount: 0
   bonusCollected: 0
@@ -9764,8 +9799,8 @@ MonoBehaviour:
   levelNumber: 12
   completesLevel: 1
   lovers:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1458556823}
+  - {fileID: 1520847870}
 --- !u!61 &1679481354
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9809,7 +9844,7 @@ Transform:
   m_PrefabInternal: {fileID: 855003160}
   m_GameObject: {fileID: 1679481352}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.82459176, y: -3.58350635, z: 0}
+  m_LocalPosition: {x: 4.49247026, y: -3.62872434, z: 0}
   m_LocalScale: {x: .460000008, y: .460000008, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10158,6 +10193,17 @@ SpriteRenderer:
   m_SortingLayerID: 3940858523
   m_Sprite: {fileID: 21300000, guid: f1885cc174fd6a14eb6584b30c90cb6e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1746586360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1759379512
 GameObject:
   m_ObjectHideFlags: 0
