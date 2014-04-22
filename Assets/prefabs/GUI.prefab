@@ -97,7 +97,7 @@ GameObject:
   m_IsActive: 0
 --- !u!1 &100012
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -106,6 +106,21 @@ GameObject:
   - 132: {fileID: 13200004}
   m_Layer: 0
   m_Name: LevelNumber
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400014}
+  m_Layer: 0
+  m_Name: LevelInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,9 +161,9 @@ Transform:
   - {fileID: 400002}
   - {fileID: 400000}
   - {fileID: 400006}
+  - {fileID: 400014}
   - {fileID: 400010}
   - {fileID: 400008}
-  - {fileID: 400012}
   m_Father: {fileID: 0}
 --- !u!4 &400006
 Transform:
@@ -190,9 +205,21 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .600000024, z: 0}
+  m_LocalPosition: {x: 3.89729905, y: -3.90324736, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+  m_Father: {fileID: 400014}
+--- !u!4 &400014
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 400012}
   m_Father: {fileID: 400004}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -532,7 +559,6 @@ MonoBehaviour:
   pauseBG: {fileID: 2800000, guid: 1bcfc92da58814d43978f30dc27dbf6a, type: 3}
   arrowCountTXT: {fileID: 13200000}
   timeLeftTXT: {fileID: 13200002}
-  levelNumber: 0
 --- !u!131 &13100000
 GUITexture:
   m_ObjectHideFlags: 1
