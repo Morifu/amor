@@ -743,7 +743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   where: lv1
-  levelNumber: 0
+  levelNumber: 1
 --- !u!61 &1306751131
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -802,17 +802,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   procent: 95
---- !u!114 &1376335418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1520200980
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,6 +942,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   procent: 95
+--- !u!114 &1613095849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1635010443
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,7 +963,6 @@ GameObject:
   - 4: {fileID: 1635010444}
   - 114: {fileID: 1635010448}
   - 114: {fileID: 1635010447}
-  - 61: {fileID: 1635010446}
   - 114: {fileID: 1635010445}
   - 114: {fileID: 1635010451}
   - 114: {fileID: 1635010449}
@@ -999,18 +998,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   music: {fileID: 100000, guid: 71b6bbfcd4a447941827b71d163a2de2, type: 2}
---- !u!61 &1635010446
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6100000, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e,
-    type: 2}
-  m_PrefabInternal: {fileID: 691685568}
-  m_GameObject: {fileID: 1635010443}
-  m_Enabled: 0
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 1.29999995, y: 1}
-  m_Center: {x: 0, y: 0}
 --- !u!114 &1635010447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1037,7 +1024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44c482dd53a0bd418e799cf486e3214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: lv2
+  level: lv1
 --- !u!114 &1635010449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1050,7 +1037,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvdata: {fileID: 1376335418}
+  currentLvl: 1
+  lvdata: {fileID: 1613095849}
   time: 0
   arrowCount: 0
   bonusCollected: 0
