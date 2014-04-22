@@ -40,7 +40,7 @@ public class GUIManager: MonoBehaviour {
 	// references for gui texts
 	public GUIText arrowCountTXT;
 	public GUIText timeLeftTXT;
-	
+	GUIText LevelNumberTXT;
 	// Use this for initialization
 	void Awake () {
 //		if(instance == null)
@@ -55,7 +55,7 @@ public class GUIManager: MonoBehaviour {
 	}
 
 	void Start() {
-		//arrowCountTXT = GameObject.Find("ArrowCountTXT").GetComponent<GUIText> ();
+		LevelNumberTXT = GameObject.Find("LevelNumber").GetComponent<GUIText> ();
 	}
 
 	void Update()
@@ -65,6 +65,12 @@ public class GUIManager: MonoBehaviour {
 			arrowCountTXT.text = string.Format("x{0:d}", GameManager.instance.controller.arrowCount);
 
 		}
+
+		if(LevelNumberTXT != null)
+		{
+			LevelNumberTXT.text = string.Format("LEVEL {0:d}", GameManager.instance.controller.currentLvl);
+		}
+
 		if (timeLeftTXT != null)
 		{
 			int seconds = (int)(Time.time - GameManager.instance.controller.time);
@@ -80,12 +86,17 @@ public class GUIManager: MonoBehaviour {
 		// outline for arrow count text
 		Rect screenRect = arrowCountTXT.GetScreenRect ();
 		screenRect.y = Screen.height - (screenRect.y+screenRect.height);
-		DrawOutline(screenRect,arrowCountTXT.text, arrowCountTXT,Color.black,Color.white);
+		DrawOutline(screenRect,arrowCountTXT.text, arrowCountTXT,Color.black,arrowCountTXT.color);
+
+		// outline for LevelNumberTXT text
+		screenRect = LevelNumberTXT.GetScreenRect ();
+		screenRect.y = Screen.height - (screenRect.y+screenRect.height);
+		DrawOutline(screenRect,LevelNumberTXT.text, LevelNumberTXT,Color.black,LevelNumberTXT.color);
 
 		// time left text outlie draw
 		screenRect = timeLeftTXT.GetScreenRect ();
 		screenRect.y = Screen.height - (screenRect.y+screenRect.height);
-		DrawOutline(screenRect,timeLeftTXT.text, timeLeftTXT,Color.black,Color.white);
+		DrawOutline(screenRect,timeLeftTXT.text, timeLeftTXT,Color.black,timeLeftTXT.color);
 
 		// pause button
 		if (GUI.Button(new Rect(Screen.width-pauseButtonSizes.width-pauseButtonSizes.offsetX,
@@ -152,7 +163,7 @@ public class GUIManager: MonoBehaviour {
 		GUIStyle backupStyle = new GUIStyle();
 		backupStyle.font = style.font;
 		backupStyle.fontSize = style.fontSize;
-		backupStyle.normal.textColor = Color.black;
+		backupStyle.normal.textColor = outColor;
 		//backupStyle.alignment = style.anchor;
 		position.x--;
 		GUI.Label(position, text, backupStyle);
@@ -164,7 +175,7 @@ public class GUIManager: MonoBehaviour {
 		position.y +=2;
 		GUI.Label(position, text, backupStyle);
 		position.y--;
-		backupStyle.normal.textColor = Color.white;
+		backupStyle.normal.textColor = inColor;
 		GUI.Label(position, text, backupStyle);
 		//style = backupStyle;
 	}

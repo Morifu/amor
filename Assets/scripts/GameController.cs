@@ -8,9 +8,10 @@ using System.Collections;
 public class GameController : ScriptableObject {
 
 	// number of current lv
-	int currentLvl = 1;
+	public int currentLvl = 1;
 
 	// info on all levels
+	[HideInInspector]
 	public LevelData lvdata = null;
 
 	// score in current lvl

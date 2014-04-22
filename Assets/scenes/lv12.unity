@@ -3584,7 +3584,6 @@ GameObject:
   - 4: {fileID: 371577526}
   - 114: {fileID: 371577525}
   - 114: {fileID: 371577528}
-  - 61: {fileID: 371577527}
   - 114: {fileID: 371577529}
   - 114: {fileID: 371577530}
   - 114: {fileID: 371577531}
@@ -3619,18 +3618,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
---- !u!61 &371577527
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6100000, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e,
-    type: 2}
-  m_PrefabInternal: {fileID: 912435022}
-  m_GameObject: {fileID: 371577524}
-  m_Enabled: 0
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 1.29999995, y: 1}
-  m_Center: {x: 0, y: 0}
 --- !u!114 &371577528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3685,7 +3672,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lvdata: {fileID: 426718854}
+  currentLvl: 1
+  lvdata: {fileID: 564969400}
   time: 0
   arrowCount: 0
   bonusCollected: 0
@@ -4167,17 +4155,6 @@ Prefab:
   m_RootGameObject: {fileID: 248908053}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &426718854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &448633608
 GameObject:
   m_ObjectHideFlags: 0
@@ -5201,6 +5178,17 @@ SpriteRenderer:
   m_SortingLayerID: 1859086223
   m_Sprite: {fileID: 21300000, guid: e5cc863d92378aa4a8bec2c375efbfd8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &564969400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &567296985
 GameObject:
   m_ObjectHideFlags: 0
@@ -9037,7 +9025,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52adbd72431a7554da47dc09999c7ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opened: 0
   leverProperStates: 010000000100000001000000
   levers:
   - {fileID: 1510994913}
@@ -10731,6 +10718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minZoom: 2
   sensitivity: 1
+  WSADSensitivity: .00999999978
   whatToHit:
     serializedVersion: 2
     m_Bits: 4294967291
@@ -11878,7 +11866,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52adbd72431a7554da47dc09999c7ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opened: 0
   leverProperStates: 01000000
   levers:
   - {fileID: 757285485}
@@ -12775,6 +12762,14 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
+      propertyPath: levers.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
+      propertyPath: leverProperStates.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 121217ec193d59648ab6da343ec82abf, type: 2}
       propertyPath: m_LocalPosition.x
       value: -12.1125927
@@ -13737,7 +13732,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52adbd72431a7554da47dc09999c7ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opened: 0
   leverProperStates: 01000000
   levers:
   - {fileID: 0}
@@ -16346,7 +16340,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52adbd72431a7554da47dc09999c7ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opened: 0
   leverProperStates: 010000000100000001000000
   levers:
   - {fileID: 953845230}
@@ -17678,10 +17671,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52adbd72431a7554da47dc09999c7ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opened: 0
-  leverProperStates: 01000000
-  levers:
-  - {fileID: 0}
+  leverProperStates: 
+  levers: []
   destination: {fileID: 1251091765}
 --- !u!1001 &2014440628
 Prefab:
