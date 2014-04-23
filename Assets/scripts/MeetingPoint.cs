@@ -11,7 +11,8 @@ public class MeetingPoint : MonoBehaviour {
 
 	void Start()
 	{
-		GameManager.instance.controller.LevelStart ();
+		if(completesLevel)
+			GameManager.instance.controller.LevelStart ();
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) 
