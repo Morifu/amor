@@ -1980,6 +1980,17 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2127744835}
+--- !u!114 &571957742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &583407798
 GameObject:
   m_ObjectHideFlags: 0
@@ -2631,6 +2642,14 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 13100006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: fec7e165ec34dbc43a236b87774e9cde, type: 3}
+    - target: {fileID: 13100004, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 1ea79b02f91616844b0a5d66ba702bfa, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
   m_RootGameObject: {fileID: 1429262937}
@@ -3787,11 +3806,11 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 32
+  m_FontSize: 50
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
-    rgba: 4294901800
+    rgba: 4293326590
   m_PixelCorrect: 1
   m_RichText: 1
 --- !u!1 &982736058
@@ -4313,17 +4332,6 @@ Transform:
   - {fileID: 1535233968}
   - {fileID: 591395018}
   m_Father: {fileID: 0}
---- !u!114 &1107733069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1108912757
 GameObject:
   m_ObjectHideFlags: 0
@@ -4607,7 +4615,7 @@ GUITexture:
   m_PrefabInternal: {fileID: 710337603}
   m_GameObject: {fileID: 1188197042}
   m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: b1f6654d78a2601459375d4c383ac193, type: 3}
+  m_Texture: {fileID: 2800000, guid: 1ea79b02f91616844b0a5d66ba702bfa, type: 3}
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2
@@ -5642,7 +5650,7 @@ MonoBehaviour:
   pauseBG: {fileID: 2800000, guid: 1bcfc92da58814d43978f30dc27dbf6a, type: 3}
   arrowCountTXT: {fileID: 2031605532}
   timeLeftTXT: {fileID: 123522081}
-  targetsHideTime: 5
+  targetsHideTime: 3
 --- !u!1001 &1430190464
 Prefab:
   m_ObjectHideFlags: 0
@@ -7070,8 +7078,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLvl: 1
-  lvdata: {fileID: 1107733069}
+  currentLvl: 7
+  lvdata: {fileID: 571957742}
   time: 0
   arrowCount: 0
   bonusCollected: 0
@@ -8021,6 +8029,14 @@ Prefab:
       propertyPath: level
       value: lv5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e, type: 2}
+      propertyPath: currentLvl
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e, type: 2}
+      propertyPath: lvdata
+      value: 
+      objectReference: {fileID: 571957742}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e, type: 2}
   m_RootGameObject: {fileID: 1675285872}
