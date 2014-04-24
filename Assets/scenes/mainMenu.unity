@@ -264,17 +264,6 @@ Transform:
   m_LocalScale: {x: 1.45719492, y: 1.09589028, z: 1}
   m_Children: []
   m_Father: {fileID: 1771358782}
---- !u!114 &568817136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &581757650
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,6 +572,17 @@ Prefab:
   m_RootGameObject: {fileID: 2108884531}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!114 &1089653019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1126704517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,7 +1038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLvl: 1
-  lvdata: {fileID: 568817136}
+  lvdata: {fileID: 1089653019}
   time: 0
   arrowCount: 0
   bonusCollected: 0
@@ -1052,7 +1052,7 @@ AudioSource:
   m_GameObject: {fileID: 1635010443}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 22610e85c5211494787f18a4db2e1fe2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b6b27c2a85120d249905ce5a3b5ea345, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
