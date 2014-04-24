@@ -20,6 +20,7 @@ public class LevelData : ScriptableObject {
 
 		public LevelState lvlState;
 		public bool collectible;
+		public bool extraPair;
 		public float bestTime;
 		public int arrowsUsed;
 		public int maxScore;
@@ -34,6 +35,7 @@ public class LevelData : ScriptableObject {
 
 			lvlState = LevelState.LOCKED;
 			collectible = false;
+			extraPair = false;
 			bestTime = 3600;
 			arrowsUsed = 0;
 			maxScore = 0;

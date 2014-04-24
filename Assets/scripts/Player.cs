@@ -76,6 +76,9 @@ public class Player : MonoBehaviour {
 		//Debug.Log ("Cosinus z : " + cosz+" Cosinus 70 : "+maxAngle + "rotz: "+rot.eulerAngles.z);
 		if(cosz > Mathf.Cos (maxAngle*Mathf.Deg2Rad))
 			upperBody.rotation = rot;
+
+		// here will be code for arrow trajectory
+		// ------
 	}
 
 	void OnMouseOver() {

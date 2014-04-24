@@ -22,6 +22,8 @@ public class GameController : ScriptableObject {
 	public int arrowCount = 0;
 	// if bonus was collected on level or not
 	public bool bonusCollected = false;
+	// if bonus was collected on level or not
+	public bool extraPair = false;
 	// number of stars collected	
 	public int starsCount = 0;
 	// seconds left from max time
@@ -49,7 +51,7 @@ public class GameController : ScriptableObject {
 		scoreCount  = 0;
 		arrowCount = 0;
 		bonusCollected = false;
-
+		extraPair = false;
 		lvlInfo = lvdata.getLevelInfo (currentLvl);
 	}
 
@@ -80,6 +82,11 @@ public class GameController : ScriptableObject {
 		if(bonusCollected)
 			scoreCount += 500;
 
+		if(extraPair)
+			scoreCount += 1000;
+
+		GameManager.instance.winScreen.SetActive (true);
+
 		UpdateData ();
 	}
 
@@ -91,6 +98,7 @@ public class GameController : ScriptableObject {
 		LevelData.LevelInfo info = lvlInfo;
 		info.maxScore = (info.maxScore > scoreCount)?info.maxScore:scoreCount;
 		info.collectible = bonusCollected;
+		info.extraPair = extraPair;
 		info.bestTime = (info.bestTime > (Time.time - time))?(Time.time - time):info.bestTime;
 		info.arrowsUsed = arrowCount;
 		lvdata.updateLevelInfo(currentLvl,info);
