@@ -59,8 +59,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00783225335, y: .470486611, z: 0}
-  m_LocalScale: {x: .246844515, y: .246843114, z: 1}
+  m_LocalPosition: {x: .0221499484, y: .691762865, z: 0}
+  m_LocalScale: {x: .326358408, y: .326356798, z: 1.27249444}
   m_Children: []
   m_Father: {fileID: 400002}
 --- !u!4 &400002
@@ -70,8 +70,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.61724329, y: 3.70499945, z: 0}
-  m_LocalScale: {x: -.57572329, y: .575722516, z: 1}
+  m_LocalPosition: {x: 4.04422903, y: 1.44390118, z: 0}
+  m_LocalScale: {x: -.452436656, y: .452436, z: .785858035}
   m_Children:
   - {fileID: 400004}
   - {fileID: 400000}
@@ -111,8 +111,8 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Radius: .25999999
-  m_Center: {x: -.0599999987, y: -.319999993}
+  m_Radius: .319999993
+  m_Center: {x: 0, y: -.649999976}
 --- !u!61 &6100000
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -122,8 +122,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .550000012, y: 1.60000002}
-  m_Center: {x: -.0500000007, y: .409999996}
+  m_Size: {x: .639999986, y: 2.29999995}
+  m_Center: {x: -.00999999978, y: .529999971}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 2
@@ -171,9 +171,9 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 1
-  m_SortingOrder: -1
-  m_SortingLayerID: 3940858523
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
   m_Sprite: {fileID: 21300000, guid: 6dcca060eed0fa8489d98a08cc229d3d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21200002
@@ -195,9 +195,9 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_SortingLayerID: 3940858523
-  m_Sprite: {fileID: 21300000, guid: 5d00c9a43b2f9734c9d20f39f261893a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5bab9310b84c1a24fbc0c72590d1df61, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
