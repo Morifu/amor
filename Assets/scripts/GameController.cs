@@ -85,7 +85,7 @@ public class GameController : ScriptableObject {
 		if(extraPair)
 			scoreCount += 1000;
 
-		GameManager.instance.winScreen.SetActive (true);
+		//GameManager.instance.winScreen.SetActive (true);
 
 		UpdateData ();
 	}
