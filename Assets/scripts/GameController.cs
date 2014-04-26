@@ -28,6 +28,8 @@ public class GameController : ScriptableObject {
 	public int starsCount = 0;
 	// seconds left from max time
 	public float secondsLeft = 0;
+	//flag if level is completed
+	public bool levelCompleted = false;
 	//info on current level
 	LevelData.LevelInfo lvlInfo;
 
@@ -47,6 +49,7 @@ public class GameController : ScriptableObject {
 	// level initializer, here we start counting time
 	public void LevelStart()
 	{
+		levelCompleted = false;
 		time = Time.time;
 		scoreCount  = 0;
 		arrowCount = 0;
@@ -59,7 +62,7 @@ public class GameController : ScriptableObject {
 	public void LevelCompleted()
 	{
 		scoreCount = 0;
-
+		levelCompleted = true;
 		// first count stars gathered
 		starsCount = 1;
 		lvlInfo.lvlState = LevelData.LevelState.STAR1COMPLETE;

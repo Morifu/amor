@@ -9,7 +9,24 @@ public class GUIManager: MonoBehaviour {
 		public float height = 80;
 		public float offsetX = 10;
 		public float offsetY = 10;
+		public float positionX = 0;
+		public float positionY = 0;
 	}
+
+	[System.Serializable]
+	public class TextData
+	{
+		public string text;
+		public Font font;
+		public int fontSize;
+		[HideInInspector]
+		public float width = 80;
+		[HideInInspector]
+		public float height = 80;
+		public float positionX = 0;
+		public float positionY = 0;
+	}
+
 	// singleton, dont know what for for now
 	[HideInInspector]
 	public static GUIManager instance;
@@ -176,11 +193,12 @@ public class GUIManager: MonoBehaviour {
 			}
 		}
 	}
-	// static method for drawing outline around text
-	public static void DrawOutline(Rect position, string text, GUIText style, Color outColor, Color inColor){
+
+	public static void DrawOutline(Rect position, string text,Font font, int fontSize, Color outColor, Color inColor)
+	{
 		GUIStyle backupStyle = new GUIStyle();
-		backupStyle.font = style.font;
-		backupStyle.fontSize = style.fontSize;
+		backupStyle.font = font;
+		backupStyle.fontSize = fontSize;
 		backupStyle.normal.textColor = outColor;
 		//backupStyle.alignment = style.anchor;
 		position.x--;
@@ -196,6 +214,11 @@ public class GUIManager: MonoBehaviour {
 		backupStyle.normal.textColor = inColor;
 		GUI.Label(position, text, backupStyle);
 		//style = backupStyle;
+	}
+	// static method for drawing outline around text
+	public static void DrawOutline(Rect position, string text, GUIText style, Color outColor, Color inColor)
+	{
+		DrawOutline(position, text, style.font, style.fontSize, outColor, inColor);
 	}
 	
 }
