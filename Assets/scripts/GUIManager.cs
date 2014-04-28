@@ -17,15 +17,21 @@ public class GUIManager: MonoBehaviour {
 	public class TextData
 	{
 		public string text;
-		public Font font;
-		public int fontSize;
-		[HideInInspector]
+		public GUIText guiTextReference;
 		public float width = 80;
-		[HideInInspector]
 		public float height = 80;
 		public float positionX = 0;
 		public float positionY = 0;
 	}
+
+	[System.Serializable]
+	public class SpriteData
+	{
+		public float positionX = 0;
+		public float positionY = 0;
+		public float size = 1;
+	}
+
 
 	// singleton, dont know what for for now
 	[HideInInspector]
@@ -47,7 +53,7 @@ public class GUIManager: MonoBehaviour {
 	public GUIStyle homeButtonStyle;
 	public ButtonData homeButtonSizes;
 
-	public GUIContent buttonContent;
+	public GUIStyle textStyle;
 
 	// texture with background style
 	public Texture2D pauseBG;
@@ -97,7 +103,7 @@ public class GUIManager: MonoBehaviour {
 			LevelNumberTXT.text = string.Format("LEVEL {0:d}", GameManager.instance.controller.currentLvl);
 		}
 
-		if (timeLeftTXT != null)
+		if (timeLeftTXT != null && !GameManager.instance.controller.levelCompleted)
 		{
 			int seconds = (int)(Time.time - GameManager.instance.controller.time);
 			int minutes = (int)(seconds/60);
@@ -119,19 +125,19 @@ public class GUIManager: MonoBehaviour {
 		// outline for arrow count text
 		Rect screenRect = arrowCountTXT.GetScreenRect ();
 		screenRect.y = Screen.height - (screenRect.y+screenRect.height);
-		DrawOutline(screenRect,arrowCountTXT.text, arrowCountTXT,Color.black,arrowCountTXT.color);
+		DrawOutline(screenRect,arrowCountTXT.text, arrowCountTXT,textStyle ,Color.black,arrowCountTXT.color);
 
 		if(!hideLevelNumber)
 		{
 			// outline for LevelNumberTXT text
 			screenRect = LevelNumberTXT.GetScreenRect ();
 			screenRect.y = Screen.height - (screenRect.y+screenRect.height);
-			DrawOutline(screenRect,LevelNumberTXT.text, LevelNumberTXT,Color.black,LevelNumberTXT.color);
+			DrawOutline(screenRect,LevelNumberTXT.text, LevelNumberTXT, textStyle,Color.black,LevelNumberTXT.color);
 		}
 		// time left text outlie draw
 		screenRect = timeLeftTXT.GetScreenRect ();
 		screenRect.y = Screen.height - (screenRect.y+screenRect.height);
-		DrawOutline(screenRect,timeLeftTXT.text, timeLeftTXT,Color.black,timeLeftTXT.color);
+		DrawOutline(screenRect,timeLeftTXT.text, timeLeftTXT, textStyle,Color.black,timeLeftTXT.color);
 
 		// pause button
 		if (GUI.Button(new Rect(Screen.width-pauseButtonSizes.width-pauseButtonSizes.offsetX,
@@ -194,9 +200,9 @@ public class GUIManager: MonoBehaviour {
 		}
 	}
 
-	public static void DrawOutline(Rect position, string text,Font font, int fontSize, Color outColor, Color inColor)
+	public static void DrawOutline(Rect position, string text, int fontSize, Font font, GUIStyle style, Color outColor, Color inColor)
 	{
-		GUIStyle backupStyle = new GUIStyle();
+		GUIStyle backupStyle = style;// new GUIStyle();
 		backupStyle.font = font;
 		backupStyle.fontSize = fontSize;
 		backupStyle.normal.textColor = outColor;
@@ -216,9 +222,9 @@ public class GUIManager: MonoBehaviour {
 		//style = backupStyle;
 	}
 	// static method for drawing outline around text
-	public static void DrawOutline(Rect position, string text, GUIText style, Color outColor, Color inColor)
+	public static void DrawOutline(Rect position, string text, GUIText textref, GUIStyle style, Color outColor, Color inColor)
 	{
-		DrawOutline(position, text, style.font, style.fontSize, outColor, inColor);
+		DrawOutline(position, text, textref.fontSize, textref.font, style, outColor, inColor);
 	}
 	
 }

@@ -33,7 +33,7 @@ public class MeetingPoint : MonoBehaviour {
 			loverCount++;
 		}
 
-		if (loverCount == 2 && completesLevel)
+		if (loverCount == 2 && completesLevel && !GameManager.instance.controller.levelCompleted)
 		{
 			GameManager.instance.controller.LevelCompleted();
 			GameManager.instance.controller.setNextLevel(levelNumber);
