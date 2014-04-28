@@ -15,7 +15,7 @@ public class GameController : ScriptableObject {
 	public LevelData lvdata = null;
 
 	// score in current lvl
-	int scoreCount  = 0;
+	public int scoreCount  = 0;
 	// best time in level in seconds
 	public float time = 0;
 	// arrows used on the level
@@ -30,6 +30,8 @@ public class GameController : ScriptableObject {
 	public float secondsLeft = 0;
 	//flag if level is completed
 	public bool levelCompleted = false;
+	//flag if show level loose
+	public bool levelFailed = false;
 	//info on current level
 	LevelData.LevelInfo lvlInfo;
 
@@ -63,6 +65,7 @@ public class GameController : ScriptableObject {
 	{
 		scoreCount = 0;
 		levelCompleted = true;
+		//levelFailed = true;
 		// first count stars gathered
 		starsCount = 1;
 		lvlInfo.lvlState = LevelData.LevelState.STAR1COMPLETE;
@@ -78,7 +81,9 @@ public class GameController : ScriptableObject {
 		}
 		scoreCount += 1000 * starsCount;
 
-		secondsLeft = lvlInfo.timeLimit - (Time.time - time);
+		time = Time.time - time;
+
+		secondsLeft = lvlInfo.timeLimit - time;
 		if(secondsLeft > 0)
 			scoreCount += ((int)secondsLeft)*20;
 

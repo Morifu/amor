@@ -27,7 +27,8 @@ public class Player : MonoBehaviour {
 
 	void OnMouseDown() 
 	{
-		if(GameManager.instance.GamePaused) return;
+		if(GameManager.instance.GamePaused || 
+		   GameManager.instance.controller.levelCompleted) return;
 //		Debug.Log ("Mouse Position: " + Input.mousePosition);
 //		Vector3 v3 = Input.mousePosition;
 //		v3.z = 10;
@@ -40,7 +41,8 @@ public class Player : MonoBehaviour {
 	void OnMouseDrag() 
 	{
 		//Debug.Log ("Dragging mouse!");
-		if(GameManager.instance.GamePaused) return;
+		if(GameManager.instance.GamePaused || 
+		   GameManager.instance.controller.levelCompleted) return;
 
 		Vector3 v3 = Input.mousePosition;
 		v3.z = 10;
@@ -87,7 +89,8 @@ public class Player : MonoBehaviour {
 
 	void OnMouseUp () 
 	{
-		if(GameManager.instance.GamePaused) return;
+		if(GameManager.instance.GamePaused || 
+		   GameManager.instance.controller.levelCompleted) return;
 		Debug.Log ("Clicked!");
 		Debug.Log ("Mouse Position: " + Input.mousePosition);
 		Vector3 v3 = Input.mousePosition;
