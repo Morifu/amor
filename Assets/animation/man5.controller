@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: woman1
+  m_Name: man5
   serializedVersion: 2
   m_AnimatorParameters:
   - m_Name: FallSpeed
@@ -71,28 +71,6 @@ Transition:
     m_ConditionEvent: FallSpeed
     m_EventTreshold: .100000001
     m_ExitTime: 1
-  - m_ConditionMode: 2
-    m_ConditionEvent: Died
-    m_EventTreshold: .100000001
-    m_ExitTime: 1
-  m_Atomic: 1
-  m_Solo: 0
-  m_Mute: 0
---- !u!1101 &110127289
-Transition:
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_SrcState: {fileID: 110244705}
-  m_DstState: {fileID: 110225258}
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Died
-    m_EventTreshold: 0
-    m_ExitTime: 1
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -132,18 +110,36 @@ Transition:
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
+--- !u!1101 &110166475
+Transition:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 0}
+  m_DstState: {fileID: 110225258}
+  m_TransitionDuration: .100000001
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Died
+    m_EventTreshold: 0
+    m_ExitTime: .899999976
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
 --- !u!1102 &110200000
 State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: woman1_idle
+  m_Name: man5_idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 5b79a9d1aaff00b4889f4049e83f5117, type: 2}
+  - {fileID: 7400000, guid: 6c4d4a3f4a58a71428522ad32be3c202, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 216, y: -108, z: 0}
+  m_Position: {x: 204, y: -144, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -152,13 +148,13 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: woman_dead
+  m_Name: man5_dead
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 1289b5263b56a88418ec9168580210b4, type: 2}
+  - {fileID: 7400000, guid: 103266c268b9fe94289e6d11e3dea7bf, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: -24, y: 12, z: 0}
+  m_Position: {x: 24, y: -24, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -167,13 +163,13 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: woman1_walk
+  m_Name: man5_walk
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 791449ce9cccd994aa19dd09c15bd7a8, type: 2}
+  - {fileID: 7400000, guid: 2180e76fd42edd9409eb5f51d616839c, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 420, y: -228, z: 0}
+  m_Position: {x: 408, y: -240, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -182,13 +178,13 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: woman1_fall
+  m_Name: man5_fall
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 0144028f222af1d4686592af2b1371db, type: 2}
+  - {fileID: 7400000, guid: 77d0d907a6f442d4d8a69c25423809ba, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: -24, y: -240, z: 0}
+  m_Position: {x: 0, y: -240, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -212,10 +208,14 @@ StateMachine:
       first: {fileID: 0}
       second:
       - {fileID: 110154056}
+      - {fileID: 110166475}
     data:
       first: {fileID: 110200000}
       second:
       - {fileID: 110100000}
+    data:
+      first: {fileID: 110225258}
+      second: []
     data:
       first: {fileID: 110228446}
       second:
@@ -224,10 +224,6 @@ StateMachine:
       first: {fileID: 110244705}
       second:
       - {fileID: 110104378}
-      - {fileID: 110127289}
-    data:
-      first: {fileID: 110225258}
-      second: []
   m_MotionSetCount: 1
-  m_AnyStatePosition: {x: -240, y: -84, z: 0}
+  m_AnyStatePosition: {x: -192, y: -84, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
