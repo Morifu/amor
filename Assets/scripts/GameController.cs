@@ -9,6 +9,7 @@ public class GameController : ScriptableObject {
 
 	// number of current lv
 	public int currentLvl = 1;
+	public int nextLevel;
 
 	// info on all levels
 	[HideInInspector]
@@ -46,6 +47,7 @@ public class GameController : ScriptableObject {
 	public void setNextLevel(int lvl)
 	{
 		currentLvl = lvl;
+		nextLevel = lvl;
 	}
 
 	// level initializer, here we start counting time

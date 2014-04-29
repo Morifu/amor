@@ -8,6 +8,9 @@ public class Gate : MonoBehaviour {
 
 	public GameObject destination;
 
+	bool justmoved = false;
+	int delayCount = 0;
+
 	GameObject kraty;
 	// Use this for initialization
 	void Start () {
@@ -16,7 +19,12 @@ public class Gate : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+		if(delayCount < 100)
+			delayCount++;
+		else
+			justmoved = false;
+
 		bool shouldOpen = true;
 		for ( int i = 0; i < levers.Length && shouldOpen ; i++)
 		{
@@ -35,13 +43,15 @@ public class Gate : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{
-		if(coll.gameObject.tag == "Lover")
+		if(coll.gameObject.tag == "Lover" && !justmoved)
 		{
 			coll.transform.position = destination.transform.position;
 			if(transform.localScale.x * destination.transform.localScale.x > 0)
 			{
 				coll.transform.GetComponent<LoverController>().FlipMovement();
 			}
+			justmoved = true;
+			delayCount = 0;
 		}
 	}
 }

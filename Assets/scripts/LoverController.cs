@@ -130,19 +130,26 @@ public class LoverController : MonoBehaviour {
 		move = 1;
 		stepsCount = steps;
 	}
+
+	public class Node
+	{
+		public Node left;
+		public Node right;
+		public int value;
+	}
+	
+	string Serialize(Node n)
+	{
+		string retval = "";
+		if (n == null)
+			retval = "N";
+		else
+		{
+			retval = n.value +","+ Serialize (n.left) +","+ Serialize (n.right);
+		}
+		return retval;
+	}
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

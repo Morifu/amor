@@ -37,28 +37,10 @@ public class GUIManager: MonoBehaviour {
 	[HideInInspector]
 	public static GUIManager instance;
 
-	// gui button styles
 	public GUIStyle pauseButtonStyle;
 	public ButtonData pauseButtonSizes;
-
-	public GUIStyle backButtonStyle;
-	public ButtonData backButtonSizes;
-
-	public GUIStyle repeatButtonStyle;
-	public ButtonData repeatButtonSizes;
-
-	public GUIStyle soundButtonStyle;
-	public ButtonData soundButtonSizes;
-
-	public GUIStyle homeButtonStyle;
-	public ButtonData homeButtonSizes;
-
+	
 	public GUIStyle textStyle;
-
-	// texture with background style
-	public Texture2D pauseBG;
-
-	// pause button sizes and offset
 
 	// references for gui texts
 	public GUIText arrowCountTXT;
@@ -151,53 +133,7 @@ public class GUIManager: MonoBehaviour {
 
 		}
 
-		// if game paused, draw pause screen
-		if(GameManager.instance.GamePaused)
-		{
 
-			// first draw bg texture
-			Rect rectu = new Rect (0, 0, Screen.width, Screen.height);
-			GUI.DrawTexture (rectu, pauseBG);
-
-			// back button on screen
-			if(GUI.Button(new Rect(Screen.width*0.1f+backButtonSizes.offsetX,
-			                       Screen.height*0.25f+backButtonSizes.offsetY,
-			                       backButtonSizes.width,
-			                       backButtonSizes.height),
-			              "",backButtonStyle))
-			{
-				GameManager.instance.GamePaused = !GameManager.instance.GamePaused;
-			}
-			// repeat button on screen
-			if(GUI.Button(new Rect(Screen.width*0.1f+repeatButtonSizes.offsetX,
-			                       Screen.height*0.4f+repeatButtonSizes.offsetY,
-			                       repeatButtonSizes.width,
-			                       repeatButtonSizes.height),
-			              "",repeatButtonStyle))
-			{
-				GameManager.instance.GamePaused = false;
-				Application.LoadLevel(Application.loadedLevel);
-			}
-			// sound button on screen
-			if(GUI.Button(new Rect(Screen.width*0.1f+soundButtonSizes.offsetX,
-			                       Screen.height*0.55f+soundButtonSizes.offsetY,
-			                       soundButtonSizes.width,
-			                       soundButtonSizes.height),
-			              "",soundButtonStyle))
-			{
-				
-			}
-			// home button on screen
-			if(GUI.Button(new Rect(Screen.width*0.1f+homeButtonSizes.offsetX,
-			                       Screen.height*0.7f+homeButtonSizes.offsetY,
-			                       homeButtonSizes.width,
-			                       homeButtonSizes.height),
-			              "",homeButtonStyle))
-			{
-				GameManager.instance.GamePaused = false;
-				Application.LoadLevel("selectLevel");
-			}
-		}
 	}
 
 	public static void DrawOutline(Rect position, string text, int fontSize, Font font, GUIStyle style, Color outColor, Color inColor)

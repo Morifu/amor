@@ -131,7 +131,7 @@ public class WinScreenGUI : MonoBehaviour {
 		                       nextButtonSizes.height),
 		              "",nextButtonStyle))
 		{
-			
+			Application.LoadLevel("lv"+GameManager.instance.controller.nextLevel);
 		}
 	}
 }
