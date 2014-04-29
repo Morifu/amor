@@ -1638,6 +1638,10 @@ Prefab:
       propertyPath: orthographic size
       value: 5.3499999
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 2650b42abd1f29d4987609401e17e85f, type: 2}
+      propertyPath: WSADSensitivity
+      value: .5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2650b42abd1f29d4987609401e17e85f, type: 2}
   m_RootGameObject: {fileID: 2108884531}
@@ -1733,9 +1737,9 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
+  m_SortingLayer: 1
+  m_SortingOrder: 10
+  m_SortingLayerID: 3940858523
   m_Sprite: {fileID: 21300000, guid: 2dfcc7e1e5e96fb4ab3188cf0a735f9c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &552268974
@@ -7055,7 +7059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minZoom: 2
   sensitivity: 1
-  WSADSensitivity: .00999999978
+  WSADSensitivity: .5
   whatToHit:
     serializedVersion: 2
     m_Bits: 4294967291
