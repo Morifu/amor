@@ -57,9 +57,22 @@ public class GameController : ScriptableObject {
 		time = Time.time;
 		scoreCount  = 0;
 		arrowCount = 0;
+		starsCount = 0;
 		bonusCollected = false;
 		extraPair = false;
 		lvlInfo = lvdata.getLevelInfo (currentLvl);
+	}
+
+	public void Update()
+	{
+		if(lvlInfo.star3Count >= arrowCount)
+			starsCount = 3;
+		else if(lvlInfo.star2Count >= arrowCount)
+			starsCount = 2;
+		else if(lvlInfo.star1Count >= arrowCount)
+			starsCount = 1;
+		else
+			starsCount = 0;
 	}
 
 	// level is completed, lets count points and update stats
@@ -69,17 +82,26 @@ public class GameController : ScriptableObject {
 		levelCompleted = true;
 		//levelFailed = true;
 		// first count stars gathered
-		starsCount = 1;
 		lvlInfo.lvlState = LevelData.LevelState.STAR1COMPLETE;
-		if(lvlInfo.star3Count > arrowCount)
+		if(lvlInfo.star3Count >= arrowCount)
 		{
 			starsCount = 3;
 			lvlInfo.lvlState = LevelData.LevelState.STAR3COMPLETE;
 		}
-		else if(lvlInfo.star2Count > arrowCount)
+		else if(lvlInfo.star2Count >= arrowCount)
 		{
 			starsCount = 2;
 			lvlInfo.lvlState = LevelData.LevelState.STAR2COMPLETE;
+		}
+		else if(lvlInfo.star1Count >= arrowCount)
+		{
+			starsCount = 1;
+			lvlInfo.lvlState = LevelData.LevelState.STAR1COMPLETE;
+		}
+		else
+		{
+			starsCount = 0;
+			lvlInfo.lvlState = LevelData.LevelState.UNLOCKED;
 		}
 		scoreCount += 1000 * starsCount;
 

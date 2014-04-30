@@ -83,7 +83,7 @@ public class WinScreenGUI : MonoBehaviour {
 		                                  bestTimeText.height), textbesttime, bestTimeText.guiTextReference, textStyle , Color.black, Color.white);
 
 		// draw bonus colleted string
-		string temp1 = (GameManager.instance.controller.bonusCollected) ? (" collected!") : (" missed");
+		string temp1 = (GameManager.instance.controller.bonusCollected) ? (" collected!") : (" none");
 		string textbonus = string.Format(bonusText.text+temp1);
 
 		GUIManager.DrawOutline (new Rect (Screen.width*bonusText.positionX,

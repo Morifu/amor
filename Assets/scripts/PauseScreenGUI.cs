@@ -30,6 +30,7 @@ public class PauseScreenGUI : MonoBehaviour {
 	}
 
 	void OnGUI() {
+		GUI.depth = -1;
 		// if game paused, draw pause screen
 		if(GameManager.instance.GamePaused)
 		{

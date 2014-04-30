@@ -39,12 +39,19 @@ public class GUIManager: MonoBehaviour {
 
 	public GUIStyle pauseButtonStyle;
 	public ButtonData pauseButtonSizes;
+
+	public GUIStyle restartButtonStyle;
+	public ButtonData restartButtonSizes;
 	
 	public GUIStyle textStyle;
 
 	// references for gui texts
 	public GUIText arrowCountTXT;
-	public GUIText timeLeftTXT;
+	public GUITexture starsBG;
+	public Sprite star;
+	public GUIManager.SpriteData starsData;
+
+	//public GUIText timeLeftTXT;
 	GUIText LevelNumberTXT;
 
 	bool hideLevelNumber = false;
@@ -85,13 +92,13 @@ public class GUIManager: MonoBehaviour {
 			LevelNumberTXT.text = string.Format("LEVEL {0:d}", GameManager.instance.controller.currentLvl);
 		}
 
-		if (timeLeftTXT != null && !GameManager.instance.controller.levelCompleted)
-		{
-			int seconds = (int)(Time.time - GameManager.instance.controller.time);
-			int minutes = (int)(seconds/60);
-
-			timeLeftTXT.text = string.Format("Time: {0:d2}:{1:d2}", minutes, seconds%60);
-		}
+//		if (timeLeftTXT != null && !GameManager.instance.controller.levelCompleted)
+//		{
+//			int seconds = (int)(Time.time - GameManager.instance.controller.time);
+//			int minutes = (int)(seconds/60);
+//
+//			timeLeftTXT.text = string.Format("Time: {0:d2}:{1:d2}", minutes, seconds%60);
+//		}
 
 		if(!hideLevelNumber && (int)(Time.time - GameManager.instance.controller.time) > targetsHideTime)
 		{
@@ -116,23 +123,47 @@ public class GUIManager: MonoBehaviour {
 			screenRect.y = Screen.height - (screenRect.y+screenRect.height);
 			DrawOutline(screenRect,LevelNumberTXT.text, LevelNumberTXT, textStyle,Color.black,LevelNumberTXT.color);
 		}
+
+		for (int i = 0; i < GameManager.instance.controller.starsCount; i++)
+		{
+
+			float starWidth = star.rect.width*((starsBG.GetScreenRect().height/star.rect.height)*starsData.size)*1.07f;
+			Rect starFillRect = new Rect(Screen.width*starsData.positionX
+			                             + starWidth*i,
+			                             Screen.height*starsData.positionY,
+			                             starWidth,
+			                             starsBG.GetScreenRect().height*starsData.size);
+			
+			GUI.DrawTexture (starFillRect, star.texture);
+			
+		}
 		// time left text outlie draw
-		screenRect = timeLeftTXT.GetScreenRect ();
-		screenRect.y = Screen.height - (screenRect.y+screenRect.height);
-		DrawOutline(screenRect,timeLeftTXT.text, timeLeftTXT, textStyle,Color.black,timeLeftTXT.color);
+//		screenRect = timeLeftTXT.GetScreenRect ();
+//		screenRect.y = Screen.height - (screenRect.y+screenRect.height);
+//		DrawOutline(screenRect,timeLeftTXT.text, timeLeftTXT, textStyle,Color.black,timeLeftTXT.color);
 
 		// pause button
-		if (GUI.Button(new Rect(Screen.width-pauseButtonSizes.width-pauseButtonSizes.offsetX,
-		                        pauseButtonSizes.offsetY,
+		if (!GameManager.instance.GamePaused && 
+		    GUI.Button(new Rect(Screen.width*pauseButtonSizes.positionX+pauseButtonSizes.offsetX,
+		                        Screen.height*pauseButtonSizes.positionY+pauseButtonSizes.offsetY,
 		                        pauseButtonSizes.width,
 		                        pauseButtonSizes.height),
 		               	"",pauseButtonStyle))
 		{
-			if(!GameManager.instance.GamePaused)
 			GameManager.instance.GamePaused = true;
-
 		}
 
+		// restart button
+		if(!GameManager.instance.GamePaused && 
+		   GUI.Button(new Rect(Screen.width*restartButtonSizes.positionX+restartButtonSizes.offsetX,
+		                       Screen.height*restartButtonSizes.positionY+restartButtonSizes.offsetY,
+		                       restartButtonSizes.width,
+		                       restartButtonSizes.height),
+		              "",restartButtonStyle))
+		{
+			GameManager.instance.GamePaused = false;
+			Application.LoadLevel(Application.loadedLevel);
+		}
 
 	}
 

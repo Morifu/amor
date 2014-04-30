@@ -51,9 +51,9 @@ public class LevelData : ScriptableObject {
 		{
 			levels = new ArrayList ();
 			// constructor is LevelInfo(for 1 star, for 2 stars, for 3 stars, minimum time in seconds);
-			LevelInfo lvl1 = new LevelInfo (3, 4, 5, 10);
-			LevelInfo lvl2 = new LevelInfo (5, 10, 15, 20);
-			LevelInfo lvl3 = new LevelInfo (4, 9, 14, 30);
+			LevelInfo lvl1 = new LevelInfo (10, 6, 3, 10);
+			LevelInfo lvl2 = new LevelInfo (15, 10, 5, 20);
+			LevelInfo lvl3 = new LevelInfo (14, 9, 4, 30);
 			LevelInfo lvl4 = new LevelInfo (8, 15, 25, 50);
 			LevelInfo lvl5 = new LevelInfo (7, 14, 24, 50);
 			LevelInfo lvl6 = new LevelInfo (11, 19, 30, 50);

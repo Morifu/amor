@@ -69,4 +69,9 @@ public class GameManager : MonoBehaviour {
 
 	}
 
+	void Update()
+	{
+		controller.Update ();
+	}
+
 }
