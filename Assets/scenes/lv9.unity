@@ -2452,14 +2452,14 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 219253609}
-  - 132: {fileID: 219253610}
+  - 131: {fileID: 219253610}
   m_Layer: 0
-  m_Name: TimeTXT
+  m_Name: StarsBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &219253609
 Transform:
   m_ObjectHideFlags: 0
@@ -2467,34 +2467,30 @@ Transform:
   m_PrefabInternal: {fileID: 1446863070}
   m_GameObject: {fileID: 219253608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00999999978, y: .99000001, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: .00999999978, y: .910000026, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 1348396352}
---- !u!132 &219253610
-GUIText:
+--- !u!131 &219253610
+GUITexture:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13200006, guid: 0254eefbbe3f2834e82d0530ff8bca51,
+  m_PrefabParentObject: {fileID: 13100002, guid: 0254eefbbe3f2834e82d0530ff8bca51,
     type: 2}
   m_PrefabInternal: {fileID: 1446863070}
   m_GameObject: {fileID: 219253608}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Text: 'Time: 00:20'
-  m_Anchor: 0
-  m_Alignment: 0
-  m_PixelOffset: {x: 0, y: 0}
-  m_LineSpacing: 1
-  m_TabSize: 4
-  m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
-  m_Material: {fileID: 0}
-  m_FontSize: 26
-  m_FontStyle: 0
-  m_Color:
+  m_Texture: {fileID: 2800000, guid: 506201d03dce87547a5660b2e8e8df12, type: 3}
+  m_Color: {r: .5, g: .5, b: .5, a: .5}
+  m_PixelInset:
     serializedVersion: 2
-    rgba: 4294967295
-  m_PixelCorrect: 1
-  m_RichText: 1
+    x: 0
+    y: 0
+    width: 120
+    height: 34
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
 --- !u!1 &219356403
 GameObject:
   m_ObjectHideFlags: 0
@@ -5206,7 +5202,7 @@ Prefab:
     - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
       propertyPath: lovers.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 364268030}
     - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
       propertyPath: lovers.Array.data[1]
       value: 
@@ -11947,10 +11943,76 @@ MonoBehaviour:
   pauseButtonSizes:
     width: 80
     height: 80
-    offsetX: 10
-    offsetY: 10
-    positionX: 0
-    positionY: 0
+    offsetX: 0
+    offsetY: 0
+    positionX: .870000005
+    positionY: .00999999978
+  restartButtonStyle:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 2800000, guid: 9fd8db818857f424b8ad62e432bad865, type: 3}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 2800000, guid: 9fd8db818857f424b8ad62e432bad865, type: 3}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  restartButtonSizes:
+    width: 60
+    height: 55
+    offsetX: 0
+    offsetY: 0
+    positionX: .769999981
+    positionY: .0399999991
   textStyle:
     m_Name: 
     m_Normal:
@@ -12011,7 +12073,12 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   arrowCountTXT: {fileID: 1130023217}
-  timeLeftTXT: {fileID: 219253610}
+  starsBG: {fileID: 219253610}
+  star: {fileID: 21300000, guid: 280e794cec0ffa2459ed6a38a5f953e8, type: 3}
+  starsData:
+    positionX: 0
+    positionY: 0
+    size: 1
   targetsHideTime: 3
 --- !u!1 &1365341549
 GameObject:
@@ -12511,7 +12578,7 @@ MonoBehaviour:
   levelNumber: 10
   completesLevel: 1
   lovers:
-  - {fileID: 0}
+  - {fileID: 364268030}
   - {fileID: 262698725}
 --- !u!1 &1418691676
 GameObject:
