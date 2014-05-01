@@ -5571,6 +5571,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 599954588}
+  - 114: {fileID: 599954589}
   m_Layer: 0
   m_Name: Back-BG
   m_TagString: Untagged
@@ -5593,6 +5594,19 @@ Transform:
   - {fileID: 1404787341}
   - {fileID: 1955904277}
   m_Father: {fileID: 0}
+--- !u!114 &599954589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 599954587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 345b7268e70dffe4197fb6ee2dc7a686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camer: {fileID: 1904574153}
+  movingXpower: .150000006
 --- !u!1 &605120466
 GameObject:
   m_ObjectHideFlags: 0
@@ -7396,6 +7410,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 2fa2f493bb3fbdc4b81b7716b59f520c, type: 2}
       propertyPath: maxSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 2fa2f493bb3fbdc4b81b7716b59f520c, type: 2}
+      propertyPath: steps
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2fa2f493bb3fbdc4b81b7716b59f520c, type: 2}
@@ -13589,7 +13607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 2
   move: 0
-  steps: 100
+  steps: 150
   deathVelocity: 6
 --- !u!95 &1909370545
 Animator:

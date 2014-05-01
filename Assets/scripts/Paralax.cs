@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Paralax : MonoBehaviour {
 	public Transform camer;
-	public float movingXpower=0.5f;
+	public float movingXpower=0.15f;
 	float moving;
 
 	// Use this for initialization

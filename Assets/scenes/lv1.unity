@@ -1151,6 +1151,14 @@ Prefab:
       propertyPath: starsData.size
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 13200018, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_Color.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 13200018, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_FontStyle
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
   m_RootGameObject: {fileID: 1097193436}
@@ -5625,6 +5633,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 695232788}
+  - 114: {fileID: 695232789}
   m_Layer: 0
   m_Name: Back-BG
   m_TagString: Untagged
@@ -5645,6 +5654,19 @@ Transform:
   - {fileID: 253607866}
   - {fileID: 1115109012}
   m_Father: {fileID: 0}
+--- !u!114 &695232789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 695232787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 345b7268e70dffe4197fb6ee2dc7a686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camer: {fileID: 2108884537}
+  movingXpower: .150000006
 --- !u!1 &704496854
 GameObject:
   m_ObjectHideFlags: 0

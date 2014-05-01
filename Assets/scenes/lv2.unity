@@ -3693,6 +3693,17 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1866731883}
+--- !u!114 &635645280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &642080329
 GameObject:
   m_ObjectHideFlags: 0
@@ -4652,6 +4663,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 791016790}
+  - 114: {fileID: 791016791}
   m_Layer: 0
   m_Name: Back-BG
   m_TagString: Untagged
@@ -4672,6 +4684,19 @@ Transform:
   - {fileID: 1511162791}
   - {fileID: 1739329426}
   m_Father: {fileID: 0}
+--- !u!114 &791016791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 791016789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 345b7268e70dffe4197fb6ee2dc7a686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camer: {fileID: 1492661301}
+  movingXpower: .150000006
 --- !u!1 &803378676
 GameObject:
   m_ObjectHideFlags: 0
@@ -5313,7 +5338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLvl: 2
   nextLevel: 0
-  lvdata: {fileID: 1818492606}
+  lvdata: {fileID: 635645280}
   scoreCount: 0
   time: 0
   arrowCount: 0
@@ -9363,17 +9388,6 @@ MonoBehaviour:
     height: 80
     positionX: .349999994
     positionY: .349999994
---- !u!114 &1818492606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1825813753
 GameObject:
   m_ObjectHideFlags: 0
