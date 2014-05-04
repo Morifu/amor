@@ -264,7 +264,7 @@ Transform:
   m_LocalScale: {x: 1.45719492, y: 1.09589028, z: 1}
   m_Children: []
   m_Father: {fileID: 1771358782}
---- !u!114 &558581340
+--- !u!114 &451679509
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -753,7 +753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220c73361d768cc48a2bfbaa041fe6d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  where: lv1
+  where: intro
   levelNumber: 1
 --- !u!61 &1306751131
 BoxCollider2D:
@@ -1038,12 +1038,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLvl: 1
-  lvdata: {fileID: 558581340}
+  nextLevel: 0
+  lvdata: {fileID: 451679509}
+  scoreCount: 0
   time: 0
   arrowCount: 0
   bonusCollected: 0
+  extraPair: 0
   starsCount: 0
   secondsLeft: 0
+  levelCompleted: 0
+  levelFailed: 0
 --- !u!82 &1635010450
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1117,6 +1122,8 @@ MonoBehaviour:
   controller: {fileID: 0}
   isInGame: 0
   GamePaused: 0
+  winScreen: {fileID: 0}
+  looseScreen: {fileID: 0}
 --- !u!1 &1665254597
 GameObject:
   m_ObjectHideFlags: 0

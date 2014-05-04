@@ -26,7 +26,7 @@ public class SiteLock : MonoBehaviour {
 				Application.LoadLevel("blockPirate");
 				//print("Pirated web player");
 		else if (isPirated == false)
-				Application.LoadLevel("mainMenu");
+				//Application.LoadLevel("mainMenu");
 
 		*/		
 			//	
@@ -38,7 +38,7 @@ public class SiteLock : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Time.time >= timeStart+1)
+		if (Time.time >= timeStart+2)
 		Application.LoadLevel("mainMenu"); //
 	}
 
