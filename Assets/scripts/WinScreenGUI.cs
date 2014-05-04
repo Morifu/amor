@@ -69,7 +69,11 @@ public class WinScreenGUI : MonoBehaviour {
 		GUIManager.DrawOutline (new Rect (Screen.width*LevelCompletedText.positionX,
 		                                  Screen.height*LevelCompletedText.positionY,
 		                                  LevelCompletedText.width,
-		                                  LevelCompletedText.height), LevelCompletedText.text, LevelCompletedText.guiTextReference, textStyle , Color.black, Color.white);
+		                                  LevelCompletedText.height),
+		                        LevelCompletedText.text, 
+		                        LevelCompletedText.guiTextReference, 
+		                        textStyle , Color.black, 
+		                        LevelCompletedText.guiTextReference.color);
 
 		// draw best time 
 		int seconds = (int)(GameManager.instance.controller.time);
@@ -80,7 +84,11 @@ public class WinScreenGUI : MonoBehaviour {
 		GUIManager.DrawOutline (new Rect (Screen.width*bestTimeText.positionX,
 		                                  Screen.height*bestTimeText.positionY,
 		                                  bestTimeText.width,
-		                                  bestTimeText.height), textbesttime, bestTimeText.guiTextReference, textStyle , Color.black, Color.white);
+		                                  bestTimeText.height),
+		                        textbesttime,
+		                        bestTimeText.guiTextReference, 
+		                        textStyle , Color.black, 
+		                        bestTimeText.guiTextReference.color);
 
 		// draw bonus colleted string
 		string temp1 = (GameManager.instance.controller.bonusCollected) ? (" collected!") : (" none");
@@ -89,9 +97,11 @@ public class WinScreenGUI : MonoBehaviour {
 		GUIManager.DrawOutline (new Rect (Screen.width*bonusText.positionX,
 		                                  Screen.height*bonusText.positionY,
 		                                  bonusText.width,
-		                                  bonusText.height), textbonus, 
+		                                  bonusText.height), 
+		                        textbonus, 
 		                        bonusText.guiTextReference, 
-		                        textStyle , Color.black, Color.white);
+		                        textStyle , Color.black, 
+		                        bonusText.guiTextReference.color);
 
 		string textScoreCount = string.Format(scoreText.text+"\n{0}", 
 		                                      GameManager.instance.controller.scoreCount);
@@ -100,9 +110,11 @@ public class WinScreenGUI : MonoBehaviour {
 		GUIManager.DrawOutline (new Rect (Screen.width*scoreText.positionX,
 		                                  Screen.height*scoreText.positionY,
 		                                  scoreText.width,
-		                                  scoreText.height), textScoreCount, 
+		                                  scoreText.height),
+		                        textScoreCount, 
 		                        scoreText.guiTextReference, 
-		                        textStyle , Color.black, Color.white);
+		                        textStyle , Color.black, 
+		                        scoreText.guiTextReference.color);
 		textStyle.alignment = tempAnchor;
 
 		// back button 

@@ -34,7 +34,8 @@ public class GameController : ScriptableObject {
 	//flag if show level loose
 	public bool levelFailed = false;
 	//info on current level
-	LevelData.LevelInfo lvlInfo;
+	[HideInInspector]
+	public LevelData.LevelInfo lvlInfo;
 
 	// scriptableObjects method for enabling script
 	void OnEnable()
@@ -57,7 +58,7 @@ public class GameController : ScriptableObject {
 		time = Time.time;
 		scoreCount  = 0;
 		arrowCount = 0;
-		starsCount = 0;
+		starsCount = 1;
 		bonusCollected = false;
 		extraPair = false;
 		lvlInfo = lvdata.getLevelInfo (currentLvl);
@@ -69,10 +70,8 @@ public class GameController : ScriptableObject {
 			starsCount = 3;
 		else if(lvlInfo.star2Count >= arrowCount)
 			starsCount = 2;
-		else if(lvlInfo.star1Count >= arrowCount)
+		else 
 			starsCount = 1;
-		else
-			starsCount = 0;
 	}
 
 	// level is completed, lets count points and update stats
@@ -93,16 +92,12 @@ public class GameController : ScriptableObject {
 			starsCount = 2;
 			lvlInfo.lvlState = LevelData.LevelState.STAR2COMPLETE;
 		}
-		else if(lvlInfo.star1Count >= arrowCount)
+		else
 		{
 			starsCount = 1;
 			lvlInfo.lvlState = LevelData.LevelState.STAR1COMPLETE;
 		}
-		else
-		{
-			starsCount = 0;
-			lvlInfo.lvlState = LevelData.LevelState.UNLOCKED;
-		}
+
 		scoreCount += 1000 * starsCount;
 
 		time = Time.time - time;
