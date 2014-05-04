@@ -51,18 +51,18 @@ public class LevelData : ScriptableObject {
 		{
 			levels = new ArrayList ();
 			// constructor is LevelInfo(for 1 star, for 2 stars, for 3 stars, minimum time in seconds);
-			LevelInfo lvl1 = new LevelInfo (10, 6, 3, 10);
-			LevelInfo lvl2 = new LevelInfo (15, 10, 5, 20);
-			LevelInfo lvl3 = new LevelInfo (14, 9, 4, 30);
-			LevelInfo lvl4 = new LevelInfo (8, 15, 25, 50);
-			LevelInfo lvl5 = new LevelInfo (7, 14, 24, 50);
-			LevelInfo lvl6 = new LevelInfo (11, 19, 30, 50);
-			LevelInfo lvl7 = new LevelInfo (15, 20, 25, 70);
-			LevelInfo lvl8 = new LevelInfo (15, 20, 25, 70);
-			LevelInfo lvl9 = new LevelInfo (15, 20, 25, 80);
-			LevelInfo lvl10 = new LevelInfo (15, 20, 25, 80);
-			LevelInfo lvl11 = new LevelInfo (15, 20, 25, 110);
-			LevelInfo lvl12 = new LevelInfo (15, 20, 25, 200);
+			LevelInfo lvl1 = new LevelInfo (99, 8, 3, 10);
+			LevelInfo lvl2 = new LevelInfo (99, 12, 5, 20);
+			LevelInfo lvl3 = new LevelInfo (99, 10, 4, 30);
+			LevelInfo lvl4 = new LevelInfo (99, 22, 9, 50);
+			LevelInfo lvl5 = new LevelInfo (99, 15, 6, 50);
+			LevelInfo lvl6 = new LevelInfo (99, 25, 10, 50);
+			LevelInfo lvl7 = new LevelInfo (99, 15, 6, 70);
+			LevelInfo lvl8 = new LevelInfo (99, 20, 8, 70);
+			LevelInfo lvl9 = new LevelInfo (99, 20, 8, 80);
+			LevelInfo lvl10 = new LevelInfo (99, 23, 9, 80);
+			LevelInfo lvl11 = new LevelInfo (99, 45, 19, 110);
+			LevelInfo lvl12 = new LevelInfo (99, 32, 12, 200);
 
 			levels.Add (lvl1);
 			levels.Add (lvl2);

@@ -2,9 +2,11 @@
 using System.Collections;
 
 public class SiteLock : MonoBehaviour {
+	float timeStart;
 
 	// Use this for initialization
 	void Start () {
+		timeStart=Time.time;
 		/*Application.ExternalEval("if(document.location.host != 'http://orohimaru.zebromalz.info/amor/') { document.location=''; }");*/
 
 		bool isPirated = true;
@@ -24,7 +26,7 @@ public class SiteLock : MonoBehaviour {
 				Application.LoadLevel("blockPirate");
 				//print("Pirated web player");
 		else if (isPirated == false)
-				Application.LoadLevel("mainMenu");
+				//Application.LoadLevel("mainMenu");
 
 		*/		
 			//	
@@ -36,6 +38,7 @@ public class SiteLock : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if (Time.time >= timeStart+2)
 		Application.LoadLevel("mainMenu"); //
 	}
 
