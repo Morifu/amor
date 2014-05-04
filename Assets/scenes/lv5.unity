@@ -819,7 +819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loverCount: 0
-  nextLevel: lv6
+  nextLevel: cutsceen
   levelNumber: 6
   completesLevel: 1
   lovers:
@@ -12917,7 +12917,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
       propertyPath: nextLevel
-      value: lv6
+      value: cutsceen
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
       propertyPath: levelNumber
@@ -12931,6 +12931,10 @@ Prefab:
       propertyPath: lovers.Array.data[1]
       value: 
       objectReference: {fileID: 1909370539}
+    - target: {fileID: 11400002, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
+      propertyPath: completesLevel
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
   m_RootGameObject: {fileID: 96907861}

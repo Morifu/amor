@@ -113,6 +113,10 @@ Prefab:
       propertyPath: timeToWait
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 725979134c5ede142b5faae7442d2006, type: 2}
+      propertyPath: MoveTo
+      value: mainMenu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 725979134c5ede142b5faae7442d2006, type: 2}
   m_RootGameObject: {fileID: 2029002895}
@@ -271,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToWait: 3
-  MoveTo: lv1
+  MoveTo: mainMenu
 --- !u!102 &2029002897
 TextMesh:
   serializedVersion: 3

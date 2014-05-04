@@ -3,6 +3,8 @@ using System.Collections;
 
 public class intro : MonoBehaviour {
 	float timeStart;
+	public float timeToWait=1;
+	public string MoveTo;
 
 	// Use this for initialization
 	void Start () {
@@ -11,8 +13,13 @@ public class intro : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Time.time >= timeStart+1)
-			Application.LoadLevel("lv1"); //
-	
+		if (Time.time >= timeStart+timeToWait)
+			Application.LoadLevel(MoveTo); //
+		else {
+			if (Input.GetKey(KeyCode.Space)) { 
+				Application.LoadLevel(MoveTo);
+			}
+		}
+
 	}
 }
