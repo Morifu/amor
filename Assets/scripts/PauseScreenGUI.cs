@@ -31,6 +31,16 @@ public class PauseScreenGUI : MonoBehaviour {
 	public Sprite mainTargetMan;
 	public GUIManager.ButtonData manPosition;
 
+	public bool haveExtraPair = false;
+
+	public Sprite extraPairBG;
+	public GUIManager.ButtonData eextraPairBgPosition;
+
+	public Sprite extraTargetWoman;
+	public GUIManager.ButtonData extraWomanPosition;
+	
+	public Sprite extraTargetMan;
+	public GUIManager.ButtonData extraManPosition;
 
 	// Use this for initialization
 	void Start () {
@@ -47,7 +57,7 @@ public class PauseScreenGUI : MonoBehaviour {
 		// if game paused, draw pause screen
 		if(GameManager.instance.GamePaused)
 		{
-			
+
 			// first draw bg texture
 			Rect rectu = new Rect (0, 0, Screen.width, Screen.height);
 			GUI.DrawTexture (rectu, pauseBG);
@@ -140,6 +150,31 @@ public class PauseScreenGUI : MonoBehaviour {
 			{
 				GameManager.instance.GamePaused = false;
 				Application.LoadLevel("selectLevel");
+			}
+
+
+			
+			if(haveExtraPair)
+			{
+				GUI.DrawTexture ( new Rect (Screen.width*eextraPairBgPosition.positionX,
+				                            Screen.height*eextraPairBgPosition.positionY,
+				                            eextraPairBgPosition.width,
+				                            eextraPairBgPosition.height), 
+				                 extraPairBG.texture);
+				
+				//draw womans portrait
+				GUI.DrawTexture ( new Rect (Screen.width*extraWomanPosition.positionX,
+				                            Screen.height*extraWomanPosition.positionY,
+				                            extraWomanPosition.width,
+				                            extraWomanPosition.height), 
+				                 extraTargetWoman.texture);
+				
+				//draw mans portrait
+				GUI.DrawTexture ( new Rect (Screen.width*extraManPosition.positionX,
+				                            Screen.height*extraManPosition.positionY,
+				                            extraManPosition.width,
+				                            extraManPosition.height), 
+				                 extraTargetMan.texture);
 			}
 		}
 	}
