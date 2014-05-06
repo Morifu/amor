@@ -16941,6 +16941,31 @@ MonoBehaviour:
     offsetY: 0
     positionX: .421999991
     positionY: .234999999
+  haveExtraPair: 1
+  extraPairBG: {fileID: 21300000, guid: 5b94a52a31d299c44ab1ef7fa9333a90, type: 3}
+  eextraPairBgPosition:
+    width: 175
+    height: 122
+    offsetX: 0
+    offsetY: 0
+    positionX: .236000001
+    positionY: .529999971
+  extraTargetWoman: {fileID: 21300000, guid: 1ea79b02f91616844b0a5d66ba702bfa, type: 3}
+  extraWomanPosition:
+    width: 55
+    height: 55
+    offsetX: 0
+    offsetY: 0
+    positionX: .423000008
+    positionY: .667999983
+  extraTargetMan: {fileID: 21300000, guid: 4167602321692584eb17797896f1a9aa, type: 3}
+  extraManPosition:
+    width: 55
+    height: 55
+    offsetX: 0
+    offsetY: 0
+    positionX: .423000008
+    positionY: .532000005
 --- !u!1001 &1727390078
 Prefab:
   m_ObjectHideFlags: 0
@@ -22165,6 +22190,20 @@ Prefab:
       propertyPath: mainTargetMan
       value: 
       objectReference: {fileID: 21300000, guid: ca0fb04df26b8ee43933e3365422fa6a,
+        type: 3}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: haveExtraPair
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: extraTargetWoman
+      value: 
+      objectReference: {fileID: 21300000, guid: 1ea79b02f91616844b0a5d66ba702bfa,
+        type: 3}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: extraTargetMan
+      value: 
+      objectReference: {fileID: 21300000, guid: 4167602321692584eb17797896f1a9aa,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}

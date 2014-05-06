@@ -1171,6 +1171,19 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: ca0fb04df26b8ee43933e3365422fa6a,
         type: 3}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: mainTargetWoman
+      value: 
+      objectReference: {fileID: 21300000, guid: 1ea79b02f91616844b0a5d66ba702bfa,
+        type: 3}
+    - target: {fileID: 13200006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 13200006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_FontSize
+      value: 32
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
   m_RootGameObject: {fileID: 1526195335}
@@ -3597,6 +3610,31 @@ MonoBehaviour:
     offsetY: 0
     positionX: .421999991
     positionY: .234999999
+  haveExtraPair: 0
+  extraPairBG: {fileID: 21300000, guid: 5b94a52a31d299c44ab1ef7fa9333a90, type: 3}
+  eextraPairBgPosition:
+    width: 175
+    height: 122
+    offsetX: 0
+    offsetY: 0
+    positionX: .236000001
+    positionY: .529999971
+  extraTargetWoman: {fileID: 21300000, guid: e4d237a07d136234a9ecd761fc0a0be5, type: 3}
+  extraWomanPosition:
+    width: 55
+    height: 55
+    offsetX: 0
+    offsetY: 0
+    positionX: .423000008
+    positionY: .667999983
+  extraTargetMan: {fileID: 21300000, guid: cfaaeac3dfc41b4468f9a226b58b413b, type: 3}
+  extraManPosition:
+    width: 55
+    height: 55
+    offsetX: 0
+    offsetY: 0
+    positionX: .423000008
+    positionY: .532000005
 --- !u!1 &798246140
 GameObject:
   m_ObjectHideFlags: 0
@@ -5541,17 +5579,6 @@ Transform:
   m_LocalScale: {x: .336984307, y: .336984068, z: 1}
   m_Children: []
   m_Father: {fileID: 1208955552}
---- !u!114 &1288948812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1331926479
 GameObject:
   m_ObjectHideFlags: 0
@@ -6266,7 +6293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLvl: 3
   nextLevel: 0
-  lvdata: {fileID: 1288948812}
+  lvdata: {fileID: 1909828448}
   scoreCount: 0
   time: 0
   arrowCount: 0
@@ -11954,6 +11981,17 @@ Prefab:
   m_RootGameObject: {fileID: 2127744831}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!114 &1909828448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1934540897
 GameObject:
   m_ObjectHideFlags: 0
@@ -12334,7 +12372,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 24
+  m_FontSize: 32
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
