@@ -62,6 +62,7 @@ public class GameController : ScriptableObject {
 		bonusCollected = false;
 		extraPair = false;
 		lvlInfo = lvdata.getLevelInfo (currentLvl);
+		GameManager.instance.soundManager.PlayBG ();
 	}
 
 	public void Update()
@@ -113,7 +114,7 @@ public class GameController : ScriptableObject {
 			scoreCount += 1000;
 
 		//GameManager.instance.winScreen.SetActive (true);
-
+		GameManager.instance.soundManager.PlayWin ();
 		UpdateData ();
 	}
 

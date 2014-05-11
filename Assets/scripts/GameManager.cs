@@ -14,10 +14,9 @@ public class GameManager : MonoBehaviour {
 	[HideInInspector]
 	public bool GamePaused = false;
 
-	public GameObject winScreen;
-	public GameObject looseScreen;
-
-
+	[HideInInspector]
+	public SoundManager soundManager;
+	
 	public void Save()
 	{
 		LevelData lvlData = controller.lvdata;
@@ -59,6 +58,7 @@ public class GameManager : MonoBehaviour {
 			if(controller == null)
 			{
 				controller = ScriptableObject.CreateInstance<GameController>();
+				soundManager = GetComponent<SoundManager>();
 				Load ();
 			}
 		}
