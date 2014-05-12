@@ -75,9 +75,9 @@ public class GUIManager: MonoBehaviour {
 		LevelNumberTXT = GameObject.Find("LevelNumber").GetComponent<GUIText> ();
 	}
 
-	void OnEnable() {
-		Debug.Log ("script was enabled");
-	}
+//	void OnEnable() {
+//		Debug.Log ("script was enabled");
+//	}
 	
 	void Update()
 	{

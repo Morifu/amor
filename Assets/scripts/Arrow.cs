@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Arrow : MonoBehaviour {
 
+	public AudioClip arrowShotSound;
+	public AudioClip arrowHitSound;
+
 	Rigidbody2D arrowBody;
 	CircleCollider2D arrowCollider;
 
@@ -11,6 +14,7 @@ public class Arrow : MonoBehaviour {
 	{
 		arrowBody = rigidbody2D;
 		arrowCollider = GetComponent<CircleCollider2D> ();
+		AudioHelper.CreatePlayAudioObject (arrowShotSound);
 	}
 	
 	void FixedUpdate()
@@ -37,8 +41,8 @@ public class Arrow : MonoBehaviour {
 		arrowBody.velocity = Vector2.zero;
 		arrowCollider.enabled = false;
 		 // we destroy as soon it hits anything as it creates problems
-//		if(coll.gameObject.CompareTag("Lover"))
-//			transform.parent = coll.transform;
+		if(!coll.gameObject.CompareTag("Lover"))
+			AudioHelper.CreatePlayAudioObject (arrowHitSound);
 	} 
 
 

@@ -11,7 +11,9 @@ public class Bow : MonoBehaviour {
 	/// <summary>
 	/// Speed of the arrow shot
 	/// </summary>
-	public float speed = 5;		
+	public float speed = 5;
+
+	//public AudioClip shootSound;
 
 	/// <summary>
 	/// The arrow spawn delay in seconds.
@@ -48,6 +50,8 @@ public class Bow : MonoBehaviour {
 			//arrowInstance = null;
 			//StartCoroutine (spawnArrow());
 			GameManager.instance.controller.arrowCount++;
+
+			//AudioHelper.CreatePlayAudioObject(shootSound);
 		}
 	}
 

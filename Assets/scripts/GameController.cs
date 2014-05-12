@@ -5,7 +5,7 @@ using System.Collections;
 // derive from ScriptableObject
 // There is always one GameController as it
 // is created in GameManager singleton
-public class GameController : ScriptableObject {
+public class GameController : MonoBehaviour {
 
 	// number of current lv
 	public int currentLvl = 1;
@@ -37,12 +37,15 @@ public class GameController : ScriptableObject {
 	[HideInInspector]
 	public LevelData.LevelInfo lvlInfo;
 
+	GameObject bgMusic;
+
 	// scriptableObjects method for enabling script
 	void OnEnable()
 	{
 		// let's create level data if it does not exists already
 		if(lvdata == null)
 			lvdata = ScriptableObject.CreateInstance<LevelData> ();
+
 	}
 
 	public void setNextLevel(int lvl)
@@ -62,7 +65,9 @@ public class GameController : ScriptableObject {
 		bonusCollected = false;
 		extraPair = false;
 		lvlInfo = lvdata.getLevelInfo (currentLvl);
-		GameManager.instance.soundManager.PlayBG ();
+		bgMusic = AudioHelper.CreateGetFadeAudioObject (GameManager.instance.BackgroundMusic, true, GameManager.instance.fadeClip);
+		StartCoroutine (AudioHelper.FadeAudioObject (bgMusic, 0.25f));
+
 	}
 
 	public void Update()
@@ -114,7 +119,8 @@ public class GameController : ScriptableObject {
 			scoreCount += 1000;
 
 		//GameManager.instance.winScreen.SetActive (true);
-		GameManager.instance.soundManager.PlayWin ();
+		StartCoroutine (AudioHelper.FadeAudioObject (bgMusic, -1f));
+		AudioHelper.CreatePlayAudioObject (GameManager.instance.winMusic);
 		UpdateData ();
 	}
 

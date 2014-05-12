@@ -65,10 +65,14 @@ public class AudioHelper : MonoBehaviour
 		if (fadeSpeed < 0) 
 		{ 
 			apAnim[apAnim.clip.name].time = apAnim[apAnim.clip.name].length; 
+
 		}
 		else  
 		{ 
-			apAnim[apAnim.clip.name].time = 0; 
+			foreach(AnimationState sate in apAnim)
+			{
+				sate.time = 0; 
+			}
 		}
 		
 		// set our speed
@@ -111,7 +115,7 @@ public class AudioHelper : MonoBehaviour
 		// position the object in the world
 		apObject.transform.position = Vector3.zero;
 		// add our DontDestroyOnLoad
-		DontDestroyOnLoad(apObject);		
+		//DontDestroyOnLoad(apObject);		
 		// add an AudioSource component
 		apObject.AddComponent<AudioSource>();
 		// return this script for use

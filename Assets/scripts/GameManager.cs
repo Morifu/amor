@@ -8,14 +8,16 @@ public class GameManager : MonoBehaviour {
 	[HideInInspector]
 	public GameController controller = null;
 
+	// musics
+	public AudioClip BackgroundMusic;
+	public AudioClip winMusic;
+	public AnimationClip fadeClip;
+
 	[HideInInspector]
 	public bool isInGame = false;
 	
 	[HideInInspector]
 	public bool GamePaused = false;
-
-	[HideInInspector]
-	public SoundManager soundManager;
 	
 	public void Save()
 	{
@@ -57,8 +59,7 @@ public class GameManager : MonoBehaviour {
 			// create level controller
 			if(controller == null)
 			{
-				controller = ScriptableObject.CreateInstance<GameController>();
-				soundManager = GetComponent<SoundManager>();
+				controller = gameObject.AddComponent<GameController>();
 				Load ();
 			}
 		}
