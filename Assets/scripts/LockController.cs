@@ -7,6 +7,8 @@ public class LockController : MonoBehaviour {
 	SpriteRenderer sprite;
 	BoxCollider2D coll;
 
+	public AudioClip openSound;
+
 	SpriteRenderer odrzwiaSprite;
 	BoxCollider2D ramaCollider;
 
@@ -36,6 +38,7 @@ public class LockController : MonoBehaviour {
 			// hide lock sprite and turn off collider
 			sprite.enabled = false;
 			coll.enabled = false;
+			AudioHelper.CreatePlayAudioObject(openSound);
 		}
 	}
 }

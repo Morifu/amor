@@ -1076,7 +1076,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 24
+  m_FontSize: 34
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -1513,6 +1513,7 @@ MonoBehaviour:
   lovers:
   - {fileID: 1439661916}
   - {fileID: 1109445675}
+  extraPairSound: {fileID: 8300000, guid: f801c2a0257b30748a7e1e8928d5dba1, type: 3}
 --- !u!1 &379945517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2473,9 +2474,9 @@ GameObject:
   - 4: {fileID: 565289280}
   - 212: {fileID: 565289279}
   - 61: {fileID: 565289278}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2875,9 +2876,9 @@ GameObject:
   - 4: {fileID: 656307953}
   - 212: {fileID: 656307952}
   - 61: {fileID: 656307951}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2939,9 +2940,9 @@ GameObject:
   - 4: {fileID: 674444818}
   - 212: {fileID: 674444817}
   - 61: {fileID: 674444816}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3578,22 +3579,22 @@ MonoBehaviour:
     guiTextReference: {fileID: 1987725916}
     width: 80
     height: 80
-    positionX: .75
-    positionY: .730000019
+    positionX: .709999979
+    positionY: .714999974
   star2Text:
     text: <=
     guiTextReference: {fileID: 2010173311}
     width: 80
     height: 80
-    positionX: .75
-    positionY: .646000028
+    positionX: .709999979
+    positionY: .63499999
   star3Text:
     text: <=
     guiTextReference: {fileID: 268295869}
     width: 80
     height: 80
-    positionX: .75
-    positionY: .560000002
+    positionX: .709999979
+    positionY: .550000012
   mainTargetWoman: {fileID: 21300000, guid: 1ea79b02f91616844b0a5d66ba702bfa, type: 3}
   womanPosition:
     width: 55
@@ -4375,9 +4376,9 @@ GameObject:
   - 4: {fileID: 1040313560}
   - 212: {fileID: 1040313562}
   - 61: {fileID: 1040313561}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4835,6 +4836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40237a83f8b69394baa902da1bb1a25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: 31f0c651d69296045b34b02fc062890a, type: 3}
   maxSpeed: 2
   move: 0
   steps: 100
@@ -5306,10 +5308,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1040313560}
-  - {fileID: 1813547089}
   - {fileID: 1331926482}
-  - {fileID: 1839192886}
   - {fileID: 1481613479}
+  - {fileID: 1839192886}
+  - {fileID: 1813547089}
   m_Father: {fileID: 0}
 --- !u!1 &1208955551
 GameObject:
@@ -5432,6 +5434,10 @@ Prefab:
       propertyPath: currentLvl
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e, type: 2}
+      propertyPath: BackgroundMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f13f35c8942e7d4a9cd61bae4760444, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e, type: 2}
   m_RootGameObject: {fileID: 1446905084}
@@ -5589,9 +5595,9 @@ GameObject:
   - 4: {fileID: 1331926482}
   - 212: {fileID: 1331926481}
   - 61: {fileID: 1331926480}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5693,9 +5699,9 @@ GameObject:
   - 4: {fileID: 1385475227}
   - 212: {fileID: 1385475226}
   - 61: {fileID: 1385475225}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5879,9 +5885,9 @@ GameObject:
   - 4: {fileID: 1415858321}
   - 212: {fileID: 1415858320}
   - 61: {fileID: 1415858319}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6159,6 +6165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40237a83f8b69394baa902da1bb1a25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: 1f79f287ca9aeac4ab3125aa68590089, type: 3}
   maxSpeed: 2
   move: 0
   steps: 120
@@ -6201,9 +6208,7 @@ GameObject:
   - 4: {fileID: 1446905086}
   - 114: {fileID: 1446905085}
   - 114: {fileID: 1446905088}
-  - 114: {fileID: 1446905089}
   - 114: {fileID: 1446905090}
-  - 114: {fileID: 1446905091}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Controller
@@ -6249,19 +6254,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TS: 0
   pause: 0
---- !u!114 &1446905089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400004, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1218359896}
-  m_GameObject: {fileID: 1446905084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0cbde79d229b36439dc9af6739daa8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  music: {fileID: 100000, guid: 71b6bbfcd4a447941827b71d163a2de2, type: 2}
 --- !u!114 &1446905090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6275,34 +6267,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
+  BackgroundMusic: {fileID: 8300000, guid: 7f13f35c8942e7d4a9cd61bae4760444, type: 3}
+  winMusic: {fileID: 8300000, guid: a26e92a0f8f08c34d86230936f35e1aa, type: 3}
+  looseMusic: {fileID: 8300000, guid: eb5a4af53a46e1446b307f94fe445a11, type: 3}
+  fadeClip: {fileID: 7400000, guid: d6f785f388ecce3489c104bd8e6f95d8, type: 2}
+  bgMusic: {fileID: 0}
   isInGame: 0
   GamePaused: 0
-  winScreen: {fileID: 0}
-  looseScreen: {fileID: 0}
---- !u!114 &1446905091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400008, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1218359896}
-  m_GameObject: {fileID: 1446905084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentLvl: 3
-  nextLevel: 0
-  lvdata: {fileID: 1909828448}
-  scoreCount: 0
-  time: 0
-  arrowCount: 0
-  bonusCollected: 0
-  extraPair: 0
-  starsCount: 0
-  secondsLeft: 0
-  levelCompleted: 0
-  levelFailed: 0
 --- !u!1001 &1447395962
 Prefab:
   m_ObjectHideFlags: 0
@@ -6565,9 +6536,9 @@ GameObject:
   - 4: {fileID: 1481613479}
   - 212: {fileID: 1481613481}
   - 61: {fileID: 1481613480}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9576,10 +9547,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 656307953}
-  - {fileID: 1415858321}
-  - {fileID: 674444818}
-  - {fileID: 565289280}
   - {fileID: 1385475227}
+  - {fileID: 1415858321}
+  - {fileID: 565289280}
+  - {fileID: 674444818}
   m_Father: {fileID: 0}
 --- !u!1 &1700593297
 GameObject:
@@ -10107,9 +10078,9 @@ GameObject:
   - 4: {fileID: 1813547089}
   - 212: {fileID: 1813547091}
   - 61: {fileID: 1813547090}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10534,9 +10505,9 @@ GameObject:
   - 4: {fileID: 1839192886}
   - 212: {fileID: 1839192888}
   - 61: {fileID: 1839192887}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11981,17 +11952,6 @@ Prefab:
   m_RootGameObject: {fileID: 2127744831}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!114 &1909828448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3ac2beaa6c23a469b5dc1dc672c189, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1934540897
 GameObject:
   m_ObjectHideFlags: 0
@@ -12423,7 +12383,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 24
+  m_FontSize: 34
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2

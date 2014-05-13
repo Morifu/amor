@@ -3,6 +3,8 @@ using System.Collections;
 
 public class LoverController : MonoBehaviour {
 
+
+	public AudioClip deathSound;
 	// public variables
 	public float maxSpeed = 1f;
 	public float move;
@@ -48,6 +50,7 @@ public class LoverController : MonoBehaviour {
 		{
 			died = true;
 			anim.SetBool("Died",died);
+
 		}
 		if(arrived) return;
 
@@ -109,6 +112,12 @@ public class LoverController : MonoBehaviour {
 
 	}
 
+	void PlayDeathSound()
+	{
+		AudioHelper.CreatePlayAudioObject(deathSound);
+		GameManager.instance.controller.LevelFailed();
+	}
+
 //	void OnTriggerEnter2D(Collider2D other) 
 //	{
 //		if (other.gameObject.tag == "MeetingPoint") {
@@ -136,18 +145,6 @@ public class LoverController : MonoBehaviour {
 		public Node left;
 		public Node right;
 		public int value;
-	}
-	
-	string Serialize(Node n)
-	{
-		string retval = "";
-		if (n == null)
-			retval = "N";
-		else
-		{
-			retval = n.value +","+ Serialize (n.left) +","+ Serialize (n.right);
-		}
-		return retval;
 	}
 
 }

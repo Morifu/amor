@@ -37,7 +37,6 @@ public class GameController : MonoBehaviour {
 	[HideInInspector]
 	public LevelData.LevelInfo lvlInfo;
 
-	GameObject bgMusic;
 
 	// scriptableObjects method for enabling script
 	void OnEnable()
@@ -52,12 +51,18 @@ public class GameController : MonoBehaviour {
 	{
 		currentLvl = lvl;
 		nextLevel = lvl;
+		if(lvl != 0)
+		{
+			Destroy(GameManager.instance.bgMusic);
+			GameManager.instance.bgMusic= null;
+		}
 	}
 
 	// level initializer, here we start counting time
 	public void LevelStart()
 	{
 		levelCompleted = false;
+		levelFailed = false;
 		time = Time.time;
 		scoreCount  = 0;
 		arrowCount = 0;
@@ -65,9 +70,11 @@ public class GameController : MonoBehaviour {
 		bonusCollected = false;
 		extraPair = false;
 		lvlInfo = lvdata.getLevelInfo (currentLvl);
-		bgMusic = AudioHelper.CreateGetFadeAudioObject (GameManager.instance.BackgroundMusic, true, GameManager.instance.fadeClip);
-		StartCoroutine (AudioHelper.FadeAudioObject (bgMusic, 0.25f));
-
+		if(GameManager.instance.bgMusic == null)
+		{
+			GameManager.instance.bgMusic = AudioHelper.CreateGetFadeAudioObject (GameManager.instance.BackgroundMusic, true, GameManager.instance.fadeClip);
+			StartCoroutine (AudioHelper.FadeAudioObject (GameManager.instance.bgMusic, 0.25f));
+		}
 	}
 
 	public void Update()
@@ -119,9 +126,16 @@ public class GameController : MonoBehaviour {
 			scoreCount += 1000;
 
 		//GameManager.instance.winScreen.SetActive (true);
-		StartCoroutine (AudioHelper.FadeAudioObject (bgMusic, -1f));
+		StartCoroutine (AudioHelper.FadeAudioObject (GameManager.instance.bgMusic, -1f));
 		AudioHelper.CreatePlayAudioObject (GameManager.instance.winMusic);
 		UpdateData ();
+	}
+
+	public void LevelFailed()
+	{
+		StartCoroutine (AudioHelper.FadeAudioObject (GameManager.instance.bgMusic, -1f));
+		AudioHelper.CreatePlayAudioObject (GameManager.instance.looseMusic);
+		levelFailed = true;
 	}
 
 	// method for updating levelData with updated scores and save progress

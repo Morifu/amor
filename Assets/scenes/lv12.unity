@@ -848,7 +848,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 24
+  m_FontSize: 34
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -2640,6 +2640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40237a83f8b69394baa902da1bb1a25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: 31f0c651d69296045b34b02fc062890a, type: 3}
   maxSpeed: 2
   move: 0
   steps: 200
@@ -4961,9 +4962,7 @@ GameObject:
   - 4: {fileID: 371577526}
   - 114: {fileID: 371577525}
   - 114: {fileID: 371577528}
-  - 114: {fileID: 371577529}
   - 114: {fileID: 371577530}
-  - 114: {fileID: 371577531}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Controller
@@ -5009,19 +5008,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TS: 0
   pause: 0
---- !u!114 &371577529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400004, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e,
-    type: 2}
-  m_PrefabInternal: {fileID: 912435022}
-  m_GameObject: {fileID: 371577524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0cbde79d229b36439dc9af6739daa8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  music: {fileID: 100000, guid: 71b6bbfcd4a447941827b71d163a2de2, type: 2}
 --- !u!114 &371577530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5035,34 +5021,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
+  BackgroundMusic: {fileID: 8300000, guid: 24e027f376629974aae4ba6275548605, type: 3}
+  winMusic: {fileID: 8300000, guid: a26e92a0f8f08c34d86230936f35e1aa, type: 3}
+  looseMusic: {fileID: 8300000, guid: eb5a4af53a46e1446b307f94fe445a11, type: 3}
+  fadeClip: {fileID: 7400000, guid: d6f785f388ecce3489c104bd8e6f95d8, type: 2}
+  bgMusic: {fileID: 0}
   isInGame: 0
   GamePaused: 0
-  winScreen: {fileID: 0}
-  looseScreen: {fileID: 0}
---- !u!114 &371577531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400008, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e,
-    type: 2}
-  m_PrefabInternal: {fileID: 912435022}
-  m_GameObject: {fileID: 371577524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentLvl: 12
-  nextLevel: 0
-  lvdata: {fileID: 135646326}
-  scoreCount: 0
-  time: 0
-  arrowCount: 0
-  bonusCollected: 0
-  extraPair: 0
-  starsCount: 0
-  secondsLeft: 0
-  levelCompleted: 0
-  levelFailed: 0
 --- !u!1 &372923294
 GameObject:
   m_ObjectHideFlags: 0
@@ -9924,6 +9889,10 @@ Prefab:
       propertyPath: lvdata
       value: 
       objectReference: {fileID: 135646326}
+    - target: {fileID: 11400006, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e, type: 2}
+      propertyPath: BackgroundMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 24e027f376629974aae4ba6275548605, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e, type: 2}
   m_RootGameObject: {fileID: 371577524}
@@ -10002,7 +9971,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 24
+  m_FontSize: 34
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -13201,6 +13170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40237a83f8b69394baa902da1bb1a25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: 1f79f287ca9aeac4ab3125aa68590089, type: 3}
   maxSpeed: 1
   move: 0
   steps: 100
@@ -19431,6 +19401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40237a83f8b69394baa902da1bb1a25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: 1f79f287ca9aeac4ab3125aa68590089, type: 3}
   maxSpeed: 2
   move: 0
   steps: 300
@@ -21050,7 +21021,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 24
+  m_FontSize: 34
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -23748,22 +23719,22 @@ MonoBehaviour:
     guiTextReference: {fileID: 916941350}
     width: 80
     height: 80
-    positionX: .75
-    positionY: .730000019
+    positionX: .709999979
+    positionY: .714999974
   star2Text:
     text: <=
     guiTextReference: {fileID: 1743411720}
     width: 80
     height: 80
-    positionX: .75
-    positionY: .646000028
+    positionX: .709999979
+    positionY: .63499999
   star3Text:
     text: <=
     guiTextReference: {fileID: 57149421}
     width: 80
     height: 80
-    positionX: .75
-    positionY: .560000002
+    positionX: .709999979
+    positionY: .550000012
   mainTargetWoman: {fileID: 21300000, guid: b4f458a2f112f664cab3e85169866c6d, type: 3}
   womanPosition:
     width: 55

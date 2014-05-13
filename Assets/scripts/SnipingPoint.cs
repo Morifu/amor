@@ -18,7 +18,8 @@ public class SnipingPoint : MonoBehaviour {
 	void OnMouseUp() 
 	{
 		if(GameManager.instance.GamePaused || 
-		   GameManager.instance.controller.levelCompleted) return;
+		   GameManager.instance.controller.levelCompleted ||
+		   GameManager.instance.controller.levelFailed) return;
 		Debug.Log ("OnMouseup mouse!");
 		if(player != null)
 			player.transform.position = transform.position;

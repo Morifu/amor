@@ -9,6 +9,8 @@ public class MeetingPoint : MonoBehaviour {
 	public bool completesLevel = false;
 	public GameObject[] lovers;
 
+	public AudioClip extraPairSound;
+
 	void Start()
 	{
 		if(completesLevel)
@@ -42,6 +44,7 @@ public class MeetingPoint : MonoBehaviour {
 		else if( loverCount == 2 && !completesLevel)
 		{
 			GameManager.instance.controller.extraPair = true;
+			AudioHelper.CreatePlayAudioObject(extraPairSound);
 		}
 	}
 }

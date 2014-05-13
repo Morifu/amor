@@ -2333,11 +2333,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: d6388c07a5a341e469dacb2e5c240504, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.37805796
+      value: 2.3071444
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d6388c07a5a341e469dacb2e5c240504, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.06693053
+      value: -1.12284899
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d6388c07a5a341e469dacb2e5c240504, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5879,6 +5879,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e, type: 2}
+      propertyPath: BackgroundMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f13f35c8942e7d4a9cd61bae4760444, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e, type: 2}
   m_RootGameObject: {fileID: 1153790033}
@@ -7239,7 +7243,9 @@ MonoBehaviour:
   controller: {fileID: 0}
   BackgroundMusic: {fileID: 8300000, guid: 7f13f35c8942e7d4a9cd61bae4760444, type: 3}
   winMusic: {fileID: 8300000, guid: a26e92a0f8f08c34d86230936f35e1aa, type: 3}
+  looseMusic: {fileID: 8300000, guid: eb5a4af53a46e1446b307f94fe445a11, type: 3}
   fadeClip: {fileID: 7400000, guid: d6f785f388ecce3489c104bd8e6f95d8, type: 2}
+  bgMusic: {fileID: 0}
   isInGame: 0
   GamePaused: 0
 --- !u!1 &1193599438
@@ -7346,11 +7352,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 4160feaa6c7f73c478bf6d74c8a4b928, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.38453579
+      value: -2.522928
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 4160feaa6c7f73c478bf6d74c8a4b928, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.19086897
+      value: -1.05247688
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 4160feaa6c7f73c478bf6d74c8a4b928, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8771,7 +8777,7 @@ Transform:
   m_PrefabInternal: {fileID: 1200713035}
   m_GameObject: {fileID: 1536165789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.38453579, y: -1.19086897, z: 0}
+  m_LocalPosition: {x: -2.522928, y: -1.05247688, z: 0}
   m_LocalScale: {x: -.449999988, y: .449999988, z: 1}
   m_Children:
   - {fileID: 1319412229}
@@ -8841,6 +8847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40237a83f8b69394baa902da1bb1a25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: 1f79f287ca9aeac4ab3125aa68590089, type: 3}
   maxSpeed: 2
   move: 0
   steps: 100
@@ -10518,6 +10525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40237a83f8b69394baa902da1bb1a25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: 31f0c651d69296045b34b02fc062890a, type: 3}
   maxSpeed: 2
   move: 0
   steps: 100
@@ -10544,7 +10552,7 @@ Transform:
   m_PrefabInternal: {fileID: 384656813}
   m_GameObject: {fileID: 1968927019}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.37805796, y: -1.06693053, z: 0}
+  m_LocalPosition: {x: 2.3071444, y: -1.12284899, z: 0}
   m_LocalScale: {x: -.452436656, y: .452436, z: .785858035}
   m_Children:
   - {fileID: 734750777}

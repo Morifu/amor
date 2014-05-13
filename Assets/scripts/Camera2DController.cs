@@ -31,7 +31,8 @@ public class Camera2DController : MonoBehaviour {
 	void Update () 
 	{
 		if(GameManager.instance.GamePaused || 
-		   GameManager.instance.controller.levelCompleted) return;
+		   GameManager.instance.controller.levelCompleted || 
+		   GameManager.instance.controller.levelFailed) return;
 
 		bool canDrag = false;
 		if ( Input.GetMouseButtonDown(0))

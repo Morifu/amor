@@ -90,8 +90,8 @@ public class AudioHelper : MonoBehaviour
 		// yield the length of the clip
 		if (fadeSpeed < 0)
 		{
-			while(apAnim.isPlaying) { yield return new WaitForEndOfFrame(); }
-			
+			while(apAnim != null && apAnim.isPlaying) { yield return new WaitForEndOfFrame(); }
+			GameManager.instance.bgMusic = null;
 			Destroy (aObject);
 		}	
 	}
@@ -115,7 +115,7 @@ public class AudioHelper : MonoBehaviour
 		// position the object in the world
 		apObject.transform.position = Vector3.zero;
 		// add our DontDestroyOnLoad
-		//DontDestroyOnLoad(apObject);		
+		DontDestroyOnLoad(apObject);		
 		// add an AudioSource component
 		apObject.AddComponent<AudioSource>();
 		// return this script for use

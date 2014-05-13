@@ -8,13 +8,17 @@ public class Gate : MonoBehaviour {
 
 	public GameObject destination;
 
+	public AudioClip openSound;
+
 	bool justmoved = false;
+	public bool isOpened = false;
 	int delayCount = 0;
 
 	GameObject kraty;
 	// Use this for initialization
 	void Start () {
 		kraty = transform.FindChild ("kraty_brama").gameObject;
+		isOpened = !kraty.activeSelf;
 	}
 	
 	// Update is called once per frame
@@ -33,11 +37,17 @@ public class Gate : MonoBehaviour {
 		}
 		if(shouldOpen)
 		{
+			if(!isOpened)
+				AudioHelper.CreatePlayAudioObject(openSound);
 			kraty.SetActive(false);
+			isOpened = true;
 		}
 		else 
 		{
+			if(isOpened)
+				AudioHelper.CreatePlayAudioObject(openSound);
 			kraty.SetActive(true);
+			isOpened = false;
 		}
 	}
 

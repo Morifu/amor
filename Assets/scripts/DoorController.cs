@@ -7,7 +7,7 @@ public class DoorController : MonoBehaviour {
 
 	public Lever.State[] leverProperStates;
 	public Lever[] levers;
-
+	public AudioClip openSound;
 
 	SpriteRenderer odrzwiaSprite;
 	BoxCollider2D ramaCollider;
@@ -35,6 +35,7 @@ public class DoorController : MonoBehaviour {
 			odrzwiaSprite.enabled = true;
 			ramaCollider.enabled = false;
 			opened = true;
+			AudioHelper.CreatePlayAudioObject(openSound);
 		}
 	}
 

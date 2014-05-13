@@ -143,23 +143,21 @@ public class GUIManager: MonoBehaviour {
 //		DrawOutline(screenRect,timeLeftTXT.text, timeLeftTXT, textStyle,Color.black,timeLeftTXT.color);
 
 		// pause button
-		if (!GameManager.instance.GamePaused && 
-		    GUI.Button(new Rect(Screen.width*pauseButtonSizes.positionX+pauseButtonSizes.offsetX,
+		if ( GUI.Button(new Rect(Screen.width*pauseButtonSizes.positionX+pauseButtonSizes.offsetX,
 		                        Screen.height*pauseButtonSizes.positionY+pauseButtonSizes.offsetY,
 		                        pauseButtonSizes.width,
 		                        pauseButtonSizes.height),
-		               	"",pauseButtonStyle))
+		                "",pauseButtonStyle) && !GameManager.instance.GamePaused)
 		{
 			GameManager.instance.GamePaused = true;
 		}
 
 		// restart button
-		if(!GameManager.instance.GamePaused && 
-		   GUI.Button(new Rect(Screen.width*restartButtonSizes.positionX+restartButtonSizes.offsetX,
+		if( GUI.Button(new Rect(Screen.width*restartButtonSizes.positionX+restartButtonSizes.offsetX,
 		                       Screen.height*restartButtonSizes.positionY+restartButtonSizes.offsetY,
 		                       restartButtonSizes.width,
 		                       restartButtonSizes.height),
-		              "",restartButtonStyle))
+		           "",restartButtonStyle) && !GameManager.instance.GamePaused)
 		{
 			GameManager.instance.GamePaused = false;
 			Application.LoadLevel(Application.loadedLevel);

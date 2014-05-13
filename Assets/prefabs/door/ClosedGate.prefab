@@ -148,11 +148,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52adbd72431a7554da47dc09999c7ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  opened: 0
   leverProperStates: 01000000
   levers:
   - {fileID: 0}
   destination: {fileID: 0}
+  openSound: {fileID: 8300000, guid: 4b9e879a6d37ca745929c50c78ad0ff4, type: 3}
+  isOpened: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

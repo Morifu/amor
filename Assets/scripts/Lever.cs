@@ -4,6 +4,7 @@ using System.Collections;
 public class Lever : MonoBehaviour {
 
 	Animator anim;
+	public AudioClip leverSound;
 
 	// public for other classes
 	[HideInInspector]
@@ -30,6 +31,7 @@ public class Lever : MonoBehaviour {
 
 			anim.SetInteger("State",(int)currentState);
 			clearToShot = false;
+			AudioHelper.CreatePlayAudioObject(leverSound);
 		}
 	}
 

@@ -11,7 +11,11 @@ public class GameManager : MonoBehaviour {
 	// musics
 	public AudioClip BackgroundMusic;
 	public AudioClip winMusic;
+	public AudioClip looseMusic;
 	public AnimationClip fadeClip;
+
+	[HideInInspector]
+	public GameObject bgMusic;
 
 	[HideInInspector]
 	public bool isInGame = false;
@@ -65,9 +69,14 @@ public class GameManager : MonoBehaviour {
 		}
 		else if (instance != this) 
 		{
+			instance.BackgroundMusic = BackgroundMusic;
 			Destroy(gameObject);
 		}
-
+		if(instance.bgMusic == null)
+		{
+			instance.bgMusic = AudioHelper.CreateGetFadeAudioObject (instance.BackgroundMusic, true, instance.fadeClip);
+			StartCoroutine (AudioHelper.FadeAudioObject (instance.bgMusic, 0.25f));
+		}
 	}
 
 	void Update()

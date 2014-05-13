@@ -492,6 +492,7 @@ MonoBehaviour:
   lovers:
   - {fileID: 433161666}
   - {fileID: 1709335779}
+  extraPairSound: {fileID: 8300000, guid: f801c2a0257b30748a7e1e8928d5dba1, type: 3}
 --- !u!1 &110585370
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +530,7 @@ MonoBehaviour:
   lovers:
   - {fileID: 599799738}
   - {fileID: 1359831727}
+  extraPairSound: {fileID: 8300000, guid: f801c2a0257b30748a7e1e8928d5dba1, type: 3}
 --- !u!61 &110585372
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -883,7 +885,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 24
+  m_FontSize: 34
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -1477,6 +1479,7 @@ MonoBehaviour:
   levers:
   - {fileID: 1179808570}
   - {fileID: 2006447388}
+  openSound: {fileID: 8300000, guid: b1f851a366dd9c841b506249514f6b70, type: 3}
 --- !u!1 &433161666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,6 +1577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40237a83f8b69394baa902da1bb1a25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: 31f0c651d69296045b34b02fc062890a, type: 3}
   maxSpeed: 2
   move: 0
   steps: 100
@@ -1739,7 +1743,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 24
+  m_FontSize: 34
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -1873,6 +1877,10 @@ Prefab:
       propertyPath: level
       value: lv1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e, type: 2}
+      propertyPath: BackgroundMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f13f35c8942e7d4a9cd61bae4760444, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e, type: 2}
   m_RootGameObject: {fileID: 1076933193}
@@ -3510,6 +3518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40237a83f8b69394baa902da1bb1a25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: 31f0c651d69296045b34b02fc062890a, type: 3}
   maxSpeed: 2
   move: 0
   steps: 100
@@ -6211,7 +6220,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 24
+  m_FontSize: 34
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -6266,9 +6275,7 @@ GameObject:
   - 4: {fileID: 1076933195}
   - 114: {fileID: 1076933194}
   - 114: {fileID: 1076933196}
-  - 114: {fileID: 1076933198}
   - 114: {fileID: 1076933199}
-  - 114: {fileID: 1076933200}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Controller
@@ -6314,19 +6321,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TS: 0
   pause: 0
---- !u!114 &1076933198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400004, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e,
-    type: 2}
-  m_PrefabInternal: {fileID: 499389868}
-  m_GameObject: {fileID: 1076933193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0cbde79d229b36439dc9af6739daa8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  music: {fileID: 100000, guid: 71b6bbfcd4a447941827b71d163a2de2, type: 2}
 --- !u!114 &1076933199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6340,34 +6334,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
+  BackgroundMusic: {fileID: 8300000, guid: 7f13f35c8942e7d4a9cd61bae4760444, type: 3}
+  winMusic: {fileID: 8300000, guid: a26e92a0f8f08c34d86230936f35e1aa, type: 3}
+  looseMusic: {fileID: 8300000, guid: eb5a4af53a46e1446b307f94fe445a11, type: 3}
+  fadeClip: {fileID: 7400000, guid: d6f785f388ecce3489c104bd8e6f95d8, type: 2}
+  bgMusic: {fileID: 0}
   isInGame: 0
   GamePaused: 0
-  winScreen: {fileID: 0}
-  looseScreen: {fileID: 0}
---- !u!114 &1076933200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400008, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e,
-    type: 2}
-  m_PrefabInternal: {fileID: 499389868}
-  m_GameObject: {fileID: 1076933193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75967c2cabef338418565473f1dae95e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentLvl: 4
-  nextLevel: 0
-  lvdata: {fileID: 982222579}
-  scoreCount: 0
-  time: 0
-  arrowCount: 0
-  bonusCollected: 0
-  extraPair: 0
-  starsCount: 0
-  secondsLeft: 0
-  levelCompleted: 0
-  levelFailed: 0
 --- !u!1001 &1078798265
 Prefab:
   m_ObjectHideFlags: 0
@@ -8331,6 +8304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685714b87fbe3ae439e5958a23b01cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leverSound: {fileID: 8300000, guid: d45b4449a8af7ee43b88c6867e299215, type: 3}
   currentState: 0
 --- !u!95 &1179808571
 Animator:
@@ -8555,7 +8529,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 21200000, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
       propertyPath: m_SortingLayer
-      value: 1
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 21200000, guid: 13da22e69ace9d1478b92de2bb9ff9e3, type: 2}
       propertyPath: m_SortingLayerID
@@ -8880,6 +8854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40237a83f8b69394baa902da1bb1a25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: 1f79f287ca9aeac4ab3125aa68590089, type: 3}
   maxSpeed: 1
   move: 0
   steps: 100
@@ -9546,6 +9521,7 @@ MonoBehaviour:
   levers:
   - {fileID: 1179808570}
   - {fileID: 1806862601}
+  openSound: {fileID: 8300000, guid: b1f851a366dd9c841b506249514f6b70, type: 3}
 --- !u!1001 &1501337962
 Prefab:
   m_ObjectHideFlags: 0
@@ -10208,6 +10184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40237a83f8b69394baa902da1bb1a25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: 1f79f287ca9aeac4ab3125aa68590089, type: 3}
   maxSpeed: 1
   move: 0
   steps: 100
@@ -10855,7 +10832,7 @@ GUITexture:
   m_PrefabInternal: {fileID: 2027398149}
   m_GameObject: {fileID: 1773804123}
   m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: 1ea79b02f91616844b0a5d66ba702bfa, type: 3}
+  m_Texture: {fileID: 2800000, guid: b1f6654d78a2601459375d4c383ac193, type: 3}
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2
@@ -11171,6 +11148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685714b87fbe3ae439e5958a23b01cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leverSound: {fileID: 8300000, guid: d45b4449a8af7ee43b88c6867e299215, type: 3}
   currentState: 0
 --- !u!95 &1806862602
 Animator:
@@ -13466,22 +13444,22 @@ MonoBehaviour:
     guiTextReference: {fileID: 457104086}
     width: 80
     height: 80
-    positionX: .75
-    positionY: .730000019
+    positionX: .709999979
+    positionY: .714999974
   star2Text:
     text: <=
     guiTextReference: {fileID: 1043653310}
     width: 80
     height: 80
-    positionX: .75
-    positionY: .646000028
+    positionX: .709999979
+    positionY: .63499999
   star3Text:
     text: <=
     guiTextReference: {fileID: 239453776}
     width: 80
     height: 80
-    positionX: .75
-    positionY: .560000002
+    positionX: .709999979
+    positionY: .550000012
   mainTargetWoman: {fileID: 21300000, guid: 1ea79b02f91616844b0a5d66ba702bfa, type: 3}
   womanPosition:
     width: 55
@@ -13807,6 +13785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685714b87fbe3ae439e5958a23b01cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leverSound: {fileID: 8300000, guid: d45b4449a8af7ee43b88c6867e299215, type: 3}
   currentState: 0
 --- !u!95 &2006447389
 Animator:
