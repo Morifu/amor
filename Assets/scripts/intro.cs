@@ -3,7 +3,7 @@ using System.Collections;
 
 public class intro : MonoBehaviour {
 	float timeStart;
-	public float timeToWait=1;
+	public float timeToWait;
 	public string MoveTo;
 
 	// Use this for initialization
