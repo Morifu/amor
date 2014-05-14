@@ -365,6 +365,57 @@ Prefab:
   m_RootGameObject: {fileID: 1635010443}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &743480630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 743480633}
+  - 61: {fileID: 743480632}
+  - 114: {fileID: 743480631}
+  m_Layer: 0
+  m_Name: t_audio_on
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &743480631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 743480630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97aee100c2f730447b757e961a74f9b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnButton: 1
+--- !u!61 &743480632
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 743480630}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .449999988, y: .459999979}
+  m_Center: {x: 0, y: 0}
+--- !u!4 &743480633
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 743480630}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .936473966, y: -.3699646, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &885765619
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,11 +571,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1249835430}
-  - 212: {fileID: 1249835429}
   - 61: {fileID: 1249835428}
   - 114: {fileID: 1249835427}
   m_Layer: 0
-  m_Name: t_audio_on
+  m_Name: t_audio_off
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -541,8 +591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97aee100c2f730447b757e961a74f9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioOn: 1
-  button: on1
+  isOnButton: 0
 --- !u!61 &1249835428
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -552,31 +601,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 1.85076296, y: .459999979}
-  m_Center: {x: .339618206, y: 0}
---- !u!212 &1249835429
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1249835426}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortingLayerID: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Size: {x: .611859798, y: .459999979}
+  m_Center: {x: 0, y: 0}
 --- !u!4 &1249835430
 Transform:
   m_ObjectHideFlags: 0
@@ -584,8 +610,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1249835426}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.24777746, y: -.354128599, z: 0}
-  m_LocalScale: {x: .909519553, y: .749999881, z: 1}
+  m_LocalPosition: {x: 2.11573696, y: -.3699646, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &1306751129
@@ -811,6 +837,7 @@ MonoBehaviour:
   controller: {fileID: 0}
   BackgroundMusic: {fileID: 8300000, guid: fbbe65bd9cc26474e8bcbe9b57c687e1, type: 3}
   winMusic: {fileID: 8300000, guid: a26e92a0f8f08c34d86230936f35e1aa, type: 3}
+  looseMusic: {fileID: 8300000, guid: eb5a4af53a46e1446b307f94fe445a11, type: 3}
   fadeClip: {fileID: 7400000, guid: d6f785f388ecce3489c104bd8e6f95d8, type: 2}
   bgMusic: {fileID: 0}
   isInGame: 0

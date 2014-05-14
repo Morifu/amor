@@ -14,8 +14,8 @@ public class LooseScreenGUI : MonoBehaviour {
 	public GUIStyle homeButtonStyle;
 	public GUIManager.ButtonData homeButtonSizes;
 	
-	public GUIStyle nextButtonStyle;
-	public GUIManager.ButtonData nextButtonSizes;
+//	public GUIStyle nextButtonStyle;
+//	public GUIManager.ButtonData nextButtonSizes;
 	
 	public GUIManager.TextData LevelLoseText;
 	public GUIManager.TextData againText;
@@ -64,14 +64,14 @@ public class LooseScreenGUI : MonoBehaviour {
 			GameManager.instance.GamePaused = false;
 			Application.LoadLevel(Application.loadedLevel);
 		}
-		// next button 
-		if(GUI.Button(new Rect(Screen.width*nextButtonSizes.positionX+nextButtonSizes.offsetX,
-		                       Screen.height*nextButtonSizes.positionY+nextButtonSizes.offsetY,
-		                       nextButtonSizes.width,
-		                       nextButtonSizes.height),
-		              "",nextButtonStyle))
-		{
-			
-		}
+//		// next button 
+//		if(GUI.Button(new Rect(Screen.width*nextButtonSizes.positionX+nextButtonSizes.offsetX,
+//		                       Screen.height*nextButtonSizes.positionY+nextButtonSizes.offsetY,
+//		                       nextButtonSizes.width,
+//		                       nextButtonSizes.height),
+//		              "",nextButtonStyle))
+//		{
+//			
+//		}
 	}
 }

@@ -42,6 +42,8 @@ public class PauseScreenGUI : MonoBehaviour {
 	public Sprite extraTargetMan;
 	public GUIManager.ButtonData extraManPosition;
 
+	public GUISkin mySkin;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -139,7 +141,13 @@ public class PauseScreenGUI : MonoBehaviour {
 			                       soundButtonSizes.height),
 			              "",soundButtonStyle))
 			{
-				
+				AudioListener.pause = !AudioListener.pause;
+				// switch backgrounds so button looks like switch
+				GUIStyleState temp = new GUIStyleState();
+				temp.background = soundButtonStyle.normal.background;
+				soundButtonStyle.normal.background = soundButtonStyle.active.background;
+				soundButtonStyle.active.background = temp.background;
+
 			}
 			// home button on screen
 			if(GUI.Button(new Rect(Screen.width*homeButtonSizes.positionX+homeButtonSizes.offsetX,
