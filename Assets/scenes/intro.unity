@@ -232,6 +232,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 4522dcb7b1fd33f4cb3f80ff1e1c4c09, type: 2}
+      propertyPath: timeToWait
+      value: 28
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4522dcb7b1fd33f4cb3f80ff1e1c4c09, type: 2}
   m_RootGameObject: {fileID: 2029002895}
@@ -2206,7 +2210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 519871c5b20b7a442af2df98a49c9808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToWait: 15
+  timeToWait: 28
   MoveTo: lv1
 --- !u!102 &2029002897
 TextMesh:

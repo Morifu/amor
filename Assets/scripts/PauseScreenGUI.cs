@@ -27,7 +27,7 @@ public class PauseScreenGUI : MonoBehaviour {
 
 	public GUIManager.TextData manDetailText;
 	public GUIManager.TextData womanDetailText;
-
+	
 	public Sprite mainTargetWoman;
 	public GUIManager.ButtonData womanPosition;
 
