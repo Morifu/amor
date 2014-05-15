@@ -25,6 +25,9 @@ public class PauseScreenGUI : MonoBehaviour {
 	public GUIManager.TextData star2Text;
 	public GUIManager.TextData star3Text;
 
+	public GUIManager.TextData manDetailText;
+	public GUIManager.TextData womanDetailText;
+
 	public Sprite mainTargetWoman;
 	public GUIManager.ButtonData womanPosition;
 
@@ -42,11 +45,15 @@ public class PauseScreenGUI : MonoBehaviour {
 	public Sprite extraTargetMan;
 	public GUIManager.ButtonData extraManPosition;
 
-	public GUISkin mySkin;
-
 	// Use this for initialization
 	void Start () {
-	
+		if(AudioListener.pause)
+		{
+			GUIStyleState temp = new GUIStyleState();
+			temp.background = soundButtonStyle.normal.background;
+			soundButtonStyle.normal.background = soundButtonStyle.active.background;
+			soundButtonStyle.active.background = temp.background;
+		}
 	}
 	
 	// Update is called once per frame
@@ -114,6 +121,24 @@ public class PauseScreenGUI : MonoBehaviour {
 			                        star3Text.guiTextReference, 
 			                        textStyle , Color.black,
 			                        star3Text.guiTextReference.color);
+
+			GUIManager.DrawOutline (new Rect (Screen.width*manDetailText.positionX,
+			                                  Screen.height*manDetailText.positionY,
+			                                  manDetailText.width,
+			                                  manDetailText.height), 
+			                        manDetailText.text, 
+			                        manDetailText.guiTextReference, 
+			                        textStyle , Color.black,
+			                        manDetailText.guiTextReference.color);
+
+			GUIManager.DrawOutline (new Rect (Screen.width*womanDetailText.positionX,
+			                                  Screen.height*womanDetailText.positionY,
+			                                  womanDetailText.width,
+			                                  womanDetailText.height), 
+			                        womanDetailText.text, 
+			                        womanDetailText.guiTextReference, 
+			                        textStyle , Color.black,
+			                        womanDetailText.guiTextReference.color);
 			
 			// back button on screen
 			if(GUI.Button(new Rect(Screen.width*backButtonSizes.positionX+backButtonSizes.offsetX,
