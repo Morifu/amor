@@ -322,6 +322,57 @@ GUIText:
     rgba: 4294967295
   m_PixelCorrect: 1
   m_RichText: 1
+--- !u!1 &150596157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100046, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+  m_PrefabInternal: {fileID: 2053345559}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 150596158}
+  - 132: {fileID: 150596159}
+  m_Layer: 0
+  m_Name: womanDetailsTXT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &150596158
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400046, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+  m_PrefabInternal: {fileID: 2053345559}
+  m_GameObject: {fileID: 150596157}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 705069685}
+--- !u!132 &150596159
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13200024, guid: 0254eefbbe3f2834e82d0530ff8bca51,
+    type: 2}
+  m_PrefabInternal: {fileID: 2053345559}
+  m_GameObject: {fileID: 150596157}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: 
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: 8515f041ecb8ef24a8b294b9b1bb0498, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 14
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
 --- !u!1 &173413191
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,7 +408,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 178217862}
   - 58: {fileID: 178217863}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1691,7 +1742,7 @@ GameObject:
   - 50: {fileID: 233610016}
   - 61: {fileID: 233610015}
   - 212: {fileID: 233610014}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: man3
   m_TagString: Lover
   m_Icon: {fileID: 0}
@@ -1968,6 +2019,57 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 1.70000005, y: 1}
   m_Center: {x: 0, y: .5}
+--- !u!1 &301626890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100042, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+  m_PrefabInternal: {fileID: 2053345559}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 301626891}
+  - 132: {fileID: 301626892}
+  m_Layer: 0
+  m_Name: star3TXT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &301626891
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400042, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+  m_PrefabInternal: {fileID: 2053345559}
+  m_GameObject: {fileID: 301626890}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 705069685}
+--- !u!132 &301626892
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13200022, guid: 0254eefbbe3f2834e82d0530ff8bca51,
+    type: 2}
+  m_PrefabInternal: {fileID: 2053345559}
+  m_GameObject: {fileID: 301626890}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: 
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 34
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
 --- !u!1 &347085618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2028,7 +2130,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 351100969}
   - 212: {fileID: 351100970}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2165,7 +2267,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 34
+  m_FontSize: 32
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -3665,9 +3767,9 @@ GameObject:
   - 4: {fileID: 565289280}
   - 212: {fileID: 565289279}
   - 61: {fileID: 565289278}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3756,7 +3858,7 @@ GameObject:
   - 4: {fileID: 624097193}
   - 132: {fileID: 624097194}
   m_Layer: 0
-  m_Name: star3TXT
+  m_Name: manDetailsTXT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3788,9 +3890,9 @@ GUIText:
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
+  m_Font: {fileID: 12800000, guid: 8515f041ecb8ef24a8b294b9b1bb0498, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 34
+  m_FontSize: 14
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -3834,9 +3936,9 @@ GameObject:
   - 4: {fileID: 656307953}
   - 212: {fileID: 656307952}
   - 61: {fileID: 656307951}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3898,9 +4000,9 @@ GameObject:
   - 4: {fileID: 674444818}
   - 212: {fileID: 674444817}
   - 61: {fileID: 674444816}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4115,6 +4217,7 @@ MonoBehaviour:
   lovers:
   - {fileID: 233610013}
   - {fileID: 1124530303}
+  extraPairSound: {fileID: 8300000, guid: f801c2a0257b30748a7e1e8928d5dba1, type: 3}
 --- !u!1 &697892087
 GameObject:
   m_ObjectHideFlags: 0
@@ -4305,8 +4408,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 624097193}
+  - {fileID: 301626891}
   - {fileID: 906118499}
   - {fileID: 387022034}
+  - {fileID: 150596158}
   m_Father: {fileID: 2078976715}
 --- !u!114 &705069687
 MonoBehaviour:
@@ -4371,7 +4476,7 @@ MonoBehaviour:
     m_FontSize: 0
     m_FontStyle: 0
     m_Alignment: 0
-    m_WordWrap: 0
+    m_WordWrap: 1
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0
@@ -4660,12 +4765,28 @@ MonoBehaviour:
     positionY: .63499999
   star3Text:
     text: <=
-    guiTextReference: {fileID: 624097194}
+    guiTextReference: {fileID: 301626892}
     width: 80
     height: 80
     positionX: .709999979
     positionY: .550000012
-  mainTargetWoman: {fileID: 21300000, guid: b1f6654d78a2601459375d4c383ac193, type: 3}
+  manDetailText:
+    text: Big fan of the middle-aged cuisine. The best part? three seconds rule is
+      more like three hours rule in here.
+    guiTextReference: {fileID: 624097194}
+    width: 240
+    height: 80
+    positionX: .537999988
+    positionY: .237000003
+  womanDetailText:
+    text: "She believes all man are pigs. But she\u2019s still looking for the one
+      destined to her.  Man strong, romantic and with big wallet."
+    guiTextReference: {fileID: 150596159}
+    width: 238
+    height: 80
+    positionX: .537999988
+    positionY: .381000012
+  mainTargetWoman: {fileID: 21300000, guid: 1ea79b02f91616844b0a5d66ba702bfa, type: 3}
   womanPosition:
     width: 55
     height: 55
@@ -4673,7 +4794,7 @@ MonoBehaviour:
     offsetY: 0
     positionX: .421999991
     positionY: .375999987
-  mainTargetMan: {fileID: 21300000, guid: 3e9c1b2f8a0694547b9f0898816c22ed, type: 3}
+  mainTargetMan: {fileID: 21300000, guid: ca0fb04df26b8ee43933e3365422fa6a, type: 3}
   manPosition:
     width: 55
     height: 55
@@ -5369,7 +5490,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1089053891}
   - 212: {fileID: 1089053892}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5572,7 +5693,7 @@ GameObject:
   - 50: {fileID: 1124530307}
   - 61: {fileID: 1124530306}
   - 212: {fileID: 1124530305}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: woman3
   m_TagString: Lover
   m_Icon: {fileID: 0}
@@ -5782,6 +5903,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 694954703}
+  - {fileID: 1725783777}
   - {fileID: 469582433}
   - {fileID: 1329041784}
   - {fileID: 1060859254}
@@ -6307,7 +6429,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1287283231}
   - 58: {fileID: 1287283230}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6635,9 +6757,9 @@ GameObject:
   - 4: {fileID: 1385475227}
   - 212: {fileID: 1385475226}
   - 61: {fileID: 1385475225}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6746,9 +6868,9 @@ GameObject:
   - 4: {fileID: 1415858321}
   - 212: {fileID: 1415858320}
   - 61: {fileID: 1415858319}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7646,6 +7768,92 @@ SpriteRenderer:
   m_SortingLayerID: 1859086223
   m_Sprite: {fileID: 21300000, guid: 373bd34a3c1058f48bc6187eb89cabb8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1725783776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100044, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+  m_PrefabInternal: {fileID: 2053345559}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1725783777}
+  - 82: {fileID: 1725783778}
+  m_Layer: 0
+  m_Name: sWygrana
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1725783777
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400044, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+  m_PrefabInternal: {fileID: 2053345559}
+  m_GameObject: {fileID: 1725783776}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1167641520}
+--- !u!82 &1725783778
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8200000, guid: 0254eefbbe3f2834e82d0530ff8bca51,
+    type: 2}
+  m_PrefabInternal: {fileID: 2053345559}
+  m_GameObject: {fileID: 1725783776}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: a26e92a0f8f08c34d86230936f35e1aa, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &1730943984
 Prefab:
   m_ObjectHideFlags: 0
@@ -7905,7 +8113,7 @@ GUITexture:
   m_PrefabInternal: {fileID: 2053345559}
   m_GameObject: {fileID: 1771868587}
   m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: 3e9c1b2f8a0694547b9f0898816c22ed, type: 3}
+  m_Texture: {fileID: 2800000, guid: ca0fb04df26b8ee43933e3365422fa6a, type: 3}
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2
@@ -9408,7 +9616,7 @@ MonoBehaviour:
     height: 80
     offsetX: 10
     offsetY: 10
-    positionX: .25999999
+    positionX: .349999994
     positionY: .680000007
   homeButtonStyle:
     m_Name: 
@@ -9474,73 +9682,7 @@ MonoBehaviour:
     height: 80
     offsetX: 10
     offsetY: 10
-    positionX: .419999987
-    positionY: .680000007
-  nextButtonStyle:
-    m_Name: 
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: c195bf8913b65fa4887dffb2660579d7, type: 3}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Hover:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Active:
-      m_Background: {fileID: 2800000, guid: 4b99e0ab3640e3648b6025dbcb678492, type: 3}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Focused:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnNormal:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnHover:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnActive:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnFocused:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Border:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Margin:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Padding:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Overflow:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Font: {fileID: 0}
-    m_FontSize: 0
-    m_FontStyle: 0
-    m_Alignment: 0
-    m_WordWrap: 0
-    m_RichText: 1
-    m_TextClipping: 0
-    m_ImagePosition: 0
-    m_ContentOffset: {x: 0, y: 0}
-    m_FixedWidth: 0
-    m_FixedHeight: 0
-    m_StretchWidth: 1
-    m_StretchHeight: 0
-  nextButtonSizes:
-    width: 80
-    height: 80
-    offsetX: 10
-    offsetY: 10
-    positionX: .579999983
+    positionX: .5
     positionY: .680000007
   LevelLoseText:
     text: Level Failed!
@@ -10141,7 +10283,7 @@ GUITexture:
   m_PrefabInternal: {fileID: 2053345559}
   m_GameObject: {fileID: 1981013937}
   m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: b1f6654d78a2601459375d4c383ac193, type: 3}
+  m_Texture: {fileID: 2800000, guid: 1ea79b02f91616844b0a5d66ba702bfa, type: 3}
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2
@@ -10368,6 +10510,58 @@ Prefab:
     - target: {fileID: 400004, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: manDetailText.text
+      value: Big fan of the middle-aged cuisine. The best part? three seconds rule
+        is more like three hours rule in here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: manDetailText.width
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: manDetailText.positionX
+      value: .537999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: manDetailText.positionY
+      value: .237000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 13200012, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_FontSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 13200012, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 8515f041ecb8ef24a8b294b9b1bb0498,
+        type: 3}
+    - target: {fileID: 13200024, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 8515f041ecb8ef24a8b294b9b1bb0498,
+        type: 3}
+    - target: {fileID: 13200024, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_FontSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: womanDetailText.text
+      value: "She believes all man are pigs. But she\u2019s still looking for the
+        one destined to her.  Man strong, romantic and with big wallet."
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: womanDetailText.width
+      value: 238
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: womanDetailText.positionX
+      value: .537999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: womanDetailText.positionY
+      value: .381000012
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}

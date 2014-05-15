@@ -367,6 +367,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1089795669}
+  - {fileID: 1487582799}
   - {fileID: 699670196}
   - {fileID: 909133972}
   - {fileID: 159751462}
@@ -802,7 +803,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 109465785}
   - 212: {fileID: 109465786}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -955,7 +956,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 137100759}
   - 58: {fileID: 137100760}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2508,6 +2509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70011cbaa54ac36488a65fbb45bc6d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSound: {fileID: 8300000, guid: 115951b338c9f7943b2e4a9e2a85db45, type: 3}
 --- !u!50 &227648803
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -2780,7 +2782,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 286783078}
   - 58: {fileID: 286783077}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2979,6 +2981,58 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 4167602321692584eb17797896f1a9aa,
         type: 3}
+    - target: {fileID: 13200012, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_FontSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 13200012, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 8515f041ecb8ef24a8b294b9b1bb0498,
+        type: 3}
+    - target: {fileID: 13200024, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_FontSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 13200024, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 8515f041ecb8ef24a8b294b9b1bb0498,
+        type: 3}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: manDetailText.width
+      value: 238
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: manDetailText.positionX
+      value: .537999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: manDetailText.positionY
+      value: .237000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: womanDetailText.width
+      value: 238
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: womanDetailText.positionX
+      value: .537999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: womanDetailText.positionY
+      value: .381000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: manDetailText.text
+      value: "How is this guy still alive? I don\u2019t know. But his tamagotchi is
+        still alive after 15 years! How did he do that!?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: womanDetailText.text
+      value: "Babushka. Rumor says she\u2019s so old, she was around before WWI. She
+        likes raisins and toffee. She fills holes in her teeth with em.  "
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
   m_RootGameObject: {fileID: 1429262937}
@@ -3193,7 +3247,7 @@ GameObject:
   - 50: {fileID: 419405394}
   - 61: {fileID: 419405393}
   - 212: {fileID: 419405392}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: woman5
   m_TagString: Lover
   m_Icon: {fileID: 0}
@@ -3333,6 +3387,7 @@ MonoBehaviour:
   lovers:
   - {fileID: 1674731792}
   - {fileID: 579487691}
+  extraPairSound: {fileID: 8300000, guid: f801c2a0257b30748a7e1e8928d5dba1, type: 3}
 --- !u!61 &433425493
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4499,7 +4554,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 453966343}
   - 212: {fileID: 453966342}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4673,6 +4728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 771d552015a48634d9c3d337a3ee7410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  openSound: {fileID: 8300000, guid: b1f851a366dd9c841b506249514f6b70, type: 3}
 --- !u!61 &562294378
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4730,9 +4786,9 @@ GameObject:
   - 4: {fileID: 565289280}
   - 212: {fileID: 565289279}
   - 61: {fileID: 565289278}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4824,7 +4880,7 @@ GameObject:
   - 50: {fileID: 579487694}
   - 61: {fileID: 579487693}
   - 212: {fileID: 579487692}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: man4
   m_TagString: Lover
   m_Icon: {fileID: 0}
@@ -4938,9 +4994,9 @@ GameObject:
   - 4: {fileID: 583407799}
   - 212: {fileID: 583407801}
   - 61: {fileID: 583407800}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5002,9 +5058,9 @@ GameObject:
   - 4: {fileID: 591395018}
   - 212: {fileID: 591395020}
   - 61: {fileID: 591395019}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5260,9 +5316,9 @@ GameObject:
   - 4: {fileID: 656307953}
   - 212: {fileID: 656307952}
   - 61: {fileID: 656307951}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5367,9 +5423,9 @@ GameObject:
   - 4: {fileID: 674444818}
   - 212: {fileID: 674444817}
   - 61: {fileID: 674444816}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5950,7 +6006,7 @@ GameObject:
   - 4: {fileID: 796587426}
   - 132: {fileID: 796587427}
   m_Layer: 0
-  m_Name: star3TXT
+  m_Name: manDetailsTXT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5982,9 +6038,9 @@ GUIText:
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
+  m_Font: {fileID: 12800000, guid: 8515f041ecb8ef24a8b294b9b1bb0498, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 34
+  m_FontSize: 14
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -6224,7 +6280,7 @@ MonoBehaviour:
     height: 80
     offsetX: 10
     offsetY: 10
-    positionX: .25999999
+    positionX: .349999994
     positionY: .680000007
   homeButtonStyle:
     m_Name: 
@@ -6290,73 +6346,7 @@ MonoBehaviour:
     height: 80
     offsetX: 10
     offsetY: 10
-    positionX: .419999987
-    positionY: .680000007
-  nextButtonStyle:
-    m_Name: 
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: c195bf8913b65fa4887dffb2660579d7, type: 3}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Hover:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Active:
-      m_Background: {fileID: 2800000, guid: 4b99e0ab3640e3648b6025dbcb678492, type: 3}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Focused:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnNormal:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnHover:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnActive:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnFocused:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Border:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Margin:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Padding:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Overflow:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Font: {fileID: 0}
-    m_FontSize: 0
-    m_FontStyle: 0
-    m_Alignment: 0
-    m_WordWrap: 0
-    m_RichText: 1
-    m_TextClipping: 0
-    m_ImagePosition: 0
-    m_ContentOffset: {x: 0, y: 0}
-    m_FixedWidth: 0
-    m_FixedHeight: 0
-    m_StretchWidth: 1
-    m_StretchHeight: 0
-  nextButtonSizes:
-    width: 80
-    height: 80
-    offsetX: 10
-    offsetY: 10
-    positionX: .579999983
+    positionX: .5
     positionY: .680000007
   LevelLoseText:
     text: Level Failed!
@@ -6544,7 +6534,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 34
+  m_FontSize: 32
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -6898,6 +6888,7 @@ MonoBehaviour:
   lovers:
   - {fileID: 419405391}
   - {fileID: 1474635034}
+  extraPairSound: {fileID: 8300000, guid: f801c2a0257b30748a7e1e8928d5dba1, type: 3}
 --- !u!1 &901981747
 GameObject:
   m_ObjectHideFlags: 0
@@ -7101,7 +7092,7 @@ GameObject:
   - 4: {fileID: 951662869}
   - 58: {fileID: 951662871}
   - 212: {fileID: 951662870}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8939,6 +8930,57 @@ PolygonCollider2D:
       - {x: .494106293, y: -.299891591}
       - {x: -.47577095, y: -.301783204}
       - {x: -.482431412, y: .569365501}
+--- !u!1 &1141481838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100046, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+  m_PrefabInternal: {fileID: 371942301}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1141481839}
+  - 132: {fileID: 1141481840}
+  m_Layer: 0
+  m_Name: womanDetailsTXT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1141481839
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400046, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+  m_PrefabInternal: {fileID: 371942301}
+  m_GameObject: {fileID: 1141481838}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1859994059}
+--- !u!132 &1141481840
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13200024, guid: 0254eefbbe3f2834e82d0530ff8bca51,
+    type: 2}
+  m_PrefabInternal: {fileID: 371942301}
+  m_GameObject: {fileID: 1141481838}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: 
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: 8515f041ecb8ef24a8b294b9b1bb0498, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 14
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
 --- !u!1 &1143723056
 GameObject:
   m_ObjectHideFlags: 0
@@ -9508,9 +9550,9 @@ GameObject:
   - 4: {fileID: 1385475227}
   - 212: {fileID: 1385475226}
   - 61: {fileID: 1385475225}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9572,9 +9614,9 @@ GameObject:
   - 4: {fileID: 1415858321}
   - 212: {fileID: 1415858320}
   - 61: {fileID: 1415858319}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10236,7 +10278,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1469980152}
   - 58: {fileID: 1469980153}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10280,7 +10322,7 @@ GameObject:
   - 61: {fileID: 1474635038}
   - 212: {fileID: 1474635037}
   - 61: {fileID: 1474635036}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: man5
   m_TagString: Lover
   m_Icon: {fileID: 0}
@@ -10395,6 +10437,92 @@ Animator:
   m_ApplyRootMotion: 0
   m_AnimatePhysics: 1
   m_HasTransformHierarchy: 1
+--- !u!1 &1487582798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100044, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+  m_PrefabInternal: {fileID: 371942301}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1487582799}
+  - 82: {fileID: 1487582800}
+  m_Layer: 0
+  m_Name: sWygrana
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1487582799
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400044, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+  m_PrefabInternal: {fileID: 371942301}
+  m_GameObject: {fileID: 1487582798}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 97801780}
+--- !u!82 &1487582800
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8200000, guid: 0254eefbbe3f2834e82d0530ff8bca51,
+    type: 2}
+  m_PrefabInternal: {fileID: 371942301}
+  m_GameObject: {fileID: 1487582798}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: a26e92a0f8f08c34d86230936f35e1aa, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &1489112167
 Prefab:
   m_ObjectHideFlags: 0
@@ -10528,9 +10656,9 @@ GameObject:
   - 4: {fileID: 1535233968}
   - 212: {fileID: 1535233970}
   - 61: {fileID: 1535233969}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10639,9 +10767,9 @@ GameObject:
   - 4: {fileID: 1582013680}
   - 212: {fileID: 1582013682}
   - 61: {fileID: 1582013681}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10953,7 +11081,7 @@ GameObject:
   - 50: {fileID: 1674731796}
   - 61: {fileID: 1674731795}
   - 212: {fileID: 1674731794}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: woman2
   m_TagString: Lover
   m_Icon: {fileID: 0}
@@ -11410,9 +11538,9 @@ GameObject:
   - 4: {fileID: 1851895082}
   - 212: {fileID: 1851895081}
   - 61: {fileID: 1851895080}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11491,8 +11619,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 796587426}
+  - {fileID: 1985993393}
   - {fileID: 94281312}
   - {fileID: 875319206}
+  - {fileID: 1141481839}
   m_Father: {fileID: 1429262938}
 --- !u!114 &1859994061
 MonoBehaviour:
@@ -11557,7 +11687,7 @@ MonoBehaviour:
     m_FontSize: 0
     m_FontStyle: 0
     m_Alignment: 0
-    m_WordWrap: 0
+    m_WordWrap: 1
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0
@@ -11846,11 +11976,27 @@ MonoBehaviour:
     positionY: .63499999
   star3Text:
     text: <=
-    guiTextReference: {fileID: 796587427}
+    guiTextReference: {fileID: 1985993394}
     width: 80
     height: 80
     positionX: .709999979
     positionY: .550000012
+  manDetailText:
+    text: "How is this guy still alive? I don\u2019t know. But his tamagotchi is still
+      alive after 15 years! How did he do that!?"
+    guiTextReference: {fileID: 796587427}
+    width: 238
+    height: 80
+    positionX: .537999988
+    positionY: .237000003
+  womanDetailText:
+    text: "Babushka. Rumor says she\u2019s so old, she was around before WWI. She
+      likes raisins and toffee. She fills holes in her teeth with em.  "
+    guiTextReference: {fileID: 1141481840}
+    width: 238
+    height: 80
+    positionX: .537999988
+    positionY: .381000012
   mainTargetWoman: {fileID: 21300000, guid: e4d237a07d136234a9ecd761fc0a0be5, type: 3}
   womanPosition:
     width: 55
@@ -14651,6 +14797,57 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_Radius: 1.15999997
   m_Center: {x: -.0399999991, y: .109999999}
+--- !u!1 &1985993392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100042, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+  m_PrefabInternal: {fileID: 371942301}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1985993393}
+  - 132: {fileID: 1985993394}
+  m_Layer: 0
+  m_Name: star3TXT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1985993393
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400042, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+  m_PrefabInternal: {fileID: 371942301}
+  m_GameObject: {fileID: 1985993392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1859994059}
+--- !u!132 &1985993394
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13200022, guid: 0254eefbbe3f2834e82d0530ff8bca51,
+    type: 2}
+  m_PrefabInternal: {fileID: 371942301}
+  m_GameObject: {fileID: 1985993392}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: 
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 34
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
 --- !u!1 &1987428858
 GameObject:
   m_ObjectHideFlags: 0
@@ -14780,6 +14977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685714b87fbe3ae439e5958a23b01cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leverSound: {fileID: 8300000, guid: d45b4449a8af7ee43b88c6867e299215, type: 3}
   currentState: 0
 --- !u!95 &2000752579
 Animator:
@@ -15238,6 +15436,7 @@ MonoBehaviour:
   leverProperStates: 01000000
   levers:
   - {fileID: 2000752578}
+  openSound: {fileID: 8300000, guid: b1f851a366dd9c841b506249514f6b70, type: 3}
 --- !u!1 &2110666811
 GameObject:
   m_ObjectHideFlags: 0

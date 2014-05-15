@@ -86,7 +86,7 @@ GameObject:
   - 50: {fileID: 1850785}
   m_Layer: 0
   m_Name: WoodenBox
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -334,7 +334,7 @@ GameObject:
   - 4: {fileID: 33634727}
   - 212: {fileID: 33634729}
   - 61: {fileID: 33634728}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -691,7 +691,7 @@ GameObject:
   - 4: {fileID: 80340344}
   - 212: {fileID: 80340346}
   - 61: {fileID: 80340345}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -840,9 +840,9 @@ GameObject:
   - 4: {fileID: 100469493}
   - 61: {fileID: 100469492}
   - 114: {fileID: 100469494}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Floor1open-r
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1129,7 +1129,7 @@ GameObject:
   - 4: {fileID: 135907347}
   - 212: {fileID: 135907349}
   - 61: {fileID: 135907348}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2691,7 +2691,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 241369527}
   - 212: {fileID: 241369528}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2862,6 +2862,92 @@ SpriteRenderer:
   m_SortingLayerID: 1093696345
   m_Sprite: {fileID: 21300000, guid: cea4aa26a67e99940b3343130cf7f94a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &272576545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100044, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+  m_PrefabInternal: {fileID: 630754994}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 272576546}
+  - 82: {fileID: 272576547}
+  m_Layer: 0
+  m_Name: sWygrana
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &272576546
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400044, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+  m_PrefabInternal: {fileID: 630754994}
+  m_GameObject: {fileID: 272576545}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2037026601}
+--- !u!82 &272576547
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8200000, guid: 0254eefbbe3f2834e82d0530ff8bca51,
+    type: 2}
+  m_PrefabInternal: {fileID: 630754994}
+  m_GameObject: {fileID: 272576545}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: a26e92a0f8f08c34d86230936f35e1aa, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &291149403
 GameObject:
   m_ObjectHideFlags: 0
@@ -3120,7 +3206,7 @@ GameObject:
   - 4: {fileID: 347413706}
   - 132: {fileID: 347413707}
   m_Layer: 0
-  m_Name: star3TXT
+  m_Name: manDetailsTXT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3152,9 +3238,9 @@ GUIText:
   m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
-  m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
+  m_Font: {fileID: 12800000, guid: 8515f041ecb8ef24a8b294b9b1bb0498, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 34
+  m_FontSize: 14
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -3392,9 +3478,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 389068496}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LongGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3801,7 +3887,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 525972134}
   - 212: {fileID: 525972133}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3892,7 +3978,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 534892718}
   - 212: {fileID: 534892719}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: spr_wooden_plat_light_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5538,7 +5624,7 @@ GameObject:
   - 4: {fileID: 605120467}
   - 212: {fileID: 605120469}
   - 61: {fileID: 605120468}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5602,7 +5688,7 @@ GameObject:
   - 4: {fileID: 616560040}
   - 212: {fileID: 616560042}
   - 61: {fileID: 616560041}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5892,6 +5978,58 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 4167602321692584eb17797896f1a9aa,
         type: 3}
+    - target: {fileID: 13200012, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_FontSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 13200012, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 8515f041ecb8ef24a8b294b9b1bb0498,
+        type: 3}
+    - target: {fileID: 13200024, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_FontSize
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 13200024, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 8515f041ecb8ef24a8b294b9b1bb0498,
+        type: 3}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: manDetailText.width
+      value: 238
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: manDetailText.positionX
+      value: .537999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: manDetailText.positionY
+      value: .237000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: womanDetailText.width
+      value: 238
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: womanDetailText.positionX
+      value: .537999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: womanDetailText.positionY
+      value: .381000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: manDetailText.text
+      value: "The Knight. No one ever saw his face under the helmet. Nobody call\u2019s
+        him Black Knight though. Just to be certain."
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: womanDetailText.text
+      value: "This girl is tougher than nails. Someone tried to hit on her once. Didn\u2019t
+        end well \u2013she hit him back\u2026 in the face."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
   m_RootGameObject: {fileID: 597282653}
@@ -5905,9 +6043,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 639325284}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LongGround
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5948,7 +6086,7 @@ GameObject:
   - 4: {fileID: 641233289}
   - 212: {fileID: 641233291}
   - 61: {fileID: 641233290}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6556,9 +6694,9 @@ GameObject:
   - 4: {fileID: 798009622}
   - 61: {fileID: 798009621}
   - 114: {fileID: 798009623}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Floor1open
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7158,7 +7296,7 @@ GameObject:
   - 4: {fileID: 926734607}
   - 212: {fileID: 926734609}
   - 61: {fileID: 926734608}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7360,7 +7498,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1019773677}
   - 212: {fileID: 1019773678}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: spr_wooden_plat_light_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7672,6 +7810,57 @@ EdgeCollider2D:
   m_Points:
   - {x: -.302247047, y: -.233798265}
   - {x: -.295841694, y: 1.18562412}
+--- !u!1 &1062491428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100046, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+  m_PrefabInternal: {fileID: 630754994}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1062491429}
+  - 132: {fileID: 1062491430}
+  m_Layer: 0
+  m_Name: womanDetailsTXT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1062491429
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400046, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+  m_PrefabInternal: {fileID: 630754994}
+  m_GameObject: {fileID: 1062491428}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1092189069}
+--- !u!132 &1062491430
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13200024, guid: 0254eefbbe3f2834e82d0530ff8bca51,
+    type: 2}
+  m_PrefabInternal: {fileID: 630754994}
+  m_GameObject: {fileID: 1062491428}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: 
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: 8515f041ecb8ef24a8b294b9b1bb0498, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 14
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
 --- !u!1 &1062719603
 GameObject:
   m_ObjectHideFlags: 0
@@ -8206,7 +8395,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 34
+  m_FontSize: 32
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -8240,8 +8429,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 347413706}
+  - {fileID: 1507844775}
   - {fileID: 1202818361}
   - {fileID: 1091116139}
+  - {fileID: 1062491429}
   m_Father: {fileID: 597282654}
 --- !u!114 &1092189071
 MonoBehaviour:
@@ -8306,7 +8497,7 @@ MonoBehaviour:
     m_FontSize: 0
     m_FontStyle: 0
     m_Alignment: 0
-    m_WordWrap: 0
+    m_WordWrap: 1
     m_RichText: 1
     m_TextClipping: 0
     m_ImagePosition: 0
@@ -8595,11 +8786,27 @@ MonoBehaviour:
     positionY: .63499999
   star3Text:
     text: <=
-    guiTextReference: {fileID: 347413707}
+    guiTextReference: {fileID: 1507844776}
     width: 80
     height: 80
     positionX: .709999979
     positionY: .550000012
+  manDetailText:
+    text: "The Knight. No one ever saw his face under the helmet. Nobody call\u2019s
+      him Black Knight though. Just to be certain."
+    guiTextReference: {fileID: 347413707}
+    width: 238
+    height: 80
+    positionX: .537999988
+    positionY: .237000003
+  womanDetailText:
+    text: "This girl is tougher than nails. Someone tried to hit on her once. Didn\u2019t
+      end well \u2013she hit him back\u2026 in the face."
+    guiTextReference: {fileID: 1062491430}
+    width: 238
+    height: 80
+    positionX: .537999988
+    positionY: .381000012
   mainTargetWoman: {fileID: 21300000, guid: b4f458a2f112f664cab3e85169866c6d, type: 3}
   womanPosition:
     width: 55
@@ -8717,7 +8924,7 @@ GameObject:
   - 50: {fileID: 1105975728}
   m_Layer: 0
   m_Name: WoodenBox
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8961,7 +9168,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1139891724}
   - 58: {fileID: 1139891725}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9105,7 +9312,7 @@ GameObject:
   - 50: {fileID: 1157128286}
   m_Layer: 0
   m_Name: WoodenBox
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9397,7 +9604,7 @@ GameObject:
   - 4: {fileID: 1223025271}
   - 212: {fileID: 1223025273}
   - 61: {fileID: 1223025272}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9592,7 +9799,7 @@ GameObject:
   - 4: {fileID: 1296201933}
   - 212: {fileID: 1296201935}
   - 61: {fileID: 1296201934}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9656,7 +9863,7 @@ GameObject:
   - 4: {fileID: 1318626370}
   - 212: {fileID: 1318626372}
   - 61: {fileID: 1318626371}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10101,7 +10308,7 @@ GameObject:
   - 4: {fileID: 1395398601}
   - 212: {fileID: 1395398603}
   - 61: {fileID: 1395398602}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10592,7 +10799,7 @@ GameObject:
   - 4: {fileID: 1455637958}
   - 212: {fileID: 1455637960}
   - 61: {fileID: 1455637959}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10877,7 +11084,7 @@ GameObject:
   - 50: {fileID: 1507694043}
   m_Layer: 0
   m_Name: WoodenBox
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10922,6 +11129,57 @@ Transform:
   m_Children:
   - {fileID: 1136396878}
   m_Father: {fileID: 0}
+--- !u!1 &1507844774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100042, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+  m_PrefabInternal: {fileID: 630754994}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1507844775}
+  - 132: {fileID: 1507844776}
+  m_Layer: 0
+  m_Name: star3TXT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1507844775
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400042, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+  m_PrefabInternal: {fileID: 630754994}
+  m_GameObject: {fileID: 1507844774}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1092189069}
+--- !u!132 &1507844776
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13200022, guid: 0254eefbbe3f2834e82d0530ff8bca51,
+    type: 2}
+  m_PrefabInternal: {fileID: 630754994}
+  m_GameObject: {fileID: 1507844774}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: 
+  m_Anchor: 0
+  m_Alignment: 0
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: 9a330924d7af7ff43a64313ef86bdc94, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 34
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
 --- !u!1 &1513520470
 GameObject:
   m_ObjectHideFlags: 0
@@ -10932,9 +11190,9 @@ GameObject:
   - 4: {fileID: 1513520471}
   - 61: {fileID: 1513520472}
   - 114: {fileID: 1513520473}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Floor1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11058,7 +11316,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1542840217}
   - 212: {fileID: 1542840218}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: spr_wooden_plat_light_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11613,7 +11871,7 @@ MonoBehaviour:
     height: 80
     offsetX: 10
     offsetY: 10
-    positionX: .25999999
+    positionX: .349999994
     positionY: .680000007
   homeButtonStyle:
     m_Name: 
@@ -11679,73 +11937,7 @@ MonoBehaviour:
     height: 80
     offsetX: 10
     offsetY: 10
-    positionX: .419999987
-    positionY: .680000007
-  nextButtonStyle:
-    m_Name: 
-    m_Normal:
-      m_Background: {fileID: 2800000, guid: c195bf8913b65fa4887dffb2660579d7, type: 3}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Hover:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Active:
-      m_Background: {fileID: 2800000, guid: 4b99e0ab3640e3648b6025dbcb678492, type: 3}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Focused:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnNormal:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnHover:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnActive:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnFocused:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Border:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Margin:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Padding:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Overflow:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Font: {fileID: 0}
-    m_FontSize: 0
-    m_FontStyle: 0
-    m_Alignment: 0
-    m_WordWrap: 0
-    m_RichText: 1
-    m_TextClipping: 0
-    m_ImagePosition: 0
-    m_ContentOffset: {x: 0, y: 0}
-    m_FixedWidth: 0
-    m_FixedHeight: 0
-    m_StretchWidth: 1
-    m_StretchHeight: 0
-  nextButtonSizes:
-    width: 80
-    height: 80
-    offsetX: 10
-    offsetY: 10
-    positionX: .579999983
+    positionX: .5
     positionY: .680000007
   LevelLoseText:
     text: Level Failed!
@@ -11817,7 +12009,7 @@ GameObject:
   - 4: {fileID: 1601696189}
   - 212: {fileID: 1601696191}
   - 61: {fileID: 1601696190}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12274,7 +12466,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1682977400}
   - 58: {fileID: 1682977399}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12455,7 +12647,7 @@ GameObject:
   - 4: {fileID: 1733428947}
   - 212: {fileID: 1733428949}
   - 61: {fileID: 1733428948}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12583,7 +12775,7 @@ GameObject:
   - 4: {fileID: 1753431728}
   - 212: {fileID: 1753431730}
   - 61: {fileID: 1753431729}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12966,7 +13158,7 @@ GameObject:
   - 50: {fileID: 1807771728}
   - 61: {fileID: 1807771727}
   - 212: {fileID: 1807771726}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: woman4
   m_TagString: Lover
   m_Icon: {fileID: 0}
@@ -13375,7 +13567,7 @@ GameObject:
   - 4: {fileID: 1897586759}
   - 212: {fileID: 1897586761}
   - 61: {fileID: 1897586760}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13639,7 +13831,7 @@ GameObject:
   - 50: {fileID: 1909370543}
   - 61: {fileID: 1909370542}
   - 212: {fileID: 1909370541}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: man4
   m_TagString: Lover
   m_Icon: {fileID: 0}
@@ -13854,7 +14046,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1925183190}
   - 212: {fileID: 1925183189}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: spr_wooden_plat_light_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14115,7 +14307,7 @@ GameObject:
   - 4: {fileID: 1953902522}
   - 212: {fileID: 1953902521}
   - 61: {fileID: 1953902520}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14315,7 +14507,7 @@ GameObject:
   - 4: {fileID: 1987606300}
   - 212: {fileID: 1987606302}
   - 61: {fileID: 1987606301}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14512,6 +14704,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 245073136}
+  - {fileID: 272576546}
   - {fileID: 1320011634}
   - {fileID: 1910348473}
   - {fileID: 1402178009}
@@ -16352,9 +16545,9 @@ GameObject:
   - 4: {fileID: 2117003203}
   - 61: {fileID: 2117003202}
   - 114: {fileID: 2117003204}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Floor1-r
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16412,7 +16605,7 @@ GameObject:
   - 4: {fileID: 2132648272}
   - 212: {fileID: 2132648274}
   - 61: {fileID: 2132648273}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16580,7 +16773,7 @@ GameObject:
   - 50: {fileID: 2139227824}
   m_Layer: 0
   m_Name: WoodenBox
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16635,7 +16828,7 @@ GameObject:
   - 4: {fileID: 2139505216}
   - 212: {fileID: 2139505218}
   - 61: {fileID: 2139505217}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
