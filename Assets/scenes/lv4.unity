@@ -3624,7 +3624,7 @@ GUITexture:
   m_PrefabInternal: {fileID: 2027398149}
   m_GameObject: {fileID: 603903498}
   m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: ca0fb04df26b8ee43933e3365422fa6a, type: 3}
+  m_Texture: {fileID: 2800000, guid: 3e9c1b2f8a0694547b9f0898816c22ed, type: 3}
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2
@@ -13609,7 +13609,7 @@ MonoBehaviour:
     offsetY: 0
     positionX: .421999991
     positionY: .375999987
-  mainTargetMan: {fileID: 21300000, guid: ca0fb04df26b8ee43933e3365422fa6a, type: 3}
+  mainTargetMan: {fileID: 21300000, guid: 3e9c1b2f8a0694547b9f0898816c22ed, type: 3}
   manPosition:
     width: 55
     height: 55
@@ -13617,7 +13617,7 @@ MonoBehaviour:
     offsetY: 0
     positionX: .421999991
     positionY: .234999999
-  haveExtraPair: 0
+  haveExtraPair: 1
   extraPairBG: {fileID: 21300000, guid: 5b94a52a31d299c44ab1ef7fa9333a90, type: 3}
   eextraPairBgPosition:
     width: 175
@@ -13626,7 +13626,7 @@ MonoBehaviour:
     offsetY: 0
     positionX: .236000001
     positionY: .529999971
-  extraTargetWoman: {fileID: 21300000, guid: e4d237a07d136234a9ecd761fc0a0be5, type: 3}
+  extraTargetWoman: {fileID: 21300000, guid: b1f6654d78a2601459375d4c383ac193, type: 3}
   extraWomanPosition:
     width: 55
     height: 55
@@ -13634,7 +13634,7 @@ MonoBehaviour:
     offsetY: 0
     positionX: .423000008
     positionY: .667999983
-  extraTargetMan: {fileID: 21300000, guid: cfaaeac3dfc41b4468f9a226b58b413b, type: 3}
+  extraTargetMan: {fileID: 21300000, guid: 41bc4bc3c5357ec47bb1dc70cdf40a04, type: 3}
   extraManPosition:
     width: 55
     height: 55
@@ -14117,6 +14117,29 @@ Prefab:
       value: "Coffee shop owner. But today she\u2019s charging for a usage of privy.
         Her coffee will make you want to use one quickly."
       objectReference: {fileID: 0}
+    - target: {fileID: 13100006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 3e9c1b2f8a0694547b9f0898816c22ed, type: 3}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: haveExtraPair
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: extraTargetWoman
+      value: 
+      objectReference: {fileID: 21300000, guid: b1f6654d78a2601459375d4c383ac193,
+        type: 3}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: extraTargetMan
+      value: 
+      objectReference: {fileID: 21300000, guid: 41bc4bc3c5357ec47bb1dc70cdf40a04,
+        type: 3}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: mainTargetMan
+      value: 
+      objectReference: {fileID: 21300000, guid: 3e9c1b2f8a0694547b9f0898816c22ed,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
   m_RootGameObject: {fileID: 712452910}

@@ -4786,7 +4786,7 @@ MonoBehaviour:
     height: 80
     positionX: .537999988
     positionY: .381000012
-  mainTargetWoman: {fileID: 21300000, guid: 1ea79b02f91616844b0a5d66ba702bfa, type: 3}
+  mainTargetWoman: {fileID: 21300000, guid: b1f6654d78a2601459375d4c383ac193, type: 3}
   womanPosition:
     width: 55
     height: 55
@@ -4794,7 +4794,7 @@ MonoBehaviour:
     offsetY: 0
     positionX: .421999991
     positionY: .375999987
-  mainTargetMan: {fileID: 21300000, guid: ca0fb04df26b8ee43933e3365422fa6a, type: 3}
+  mainTargetMan: {fileID: 21300000, guid: 3e9c1b2f8a0694547b9f0898816c22ed, type: 3}
   manPosition:
     width: 55
     height: 55
@@ -8113,7 +8113,7 @@ GUITexture:
   m_PrefabInternal: {fileID: 2053345559}
   m_GameObject: {fileID: 1771868587}
   m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: ca0fb04df26b8ee43933e3365422fa6a, type: 3}
+  m_Texture: {fileID: 2800000, guid: 3e9c1b2f8a0694547b9f0898816c22ed, type: 3}
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2
@@ -10283,7 +10283,7 @@ GUITexture:
   m_PrefabInternal: {fileID: 2053345559}
   m_GameObject: {fileID: 1981013937}
   m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: 1ea79b02f91616844b0a5d66ba702bfa, type: 3}
+  m_Texture: {fileID: 2800000, guid: b1f6654d78a2601459375d4c383ac193, type: 3}
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2
@@ -10563,6 +10563,24 @@ Prefab:
       propertyPath: womanDetailText.positionY
       value: .381000012
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: mainTargetWoman
+      value: 
+      objectReference: {fileID: 21300000, guid: b1f6654d78a2601459375d4c383ac193,
+        type: 3}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: mainTargetMan
+      value: 
+      objectReference: {fileID: 21300000, guid: 3e9c1b2f8a0694547b9f0898816c22ed,
+        type: 3}
+    - target: {fileID: 13100006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 3e9c1b2f8a0694547b9f0898816c22ed, type: 3}
+    - target: {fileID: 13100004, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: b1f6654d78a2601459375d4c383ac193, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
   m_RootGameObject: {fileID: 2078976714}
