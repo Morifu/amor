@@ -10,7 +10,7 @@ public class Player : MonoBehaviour {
 
 	Transform upperBody;
 
-	Animator legAnim, bodyAnim;
+	Animator legAnim, bodyAnim, arrowAnim;
 
 	bool flippedCharacter = false; // if we should flip the player
 
@@ -22,7 +22,8 @@ public class Player : MonoBehaviour {
 		weapon = upperBody.FindChild ("Bow").GetComponent<Bow> ();
 		startingPos = new Vector2(transform.position.x,transform.position.y+0.5f);
 		bodyAnim = upperBody.GetComponentInChildren<Animator> ();
-
+		arrowAnim = weapon.GetComponentInChildren<Animator> ();
+		arrowAnim.SetFloat ("Magnitude", 0);
 	}
 
 	void OnMouseDown() 
@@ -70,6 +71,7 @@ public class Player : MonoBehaviour {
 		Quaternion rot = Quaternion.LookRotation (v2);
 		//Debug.Log ("magnitude : " + v2.magnitude);
 		bodyAnim.SetFloat ("Magnitude", v2.magnitude);
+		arrowAnim.SetFloat ("Magnitude", v2.magnitude);
 		v2.Normalize ();
 
 		// we don't need rotation on x and y within 2D space
@@ -104,5 +106,6 @@ public class Player : MonoBehaviour {
 		weapon.shootArrow (startingPos-endingPos);
 		bodyAnim.SetTrigger ("Shoot");
 		bodyAnim.SetFloat ("Magnitude", 0);
+		arrowAnim.SetFloat ("Magnitude", 0);
 	}
 }

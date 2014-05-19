@@ -8,7 +8,7 @@ public class intro : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		timeStart = Time.time;
 	}
 	
 	// Update is called once per frame

@@ -182,7 +182,8 @@ public class PauseScreenGUI : MonoBehaviour {
 			              "",homeButtonStyle))
 			{
 				GameManager.instance.GamePaused = false;
-				Application.LoadLevel("selectLevel");
+				GameManager.instance.needReloadMusic = true;
+				Application.LoadLevel("mainMenu");
 			}
 
 

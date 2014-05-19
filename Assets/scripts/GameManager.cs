@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour {
 	
 	[HideInInspector]
 	public bool GamePaused = false;
+
+	[HideInInspector]
+	public bool needReloadMusic = true;
 	
 	public void Save()
 	{
@@ -72,10 +75,12 @@ public class GameManager : MonoBehaviour {
 			instance.BackgroundMusic = BackgroundMusic;
 			Destroy(gameObject);
 		}
-		if(instance.bgMusic == null)
+		if(instance.needReloadMusic)//instance.bgMusic == null)
 		{
+			Destroy(instance.bgMusic);
 			instance.bgMusic = AudioHelper.CreateGetFadeAudioObject (instance.BackgroundMusic, true, instance.fadeClip);
 			StartCoroutine (AudioHelper.FadeAudioObject (instance.bgMusic, 0.25f));
+			instance.needReloadMusic = false;
 		}
 	}
 

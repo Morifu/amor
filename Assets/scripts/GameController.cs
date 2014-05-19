@@ -54,7 +54,7 @@ public class GameController : MonoBehaviour {
 		if(lvl != 0)
 		{
 			Destroy(GameManager.instance.bgMusic);
-			GameManager.instance.bgMusic= null;
+			GameManager.instance.needReloadMusic = true;
 		}
 	}
 
