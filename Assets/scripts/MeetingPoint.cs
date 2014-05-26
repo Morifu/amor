@@ -8,6 +8,7 @@ public class MeetingPoint : MonoBehaviour {
 	public int levelNumber;
 	public bool completesLevel = false;
 	public GameObject[] lovers;
+	ParticleSystem partikle;
 
 	public AudioClip extraPairSound;
 
@@ -19,6 +20,12 @@ public class MeetingPoint : MonoBehaviour {
 			// just to be sure lets set current level number
 			GameManager.instance.controller.currentLvl = levelNumber-1; 
 		}
+		partikle = GetComponentInChildren<ParticleSystem> ();
+		if(partikle != null)
+		{
+			partikle.renderer.sortingLayerName = "inFront";
+		}
+
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) 
@@ -37,8 +44,10 @@ public class MeetingPoint : MonoBehaviour {
 
 		if (loverCount == 2 && completesLevel && !GameManager.instance.controller.levelCompleted)
 		{
-			GameManager.instance.controller.LevelCompleted();
+			Invoke("LevelCompleted",5);
 			GameManager.instance.controller.setNextLevel(levelNumber);
+			AudioHelper.CreatePlayAudioObject(extraPairSound);
+			partikle.Play();
 			//Application.LoadLevel (nextLevel);
 		}
 		else if( loverCount == 2 && !completesLevel)
@@ -46,5 +55,10 @@ public class MeetingPoint : MonoBehaviour {
 			GameManager.instance.controller.extraPair = true;
 			AudioHelper.CreatePlayAudioObject(extraPairSound);
 		}
+	}
+
+	void LevelCompleted()
+	{
+		GameManager.instance.controller.LevelCompleted ();
 	}
 }
