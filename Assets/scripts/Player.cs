@@ -68,18 +68,18 @@ public class Player : MonoBehaviour {
 			flippedCharacter = false;
 		}
 		Vector2 v2 = startingPos - new Vector2 (pos.x, pos.y);
-		Quaternion rot = Quaternion.LookRotation (v2);
+
 		//Debug.Log ("magnitude : " + v2.magnitude);
 		bodyAnim.SetFloat ("Magnitude", v2.magnitude);
 		arrowAnim.SetFloat ("Magnitude", v2.magnitude);
 		v2.Normalize ();
-
 		// we don't need rotation on x and y within 2D space
+		Quaternion rot = Quaternion.LookRotation (v2);
 		rot.x = 0;
 		rot.y = 0;
 		float cosz = Mathf.Cos (rot.eulerAngles.z*Mathf.Deg2Rad); 
 		rot.z *= transform.localScale.x;
-		//Debug.Log ("Cosinus z : " + cosz+" Cosinus 70 : "+maxAngle + "rotz: "+rot.eulerAngles.z);
+		Debug.Log ("Cosinus z : " + cosz+" Cosinus 70 : "+maxAngle + " rotz: "+rot.eulerAngles.z);
 		if(cosz > Mathf.Cos (maxAngle*Mathf.Deg2Rad))
 			upperBody.rotation = rot;
 
@@ -102,8 +102,24 @@ public class Player : MonoBehaviour {
 		v3.z = 10;
 		Vector3 pos = Camera.main.ScreenToWorldPoint (v3);
 		endingPos = new Vector2 (pos.x, pos.y);
-		Debug.Log ("Ending Position x: " + pos.x + " y: " + pos.y);
-		weapon.shootArrow (startingPos-endingPos);
+		Vector2 direction = startingPos - endingPos;
+		direction.Normalize ();
+
+		float tanmax = Mathf.Tan (maxAngle * Mathf.Deg2Rad);
+		Debug.Log("Tan konta "+tanmax);
+		if(Mathf.Abs( direction.y/direction.x) > tanmax)
+		{
+			direction.x = 1*Mathf.Sign(direction.x);
+			direction.y = tanmax*Mathf.Sign(direction.y);
+		}
+
+		Debug.Log ("y do x : " + direction.y / direction.x);
+//		if (direction.y > Mathf.Tan (maxAngle * Mathf.Deg2Rad))
+//						direction.y = Mathf.Tan (maxAngle * Mathf.Deg2Rad);
+		//endingPos.Normalize ();
+		//Debug.Log ("Ending Position x: " + endingPos.x + " y: " + endingPos.y);
+		Debug.Log ("Direction : " + direction);
+		weapon.shootArrow (direction);
 		bodyAnim.SetTrigger ("Shoot");
 		bodyAnim.SetFloat ("Magnitude", 0);
 		arrowAnim.SetFloat ("Magnitude", 0);

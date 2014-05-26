@@ -136,14 +136,17 @@ public class WinScreenGUI : MonoBehaviour {
 			GameManager.instance.GamePaused = false;
 			Application.LoadLevel(Application.loadedLevel);
 		}
-		// sound button 
+		// next level button 
 		if(GUI.Button(new Rect(Screen.width*nextButtonSizes.positionX+nextButtonSizes.offsetX,
 		                       Screen.height*nextButtonSizes.positionY+nextButtonSizes.offsetY,
 		                       nextButtonSizes.width,
 		                       nextButtonSizes.height),
 		              "",nextButtonStyle))
 		{
-			Application.LoadLevel("lv"+GameManager.instance.controller.nextLevel);
+			if(GameManager.instance.controller.nextLevel == 13)
+				Application.LoadLevel("outro");
+			else
+				Application.LoadLevel("lv"+GameManager.instance.controller.nextLevel);
 		}
 	}
 }

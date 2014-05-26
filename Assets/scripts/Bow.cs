@@ -44,6 +44,7 @@ public class Bow : MonoBehaviour {
 			arrowInstance = Instantiate(arrow, transform.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
 			//arrowInstance.isKinematic = false;
 			Debug.Log ("arrow magnitude : "+direction.magnitude);
+			Debug.Log (direction);
 			arrowInstance.velocity = direction.normalized*speed*((direction.magnitude > 1)?1:direction.magnitude);
 			//arrowInstance.transform.parent = null;
 			arrowShot = true;

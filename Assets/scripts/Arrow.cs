@@ -15,6 +15,7 @@ public class Arrow : MonoBehaviour {
 		arrowBody = rigidbody2D;
 		arrowCollider = GetComponent<CircleCollider2D> ();
 		AudioHelper.CreatePlayAudioObject (arrowShotSound);
+		Destroy (gameObject, 5);
 	}
 	
 	void FixedUpdate()

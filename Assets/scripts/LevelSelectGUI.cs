@@ -40,7 +40,7 @@ public class LevelSelectGUI : MonoBehaviour {
 		                    position.width * Screen.width,
 		                    position.height * Screen.height);
 
-		GUI.BeginGroup (pos,"LEVELE");
+		GUI.BeginGroup (pos);
 		Rect tempPos = new Rect (0, 0, pos.width, pos.height);
 
 
