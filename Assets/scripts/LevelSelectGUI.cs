@@ -7,11 +7,15 @@ public class LevelSelectGUI : MonoBehaviour {
 	public GUISkin buttonSkins;
 	public Texture2D[] buttons;
 	Texture2D[] pageButtons;
+	public Texture2D blankLvBG;
+	public Texture2D pytajnik;
 	public Rect leftButton;
 	public GUIStyle leftButtonStyle;
 	public Rect rightButton;
 	public GUIStyle rightButtonStyle;
 	public GUIStyle style;
+
+	LevelData lvldata;
 
 	int selected = -1;
 	int pageNum = 0;
@@ -19,10 +23,14 @@ public class LevelSelectGUI : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		pageButtons = new Texture2D[6];
-
+		lvldata = GameManager.instance.controller.lvdata;
 		for (int i = 0; i < 6 ; i++)
 		{
-			pageButtons[i] = buttons[i];
+			LevelData.LevelInfo info = lvldata.getLevelInfo(i+1);
+			if(info.lvlState == LevelData.LevelState.LOCKED)
+				pageButtons[i] = blankLvBG;
+			else
+				pageButtons[i] = buttons[i];
 		}
 	}
 	
@@ -44,16 +52,30 @@ public class LevelSelectGUI : MonoBehaviour {
 		Rect tempPos = new Rect (0, 0, pos.width, pos.height);
 
 
-		selected = GUI.SelectionGrid(tempPos, selected, pageButtons, 3,style);
+		selected = GUI.SelectionGrid(tempPos, selected, pageButtons, 3, style);
+
+		int lower = (int)(tempPos.y + tempPos.height/2);
+		for(int i = 0; i < 3; i++)
+		{
+			int posx = (int)(tempPos.x + (tempPos.width/3)*(i));
+			Rect firstRow = new Rect(posx,tempPos.y,tempPos.width/3,tempPos.height/2);
+			Rect secondRow = new Rect(posx, lower, tempPos.width/3,tempPos.height/2);
+			drawScores(firstRow,(i+1)+(6*pageNum));
+			drawScores(secondRow,(i+4)+(6*pageNum));
+		}
 
 		GUI.EndGroup ();
 
 		if(selected != -1)
 		{
 			Debug.Log("selected = "+selected);
-			GameManager.instance.controller.setNextLevel(selected+1);
-			GameManager.instance.needReloadMusic = true;
-			Application.LoadLevel("lv"+(selected+1));
+			LevelData.LevelInfo info = lvldata.getLevelInfo(selected+1);
+			if(info.lvlState != LevelData.LevelState.LOCKED)
+			{
+				GameManager.instance.controller.setNextLevel(selected+1);
+				GameManager.instance.needReloadMusic = true;
+				Application.LoadLevel("lv"+(selected+1));
+			}
 		}
 		
 		if(GUI.Button (leftButton,"",leftButtonStyle))
@@ -64,6 +86,7 @@ public class LevelSelectGUI : MonoBehaviour {
 			{
 				pageNum--;
 				reloadPage();
+				Debug.Log("left Button");
 			}
 
 		}
@@ -73,6 +96,7 @@ public class LevelSelectGUI : MonoBehaviour {
 			{
 				pageNum++;
 				reloadPage();
+				Debug.Log("right Button");
 			}
 		}
 	}
@@ -81,12 +105,37 @@ public class LevelSelectGUI : MonoBehaviour {
 	{
 		for (int i = 0; i < 6 ; i++)
 		{
-			pageButtons[i] = buttons[i+(6*pageNum)];
+			LevelData.LevelInfo info = lvldata.getLevelInfo((i+1)+(6*pageNum));
+			if(info.lvlState == LevelData.LevelState.LOCKED)
+				pageButtons[i] = blankLvBG;
+			else
+				pageButtons[i] = buttons[i+(6*pageNum)];
 		}
 	}
 
 	void drawScores(Rect position, int lvlNumber)
 	{
+		Debug.Log ("position: " + position + " lvlnumber: " + lvlNumber);
 
+		GUI.BeginGroup (position);
+
+		LevelData.LevelInfo info = lvldata.getLevelInfo(lvlNumber);
+
+		if(info.lvlState == LevelData.LevelState.LOCKED)
+		{
+			// if level is locked draw just question mark
+			GUI.DrawTexture(new Rect (position.width/2-pytajnik.width/2,
+			                          position.height/2-pytajnik.height/2,pytajnik.width,
+			                          pytajnik.height),
+			                pytajnik);
+		}
+		else
+		{
+			// here we draw all the scores for the level
+
+
+		}
+
+		GUI.EndGroup();
 	}
 }

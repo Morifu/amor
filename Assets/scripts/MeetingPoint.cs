@@ -9,6 +9,7 @@ public class MeetingPoint : MonoBehaviour {
 	public bool completesLevel = false;
 	public GameObject[] lovers;
 	ParticleSystem partikle;
+	public float winDelay = 5f;
 
 	public AudioClip extraPairSound;
 
@@ -44,7 +45,7 @@ public class MeetingPoint : MonoBehaviour {
 
 		if (loverCount == 2 && completesLevel && !GameManager.instance.controller.levelCompleted)
 		{
-			Invoke("LevelCompleted",5);
+			Invoke("LevelCompleted",winDelay);
 			GameManager.instance.controller.setNextLevel(levelNumber);
 			AudioHelper.CreatePlayAudioObject(extraPairSound);
 			partikle.Play();

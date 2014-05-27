@@ -46,7 +46,28 @@ MonoBehaviour:
     width: .899999976
     height: .600000024
   buttonSkins: {fileID: 11400000, guid: 6a2258289d9fc1c44804833b8b9491e8, type: 2}
-  style:
+  buttons:
+  - {fileID: 2800000, guid: ce277ca7109a44b448e96032dd6f0911, type: 3}
+  - {fileID: 2800000, guid: 0df181428d492de4ab66eb5929d83838, type: 3}
+  - {fileID: 2800000, guid: ad8b577edcd45864889f084f7fd0e537, type: 3}
+  - {fileID: 2800000, guid: 66c6b93dc79d1134cb92eb8203dc321a, type: 3}
+  - {fileID: 2800000, guid: 72e43d57138d958468e2a614dea73ae1, type: 3}
+  - {fileID: 2800000, guid: 134a24b15feb5ec4f9a089af25d9f126, type: 3}
+  - {fileID: 2800000, guid: 42a97a15f57ed8e4d9dc3b74f57ac995, type: 3}
+  - {fileID: 2800000, guid: 60e3d303c95c4d04c87c8de88545a765, type: 3}
+  - {fileID: 2800000, guid: e559e4e63b1216c4aaf1db631f7e5d48, type: 3}
+  - {fileID: 2800000, guid: 3d1036b7e41743446a0837d254f3c39a, type: 3}
+  - {fileID: 2800000, guid: 98181189706180548b6824b14c186b39, type: 3}
+  - {fileID: 2800000, guid: 6873c2349f4d3894d837ab01ec0696ca, type: 3}
+  blankLvBG: {fileID: 2800000, guid: 6d953bd1639f70f4a829cca24f1ca153, type: 3}
+  pytajnik: {fileID: 2800000, guid: 5962c7b3098785f44a089fe003412ea8, type: 3}
+  leftButton:
+    serializedVersion: 2
+    x: 200
+    y: 380
+    width: 100
+    height: 50
+  leftButtonStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
@@ -105,31 +126,130 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
-  buttons:
-  - {fileID: 2800000, guid: ce277ca7109a44b448e96032dd6f0911, type: 3}
-  - {fileID: 2800000, guid: 0df181428d492de4ab66eb5929d83838, type: 3}
-  - {fileID: 2800000, guid: ad8b577edcd45864889f084f7fd0e537, type: 3}
-  - {fileID: 2800000, guid: 66c6b93dc79d1134cb92eb8203dc321a, type: 3}
-  - {fileID: 2800000, guid: 72e43d57138d958468e2a614dea73ae1, type: 3}
-  - {fileID: 2800000, guid: 134a24b15feb5ec4f9a089af25d9f126, type: 3}
-  - {fileID: 2800000, guid: 42a97a15f57ed8e4d9dc3b74f57ac995, type: 3}
-  - {fileID: 2800000, guid: 60e3d303c95c4d04c87c8de88545a765, type: 3}
-  - {fileID: 2800000, guid: e559e4e63b1216c4aaf1db631f7e5d48, type: 3}
-  - {fileID: 2800000, guid: 3d1036b7e41743446a0837d254f3c39a, type: 3}
-  - {fileID: 2800000, guid: 98181189706180548b6824b14c186b39, type: 3}
-  - {fileID: 2800000, guid: 6873c2349f4d3894d837ab01ec0696ca, type: 3}
-  leftButton:
-    serializedVersion: 2
-    x: 200
-    y: 380
-    width: 100
-    height: 50
   rightButton:
     serializedVersion: 2
     x: 320
     y: 380
     width: 100
     height: 50
+  rightButtonStyle:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  style:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 4
+      m_Right: 0
+      m_Top: 4
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

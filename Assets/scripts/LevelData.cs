@@ -62,6 +62,7 @@ public class LevelData : ScriptableObject {
 			LevelInfo lvl11 = new LevelInfo ( 45, 19, 110);
 			LevelInfo lvl12 = new LevelInfo ( 32, 12, 200);
 
+			lvl1.lvlState = LevelState.UNLOCKED;
 			levels.Add (lvl1);
 			levels.Add (lvl2);
 			levels.Add (lvl3);
