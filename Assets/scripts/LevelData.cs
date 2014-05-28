@@ -38,6 +38,10 @@ public class LevelData : ScriptableObject {
 			arrowsUsed = 0;
 			maxScore = 0;
 		}
+		public string ToString()
+		{
+			return (int)lvlState +" "+ collectible.ToString()+ " " + maxScore;
+		}
 
 	};
 
@@ -75,6 +79,7 @@ public class LevelData : ScriptableObject {
 			levels.Add (lvl10);
 			levels.Add (lvl11);
 			levels.Add (lvl12);
+
 		}
 	}
 
@@ -90,6 +95,15 @@ public class LevelData : ScriptableObject {
 		if(lv-1 < 0)
 			lv = 1;
 		levels[lv-1] = lvinfo;
+	}
+
+	public void unlockLevel(int lv)
+	{
+		if(lv-1 < 0)
+			lv = 1;
+		LevelInfo info = (LevelInfo)levels [lv - 1];
+		info.lvlState = LevelState.UNLOCKED;
+		levels [lv - 1] = info;
 	}
 
 }

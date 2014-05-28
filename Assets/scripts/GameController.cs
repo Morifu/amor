@@ -49,7 +49,6 @@ public class GameController : MonoBehaviour {
 
 	public void setNextLevel(int lvl)
 	{
-		currentLvl = lvl;
 		nextLevel = lvl;
 		if(lvl != 0)
 		{
@@ -61,6 +60,7 @@ public class GameController : MonoBehaviour {
 	// level initializer, here we start counting time
 	public void LevelStart()
 	{
+		currentLvl = nextLevel;
 		levelCompleted = false;
 		levelFailed = false;
 		time = Time.time;
@@ -129,6 +129,8 @@ public class GameController : MonoBehaviour {
 		StartCoroutine (AudioHelper.FadeAudioObject (GameManager.instance.bgMusic, -1f));
 		AudioHelper.CreatePlayAudioObject (GameManager.instance.winMusic);
 		UpdateData ();
+		lvdata.unlockLevel (nextLevel);
+
 	}
 
 	public void LevelFailed()

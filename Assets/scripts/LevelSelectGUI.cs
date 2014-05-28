@@ -15,6 +15,31 @@ public class LevelSelectGUI : MonoBehaviour {
 	public GUIStyle rightButtonStyle;
 	public GUIStyle style;
 
+	// textures and positions for info
+	public Vector2 bonusTargetsPos;
+	public float bonusTargetScale;
+	public Texture2D bonusTargetTexture;
+	public Vector2 hiScorePos;
+	public float hiScoreScale;
+	public Texture2D hiScoreTexture;
+	public Vector2 markPos;
+	public float markScale;
+	public Texture2D positiveMark;
+	public Texture2D negativeMark;
+	public Vector2 amorPosition;
+	public float amorScale;
+	public Texture2D amorTexture;
+	public Vector2 starsPos;
+	public float starsScale;
+	public float starsPadding;
+	public Texture2D fullStar;
+	public Texture2D emptyStar;
+
+	public int FontSize;
+	public Font font;
+	public Rect fontPos;
+	//public GUIStyle fontStyle;
+
 	LevelData lvldata;
 
 	int selected = -1;
@@ -115,8 +140,6 @@ public class LevelSelectGUI : MonoBehaviour {
 
 	void drawScores(Rect position, int lvlNumber)
 	{
-		Debug.Log ("position: " + position + " lvlnumber: " + lvlNumber);
-
 		GUI.BeginGroup (position);
 
 		LevelData.LevelInfo info = lvldata.getLevelInfo(lvlNumber);
@@ -132,8 +155,55 @@ public class LevelSelectGUI : MonoBehaviour {
 		else
 		{
 			// here we draw all the scores for the level
+			GUI.DrawTexture(new Rect(bonusTargetsPos.x,bonusTargetsPos.y,
+			                         bonusTargetTexture.width*bonusTargetScale,
+			                         bonusTargetTexture.height*bonusTargetScale),
+			                bonusTargetTexture);
+			GUI.DrawTexture(new Rect(hiScorePos.x,hiScorePos.y,
+			                         hiScoreTexture.width*hiScoreScale,
+			                         hiScoreTexture.height*hiScoreScale),
+			                hiScoreTexture);
 
+			GUIManager.DrawOutline(fontPos, info.maxScore.ToString(),
+			                       FontSize,font,style,Color.black,Color.white);
 
+			Texture2D bonustxt = info.extraPair?positiveMark:negativeMark;
+			GUI.DrawTexture(new Rect(markPos.x,markPos.y,
+			                         bonustxt.width*markScale,
+			                         bonustxt.height*markScale),
+			                bonustxt);
+
+			if(info.collectible)
+				GUI.DrawTexture(new Rect(amorPosition.x,amorPosition.y,
+				                         amorTexture.width*amorScale,
+				                         amorTexture.height*amorScale),
+				                amorTexture);
+			else
+				GUI.DrawTexture(new Rect(amorPosition.x,amorPosition.y,
+				                         pytajnik.width*amorScale,
+				                         pytajnik.height*amorScale),
+				                pytajnik);
+			int numberOfStars = (int)(info.lvlState - 1);
+			for(int i = 0; i < 3; i++)
+			{
+				if(numberOfStars > 0)
+				{
+					GUI.DrawTexture(new Rect(starsPos.x+(fullStar.width+starsPadding)*i,
+					                         starsPos.y,
+					                         fullStar.width*starsScale,
+					                         fullStar.height*starsScale),
+					                fullStar);
+					numberOfStars--;
+				}
+				else
+				{
+					GUI.DrawTexture(new Rect(starsPos.x+(emptyStar.width+starsPadding)*i,
+					                         starsPos.y,
+					                         emptyStar.width*starsScale,
+					                         emptyStar.height*starsScale),
+					                emptyStar);
+				}
+			}
 		}
 
 		GUI.EndGroup();
