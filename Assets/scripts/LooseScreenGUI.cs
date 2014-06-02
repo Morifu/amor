@@ -52,7 +52,7 @@ public class LooseScreenGUI : MonoBehaviour {
 		                       homeButtonSizes.height),
 		              "",homeButtonStyle))
 		{
-			Application.LoadLevel("selectLevel");
+			Application.LoadLevel("mainMenu");
 		}
 		// repeat button 
 		if(GUI.Button(new Rect(Screen.width*repeatButtonSizes.positionX+repeatButtonSizes.offsetX,

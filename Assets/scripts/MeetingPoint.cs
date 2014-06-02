@@ -8,8 +8,9 @@ public class MeetingPoint : MonoBehaviour {
 	public int levelNumber;
 	public bool completesLevel = false;
 	public GameObject[] lovers;
+	ArrayList loverLocked = null;
 	ParticleSystem partikle;
-	public float winDelay = 5f;
+	public float winDelay = 3f;
 
 	public AudioClip extraPairSound;
 
@@ -26,7 +27,8 @@ public class MeetingPoint : MonoBehaviour {
 		{
 			partikle.renderer.sortingLayerName = "inFront";
 		}
-
+		if (loverLocked == null)
+			loverLocked = new ArrayList (2);
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) 
@@ -38,9 +40,13 @@ public class MeetingPoint : MonoBehaviour {
 		if (other.gameObject.Equals (lovers [0]) 
 		    || other.gameObject.Equals (lovers [1]))
 		{
-			Debug.Log("IT WORKS");
-			other.gameObject.GetComponent<LoverController>().LockLover();
-			loverCount++;
+			if(!loverLocked.Contains(other))
+			{
+				Debug.Log("IT WORKS");
+				other.gameObject.GetComponent<LoverController>().LockLover();
+				loverCount++;
+				loverLocked.Add(other);
+			}
 		}
 
 		if (loverCount == 2 && completesLevel && !GameManager.instance.controller.levelCompleted)

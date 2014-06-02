@@ -93,23 +93,6 @@ public class GameController : MonoBehaviour {
 		scoreCount = 0;
 		levelCompleted = true;
 		//levelFailed = true;
-		// first count stars gathered
-		lvlInfo.lvlState = LevelData.LevelState.STAR1COMPLETE;
-		if(lvlInfo.star3Count >= arrowCount)
-		{
-			starsCount = 3;
-			lvlInfo.lvlState = LevelData.LevelState.STAR3COMPLETE;
-		}
-		else if(lvlInfo.star2Count >= arrowCount)
-		{
-			starsCount = 2;
-			lvlInfo.lvlState = LevelData.LevelState.STAR2COMPLETE;
-		}
-		else
-		{
-			starsCount = 1;
-			lvlInfo.lvlState = LevelData.LevelState.STAR1COMPLETE;
-		}
 
 		scoreCount += 1000 * starsCount;
 
@@ -151,6 +134,24 @@ public class GameController : MonoBehaviour {
 		info.extraPair = extraPair;
 		info.bestTime = (info.bestTime > (Time.time - time))?(Time.time - time):info.bestTime;
 		info.arrowsUsed = arrowCount;
+
+		info.lvlState = LevelData.LevelState.STAR1COMPLETE;
+		if(info.star3Count >= arrowCount)
+		{
+			starsCount = 3;
+			info.lvlState = LevelData.LevelState.STAR3COMPLETE;
+		}
+		else if(info.star2Count >= arrowCount)
+		{
+			starsCount = 2;
+			info.lvlState = LevelData.LevelState.STAR2COMPLETE;
+		}
+		else
+		{
+			starsCount = 1;
+			info.lvlState = LevelData.LevelState.STAR1COMPLETE;
+		}
+
 		lvdata.updateLevelInfo(currentLvl,info);
 		GameManager.instance.Save();
 	}

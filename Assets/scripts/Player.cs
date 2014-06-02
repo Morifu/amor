@@ -103,8 +103,7 @@ public class Player : MonoBehaviour {
 		Vector3 pos = Camera.main.ScreenToWorldPoint (v3);
 		endingPos = new Vector2 (pos.x, pos.y);
 		Vector2 direction = startingPos - endingPos;
-		direction.Normalize ();
-
+	
 		float tanmax = Mathf.Tan (maxAngle * Mathf.Deg2Rad);
 		Debug.Log("Tan konta "+tanmax);
 		if(Mathf.Abs( direction.y/direction.x) > tanmax)

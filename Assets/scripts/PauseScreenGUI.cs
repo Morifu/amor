@@ -45,6 +45,11 @@ public class PauseScreenGUI : MonoBehaviour {
 	public Sprite extraTargetMan;
 	public GUIManager.ButtonData extraManPosition;
 
+	public Texture2D amorTextureCollected;
+	public Texture2D amorTextureHidden;
+	public Rect amorRect;
+	public bool haveCollectible = false;
+
 	// Use this for initialization
 	void Start () {
 		if(AudioListener.pause)
@@ -84,6 +89,11 @@ public class PauseScreenGUI : MonoBehaviour {
 			                            manPosition.width,
 			                            manPosition.height), 
 			                 mainTargetMan.texture);
+			if(haveCollectible)
+			if(GameManager.instance.controller.lvlInfo.collectible)
+				GUI.DrawTexture ( amorRect, amorTextureCollected);
+			else
+				GUI.DrawTexture ( amorRect, amorTextureHidden);
 
 			// draw stars
 			string startemp = star1Text.text;

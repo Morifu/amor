@@ -94,12 +94,12 @@ public class LevelSelectGUI : MonoBehaviour {
 		if(selected != -1)
 		{
 			Debug.Log("selected = "+selected);
-			LevelData.LevelInfo info = lvldata.getLevelInfo(selected+1);
+			LevelData.LevelInfo info = lvldata.getLevelInfo((selected+1)+(6*pageNum));
 			if(info.lvlState != LevelData.LevelState.LOCKED)
 			{
-				GameManager.instance.controller.setNextLevel(selected+1);
+				GameManager.instance.controller.setNextLevel((selected+1)+(6*pageNum));
 				GameManager.instance.needReloadMusic = true;
-				Application.LoadLevel("lv"+(selected+1));
+				Application.LoadLevel("lv"+((selected+1)+(6*pageNum)));
 			}
 		}
 		

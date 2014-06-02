@@ -25,6 +25,11 @@ public class WinScreenGUI : MonoBehaviour {
 	public GUIManager.TextData bestTimeText;
 	public GUIManager.TextData scoreText;
 	public GUIManager.TextData bonusText;
+	
+	public Texture2D amorTextureCollected;
+	public Texture2D amorTextureHidden;
+	public Rect amorRect;
+	public bool haveCollectible = false;
 
 	// Use this for initialization
 	void Start () {
@@ -45,6 +50,12 @@ public class WinScreenGUI : MonoBehaviour {
 		// first draw bg texture
 		Rect rectu = new Rect (0, 0, Screen.width, Screen.height);
 		GUI.DrawTexture (rectu, background);
+
+		if(haveCollectible)
+		if(GameManager.instance.controller.lvlInfo.collectible)
+			GUI.DrawTexture ( amorRect, amorTextureCollected);
+		else
+			GUI.DrawTexture ( amorRect, amorTextureHidden);
 
 		// draw stars collected
 		Rect starsRect = new Rect (Screen.width*starsData.positionX,
@@ -124,7 +135,7 @@ public class WinScreenGUI : MonoBehaviour {
 		                       homeButtonSizes.height),
 		              "",homeButtonStyle))
 		{
-			Application.LoadLevel("selectLevel");
+			Application.LoadLevel("mainMenu");
 		}
 		// repeat button 
 		if(GUI.Button(new Rect(Screen.width*repeatButtonSizes.positionX+repeatButtonSizes.offsetX,

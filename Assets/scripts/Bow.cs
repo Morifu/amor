@@ -45,7 +45,7 @@ public class Bow : MonoBehaviour {
 			//arrowInstance.isKinematic = false;
 			Debug.Log ("arrow magnitude : "+direction.magnitude);
 			Debug.Log (direction);
-			arrowInstance.velocity = direction.normalized*speed*((direction.magnitude > 1)?1:direction.magnitude);
+			arrowInstance.velocity = direction.normalized*speed*((direction.magnitude > 2)?2:direction.magnitude);
 			//arrowInstance.transform.parent = null;
 			arrowShot = true;
 			//arrowInstance = null;
