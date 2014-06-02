@@ -490,8 +490,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400010, guid: 9270d9ca58d2ec740852619877a22439, type: 2}
   m_PrefabInternal: {fileID: 129695905}
   m_GameObject: {fileID: 62489367}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.540481567, y: .0568927526, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -.0812923461, w: .996690333}
+  m_LocalPosition: {x: -.47054553, y: .0560019016, z: 0}
   m_LocalScale: {x: .649999976, y: .649999976, z: 1}
   m_Children: []
   m_Father: {fileID: 1318977513}
@@ -530,7 +530,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 1
-  m_SortingOrder: -1
+  m_SortingOrder: 5
   m_SortingLayerID: 3940858523
   m_Sprite: {fileID: 21300000, guid: e32de7d88443e784f9d3ffce48ab292d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -830,8 +830,8 @@ MonoBehaviour:
   lovers:
   - {fileID: 1807771724}
   - {fileID: 1909370539}
-  winDelay: 5
-  extraPairSound: {fileID: 8300000, guid: f801c2a0257b30748a7e1e8928d5dba1, type: 3}
+  winDelay: 1.5
+  extraPairSound: {fileID: 8300000, guid: a26e92a0f8f08c34d86230936f35e1aa, type: 3}
 --- !u!1 &100469491
 GameObject:
   m_ObjectHideFlags: 0
@@ -6032,6 +6032,14 @@ Prefab:
       value: "This girl is tougher than nails. Someone tried to hit on her once. Didn\u2019t
         end well \u2013she hit him back\u2026 in the face."
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: haveCollectible
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: haveCollectible
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
   m_RootGameObject: {fileID: 597282653}
@@ -6629,8 +6637,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 7.07444, y: .357248783}
-  m_Center: {x: 6.32986259, y: -2.6459825}
+  m_Size: {x: 7.07444, y: .286634922}
+  m_Center: {x: 6.32986259, y: -2.68128943}
 --- !u!61 &768211657
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6651,8 +6659,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 4.48784351, y: .315062761}
-  m_Center: {x: 5.984797, y: 1.87230778}
+  m_Size: {x: 4.48784351, y: .234362125}
+  m_Center: {x: 5.984797, y: 1.83195758}
 --- !u!61 &768211659
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6662,8 +6670,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 6.68947411, y: .340051174}
-  m_Center: {x: -6.52102852, y: -2.67139602}
+  m_Size: {x: 6.68947411, y: .309788704}
+  m_Center: {x: -6.52102852, y: -2.68652725}
 --- !u!61 &768211660
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6673,8 +6681,8 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 5.55399895, y: .339432716}
-  m_Center: {x: -5.88003445, y: 1.88449287}
+  m_Size: {x: 5.55399895, y: .299082279}
+  m_Center: {x: -5.88003445, y: 1.86431766}
 --- !u!61 &768211661
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7635,7 +7643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrow: {fileID: 5000000, guid: bcfe0965cda241d4ba02d232a5ae30ca, type: 2}
-  speed: 15
+  speed: 5
 --- !u!1 &1043677726
 GameObject:
   m_ObjectHideFlags: 0
@@ -8040,7 +8048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
   BackgroundMusic: {fileID: 8300000, guid: 7f13f35c8942e7d4a9cd61bae4760444, type: 3}
-  winMusic: {fileID: 8300000, guid: a26e92a0f8f08c34d86230936f35e1aa, type: 3}
+  winMusic: {fileID: 0}
   looseMusic: {fileID: 8300000, guid: eb5a4af53a46e1446b307f94fe445a11, type: 3}
   fadeClip: {fileID: 7400000, guid: d6f785f388ecce3489c104bd8e6f95d8, type: 2}
   bgMusic: {fileID: 0}
@@ -8852,6 +8860,16 @@ MonoBehaviour:
     offsetY: 0
     positionX: .423000008
     positionY: .532000005
+  amorTextureCollected: {fileID: 2800000, guid: 8f2b4b8ec6afd7548855e6b24e8d5479,
+    type: 3}
+  amorTextureHidden: {fileID: 2800000, guid: 20c0fbd30965a3f498985191ee350d28, type: 3}
+  amorRect:
+    serializedVersion: 2
+    x: 480
+    y: 23
+    width: 92
+    height: 100
+  haveCollectible: 1
 --- !u!1 &1105567618
 GameObject:
   m_ObjectHideFlags: 0
@@ -14441,7 +14459,7 @@ Animator:
     type: 2}
   m_PrefabInternal: {fileID: 1476683338}
   m_GameObject: {fileID: 1807771724}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 9adc37d991d03ea41abfdd62c47606a3, type: 2}
   m_CullingMode: 0
@@ -14651,7 +14669,7 @@ Transform:
   m_PrefabInternal: {fileID: 129695905}
   m_GameObject: {fileID: 1841117633}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0455145836, y: -.00568884611, z: 0}
+  m_LocalPosition: {x: -.0608651638, y: -.0368249416, z: 0}
   m_LocalScale: {x: .780000031, y: .649999976, z: 1}
   m_Children: []
   m_Father: {fileID: 1318977513}
@@ -16226,6 +16244,16 @@ MonoBehaviour:
     height: 80
     positionX: .300000012
     positionY: .360000014
+  amorTextureCollected: {fileID: 2800000, guid: 8f2b4b8ec6afd7548855e6b24e8d5479,
+    type: 3}
+  amorTextureHidden: {fileID: 2800000, guid: 20c0fbd30965a3f498985191ee350d28, type: 3}
+  amorRect:
+    serializedVersion: 2
+    x: 400
+    y: 140
+    width: 92
+    height: 100
+  haveCollectible: 1
 --- !u!1001 &2052388539
 Prefab:
   m_ObjectHideFlags: 0

@@ -67,12 +67,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
   BackgroundMusic: {fileID: 0}
-  winMusic: {fileID: 8300000, guid: a26e92a0f8f08c34d86230936f35e1aa, type: 3}
+  winMusic: {fileID: 0}
   looseMusic: {fileID: 8300000, guid: eb5a4af53a46e1446b307f94fe445a11, type: 3}
   fadeClip: {fileID: 7400000, guid: d6f785f388ecce3489c104bd8e6f95d8, type: 2}
   bgMusic: {fileID: 0}
   isInGame: 0
   GamePaused: 0
+  needReloadMusic: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
