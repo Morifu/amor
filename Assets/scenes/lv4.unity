@@ -1696,7 +1696,7 @@ Transform:
   m_PrefabInternal: {fileID: 634725194}
   m_GameObject: {fileID: 110585370}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.30615473, y: -2.81181169, z: 0}
+  m_LocalPosition: {x: -5.53076553, y: -2.81181192, z: 0}
   m_LocalScale: {x: .307873905, y: .307874084, z: 1}
   m_Children:
   - {fileID: 743914902}
@@ -5328,11 +5328,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 67afd02ccfb03ff42b8263a6b8a044c9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6.30615473
+      value: -5.53076553
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 67afd02ccfb03ff42b8263a6b8a044c9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.81181169
+      value: -2.81181192
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 67afd02ccfb03ff42b8263a6b8a044c9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7706,7 +7706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
   BackgroundMusic: {fileID: 8300000, guid: 7f13f35c8942e7d4a9cd61bae4760444, type: 3}
-  winMusic: {fileID: 0}
+  winMusic: {fileID: 8300000, guid: a26e92a0f8f08c34d86230936f35e1aa, type: 3}
   looseMusic: {fileID: 8300000, guid: eb5a4af53a46e1446b307f94fe445a11, type: 3}
   fadeClip: {fileID: 7400000, guid: d6f785f388ecce3489c104bd8e6f95d8, type: 2}
   bgMusic: {fileID: 0}
@@ -9749,11 +9749,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: d2ab31b04bed70b45898daa7f9fc7d17, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -11.8307409
+      value: -11.8705559
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2ab31b04bed70b45898daa7f9fc7d17, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.42860031
+      value: -3.65440154
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d2ab31b04bed70b45898daa7f9fc7d17, type: 2}
       propertyPath: m_LocalPosition.z
@@ -10120,7 +10120,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: c2aa569a256218340b2a32df5eedee0d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -8.13613129
+      value: -7.16689491
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c2aa569a256218340b2a32df5eedee0d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -10278,7 +10278,7 @@ Transform:
   m_PrefabInternal: {fileID: 1323774710}
   m_GameObject: {fileID: 1359831727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.13613129, y: -3.36607695, z: 0}
+  m_LocalPosition: {x: -7.16689491, y: -3.36607695, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1444521548}
@@ -10423,7 +10423,7 @@ AudioSource:
   m_GameObject: {fileID: 1402160791}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: a26e92a0f8f08c34d86230936f35e1aa, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -13406,7 +13406,7 @@ GUITexture:
   m_PrefabInternal: {fileID: 2027398149}
   m_GameObject: {fileID: 1773804123}
   m_Enabled: 1
-  m_Texture: {fileID: 2800000, guid: 1ea79b02f91616844b0a5d66ba702bfa, type: 3}
+  m_Texture: {fileID: 2800000, guid: b1f6654d78a2601459375d4c383ac193, type: 3}
   m_Color: {r: .5, g: .5, b: .5, a: .5}
   m_PixelInset:
     serializedVersion: 2
@@ -14127,8 +14127,8 @@ MonoBehaviour:
   amorTextureHidden: {fileID: 2800000, guid: 20c0fbd30965a3f498985191ee350d28, type: 3}
   amorRect:
     serializedVersion: 2
-    x: 400
-    y: 140
+    x: 385
+    y: 120
     width: 92
     height: 100
   haveCollectible: 0
@@ -16063,7 +16063,7 @@ MonoBehaviour:
     height: 80
     positionX: .537999988
     positionY: .381000012
-  mainTargetWoman: {fileID: 21300000, guid: 1ea79b02f91616844b0a5d66ba702bfa, type: 3}
+  mainTargetWoman: {fileID: 21300000, guid: b1f6654d78a2601459375d4c383ac193, type: 3}
   womanPosition:
     width: 55
     height: 55
@@ -16213,7 +16213,7 @@ Transform:
   m_PrefabInternal: {fileID: 1186908188}
   m_GameObject: {fileID: 1976228140}
   m_LocalRotation: {x: 0, y: 0, z: -.087155737, w: .99619472}
-  m_LocalPosition: {x: -11.8307409, y: -3.42860031, z: 0}
+  m_LocalPosition: {x: -11.8705559, y: -3.65440154, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1634925767}
@@ -16616,6 +16616,10 @@ Prefab:
       propertyPath: haveCollectible
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
   m_RootGameObject: {fileID: 712452910}
@@ -16662,7 +16666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrow: {fileID: 5000000, guid: bcfe0965cda241d4ba02d232a5ae30ca, type: 2}
-  speed: 5
+  speed: 8
 --- !u!1001 &2067754040
 Prefab:
   m_ObjectHideFlags: 0
