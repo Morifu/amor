@@ -11,6 +11,7 @@ public class MeetingPoint : MonoBehaviour {
 	ArrayList loverLocked = null;
 	ParticleSystem partikle;
 	public float winDelay = 3f;
+	bool meetingCompleted = false;
 
 	public AudioClip extraPairSound;
 
@@ -36,6 +37,8 @@ public class MeetingPoint : MonoBehaviour {
 //		if (other.gameObject.tag == "Lover")
 //			loverCount++;
 //		
+		if(meetingCompleted) return;
+
 		if(lovers.Length > 0)
 		if (other.gameObject.Equals (lovers [0]) 
 		    || other.gameObject.Equals (lovers [1]))
@@ -55,12 +58,14 @@ public class MeetingPoint : MonoBehaviour {
 			GameManager.instance.controller.setNextLevel(levelNumber);
 			AudioHelper.CreatePlayAudioObject(extraPairSound);
 			partikle.Play();
+			meetingCompleted = true;
 			//Application.LoadLevel (nextLevel);
 		}
 		else if( loverCount == 2 && !completesLevel)
 		{
 			GameManager.instance.controller.extraPair = true;
 			AudioHelper.CreatePlayAudioObject(extraPairSound);
+			meetingCompleted = true;
 		}
 	}
 

@@ -102,8 +102,11 @@ public class LevelData : ScriptableObject {
 		if(lv-1 < 0)
 			lv = 1;
 		LevelInfo info = (LevelInfo)levels [lv - 1];
-		info.lvlState = LevelState.UNLOCKED;
-		levels [lv - 1] = info;
+		if(info.lvlState == LevelState.LOCKED)
+		{
+			info.lvlState = LevelState.UNLOCKED;
+			levels [lv - 1] = info;
+		}
 	}
 
 }

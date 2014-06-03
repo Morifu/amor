@@ -107,7 +107,7 @@ public class LoverController : MonoBehaviour {
 	{
 		arrived = true;
 		move = 0;
-		rigidbody2D.isKinematic = true;
+		//rigidbody2D.isKinematic = true;
 		loverCollider.enabled = false;
 
 	}

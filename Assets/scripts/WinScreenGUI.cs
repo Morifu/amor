@@ -52,7 +52,7 @@ public class WinScreenGUI : MonoBehaviour {
 		GUI.DrawTexture (rectu, background);
 
 		if(haveCollectible)
-		if(GameManager.instance.controller.lvlInfo.collectible)
+		if(GameManager.instance.controller.bonusCollected)
 			GUI.DrawTexture ( amorRect, amorTextureCollected);
 		else
 			GUI.DrawTexture ( amorRect, amorTextureHidden);
@@ -102,7 +102,7 @@ public class WinScreenGUI : MonoBehaviour {
 		                        bestTimeText.guiTextReference.color);
 
 		// draw bonus colleted string
-		string temp1 = (GameManager.instance.controller.bonusCollected) ? (" collected!") : (" none");
+		string temp1 = (GameManager.instance.controller.extraPair) ? (" collected!") : (" none");
 		string textbonus = string.Format(bonusText.text+temp1);
 
 		GUIManager.DrawOutline (new Rect (Screen.width*bonusText.positionX,

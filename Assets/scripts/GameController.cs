@@ -109,11 +109,11 @@ public class GameController : MonoBehaviour {
 			scoreCount += 1000;
 
 		//GameManager.instance.winScreen.SetActive (true);
-		StartCoroutine (AudioHelper.FadeAudioObject (GameManager.instance.bgMusic, -1f));
-		AudioHelper.CreatePlayAudioObject (GameManager.instance.winMusic);
+
 		UpdateData ();
 		lvdata.unlockLevel (nextLevel);
-
+		StartCoroutine (AudioHelper.FadeAudioObject (GameManager.instance.bgMusic, -1f));
+		AudioHelper.CreatePlayAudioObject (GameManager.instance.winMusic);
 	}
 
 	public void LevelFailed()
