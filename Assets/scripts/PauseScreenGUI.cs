@@ -89,8 +89,9 @@ public class PauseScreenGUI : MonoBehaviour {
 			                            manPosition.width,
 			                            manPosition.height), 
 			                 mainTargetMan.texture);
+
 			if(haveCollectible)
-			if(GameManager.instance.controller.lvlInfo.collectible)
+			if(GameManager.instance.controller.bonusCollected)
 				GUI.DrawTexture ( amorRect, amorTextureCollected);
 			else
 				GUI.DrawTexture ( amorRect, amorTextureHidden);

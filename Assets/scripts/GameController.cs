@@ -113,7 +113,7 @@ public class GameController : MonoBehaviour {
 		UpdateData ();
 		lvdata.unlockLevel (nextLevel);
 		StartCoroutine (AudioHelper.FadeAudioObject (GameManager.instance.bgMusic, -1f));
-		AudioHelper.CreatePlayAudioObject (GameManager.instance.winMusic);
+		//AudioHelper.CreatePlayAudioObject (GameManager.instance.winMusic);
 	}
 
 	public void LevelFailed()
@@ -130,27 +130,31 @@ public class GameController : MonoBehaviour {
 		// we get current level from level list and update bes scores
 		LevelData.LevelInfo info = lvlInfo;
 		info.maxScore = (info.maxScore > scoreCount)?info.maxScore:scoreCount;
-		info.collectible = bonusCollected;
-		info.extraPair = extraPair;
+		if(bonusCollected && !info.collectible)
+			info.collectible = bonusCollected;
+		if(extraPair && !info.extraPair)
+			info.extraPair = extraPair;
 		info.bestTime = (info.bestTime > (Time.time - time))?(Time.time - time):info.bestTime;
 		info.arrowsUsed = arrowCount;
 
-		info.lvlState = LevelData.LevelState.STAR1COMPLETE;
+		LevelData.LevelState tmplvlState = LevelData.LevelState.STAR1COMPLETE;
 		if(info.star3Count >= arrowCount)
 		{
 			starsCount = 3;
-			info.lvlState = LevelData.LevelState.STAR3COMPLETE;
+			tmplvlState = LevelData.LevelState.STAR3COMPLETE;
 		}
 		else if(info.star2Count >= arrowCount)
 		{
 			starsCount = 2;
-			info.lvlState = LevelData.LevelState.STAR2COMPLETE;
+			tmplvlState = LevelData.LevelState.STAR2COMPLETE;
 		}
 		else
 		{
 			starsCount = 1;
-			info.lvlState = LevelData.LevelState.STAR1COMPLETE;
+			tmplvlState = LevelData.LevelState.STAR1COMPLETE;
 		}
+		if (((int)info.lvlState) < ((int)tmplvlState))
+			info.lvlState = tmplvlState;
 
 		lvdata.updateLevelInfo(currentLvl,info);
 		GameManager.instance.Save();

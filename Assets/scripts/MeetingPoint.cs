@@ -12,8 +12,8 @@ public class MeetingPoint : MonoBehaviour {
 	ParticleSystem partikle;
 	public float winDelay = 3f;
 	bool meetingCompleted = false;
-
 	public AudioClip extraPairSound;
+	public ParticleSystem bonusParticle;
 
 	void Start()
 	{
@@ -63,9 +63,14 @@ public class MeetingPoint : MonoBehaviour {
 		}
 		else if( loverCount == 2 && !completesLevel)
 		{
+			//bonusParticle.renderer.sortingLayerName = "inFront";
+			//Instantiate(bonusParticle,transform.position,transform.rotation);
 			GameManager.instance.controller.extraPair = true;
 			AudioHelper.CreatePlayAudioObject(extraPairSound);
 			meetingCompleted = true;
+			//gameObject.SetActive(false);
+			//lovers[0].SetActive(false);
+			//lovers[1].SetActive(false);
 		}
 	}
 
