@@ -1614,6 +1614,7 @@ MonoBehaviour:
   - {fileID: 1709335779}
   winDelay: 1.5
   extraPairSound: {fileID: 8300000, guid: a26e92a0f8f08c34d86230936f35e1aa, type: 3}
+  bonusParticle: {fileID: 0}
 --- !u!1 &110585370
 GameObject:
   m_ObjectHideFlags: 0
@@ -1653,6 +1654,7 @@ MonoBehaviour:
   - {fileID: 1359831727}
   winDelay: 3
   extraPairSound: {fileID: 8300000, guid: f801c2a0257b30748a7e1e8928d5dba1, type: 3}
+  bonusParticle: {fileID: 0}
 --- !u!61 &110585372
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16113,7 +16115,7 @@ MonoBehaviour:
     y: 23
     width: 92
     height: 100
-  haveCollectible: 1
+  haveCollectible: 0
 --- !u!1001 &1961928898
 Prefab:
   m_ObjectHideFlags: 0
@@ -16614,7 +16616,7 @@ Prefab:
         type: 3}
     - target: {fileID: 11400006, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
       propertyPath: haveCollectible
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8200000, guid: 0254eefbbe3f2834e82d0530ff8bca51, type: 2}
       propertyPath: m_audioClip
@@ -16666,7 +16668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrow: {fileID: 5000000, guid: bcfe0965cda241d4ba02d232a5ae30ca, type: 2}
-  speed: 8
+  speed: 7
 --- !u!1001 &2067754040
 Prefab:
   m_ObjectHideFlags: 0
