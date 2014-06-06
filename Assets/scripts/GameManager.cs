@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour {
 			PlayerPrefs.SetInt ("lvl"+i+"_collectible", lvlinfo.collectible?1:0);
 			PlayerPrefs.SetInt ("lvl"+i+"_extrapair", lvlinfo.extraPair?1:0);
 			PlayerPrefs.SetInt ("lvl"+i+"_maxscore", lvlinfo.maxScore);
+			PlayerPrefs.SetInt ("lvl"+i+"_state",(int)lvlinfo.lvlState);
 		}
 		PlayerPrefs.Save ();
 	}
@@ -47,11 +48,13 @@ public class GameManager : MonoBehaviour {
 		for( int i = 1; i < lvlData.levels.Count+1; i++)
 		{
 			LevelData.LevelInfo lvlinfo = lvlData.getLevelInfo(i);
-			lvlinfo.arrowsUsed = PlayerPrefs.GetInt("lvl"+i+"_arrowscnt");
-			lvlinfo.bestTime = PlayerPrefs.GetFloat("lvl"+i+"_besttime");
-			lvlinfo.collectible = (PlayerPrefs.GetInt("lvl"+i+"_collectible") > 0)?true:false;
-			lvlinfo.extraPair = (PlayerPrefs.GetInt("lvl"+i+"_extrapair") > 0)?true:false;
-			lvlinfo.maxScore = PlayerPrefs.GetInt("lvl"+i+"_maxscore");
+			lvlinfo.arrowsUsed = PlayerPrefs.GetInt("lvl"+i+"_arrowscnt",0);
+			lvlinfo.bestTime = PlayerPrefs.GetFloat("lvl"+i+"_besttime",3600);
+			lvlinfo.collectible = (PlayerPrefs.GetInt("lvl"+i+"_collectible",0) > 0)?true:false;
+			lvlinfo.extraPair = (PlayerPrefs.GetInt("lvl"+i+"_extrapair",0) > 0)?true:false;
+			lvlinfo.maxScore = PlayerPrefs.GetInt("lvl"+i+"_maxscore",0);
+			lvlinfo.lvlState = (LevelData.LevelState)PlayerPrefs.GetInt("lvl"+i+"_state",(int)LevelData.LevelState.LOCKED);
+			lvlData.updateLevelInfo(i,lvlinfo);
 		}
 
 	}

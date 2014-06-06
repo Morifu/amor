@@ -43,7 +43,10 @@ public class GameController : MonoBehaviour {
 	{
 		// let's create level data if it does not exists already
 		if(lvdata == null)
+		{
 			lvdata = ScriptableObject.CreateInstance<LevelData> ();
+			GameManager.instance.Load();
+		}
 
 	}
 
@@ -109,9 +112,8 @@ public class GameController : MonoBehaviour {
 			scoreCount += 1000;
 
 		//GameManager.instance.winScreen.SetActive (true);
-
-		UpdateData ();
 		lvdata.unlockLevel (nextLevel);
+		UpdateData ();
 		StartCoroutine (AudioHelper.FadeAudioObject (GameManager.instance.bgMusic, -1f));
 		//AudioHelper.CreatePlayAudioObject (GameManager.instance.winMusic);
 	}
