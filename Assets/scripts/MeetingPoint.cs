@@ -56,21 +56,22 @@ public class MeetingPoint : MonoBehaviour {
 		{
 			Invoke("LevelCompleted",winDelay);
 			GameManager.instance.controller.setNextLevel(levelNumber);
-			AudioHelper.CreatePlayAudioObject(extraPairSound);
+			AudioHelper.CreatePlayAudioObject(GameManager.instance.winMusic);
 			partikle.Play();
 			meetingCompleted = true;
 			//Application.LoadLevel (nextLevel);
 		}
 		else if( loverCount == 2 && !completesLevel)
 		{
-			//bonusParticle.renderer.sortingLayerName = "inFront";
-			//Instantiate(bonusParticle,transform.position,transform.rotation);
+			bonusParticle.renderer.sortingLayerName = "inFront";
+			Instantiate(bonusParticle,transform.position,transform.rotation);
+			GetComponent<Animator>().SetTrigger("Hide");
 			GameManager.instance.controller.extraPair = true;
 			AudioHelper.CreatePlayAudioObject(extraPairSound);
 			meetingCompleted = true;
 			//gameObject.SetActive(false);
-			//lovers[0].SetActive(false);
-			//lovers[1].SetActive(false);
+			lovers[0].GetComponent<LoverController>().HideLover();
+			lovers[1].GetComponent<LoverController>().HideLover();
 		}
 	}
 

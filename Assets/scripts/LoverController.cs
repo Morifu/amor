@@ -93,8 +93,9 @@ public class LoverController : MonoBehaviour {
 			else if (position.x < 0)
 				GoLeft();
 				
-			other.transform.parent = transform;
-			other.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+//			other.transform.parent = transform;
+//			other.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+			Destroy(other.gameObject);
 		}
 //		else {
 //			move = 0;
@@ -110,6 +111,11 @@ public class LoverController : MonoBehaviour {
 		//rigidbody2D.isKinematic = true;
 		loverCollider.enabled = false;
 
+	}
+
+	public void HideLover()
+	{
+		anim.SetTrigger ("Hide");
 	}
 
 	void PlayDeathSound()

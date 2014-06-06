@@ -15,7 +15,7 @@ public class Arrow : MonoBehaviour {
 		arrowBody = rigidbody2D;
 		arrowCollider = GetComponent<CircleCollider2D> ();
 		AudioHelper.CreatePlayAudioObject (arrowShotSound);
-		Destroy (gameObject, 5);
+		Destroy (gameObject, 1.5f);
 	}
 	
 	void FixedUpdate()
@@ -36,11 +36,12 @@ public class Arrow : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll) 
 	{
-		Destroy(gameObject);
+		//Destroy(gameObject);
 		arrowBody.fixedAngle = true;
 		arrowBody.isKinematic = true;
 		arrowBody.velocity = Vector2.zero;
 		arrowCollider.enabled = false;
+		//transform.parent = coll.gameObject.transform;
 		 // we destroy as soon it hits anything as it creates problems
 		if(!coll.gameObject.CompareTag("Lover"))
 			AudioHelper.CreatePlayAudioObject (arrowHitSound);
