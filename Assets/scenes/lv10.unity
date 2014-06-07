@@ -220,6 +220,7 @@ GameObject:
   - 212: {fileID: 32995275}
   - 61: {fileID: 32995274}
   - 114: {fileID: 32995273}
+  - 95: {fileID: 32995277}
   m_Layer: 0
   m_Name: MeetingPointBonus3
   m_TagString: MeetingPoint
@@ -248,7 +249,7 @@ MonoBehaviour:
   - {fileID: 1139767725}
   winDelay: 3
   extraPairSound: {fileID: 8300000, guid: f801c2a0257b30748a7e1e8928d5dba1, type: 3}
-  bonusParticle: {fileID: 0}
+  bonusParticle: {fileID: 19800000, guid: c4babc289d967ad479cd4ccbc128658b, type: 2}
 --- !u!61 &32995274
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -297,6 +298,21 @@ Transform:
   m_Children:
   - {fileID: 990934668}
   m_Father: {fileID: 0}
+--- !u!95 &32995277
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 67afd02ccfb03ff42b8263a6b8a044c9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1773955857}
+  m_GameObject: {fileID: 32995272}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 486c5ebaa096c4d4680203fefc4621f9, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!1 &53025091
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,7 +359,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 53025091}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.75706482, y: 2.64015484, z: 0}
+  m_LocalPosition: {x: -8.75706482, y: 2.52779961, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1818186875}
@@ -2663,6 +2679,7 @@ GameObject:
   - 212: {fileID: 263996899}
   - 61: {fileID: 263996898}
   - 114: {fileID: 263996901}
+  - 95: {fileID: 263996902}
   m_Layer: 0
   m_Name: MeetingPoint2
   m_TagString: MeetingPoint
@@ -2738,8 +2755,23 @@ MonoBehaviour:
   - {fileID: 416246940}
   - {fileID: 1891102788}
   winDelay: 1.5
-  extraPairSound: {fileID: 8300000, guid: a26e92a0f8f08c34d86230936f35e1aa, type: 3}
-  bonusParticle: {fileID: 0}
+  extraPairSound: {fileID: 8300000, guid: f801c2a0257b30748a7e1e8928d5dba1, type: 3}
+  bonusParticle: {fileID: 19800000, guid: c4babc289d967ad479cd4ccbc128658b, type: 2}
+--- !u!95 &263996902
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 13da22e69ace9d1478b92de2bb9ff9e3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1886563278}
+  m_GameObject: {fileID: 263996897}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 486c5ebaa096c4d4680203fefc4621f9, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!1 &266620080
 GameObject:
   m_ObjectHideFlags: 0
@@ -4126,7 +4158,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 540052842}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.07785034, y: 2.69999218, z: 0}
+  m_LocalPosition: {x: 7.0894928, y: 2.59185219, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1818186875}
@@ -13507,7 +13539,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1043941821}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.0778503, y: 2.69998837, z: 0}
+  m_LocalPosition: {x: 23.0375748, y: 2.63161659, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1818186875}
@@ -14057,7 +14089,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1105956067}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.51037598, y: 15.2671881, z: 0}
+  m_LocalPosition: {x: 2.51037598, y: 14.947237, z: 0}
   m_LocalScale: {x: 62.9300003, y: 23.8812809, z: 5.05423641}
   m_Children: []
   m_Father: {fileID: 1818186875}
@@ -16748,7 +16780,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1441176471}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.7470856, y: 2.69999218, z: 0}
+  m_LocalPosition: {x: -24.7300034, y: 2.49252892, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1818186875}
