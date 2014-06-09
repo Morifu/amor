@@ -10,7 +10,7 @@ public class SiteLock : MonoBehaviour {
 		/*Application.ExternalEval("if(document.location.host != 'http://orohimaru.zebromalz.info/amor/') { document.location=''; }");*/
 
 		bool isPirated = true;
-		/*
+
 		if (Application.isWebPlayer) {
 
 		//   
@@ -22,6 +22,9 @@ public class SiteLock : MonoBehaviour {
 		if (Application.absoluteURL.Contains("http://andrzejchrzanowski.home.pl")) 
 		{ isPirated = false; }
 
+		if (Application.absoluteURL.Contains("http://orohimaru.zebromalz.info")) 
+			{ isPirated = false; }
+
 		if (isPirated == true)
 				Application.LoadLevel("blockPirate");
 				//print("Pirated web player");
@@ -31,11 +34,11 @@ public class SiteLock : MonoBehaviour {
 				//Application.LoadLevel("mainMenu");
 
 			
-			//	
+				
 
 
-}
-		*/
+		}
+		//
 
 	}
 
