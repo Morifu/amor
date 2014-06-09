@@ -21,7 +21,8 @@ public class Lever : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if((other.gameObject.CompareTag("Box") ||
+		if((other.gameObject.CompareTag("HangingBox") ||
+			other.gameObject.CompareTag("Box") ||
 		    other.gameObject.CompareTag("Arrow") ) && clearToShot)
 		{
 			if(currentState == State.ON)

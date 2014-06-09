@@ -54,6 +54,8 @@ public class GameManager : MonoBehaviour {
 			lvlinfo.extraPair = (PlayerPrefs.GetInt("lvl"+i+"_extrapair",0) > 0)?true:false;
 			lvlinfo.maxScore = PlayerPrefs.GetInt("lvl"+i+"_maxscore",0);
 			lvlinfo.lvlState = (LevelData.LevelState)PlayerPrefs.GetInt("lvl"+i+"_state",(int)LevelData.LevelState.LOCKED);
+			if(i == 1 && lvlinfo.lvlState == LevelData.LevelState.LOCKED)
+				lvlinfo.lvlState = LevelData.LevelState.UNLOCKED;
 			lvlData.updateLevelInfo(i,lvlinfo);
 		}
 

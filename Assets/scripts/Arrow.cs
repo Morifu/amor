@@ -15,7 +15,7 @@ public class Arrow : MonoBehaviour {
 		arrowBody = rigidbody2D;
 		arrowCollider = GetComponent<CircleCollider2D> ();
 		AudioHelper.CreatePlayAudioObject (arrowShotSound);
-		Destroy (gameObject, 1.5f);
+		Destroy (gameObject, 5f);
 	}
 	
 	void FixedUpdate()
@@ -45,6 +45,11 @@ public class Arrow : MonoBehaviour {
 		 // we destroy as soon it hits anything as it creates problems
 		if(!coll.gameObject.CompareTag("Lover"))
 			AudioHelper.CreatePlayAudioObject (arrowHitSound);
+		Destroy (gameObject, 1.5f);
+		if(coll.gameObject.CompareTag("HangingBox"))
+		{
+			Destroy(gameObject);
+		}
 	} 
 
 

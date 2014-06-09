@@ -52,7 +52,7 @@ public class Player : MonoBehaviour {
 		Vector3 pos = Camera.main.ScreenToWorldPoint (v3);
 		Debug.DrawLine (startingPos, new Vector2(pos.x,pos.y));
 
-		int sign = (int)(startingPos - new Vector2(pos.x,pos.y)).x;
+		int sign = (startingPos.x > pos.x) ? 1 : -1;
 		if (sign < 0 && !flippedCharacter) 
 		{
 			Vector3 scale = transform.localScale;

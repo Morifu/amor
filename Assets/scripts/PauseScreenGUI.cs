@@ -52,7 +52,7 @@ public class PauseScreenGUI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if(AudioListener.pause)
+		if(AudioListener.volume == 0.0f)
 		{
 			GUIStyleState temp = new GUIStyleState();
 			temp.background = soundButtonStyle.normal.background;
@@ -177,7 +177,17 @@ public class PauseScreenGUI : MonoBehaviour {
 			                       soundButtonSizes.height),
 			              "",soundButtonStyle))
 			{
-				AudioListener.pause = !AudioListener.pause;
+
+				if(AudioListener.volume == 1.0f)
+				{
+					AudioListener.volume = 0.0f;
+					AudioListener.pause = true;
+				}
+				else
+				{
+					AudioListener.volume = 1.0f;
+					AudioListener.pause = false;
+				}
 				// switch backgrounds so button looks like switch
 				GUIStyleState temp = new GUIStyleState();
 				temp.background = soundButtonStyle.normal.background;

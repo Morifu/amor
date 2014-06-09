@@ -45,6 +45,8 @@ public class GameController : MonoBehaviour {
 		if(lvdata == null)
 		{
 			lvdata = ScriptableObject.CreateInstance<LevelData> ();
+			if(GameManager.instance.controller == null)
+				GameManager.instance.controller = this;
 			GameManager.instance.Load();
 		}
 

@@ -7,8 +7,13 @@ public class BonusAmor : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll) 
 	{
+		if(coll.gameObject.CompareTag("Arrow"))
+		{
+			Destroy(coll.gameObject);
+		}
 		AudioHelper.CreatePlayAudioObject (hitSound);
 		GameManager.instance.controller.bonusCollected = true;
 		Destroy(gameObject);
+
 	} 
 }

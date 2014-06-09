@@ -39,6 +39,7 @@ public class LockController : MonoBehaviour {
 			sprite.enabled = false;
 			coll.enabled = false;
 			AudioHelper.CreatePlayAudioObject(openSound);
+			Destroy(other.gameObject);
 		}
 	}
 }

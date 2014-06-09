@@ -9,10 +9,12 @@ public class AudioOnOff : MonoBehaviour {
 		if(isOnButton)
 		{
 			AudioListener.pause = false;
+			AudioListener.volume = 1.0f;
 		}
 		else
 		{
 			AudioListener.pause = true;
+			AudioListener.volume = 0.0f;
 		}
 	}
 
