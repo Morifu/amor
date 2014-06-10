@@ -25,7 +25,10 @@ public class LevelData : ScriptableObject {
 		public int maxScore;
 		public float timeLimit;
 
-		public LevelInfo(int star2, int star3, float minTime)
+		public bool hasBonus;
+		public bool hasCollectible;
+
+		public LevelInfo(int star2, int star3, float minTime, bool bonus = false, bool collect = false)
 		{
 			star3Count = star3;
 			star2Count = star2;
@@ -37,6 +40,8 @@ public class LevelData : ScriptableObject {
 			bestTime = 3600;
 			arrowsUsed = 0;
 			maxScore = 0;
+			hasBonus = bonus;
+			hasCollectible = collect;
 		}
 		public string ToString()
 		{
@@ -53,18 +58,18 @@ public class LevelData : ScriptableObject {
 		{
 			levels = new ArrayList ();
 			// constructor is LevelInfo( for 2 stars, for 3 stars, minimum time in seconds);
-			LevelInfo lvl1 = new LevelInfo ( 8, 5, 10);
-			LevelInfo lvl2 = new LevelInfo ( 12, 6, 20);
-			LevelInfo lvl3 = new LevelInfo ( 10, 5, 30);
-			LevelInfo lvl4 = new LevelInfo ( 22, 11, 50);
-			LevelInfo lvl5 = new LevelInfo ( 15, 8, 50);
-			LevelInfo lvl6 = new LevelInfo ( 25, 11, 50);
-			LevelInfo lvl7 = new LevelInfo ( 15, 7, 70);
-			LevelInfo lvl8 = new LevelInfo ( 20, 14, 70);
-			LevelInfo lvl9 = new LevelInfo ( 20, 12, 80);
-			LevelInfo lvl10 = new LevelInfo ( 23, 11, 80);
-			LevelInfo lvl11 = new LevelInfo ( 45, 20, 110);
-			LevelInfo lvl12 = new LevelInfo ( 32, 15, 200);
+			LevelInfo lvl1 = new LevelInfo ( 8, 5, 10, false, false);
+			LevelInfo lvl2 = new LevelInfo ( 12, 6, 20, false, false);
+			LevelInfo lvl3 = new LevelInfo ( 10, 5, 30, false, false);
+			LevelInfo lvl4 = new LevelInfo ( 22, 11, 50, true, false);
+			LevelInfo lvl5 = new LevelInfo ( 15, 8, 50, false, true);
+			LevelInfo lvl6 = new LevelInfo ( 25, 11, 50, true, true);
+			LevelInfo lvl7 = new LevelInfo ( 15, 7, 70, false, true);
+			LevelInfo lvl8 = new LevelInfo ( 20, 14, 70, true, true);
+			LevelInfo lvl9 = new LevelInfo ( 20, 12, 80, false, true);
+			LevelInfo lvl10 = new LevelInfo ( 23, 11, 80, true, true);
+			LevelInfo lvl11 = new LevelInfo ( 45, 20, 110, true, true);
+			LevelInfo lvl12 = new LevelInfo ( 32, 15, 200, false, true);
 
 			lvl1.lvlState = LevelState.UNLOCKED;
 			levels.Add (lvl1);

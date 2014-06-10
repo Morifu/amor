@@ -145,6 +145,7 @@ public class WinScreenGUI : MonoBehaviour {
 		              "",repeatButtonStyle))
 		{
 			GameManager.instance.GamePaused = false;
+			GameManager.instance.controller.setNextLevel(GameManager.instance.controller.currentLvl);
 			Application.LoadLevel(Application.loadedLevel);
 		}
 		// next level button 

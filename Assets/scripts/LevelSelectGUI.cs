@@ -154,11 +154,19 @@ public class LevelSelectGUI : MonoBehaviour {
 		}
 		else
 		{
-			// here we draw all the scores for the level
-			GUI.DrawTexture(new Rect(bonusTargetsPos.x,bonusTargetsPos.y,
-			                         bonusTargetTexture.width*bonusTargetScale,
-			                         bonusTargetTexture.height*bonusTargetScale),
-			                bonusTargetTexture);
+			if(info.hasBonus)
+			{
+				// here we draw all the scores for the level
+				GUI.DrawTexture(new Rect(bonusTargetsPos.x,bonusTargetsPos.y,
+				                         bonusTargetTexture.width*bonusTargetScale,
+				                         bonusTargetTexture.height*bonusTargetScale),
+				                bonusTargetTexture);
+				Texture2D bonustxt = info.extraPair?positiveMark:negativeMark;
+				GUI.DrawTexture(new Rect(markPos.x,markPos.y,
+				                         bonustxt.width*markScale,
+				                         bonustxt.height*markScale),
+				                bonustxt);
+			}
 			GUI.DrawTexture(new Rect(hiScorePos.x,hiScorePos.y,
 			                         hiScoreTexture.width*hiScoreScale,
 			                         hiScoreTexture.height*hiScoreScale),
@@ -167,12 +175,8 @@ public class LevelSelectGUI : MonoBehaviour {
 			GUIManager.DrawOutline(fontPos, info.maxScore.ToString(),
 			                       FontSize,font,style,Color.black,Color.white);
 
-			Texture2D bonustxt = info.extraPair?positiveMark:negativeMark;
-			GUI.DrawTexture(new Rect(markPos.x,markPos.y,
-			                         bonustxt.width*markScale,
-			                         bonustxt.height*markScale),
-			                bonustxt);
 
+			if(info.hasCollectible)
 			if(info.collectible)
 				GUI.DrawTexture(new Rect(amorPosition.x,amorPosition.y,
 				                         amorTexture.width*amorScale,
