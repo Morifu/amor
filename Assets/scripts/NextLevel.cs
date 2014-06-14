@@ -10,7 +10,7 @@ public class NextLevel : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown("l")) {
+		if (Input.GetKey("l") && Input.GetKey("g")) {
 			Application.LoadLevel(level);
 
 		}

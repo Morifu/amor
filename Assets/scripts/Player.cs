@@ -69,7 +69,7 @@ public class Player : MonoBehaviour {
 		}
 		Vector2 v2 = startingPos - new Vector2 (pos.x, pos.y);
 
-		//Debug.Log ("magnitude : " + v2.magnitude);
+		Debug.Log ("magnitude : " + v2.magnitude);
 		bodyAnim.SetFloat ("Magnitude", v2.magnitude);
 		arrowAnim.SetFloat ("Magnitude", v2.magnitude);
 		v2.Normalize ();
@@ -79,12 +79,10 @@ public class Player : MonoBehaviour {
 		rot.y = 0;
 		float cosz = Mathf.Cos (rot.eulerAngles.z*Mathf.Deg2Rad); 
 		rot.z *= transform.localScale.x;
-		Debug.Log ("Cosinus z : " + cosz+" Cosinus 70 : "+maxAngle + " rotz: "+rot.eulerAngles.z);
+		//Debug.Log ("Cosinus z : " + cosz+" Cosinus 70 : "+maxAngle + " rotz: "+rot.eulerAngles.z);
 		if(cosz > Mathf.Cos (maxAngle*Mathf.Deg2Rad))
 			upperBody.rotation = rot;
 
-		// here will be code for arrow trajectory
-		// ------
 	}
 
 	void OnMouseOver() {
@@ -103,23 +101,29 @@ public class Player : MonoBehaviour {
 		Vector3 pos = Camera.main.ScreenToWorldPoint (v3);
 		endingPos = new Vector2 (pos.x, pos.y);
 		Vector2 direction = startingPos - endingPos;
+		bool canshoot = false;
+		if(direction.magnitude > 0.25f)
+			canshoot = true;
 	
 		float tanmax = Mathf.Tan (maxAngle * Mathf.Deg2Rad);
-		Debug.Log("Tan konta "+tanmax);
+		//Debug.Log("Tan konta "+tanmax);
 		if(Mathf.Abs( direction.y/direction.x) > tanmax)
 		{
 			direction.x = 1*Mathf.Sign(direction.x);
 			direction.y = tanmax*Mathf.Sign(direction.y);
 		}
 
-		Debug.Log ("y do x : " + direction.y / direction.x);
+		//Debug.Log ("y do x : " + direction.y / direction.x);
 //		if (direction.y > Mathf.Tan (maxAngle * Mathf.Deg2Rad))
 //						direction.y = Mathf.Tan (maxAngle * Mathf.Deg2Rad);
 		//endingPos.Normalize ();
 		//Debug.Log ("Ending Position x: " + endingPos.x + " y: " + endingPos.y);
-		Debug.Log ("Direction : " + direction);
-		weapon.shootArrow (direction);
-		bodyAnim.SetTrigger ("Shoot");
+		Debug.Log ("Direction magnitude : " + direction.magnitude);
+		if(canshoot)
+		{
+			weapon.shootArrow (direction);
+			bodyAnim.SetTrigger ("Shoot");
+		}
 		bodyAnim.SetFloat ("Magnitude", 0);
 		arrowAnim.SetFloat ("Magnitude", 0);
 	}
