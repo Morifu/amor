@@ -3487,6 +3487,7 @@ GameObject:
   - 212: {fileID: 433425494}
   - 61: {fileID: 433425493}
   - 114: {fileID: 433425492}
+  - 95: {fileID: 433425496}
   m_Layer: 0
   m_Name: MeetingPointBonus3
   m_TagString: MeetingPoint
@@ -3515,6 +3516,7 @@ MonoBehaviour:
   - {fileID: 579487691}
   winDelay: 3
   extraPairSound: {fileID: 8300000, guid: f801c2a0257b30748a7e1e8928d5dba1, type: 3}
+  bonusParticle: {fileID: 19800000, guid: c4babc289d967ad479cd4ccbc128658b, type: 2}
 --- !u!61 &433425493
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3563,6 +3565,21 @@ Transform:
   m_Children:
   - {fileID: 1847995951}
   m_Father: {fileID: 0}
+--- !u!95 &433425496
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 67afd02ccfb03ff42b8263a6b8a044c9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1951589634}
+  m_GameObject: {fileID: 433425491}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 486c5ebaa096c4d4680203fefc4621f9, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!1 &436421436
 GameObject:
   m_ObjectHideFlags: 0
@@ -6983,6 +7000,7 @@ GameObject:
   - 212: {fileID: 891621535}
   - 61: {fileID: 891621534}
   - 114: {fileID: 891621537}
+  - 95: {fileID: 891621538}
   m_Layer: 0
   m_Name: MeetingPoint2
   m_TagString: MeetingPoint
@@ -7058,7 +7076,23 @@ MonoBehaviour:
   - {fileID: 419405391}
   - {fileID: 1474635034}
   winDelay: 1.5
-  extraPairSound: {fileID: 8300000, guid: a26e92a0f8f08c34d86230936f35e1aa, type: 3}
+  extraPairSound: {fileID: 8300000, guid: f801c2a0257b30748a7e1e8928d5dba1, type: 3}
+  bonusParticle: {fileID: 19800000, guid: c4babc289d967ad479cd4ccbc128658b, type: 2}
+--- !u!95 &891621538
+Animator:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 13da22e69ace9d1478b92de2bb9ff9e3,
+    type: 2}
+  m_PrefabInternal: {fileID: 189165007}
+  m_GameObject: {fileID: 891621533}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 486c5ebaa096c4d4680203fefc4621f9, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 1
+  m_AnimatePhysics: 0
+  m_HasTransformHierarchy: 1
 --- !u!1 &901981747
 GameObject:
   m_ObjectHideFlags: 0
@@ -13670,7 +13704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44c482dd53a0bd418e799cf486e3214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: lv5
+  level: lv7
 --- !u!4 &1675285874
 Transform:
   m_ObjectHideFlags: 0
@@ -16165,7 +16199,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e, type: 2}
       propertyPath: level
-      value: lv5
+      value: lv7
       objectReference: {fileID: 0}
     - target: {fileID: 11400008, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e, type: 2}
       propertyPath: currentLvl

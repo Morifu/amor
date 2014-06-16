@@ -6927,6 +6927,10 @@ Prefab:
       propertyPath: BackgroundMusic
       value: 
       objectReference: {fileID: 8300000, guid: b6b27c2a85120d249905ce5a3b5ea345, type: 3}
+    - target: {fileID: 11400000, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e, type: 2}
+      propertyPath: level
+      value: lv2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e, type: 2}
   m_RootGameObject: {fileID: 1153790033}
@@ -8269,7 +8273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44c482dd53a0bd418e799cf486e3214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: lv1
+  level: lv2
 --- !u!4 &1153790035
 Transform:
   m_ObjectHideFlags: 0
