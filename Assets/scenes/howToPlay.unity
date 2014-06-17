@@ -656,7 +656,7 @@ Animator:
     type: 2}
   m_PrefabInternal: {fileID: 1957958400}
   m_GameObject: {fileID: 1520918533}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b4b57187663c8b4448b1ac1a757e8ea4, type: 2}
   m_CullingMode: 0
@@ -685,7 +685,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: da6ccc5e9372dcb4d9bee71311796da4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 15884db9e95535240b942df62e7ecbb3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1520918536
 Transform:
@@ -882,7 +882,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1635010444}
-  - 114: {fileID: 1635010448}
   - 114: {fileID: 1635010447}
   - 114: {fileID: 1635010451}
   m_Layer: 0
@@ -917,19 +916,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TS: 0
   pause: 0
---- !u!114 &1635010448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 0c618d0ca6b2b2942a36bcc6e8a61e9e,
-    type: 2}
-  m_PrefabInternal: {fileID: 691685568}
-  m_GameObject: {fileID: 1635010443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d44c482dd53a0bd418e799cf486e3214, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level: lv1
 --- !u!114 &1635010451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1062,6 +1048,15 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 5f5f7b65de121864ba09f2c1c31e501b, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 21200000, guid: 5f5f7b65de121864ba09f2c1c31e501b, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 15884db9e95535240b942df62e7ecbb3,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f5f7b65de121864ba09f2c1c31e501b, type: 2}
   m_RootGameObject: {fileID: 1520918533}
